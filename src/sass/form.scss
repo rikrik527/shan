@@ -202,37 +202,48 @@ input[type="textPath"] {
             #bio {}
             #bio-count {
                 position: absolute;
-                top: 67%;
-                left: 69%;
+                top: 73%;
+                left: 70%;
                 color: black;
                 text-shadow: none;
             }
         }
         .submit {
-            display: block;
-            height: 100px;
-            background: darkred;
             width: 300px;
+            height: 50px;
+            background: mediumvioletred;
             float: left;
-            border-radius: 10px;
-            margin: 87px 49px;
-            .submit-btn {
-                width: 100px;
-                position: absolute;
-                height: 30px;
-                background: #f8bbd0;
-                color: #ad1457;
-                /* align-self: center; */
-                border-radius: 13px;
-                border: 1px solid #ad1457;
-                text-shadow: 1px 1px 3px white;
-                left: 50%;
-                margin: calc(-30px/2) 0 0 calc(-100px/2);
-                top: 78%;
-                &:hover {
-                    background: $pink2;
-                }
-            }
+            display: block;
+            border-radius: 16px;
+            margin: 84px 41px;
+        }
+        .submit-page {
+            background: azure;
+        }
+        .login-page {
+            background: azure;
+            margin-left: 115px;
+        }
+    }
+}
+
+.btn {
+    width: 100px;
+    position: absolute;
+    height: 30px;
+    color: #ad1457;
+    border-radius: 13px;
+    border: 1px solid #ad1457;
+    text-shadow: 1px 1px 3px white;
+    left: 32%;
+    margin: calc(-30px/2) 0 0 calc(-100px/2);
+    top: 79%;
+    &:hover {
+        .login-page {
+            background: $pink3;
+        }
+        .submit-page {
+            background: $pink3;
         }
     }
 }

@@ -343,33 +343,39 @@ input[type="textPath"] {
         margin: 15px 68px; }
       .sign-up-form .form-boxcontrol .bio #bio-count {
         position: absolute;
-        top: 67%;
-        left: 69%;
+        top: 73%;
+        left: 70%;
         color: black;
         text-shadow: none; }
     .sign-up-form .form-boxcontrol .submit {
-      display: block;
-      height: 100px;
-      background: darkred;
       width: 300px;
+      height: 50px;
+      background: mediumvioletred;
       float: left;
-      border-radius: 10px;
-      margin: 87px 49px; }
-      .sign-up-form .form-boxcontrol .submit .submit-btn {
-        width: 100px;
-        position: absolute;
-        height: 30px;
-        background: #f8bbd0;
-        color: #ad1457;
-        /* align-self: center; */
-        border-radius: 13px;
-        border: 1px solid #ad1457;
-        text-shadow: 1px 1px 3px white;
-        left: 50%;
-        margin: calc(-30px/2) 0 0 calc(-100px/2);
-        top: 78%; }
-        .sign-up-form .form-boxcontrol .submit .submit-btn:hover {
-          background: #f8bbd0; }
+      display: block;
+      border-radius: 16px;
+      margin: 84px 41px; }
+    .sign-up-form .form-boxcontrol .submit-page {
+      background: azure; }
+    .sign-up-form .form-boxcontrol .login-page {
+      background: azure;
+      margin-left: 115px; }
+
+.btn {
+  width: 100px;
+  position: absolute;
+  height: 30px;
+  color: #ad1457;
+  border-radius: 13px;
+  border: 1px solid #ad1457;
+  text-shadow: 1px 1px 3px white;
+  left: 32%;
+  margin: calc(-30px/2) 0 0 calc(-100px/2);
+  top: 79%; }
+  .btn:hover .login-page {
+    background: #f48fb1; }
+  .btn:hover .submit-page {
+    background: #f48fb1; }
 
 .hide {
   display: "none"; }
