@@ -12,7 +12,8 @@ module.exports = {
 
         app: ["./app/index.js"],
         form: ["./form/index.js"],
-        'vendor': ['./app/index.js', './form/index.js']
+        login: ["./login/index.js"],
+        'vendor': ['./app/index.js', './form/index.js', './login/index.js']
 
 
     },
@@ -174,6 +175,27 @@ module.exports = {
             template: './template/index.html', //load custom template .ejs by default.
             filename: 'html/index.html',
             chunks: ['form']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'login-page',
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true,
+                collapseWhitespace: true
+            },
+            hash: true,
+            inject: true,
+            template: './template/login.html', //load custom template .ejs by default.
+            filename: 'html/login.html',
+            chunks: ['login']
         }),
 
         new webpack.optimize.UglifyJsPlugin({
