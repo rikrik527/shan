@@ -1,0 +1,120 @@
+@import './color';
+
+/* kindle fire */
+
+@media screen and (min-width:505px)and(max-width:900px) {
+    .shan-btn,
+    .shan-btn2 {
+        margin: calc(-28.750em/2) 0 0 calc(-50.5em/2)!important;
+        width: 50.5em!important;
+        background-position-x: -93px!important;
+    }
+    .img-slider-boxcontrol {
+        left: 69%!important;
+    }
+}
+
+
+/*LG */
+
+@media screen and(min-width:320px)and(max-width:504px) {
+    .shan-btn,
+    .shan-btn2 {
+        width: 24.5em!important;
+        margin: calc(-28.750em/2)0 0 calc(-24.5em/2)!important;
+        background-position-x: 50%!important;
+    }
+    .shan-talk {
+        width: 36%!important;
+        top: 66%!important;
+        left: 6%!important;
+    }
+    .img-slider-boxcontrol {
+        top: 6%!important;
+        width: 37%!important;
+        height: 41%!important;
+        left: 56%!important;
+    }
+    .img-outline {
+        left: 16%!important;
+        top: 6%!important;
+    }
+    .right-arrow {
+        left: 62%!important;
+        animation: rightarrow .5s linear infinite;
+        @keyframes rightarrow {
+            50% {
+                transform: translateX(-3px)
+            }
+        }
+    }
+    .left-arrow {
+        left: -27%!important;
+        animation: leftarrow .5s linear infinite;
+        @keyframes leftarrow {
+            50% {
+                transform: translateX(3px)
+            }
+        }
+    }
+    .pos,
+    .pos1,
+    .pos2 {
+        display: block!important;
+    }
+}
+
+
+/* iphonex */
+
+@media (max-device-width:375px)and(max-device-height:812px) {}
+
+
+/* iphone 6 6s 7 8 */
+
+@media (max-device-width:414px)and(max-device-height:736px) {}
+
+
+/* samsung */
+
+@media (max-device-width:360px)and(max-device-height:740px) {}
+
+
+/* ipad mini */
+
+@media (max-device-width:768px)and(max-device-height:1024px) {}
+
+
+/* xpreia */
+
+@media (max-device-width:360px)and(max-device-height:640px) {}
+
+
+/* iphone 6 plus */
+
+@media (max-device-width:414px)and(max-device-height:736px) {}
+
+
+/* iphone 6*/
+
+@media (max-device-width:375px)and(max-device-height:667px) {}
+
+
+/* iphone5 */
+
+@media (max-device-width:320px) and (max-device-height:568px) {}
+
+
+/* laptop */
+
+@media (max-device-width:1280px)and(max-device-height:950px) {}
+
+
+/* laptop 2 */
+
+@media (max-device-width:1280px)and(max-device-height:800px) {}
+
+
+/* laptop 3*/
+
+@media (max-device-width:1440px)and(max-device-height:900px) {}
