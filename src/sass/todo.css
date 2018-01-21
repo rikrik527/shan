@@ -20,44 +20,56 @@
   position: absolute; }
 
 #todo-list {
-  width: 43%;
+  width: 250px;
   height: auto;
-  background: rgba(100, 200, 250, 0.5);
+  display: block;
+  background: rgba(250, 100, 100, 0.8);
   border-radius: 5px;
-  border: 2px solid cyan;
+  border: 2px solid pink;
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 56%;
-  z-index: 999999999999; }
+  z-index: 99999999999999999999999; }
   #todo-list .todo-close {
-    width: 20px;
-    height: 20px;
-    padding: 4px;
+    width: 30px;
+    height: 30px;
+    padding: 9px;
     cursor: pointer;
-    position: absolute;
-    left: 87%;
-    color: lightpink; }
+    /* position: absolute; */
+    /* left: 86%; */
+    /* top: 113%; */
+    color: white;
+    background: hotpink;
+    border-radius: 100px;
+    z-index: 999999;
+    float: right;
+    margin-top: 3px; }
   #todo-list .todo-title {
     display: block;
     font-size: 14px;
     height: 35px;
-    background: cornflowerblue;
-    color: rebeccapurple;
+    /* background: cornflowerblue; */
+    color: navajowhite;
     /* vertical-align: middle; */
     width: 100%;
     /* height: auto; */
     /* border-bottom: 1px solid; */
     text-align: center;
-    line-height: -5px;
     padding-top: 9px;
-    float: left;
+    /* float: left; */
     margin: 0; }
   #todo-list .todo-add-list {
-    width: 100%;
-    display: block;
-    float: left;
-    height: auto;
-    outline: 1px solid; }
+    width: 250px;
+    /* display: block; */
+    /* float: left; */
+    height: 50px;
+    /* outline: 1px solid; */
+    position: absolute;
+    left: 50%;
+    margin: calc(-50px/2) 0 0 calc(-250px/2);
+    top: 180%;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden; }
   #todo-list .todo1,
   #todo-list .todo2,
   #todo-list .todo3,
@@ -67,6 +79,8 @@
     height: 50px;
     display: block;
     float: left;
+    /* margin: 1%; */
+    outline: 1px solid lightpink;
     cursor: pointer; }
   #todo-list .todo1 {
     background: url("../images/shan-icon.png") no-repeat;
