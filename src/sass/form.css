@@ -22,24 +22,24 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
-/* kindle fire */
 @import url(../css/normalize.css);
 @media screen and (min-width: 505px) and (max-width: 900px) {
   .shan-btn,
   .shan-btn2 {
     margin: calc(-28.750em/2) 0 0 calc(-50.5em/2) !important;
     width: 50.5em !important;
-    background-position-x: -93px !important; }
+    background-size: cover !important;
+    background-position: 43% !important; }
 
   .img-slider-boxcontrol {
     left: 69% !important; } }
-/*LG */
 @media screen and (min-width: 320px) and (max-width: 504px) {
   .shan-btn,
   .shan-btn2 {
     width: 24.5em !important;
     margin: calc(-28.750em/2) 0 0 calc(-24.5em/2) !important;
-    background-position-x: 50% !important; }
+    background-size: cover !important;
+    background-position: 48% 54% !important; }
 
   .shan-talk {
     width: 36% !important;
@@ -71,8 +71,25 @@
   .pos,
   .pos1,
   .pos2 {
-    display: block !important; } }
-/* iphonex */
+    display: block !important; }
+
+  /* form */
+  .title-shan {
+    top: 1% !important;
+    font-size: 30px !important; }
+    .title-shan .title-author {
+      font-size: 10px;
+      top: 22px !important; }
+
+  #name,
+  #password {
+    width: 50% !important; }
+
+  #email,
+  #password,
+  #conf-password,
+  #birthday {
+    width: 50% !important; } }
 /* iphone 6 6s 7 8 */
 /* samsung */
 /* ipad mini */
@@ -147,8 +164,8 @@ body {
 .clearfix {
   display: flow-root; }
 
-input[type='button'],
-input[type='submit'],
+input[type=button],
+input[type=submit],
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -201,6 +218,7 @@ input[type="textPath"] {
 #name,
 #password {
   width: 279px;
+  border-radius: 5px;
   margin-top: 2px;
   margin-left: 19px; }
 
@@ -281,15 +299,18 @@ input[type="textPath"] {
       border-radius: 10px;
       margin: 10px; }
     .sign-up-form .form-boxcontrol .sign-up-password {
-      display: block;
+      display: flex;
       height: 43px;
       background: darkred;
       /* vertical-align: middle; */
       padding: 10px;
       width: 93%;
-      float: left;
+      /* float: left; */
       border-radius: 10px;
-      margin: 10px; }
+      margin: 10px;
+      justify-content: flex-start;
+      align-content: flex-start;
+      flex-direction: row; }
     .sign-up-form .form-boxcontrol .sign-up-confirm-password {
       display: block;
       height: 43px;
@@ -340,38 +361,35 @@ input[type="textPath"] {
       .sign-up-form .form-boxcontrol .bio .label-bio {
         margin: 59px; }
       .sign-up-form .form-boxcontrol .bio .form-textarea {
-        margin: 15px 68px; }
+        width: 85%;
+        margin: 15px 15px; }
       .sign-up-form .form-boxcontrol .bio #bio-count {
-        position: absolute;
-        top: 73%;
-        left: 70%;
+        float: right;
         color: black;
-        text-shadow: none; }
+        text-shadow: none;
+        margin: -28px 46px; }
     .sign-up-form .form-boxcontrol .submit {
       width: 300px;
       height: 50px;
-      background: mediumvioletred;
       float: left;
       display: block;
       border-radius: 16px;
       margin: 84px 41px; }
     .sign-up-form .form-boxcontrol .submit-page {
-      background: azure; }
+      background: azure;
+      margin: 10px;
+      float: left; }
     .sign-up-form .form-boxcontrol .login-page {
       background: azure;
-      margin-left: 115px; }
+      margin: 10px;
+      float: right; }
 
 .btn {
   width: 100px;
-  position: absolute;
   height: 30px;
   color: #ad1457;
   border-radius: 13px;
-  border: 1px solid #ad1457;
-  text-shadow: 1px 1px 3px white;
-  left: 32%;
-  margin: calc(-30px/2) 0 0 calc(-100px/2);
-  top: 79%; }
+  text-shadow: 1px 1px 3px white; }
   .btn:hover .login-page {
     background: #f48fb1; }
   .btn:hover .submit-page {

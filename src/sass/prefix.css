@@ -62,8 +62,8 @@ body {
 .clearfix {
   display: flow-root; }
 
-input[type='button'],
-input[type='submit'],
+input[type=button],
+input[type=submit],
 button {
   -webkit-appearance: none;
   -moz-appearance: none;

@@ -39,6 +39,7 @@ input[type="textPath"] {
 #name,
 #password {
     width: 279px;
+    border-radius: 5px;
     margin-top: 2px;
     margin-left: 19px;
 }
@@ -129,15 +130,18 @@ input[type="textPath"] {
             #email {}
         }
         .sign-up-password {
-            display: block;
+            display: flex;
             height: 43px;
             background: darkred;
             /* vertical-align: middle; */
             padding: 10px;
             width: 93%;
-            float: left;
+            /* float: left; */
             border-radius: 10px;
             margin: 10px;
+            justify-content: flex-start;
+            align-content: flex-start;
+            flex-direction: row;
             #password {}
         }
         .sign-up-confirm-password {
@@ -197,21 +201,20 @@ input[type="textPath"] {
                 margin: 59px;
             }
             .form-textarea {
-                margin: 15px 68px;
+                width: 85%;
+                margin: 15px 15px;
             }
             #bio {}
             #bio-count {
-                position: absolute;
-                top: 73%;
-                left: 70%;
+                float: right;
                 color: black;
                 text-shadow: none;
+                margin: -28px 46px;
             }
         }
         .submit {
             width: 300px;
             height: 50px;
-            background: mediumvioletred;
             float: left;
             display: block;
             border-radius: 16px;
@@ -219,25 +222,23 @@ input[type="textPath"] {
         }
         .submit-page {
             background: azure;
+            margin: 10px;
+            float: left;
         }
         .login-page {
             background: azure;
-            margin-left: 115px;
+            margin: 10px;
+            float: right;
         }
     }
 }
 
 .btn {
     width: 100px;
-    position: absolute;
     height: 30px;
     color: #ad1457;
     border-radius: 13px;
-    border: 1px solid #ad1457;
     text-shadow: 1px 1px 3px white;
-    left: 32%;
-    margin: calc(-30px/2) 0 0 calc(-100px/2);
-    top: 79%;
     &:hover {
         .login-page {
             background: $pink3;

@@ -707,6 +707,8 @@ svg {
     height: 28.750em;
     background: url('../images/section1.png')no-repeat;
     transition: all .3s linear;
+    background-position: 65% 64%;
+    background-size: contain;
     animation: shanbtn 3s linear 5s;
     @keyframes shanbtn {
         10% {
