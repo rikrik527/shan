@@ -73,6 +73,10 @@
   .pos2 {
     display: block !important; }
 
+  #todo-list {
+    width: 64% !important;
+    left: 36% !important; }
+
   /* form */
   .title-shan {
     top: 1% !important;
