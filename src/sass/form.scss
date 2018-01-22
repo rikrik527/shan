@@ -39,7 +39,6 @@ input[type="textPath"] {
 #name,
 #password {
     width: 279px;
-    border-radius: 5px;
     margin-top: 2px;
     margin-left: 19px;
 }
@@ -110,11 +109,11 @@ input[type="textPath"] {
             height: 43px;
             background: darkred;
             /* vertical-align: middle; */
-            padding: 10px;
+            padding-top: 15px;
             width: 93%;
             float: left;
             border-radius: 10px;
-            margin: 10px;
+            margin: 3%;
             #name {}
         }
         .sign-up-email {
@@ -126,22 +125,19 @@ input[type="textPath"] {
             width: 93%;
             float: left;
             border-radius: 10px;
-            margin: 10px;
+            margin: 3%;
             #email {}
         }
         .sign-up-password {
-            display: flex;
+            display: block;
             height: 43px;
             background: darkred;
             /* vertical-align: middle; */
-            padding: 10px;
+            padding-top: 15px;
             width: 93%;
-            /* float: left; */
+            float: left;
             border-radius: 10px;
-            margin: 10px;
-            justify-content: flex-start;
-            align-content: flex-start;
-            flex-direction: row;
+            margin: 3%;
             #password {}
         }
         .sign-up-confirm-password {
@@ -153,7 +149,7 @@ input[type="textPath"] {
             width: 93%;
             float: left;
             border-radius: 10px;
-            margin: 10px;
+            margin: 3%;
             #conf-password {}
         }
         .sign-up-birthday {
@@ -165,7 +161,7 @@ input[type="textPath"] {
             width: 93%;
             float: left;
             border-radius: 10px;
-            margin: 10px;
+            margin: 3%;
             perspective: 1000px;
             transform-style: preserve-3d;
             #birthday {}
@@ -201,8 +197,7 @@ input[type="textPath"] {
                 margin: 59px;
             }
             .form-textarea {
-                width: 85%;
-                margin: 15px 15px;
+                margin: 15px 68px;
             }
             #bio {}
             #bio-count {
@@ -215,20 +210,21 @@ input[type="textPath"] {
         .submit {
             width: 300px;
             height: 50px;
+            background: mediumvioletred;
             float: left;
             display: block;
             border-radius: 16px;
-            margin: 84px 41px;
+            margin: 26% 12%;
         }
         .submit-page {
             background: azure;
-            margin: 10px;
             float: left;
+            margin: 3%;
         }
         .login-page {
             background: azure;
-            margin: 10px;
             float: right;
+            margin: 3%;
         }
     }
 }
@@ -238,6 +234,7 @@ input[type="textPath"] {
     height: 30px;
     color: #ad1457;
     border-radius: 13px;
+    border: 1px solid #ad1457;
     text-shadow: 1px 1px 3px white;
     &:hover {
         .login-page {

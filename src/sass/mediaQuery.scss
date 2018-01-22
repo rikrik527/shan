@@ -10,9 +10,39 @@
     .img-slider-boxcontrol {
         left: 69%!important;
     }
+    .machine-arm {
+        left: 62%!important;
+    }
 }
 
 @media screen and(min-width:320px)and(max-width:504px) {
+    .header-brand {
+        left: 38%!important;
+        width: 400px!important;
+    }
+    .production {
+        top: 61%!important;
+        left: 26%!important;
+    }
+    .developer {
+        color: transparent!important;
+    }
+    .the-game {
+        top: 23%!important;
+        left: 18%!important;
+    }
+    .awake {
+        left: 25%!important;
+    }
+    .prologue {
+        left: 40%!important;
+    }
+    .location {
+        left: 55%!important;
+    }
+    .epilogue {
+        left: 70%!important;
+    }
     .shan-btn,
     .shan-btn2 {
         width: 24.5em!important;
@@ -64,23 +94,33 @@
     }
     /* form */
     .title-shan {
-        top: 1%!important;
+        top: -1%!important;
         font-size: 30px!important;
         .title-author {
             font-size: 10px;
             top: 22px!important;
         }
     }
-    #name,
-    #password {
-        width: 50%!important;
+    .sign-up-title {
+        width: 177px!important;
+        height: 100px!important;
+        margin: calc(-100px/2) 0 0 calc(-177px/2)!important;
+        left: 58%!important;
+        position: absolute;
+        z-index: 9999999999999;
+        top: 14%!important;
     }
+    #name,
+    #password {}
     #email,
     #password,
     #conf-password,
-    #birthday {
-        width: 50% !important;
+    #birthday {}
+    .form-boxcontrol {}
+    .label-bio {
+        margin: null
     }
+    .btn {}
 }
 
 @media (max-device-width:375px)and(max-device-height:812px) {}

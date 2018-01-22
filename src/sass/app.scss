@@ -53,16 +53,21 @@ svg {
     overflow: hidden;
     top: -10%;
     left: -1%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .paralax1 {
-    background-image: url('../images/para.png')no-repeat;
     width: 300px;
-    height: 500px;
-    top: 0%;
+    height: 473px;
+    top: -157px;
     left: 0%;
-    position: fixed;
-    outline: 1px solid red;
+    transform: translateZ(-100px);
+    /* position: fixed; */
+    /* outline: 1px solid red; */
+    position: absolute;
+    background-size: contain;
+    z-index: -99999999999999;
 }
 
 .header-menu {
@@ -422,16 +427,15 @@ svg {
 #shan-li-image {
     position: absolute;
     left: 0%;
-    width: 36%;
-    height: 150%;
-    min-height: 160px;
-    min-width: 100px;
+    height: 160px;
+    width: 100px;
     top: 0%;
     border: 3px solid white;
     box-shadow: -1px 1px 18px 5px deeppink;
     -ms-transform-origin: top left;
     transform-origin: top left;
     transition: all .5s ease-in-out;
+    z-index: 999999999;
 }
 
 .shan-img-ani {
@@ -461,27 +465,59 @@ svg {
 
 .machine-arm {
     width: 30px;
-    height: 50px;
-    background: $orange6;
+    height: 40px;
+    background: #ff9800;
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 42%;
+    left: 74%;
+    z-index: 9999999;
+    -ms-transform-origin: center top;
     transform-origin: center top;
+    transform: rotateZ(71deg);
+    z-index: 9999999;
     .machine-arm2 {
         width: 20px;
-        height: 40px;
-        background: $orange3;
+        height: 58px;
+        background: #ffcc80;
         position: absolute;
-        top: 0%;
-        left: 0%;
+        top: 25%;
+        left: 17%;
+        -ms-transform-origin: center top;
         transform-origin: center top;
+        transform: rotateZ(-17deg)rotateX(59deg);
+        animation: parts 3s linear infinite;
+        @keyframes parts {
+            30% {
+                transform: rotateZ(-2deg)rotateX(59deg);
+            }
+            60%,
+            70%,
+            80%,
+            90%,
+            100% {
+                transform: rotateZ(-2deg)rotateX(0deg);
+            }
+        }
         .machine-hand {
             width: 50px;
             height: 50px;
             position: absolute;
-            background: $yellow8;
-            top: 0%;
-            left: 0%;
+            background: #fbc02d;
+            top: 100%;
+            left: -62%;
+            transform-origin: center top;
+            animation: swipe 3s linear infinite;
+            @keyframes swipe {
+                60%,
+                80%,
+                100% {
+                    transform: rotateZ(10deg)
+                }
+                70%,
+                90% {
+                    transform: rotateZ(-10deg)
+                }
+            }
         }
     }
 }
@@ -649,10 +685,7 @@ svg {
     transition: all .3s linear;
     transform-style: preserve-3d;
     .judo-lowbox {
-        @include lowbox(10%,
-        10%,
-        0%,
-        0%);
+        @include lowbox(10%, 10%, 0%, 0%);
     }
 }
 
@@ -701,32 +734,15 @@ svg {
     top: 56%;
     left: 50%;
     overflow: hidden;
-    background-position-x: 12px;
-    margin: calc(-28.750em/2) 0 0 calc(-62.5em/2);
-    width: 62.5em;
+    margin: calc(-28.750em/2) 0 0 calc(-57.5em/2);
+    width: 57.5em;
     height: 28.750em;
     background: url('../images/section1.png')no-repeat;
     transition: all .3s linear;
     background-position: 65% 64%;
     background-size: contain;
     animation: shanbtn 3s linear 5s;
-    @keyframes shanbtn {
-        10% {
-            opacity: .5;
-        }
-        30% {
-            opacity: 1;
-        }
-        50% {
-            opacity: .5;
-        }
-        70% {
-            opacity: 1;
-        }
-        90% {
-            opacity: .5;
-        }
-    }
+    @keyframes shanbtn {}
     .shan-lowbox {
         @include lowbox(10%,
         10%,
@@ -936,10 +952,30 @@ svg {
     position: absolute;
 }
 
+.light1 {
+    width: 18%;
+    height: 6%;
+    background: linear-gradient(to top, rgba(50, 200, 250, 0.1), rgba(50, 200, 250, 0.7));
+    position: absolute;
+    top: 36%;
+    left: 20%;
+    z-index: 99999999;
+    transform-origin: center top;
+    transform: rotateZ(-56deg);
+    transition: all 1s linear;
+    animation: light1 2s linear infinite;
+    @keyframes light1 {
+        50% {
+            height: 17%;
+            opacity: 0.7
+        }
+    }
+}
+
 .aside-boxcontrol {
-    position: fixed;
-    top: 40%;
-    left: 1%;
+    position: absolute;
+    top: 27%;
+    left: 0%;
     display: block;
     width: 50px;
     height: 150px;
@@ -958,7 +994,6 @@ svg {
             background: url('../images/icon.png')no-repeat;
             text-align: center;
             line-height: 10px;
-            outline: 1px solid white;
             cursor: pointer;
             border: 2px solid #f06292;
             &:hover {
@@ -975,7 +1010,6 @@ svg {
             background: url('../images/icon.png')no-repeat;
             border: 2px solid #f06292;
             background-position: -2px -50px;
-            outline: 1px solid white;
             cursor: pointer;
             &:hover {
                 .pos1 {
@@ -991,7 +1025,6 @@ svg {
             background: url('../images/icon.png')no-repeat;
             border: 2px solid #f06292;
             background-position: -2px -100px;
-            outline: 1px solid white;
             cursor: pointer;
             &:hover {
                 .pos2 {

@@ -1,5 +1,5 @@
 var obj = require('./getall');
-
+var object = require('./object');
 var source = require('../images/shanli.png');
 
 var shanLi1 = require('../images/shanli1.png');
@@ -377,14 +377,7 @@ awake.app = {
 
 
 // }
-awake.story = {
-    shanBtn: function() {
-        var shanBtn = obj.create('div');
-        shanBtn.className = 'shan-btn';
-        var awakeFS = obj.get('.awake-first-section');
-        awakeFS.insertAdjacentElement('afterbegin', shanBtn);
-    }
-}
+
 awake.call = {
     shanLi: "<div class='shan-li-hair1'></div><div class='shan-li-hair2'></div><div class='shan-li-hair3'></div><div class='shan-li-head'><div class='shan-li-eyebrow'></div><div class='shan-li-eyebrow2'></div><div class='shan-li-eye'><div class='shan-li-eyeball'></div></div><div class='shan-li-eye2'><div class='shan-li-eyeball2'></div></div><div class='shan-li-nose'></div><div class='shan-li-lips'></div><div class='shan-li-mouth'><div class='shan-li-teeth'></div></div><div class='shan-li-lips2'></div></div><div class='shan-li-neck'></div><div class='shan-li-body'><div class='shan-li-mimi'></div><div class='shan-li-mimi2'></div></div><div class='shan-li-arm'></div><div class='shan-li-arm2'></div><div class='shan-li-lowarm'><div class='shan-li-hand'></div></div><div class='shan-li-lowarm2'><div class='shan-li-hand2'></div></div><div class='shan-li-stomache'></div><div class='shan-li-peegu'></div><div class='shan-li-leg'></div><div class='shan-li-leg2'></div><div class='shan-li-lowleg'><div class='shan-li-feet'></div></div><div class='shan-li-lowleg2'><div class='shan-li-feet2'></div></div><div class='shan-li-book'><div class='shan-li-book-left'></div><div class='shan-li-book-right'></div><div class='shan-li-book-middle'></div></div>",
     shanAppear: function() {
@@ -403,6 +396,27 @@ awake.facebook = {
         var head = document.getElementsByTagName('head')[0];
         head.appendChild(script);
     }
+}
+awake.canvas = {
+    pic: require('../images/shan-li.png'),
+    canvas: null,
+    context: null,
+    img: null,
+    setup: function() {
+        var shanBtn = obj.get('.shan-btn');
+        this.canvas = obj.getId('canvas');
+        this.context = canvas.getContext('2d');
+        this.canvas.width = shanBtn.clientWidth;
+        this.canvas.height = shanBtn.clientHeight;
+
+        this.img = new Image();
+        this.img.onload = onImageLoad;
+        this.img.src = this.pic;
+    },
+    onImageLoad: function() {
+        console.log('image');
+    }
+
 }
 awake.command.awakeFirst().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
 awake.command.awakeSecond().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';

@@ -4,11 +4,11 @@ var $ = require('jquery');
 
 var obj = require('./getall');
 
-
-
+var object = require('./object');
+var shanLi = require('./shanStatus');
 
 var shan = require('./shanConversation');
-
+var say = require('./say');
 
 
 var location = require('./location');
@@ -16,10 +16,11 @@ var awake = require('./spa');
 window.onload = function() {
 
     awake.facebook.addScript();
-    awake.story.shanBtn();
+
     awake.call.shanAppear();
 
     awake.image.show();
+
 
 
     // awake.shanLiAwaken.story();
@@ -27,10 +28,8 @@ window.onload = function() {
 
     awake.shanLiAwaken.title();
     shan.talkBot.talkingDialog();
-    shan.talkBot.createLi();
-    // awake.shanLiAwaken.telling(awake.shanLiAwaken.year);
-    // awake.shanLiAwaken.telling(awake.shanLiAwaken.location);
-    // awake.shanLiAwaken.telling(awake.shanLiAwaken.event);
+    shan.talkBot.createLi('greeting')
+
 
 
     awake.button.select('.awake').onclick = function() {
@@ -151,7 +150,7 @@ function timerIncrease() {
     idleTime += 1;
     if (idleTime > 30) {
 
-        setTimeout(() => {
+        setTimeout(function() {
             shan.talkBot.createLi();
         }, shan.talkBot.random(5000));
 

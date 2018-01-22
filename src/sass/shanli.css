@@ -67,9 +67,7 @@ iframe[seamless] {
   top: 61%;
   left: 51%;
   transform-style: preserve-3d;
-  transform: translateZ(10px);
-  transform-origin: center bottom;
-  z-index: 99999999999999; }
+  transform-origin: center bottom; }
   .shan-li-boxcontrol .shan-li-hair1 {
     width: 45px;
     height: 18px;

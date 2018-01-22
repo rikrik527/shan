@@ -1,6 +1,7 @@
 var obj = require('./getall');
 var day = require('./day');
-var status = require('./shanStatus');
+var shanLi = require('./shanStatus');
+var say = require('./say');
 var shan = shan || {};
 shan.talkBot = {
 
@@ -55,7 +56,7 @@ shan.talkBot = {
         div.className = 'shan-conversation';
         var shanTalk = document.querySelector('.shan-talk');
         shanTalk.appendChild(div);
-        div.innerHTML = this.yushan + this.moment().concat(this.shanLiManner[this.random(3)]);
+        div.innerHTML = this.yushan + this.moment() + '!' + this.shanLiManner[this.random(3)] + shanLi.shanLi.knowledge.conversation['greeting'];
         console.log('finished li')
     }
 }
