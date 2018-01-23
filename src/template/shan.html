@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="icon.png">
-    <title>雨珊 Yushan artificial intelligence</title>
+    <title>雨珊 artificial intelligence</title>
 </head>
 
 
@@ -28,12 +28,24 @@
                 <div class="menu-boxcontrol">
                     <div class='header-brand'>
                         <cite class='mr-judo-made'>
-																							<h6 class="production">Yushan artificial intelligence<small class="developer"></small></h6>
+																							<h6 class="production">Artificial Intelligence<small class="developer"></small></h6>
 																									<h1 class='the-game'>
 																										雨珊
 																							</h1>
 																							<img id='shan-li-image' alt="雨珊" width="100px" height="160px">
-																							<div class="awake">
+										<div class="xs-menu l-display-none m-display-none">
+                                            <article class="xs-menu-section">
+                                            <ul class="xs-menu-menu">
+<li class="xs-awake">甦醒 Awake</li>
+<li class="xs-prologue">前言 Prologue</li>
+<li class="xs-location">方位 Location</li>
+<li class="xs-epilogue">後記 epilogue</li>
+                                            </ul>
+
+
+
+                                            </article>
+                                        </div>													<div class="awake xs-display-none">
 																									<div class="awake-border-up"></div>
 
 																									<div class="awake-border-down"></div>
@@ -47,7 +59,7 @@
 																									</div>
 
 																							</div>
-																							<div class="prologue">
+																							<div class="prologue xs-display-none">
 																									<div class="prologue-border-up"></div>
 
 																									<div class="prologue-border-down"></div>
@@ -66,7 +78,7 @@
 
 
 																							</div>
-																							<div class="location">
+																							<div class="location xs-display-none">
 
 																									<div class="location-border-up"></div>
 
@@ -85,7 +97,7 @@
 
 
 																							</div>
-																							<div class="epilogue">
+																							<div class="epilogue xs-display-none">
 																									<div class="epilogue-border-up"></div>
 
 																									<div class="epilogue-border-down"></div>
@@ -116,44 +128,45 @@
             </header>
             <div id='WebGL-output'></div>
             <div id="stats-output"></div>
-
-            <section class="awake-first-section clearfix">
-                <div class="shan-btn"> <canvas id="canvas">
+            <div class="perspective">
+                <div class="preserved-3d">
+                    <section class="awake-first-section clearfix">
+                        <div class="shan-btn"> <canvas id="canvas">
 															your browswer does not support canvas
                                                     </canvas>
-                    <aside class='aside-boxcontrol'>
-                        <ul class='aside-menu'>
-                            <li class="nav todo-list">
+                            <aside class='aside-boxcontrol'>
+                                <ul class='aside-menu'>
+                                    <li class="nav todo-list">
 
-                                <span class="tips pos">ToDoList</span>
-                            </li>
-                            <li class='nav icon-personal'>
+                                        <span class="tips pos">ToDoList</span>
+                                    </li>
+                                    <li class='nav icon-personal'>
 
-                                <span class="tips pos1">Calendar</span>
+                                        <span class="tips pos1">Calendar</span>
 
-                            </li>
-                            <li class='nav icon-service'>
+                                    </li>
+                                    <li class='nav icon-service'>
 
-                                <span class="tips pos2">Chat with Shan-li</span>
+                                        <span class="tips pos2">Chat with Shan-li</span>
 
-                            </li>
-                        </ul>
-                    </aside>
-                    <div class="machine-arm">
-                        <div class="machine-arm2">
-                            <div class="machine-hand">
+                                    </li>
+                                </ul>
+                            </aside>
+                            <div class="machine-arm">
+                                <div class="machine-arm2">
+                                    <div class="machine-hand">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="light1"></div>
-                    <div class="light2"></div>
-                    <div class="light3"></div>
-                    <div class="shan-status">
-                        <div class="shan-status-words"></div>
-                    </div>
+                            <div class="light1"></div>
+                            <div class="light2"></div>
+                            <div class="light3"></div>
+                            <div class="shan-status">
+                                <div class="shan-status-words"></div>
+                            </div>
 
 
-                    <video id="lab" autoplay>
+                            <video id="lab" autoplay>
 	<source id="lab-mp4" type="video/mp4">
 	<source id="lab-ogg" type="video/ogg">
 			你的瀏覽器不支援HTML5影片格式
@@ -163,181 +176,206 @@
 
 
 
-                    <article class='nopo-boxcontrol'>
-                        <div class='nopo-hair'>
-                            <div class='nopo-mawei'>
-                                <div class='nopo-hair2'></div>
-                            </div>
-                        </div>
-                        <div class='nopo-face'>
-                            <div class='nopo-chink'></div>
-                            <div class='nopo-chink2'></div>
-                            <div class='nopo-nose'></div>
-                            <div class='nopo-nose-left'></div>
-                            <div class='nopo-nose-right'></div>
-                            <div class='nopo-ear'>
-                                <div class='nopo-ear-deco'></div>
-                            </div>
-                            <div class='nopo-ear2'>
-                                <div class='nopo-ear2-deco'></div>
-                            </div>
-                            <div class='nopo-eyebrow'></div>
-                            <div class='nopo-eyebrow2'></div>
-                            <div class='nopo-eye'>
-                                <div class='nopo-eyeball'></div>
-                            </div>
-                            <div class='nopo-eye2'>
-                                <div class='nopo-eyeball2'></div>
-                            </div>
-                            <div class='nopo-lips'>
-                                <div class='nopo-mouth'>
-                                    <div class='nopo-teeth'></div>
-                                </div>
-                                <div class='nopo-lips2'></div>
-                            </div>
-                            <div class='nopo-jaw'></div>
-                        </div>
-                        <div class='nopo-neck'>
-                            <div class='nopo-necklace'></div>
-                        </div>
-                        <div class='nopo-body'>
-                            <div class='nopo-arm'>
-                                <div class='nopo-bicep'>
-                                    <div class='nopo-lowarm'>
-                                        <div class='nopo-hand'></div>
+                            <article class='nopo-boxcontrol'>
+                                <div class='nopo-hair'>
+                                    <div class='nopo-mawei'>
+                                        <div class='nopo-hair2'></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class='nopo-arm2'>
-                                <div class='nopo-bicep2'>
-                                    <div class='nopo-lowarm2'>
-                                        <div class='nopo-hand2'></div>
+                                <div class='nopo-face'>
+                                    <div class='nopo-chink'></div>
+                                    <div class='nopo-chink2'></div>
+                                    <div class='nopo-nose'></div>
+                                    <div class='nopo-nose-left'></div>
+                                    <div class='nopo-nose-right'></div>
+                                    <div class='nopo-ear'>
+                                        <div class='nopo-ear-deco'></div>
+                                    </div>
+                                    <div class='nopo-ear2'>
+                                        <div class='nopo-ear2-deco'></div>
+                                    </div>
+                                    <div class='nopo-eyebrow'></div>
+                                    <div class='nopo-eyebrow2'></div>
+                                    <div class='nopo-eye'>
+                                        <div class='nopo-eyeball'></div>
+                                    </div>
+                                    <div class='nopo-eye2'>
+                                        <div class='nopo-eyeball2'></div>
+                                    </div>
+                                    <div class='nopo-lips'>
+                                        <div class='nopo-mouth'>
+                                            <div class='nopo-teeth'></div>
+                                        </div>
+                                        <div class='nopo-lips2'></div>
+                                    </div>
+                                    <div class='nopo-jaw'></div>
+                                </div>
+                                <div class='nopo-neck'>
+                                    <div class='nopo-necklace'></div>
+                                </div>
+                                <div class='nopo-body'>
+                                    <div class='nopo-arm'>
+                                        <div class='nopo-bicep'>
+                                            <div class='nopo-lowarm'>
+                                                <div class='nopo-hand'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='nopo-arm2'>
+                                        <div class='nopo-bicep2'>
+                                            <div class='nopo-lowarm2'>
+                                                <div class='nopo-hand2'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='nopo-mimi'>
+                                        <div class='nopo-mimi-deco'></div>
+                                    </div>
+                                    <div class='nopo-mimi2'>
+                                        <div class='nopo-mimi2-deco'></div>
+                                    </div>
+                                    <div class='nopo-lowbody'>
+                                        <div class='nopo-fat-left'></div>
+                                        <div class='nopo-fat-right'></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class='nopo-mimi'>
-                                <div class='nopo-mimi-deco'></div>
-                            </div>
-                            <div class='nopo-mimi2'>
-                                <div class='nopo-mimi2-deco'></div>
-                            </div>
-                            <div class='nopo-lowbody'>
-                                <div class='nopo-fat-left'></div>
-                                <div class='nopo-fat-right'></div>
-                            </div>
-                        </div>
-                        <div class='nopo-peegu'>
-                            <div class='nopo-fats'></div>
-                            <div class='nopo-fats2'></div>
-                            <div class='nopo-skirt'></div>
-                            <div class='nopo-leg'>
-                                <div class='nopo-lowleg'>
-                                    <div class='nopo-boot'>
-                                        <div class='nopo-foot'></div>
+                                <div class='nopo-peegu'>
+                                    <div class='nopo-fats'></div>
+                                    <div class='nopo-fats2'></div>
+                                    <div class='nopo-skirt'></div>
+                                    <div class='nopo-leg'>
+                                        <div class='nopo-lowleg'>
+                                            <div class='nopo-boot'>
+                                                <div class='nopo-foot'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='nopo-leg2'>
+                                        <div class='nopo-lowleg2'>
+                                            <div class='nopo-boot2'>
+                                                <div class='nopo-foot2'></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class='nopo-leg2'>
-                                <div class='nopo-lowleg2'>
-                                    <div class='nopo-boot2'>
-                                        <div class='nopo-foot2'></div>
-                                    </div>
+                                <div class='nopo-effect1'></div>
+                                <div class='nopo-effect2'></div>
+                                <div class='nopo-effect3'></div>
+                                <div class='nopo-effect4'></div>
+                                <div class='nopo-effect5'></div>
+                                <div class='nopo-effect6'></div>
+                                <div class='nopo-effect7'></div>
+                            </article>
+                            <article id="todo-list">
+                                <span class="todo-close">X</span>
+                                <h2 class="todo-title">為雨珊加點東西吧</h2>
+                                <div class="todo-add-list">
+
+                                    <div class="todo todo1"><span class="todotips todo-pos1">Add parts </span></div>
+                                    <div class="todo todo2"><span class="todotips todo-pos2">Add knowledge</span></div>
+                                    <div class="todo todo3"><span class="todotips todo-pos3">Add emotion</span></div>
+                                    <div class="todo todo4"><span class="todotips todo-pos4">Add battery</span></div>
+                                    <div class="todo todo5"><span class="todotips todo-pos5">Add action</span></div>
                                 </div>
+                                <div class="todo-set"><input type="button" value="Add" class="todo-add-btn"></div>
+                            </article>
+                            <article class="todo-status">
+                                <div class="todo-progress">
+                                    <div class="todo-icon-ability"></div>
+                                    <progress value="0" max="100" class="todo-ability"></progress>
+                                    <div class="todo-ability-1"></div>
+                                    <div class="todo-ability-2"></div>
+                                    <div class="todo-ability-3"></div>
+                                    <div class="todo-ability-4"></div>
+                                    <div class="todo-ability-5"></div>
+
+                                    <div class="todo-icon-iq"></div>
+                                    <progress value="0" max="100" class="todo-iq"></progress>
+                                    <div class="todo-iq-1"></div>
+                                    <div class="todo-iq-2"></div>
+                                    <div class="todo-iq-3"></div>
+                                    <div class="todo-iq-4"></div>
+                                    <div class="todo-iq-5"></div>
+
+                                    <div class="todo-icon-emotion"></div>
+                                    <progress value="0" max="100" class="todo-emotion"></progress>
+                                    <div class="todo-emotion-1"></div>
+                                    <div class="todo-emotion-2"></div>
+                                    <div class="todo-emotion-3"></div>
+                                    <div class="todo-emotion-4"></div>
+                                    <div class="todo-emotion-5"></div>
+                                    <div class="todo-icon-action"></div>
+
+                                    <progress value="0" max="100" class="todo-action"></progress>
+                                    <div class="todo-action-1"></div>
+                                    <div class="todo-action-2"></div>
+                                    <div class="todo-action-3"></div>
+                                    <div class="todo-action-4"></div>
+                                    <div class="todo-action-5"></div>
+                                    <div class="todo-icon-stamina"></div>
+                                    <progress value="0" max="100" class="todo-stamina"></progress>
+                                    <div class="todo-stamina-1"></div>
+                                    <div class="todo-stamina-2"></div>
+                                    <div class="todo-stamina-3"></div>
+                                    <div class="todo-stamina-4"></div>
+                                    <div class="todo-stamina-5"></div>
+                                </div>
+
+                                <div class="tips-dynamic"></div>
+                            </article>
+
+
+                            <footer class='footer-boxcontrol'>
+                                <div id="footer-content"></div>
+                            </footer>
+                        </div> <br clear:both/>
+                    </section>
+                    <section class="awake-second-section">
+                        <div class="shan-btn-2"></div>
+                    </section>
+                    <section class="awake-third-section">
+                        <div class="shan-btn-3"></div>
+                    </section>
+                    <section class="awake-fourth-section">
+                        <div class="shan-btn-4"></div>
+                    </section>
+                    <section class="awake-fifth-section">
+                        <div class="shan-btn-5"></div>
+                    </section>
+                    <section class="prologue-first-section">
+                        <div class="shan-btn-prologue">
+                            <div id="track">
+                                <div id="slider"></div>
                             </div>
+
+                            <article class="image-slider">
+                                <h2 class="image-title">Display image slider</h2>
+                                <div class="myslides1" style="width:100%"></div>
+                                <div class="myslides2" style="width:100%"></div>
+                                <div class="myslides3" style="width:100%"></div>
+                                <div class="myslides4" style="width:100%"></div>
+                                <button class="next-img-btn">&#10094;</button>
+                                <button class="prev-img-btn">&#10095;</button>
+                                <div class="dot-container">
+                                    <span class="dot1"></span>
+                                    <span class="dot2"></span>
+                                    <span class="dot3"></span>
+                                    <span class="dot4"></span>
+
+                                </div>
+                            </article>
+
+
                         </div>
-                        <div class='nopo-effect1'></div>
-                        <div class='nopo-effect2'></div>
-                        <div class='nopo-effect3'></div>
-                        <div class='nopo-effect4'></div>
-                        <div class='nopo-effect5'></div>
-                        <div class='nopo-effect6'></div>
-                        <div class='nopo-effect7'></div>
-                    </article>
-                    <article id="todo-list">
-                        <span class="todo-close">X</span>
-                        <h2 class="todo-title">為雨珊加點東西吧</h2>
-                        <div class="todo-add-list">
-
-                            <div class="todo todo1"><span class="todotips todo-pos1">Add parts </span></div>
-                            <div class="todo todo2"><span class="todotips todo-pos2">Add knowledge</span></div>
-                            <div class="todo todo3"><span class="todotips todo-pos3">Add emotion</span></div>
-                            <div class="todo todo4"><span class="todotips todo-pos4">Add battery</span></div>
-                            <div class="todo todo5"><span class="todotips todo-pos5">Add action</span></div>
-                        </div>
-                        <div class="todo-set"><input type="button" value="Add" class="todo-add-btn"></div>
-                    </article>
-                    <article class="todo-status">
-                        <div class="todo-progress">
-                            <div class="todo-icon-ability"></div>
-                            <progress value="0" max="100" class="todo-ability"></progress>
-                            <div class="todo-ability-1"></div>
-                            <div class="todo-ability-2"></div>
-                            <div class="todo-ability-3"></div>
-                            <div class="todo-ability-4"></div>
-                            <div class="todo-ability-5"></div>
-
-                            <div class="todo-icon-iq"></div>
-                            <progress value="0" max="100" class="todo-iq"></progress>
-                            <div class="todo-iq-1"></div>
-                            <div class="todo-iq-2"></div>
-                            <div class="todo-iq-3"></div>
-                            <div class="todo-iq-4"></div>
-                            <div class="todo-iq-5"></div>
-
-                            <div class="todo-icon-emotion"></div>
-                            <progress value="0" max="100" class="todo-emotion"></progress>
-                            <div class="todo-emotion-1"></div>
-                            <div class="todo-emotion-2"></div>
-                            <div class="todo-emotion-3"></div>
-                            <div class="todo-emotion-4"></div>
-                            <div class="todo-emotion-5"></div>
-                            <div class="todo-icon-action"></div>
-
-                            <progress value="0" max="100" class="todo-action"></progress>
-                            <div class="todo-action-1"></div>
-                            <div class="todo-action-2"></div>
-                            <div class="todo-action-3"></div>
-                            <div class="todo-action-4"></div>
-                            <div class="todo-action-5"></div>
-                            <div class="todo-icon-stamina"></div>
-                            <progress value="0" max="100" class="todo-stamina"></progress>
-                            <div class="todo-stamina-1"></div>
-                            <div class="todo-stamina-2"></div>
-                            <div class="todo-stamina-3"></div>
-                            <div class="todo-stamina-4"></div>
-                            <div class="todo-stamina-5"></div>
-                        </div>
-
-                        <div class="tips-dynamic"></div>
-                    </article>
-
-
-                    <footer class='footer-boxcontrol'>
-                        <div id="footer-content"></div>
-                    </footer>
-                </div> <br clear:both/>
-            </section>
-            <section class="awake-second-section">
-                <div class="shan-btn-2"></div>
-            </section>
-            <section class="awake-third-section">
-                <div class="shan-btn-3"></div>
-            </section>
-            <section class="awake-fourth-section">
-                <div class="shan-btn-4"></div>
-            </section>
-            <section class="awake-fifth-section">
-                <div class="shan-btn-5"></div>
-            </section>
-            <section class="prologue-first-section">
-                <div class="shan-btn-prologue"></div>
-            </section>
-            <section class="location-first-section">
-                <div class="shan-btn-location"></div>
-            </section>
-            <section class="epilogue-first-section">
-                <div class="shan-btn-epilogue"></div>
-            </section>
+                    </section>
+                    <section class="location-first-section">
+                        <div class="shan-btn-location"></div>
+                    </section>
+                    <section class="epilogue-first-section">
+                        <div class="shan-btn-epilogue"></div>
+                    </section>
+                </div>
+            </div>
         </main>
         <div class="btn-next"></div>
 

@@ -415,6 +415,33 @@ awake.canvas = {
     },
     onImageLoad: function() {
         console.log('image');
+    },
+    octagon: function() {
+        var shanBtn = obj.get('.shan-btn');
+        this.canvas = obj.getId('canvas');
+        this.context = canvas.getContext('2d');
+        this.canvas.width = shanBtn.clientWidth;
+        this.canvas.height = shanBtn.clientHeight;
+        window.onresize = function() {
+            this.canvas.width = shanBtn.clientWidth;
+            this.canvas.height = shanBtn.clientHeight;
+        };
+
+        var numberOfSide = 6,
+            size = 10,
+            xCenter = 100,
+            yCenter = 100;
+        this.context.beginPath();
+        this.context.moveTo(xCenter + size * Math.cos(0), yCenter + size * Math.sin(0));
+        console.log(this.context);
+        for (var i = 0; i <= numberOfSide; i++) {
+            this.context.lineTo(xCenter + size * Math.cos(i * 2 * Math.PI / numberOfSide), yCenter + size * Math.sin(i * 2 * Math.PI / numberOfSide));
+        }
+        this.context.strokeStyle = 'white';
+        this.context.lineWidth = 20;
+        this.context.stroke();
+
+
     }
 
 }

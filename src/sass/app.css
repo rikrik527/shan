@@ -23,11 +23,14 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+@media screen and (min-width: 901px) and (max-width: 5000px) {
+  .l-display-none {
+    display: none; } }
 @media screen and (min-width: 505px) and (max-width: 900px) {
   .shan-btn,
   .shan-btn2 {
-    margin: calc(-28.750em/2) 0 0 calc(-50.5em/2) !important;
-    width: 50.5em !important;
+    margin: calc(-28.750em/2) 0 0 calc(-95%/2) !important;
+    width: 95% !important;
     background-size: cover !important;
     background-position: 43% !important; }
 
@@ -35,8 +38,36 @@
     left: 69% !important; }
 
   .machine-arm {
-    left: 62% !important; } }
+    left: 62% !important; }
+
+  .m-display-none {
+    display: none; } }
 @media screen and (min-width: 320px) and (max-width: 504px) {
+  .xs-menu {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ad1457, #f8bbd0);
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start; }
+
+  .xs-menu-section {
+    width: 100vw; }
+
+  .xs-awake,
+  .xs-epilogue,
+  .xs-location,
+  .xs-prologue {
+    color: paleturquoise;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px; }
+
+  .xs-display-none {
+    display: none; }
+
   .header-brand {
     left: 38% !important;
     width: 400px !important; }
@@ -105,7 +136,7 @@
 
   #todo-list {
     width: 64% !important;
-    left: 36% !important; }
+    left: 31% !important; }
 
   /* form */
   .title-shan {
@@ -5245,6 +5276,21 @@ iframe:focus {
 iframe[seamless] {
   display: block; }
 
+/* awake page animation */
+.rotatey {
+  animation: rotatey 5s linear forwards; }
+@keyframes rotatey {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(-360deg); } }
+.rotateyback {
+  animation: rotateyback 5s linear forwards; }
+@keyframes rotateyback {
+  from {
+    transform: rotateY(-360deg); }
+  to {
+    transform: rotateY(0deg); } }
 /* animation hand set */
 .handboxcontrol1 {
   animation: handboxcontrol 1s linear 2s infinite; }
@@ -7553,7 +7599,6 @@ iframe[seamless] {
     left: 50%;
     margin: calc(-50px/2) 0 0 calc(-250px/2);
     top: 116%;
-    border: 2px solid pink;
     border-radius: 0 0 10px 10px;
     overflow: hidden; }
   #todo-list .todo1,
@@ -7602,6 +7647,74 @@ iframe[seamless] {
       #todo-list .todo-set .todo-add-btn:hover {
         background: #ffee58; }
 
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+.shan-btn-prologue {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to bottom, #ad1457, #f8bbd0);
+  position: absolute; }
+
+#track {
+  position: fixed;
+  right: 1%;
+  top: 30%;
+  border-radius: 10px;
+  width: 15px;
+  height: 50%;
+  background: #90a4ae; }
+  #track #slider {
+    position: absolute;
+    background: linear-gradient(to right, #64b5f6, white, #64b5f6);
+    cursor: pointer; }
+
+.image-slider {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative; }
+  .image-slider .image-title {
+    color: #ffee58;
+    font-size: 20px; }
+  .image-slider .next-img-btn {
+    width: 100px;
+    height: 50px;
+    background: #ffee58;
+    display: block;
+    float: right; }
+  .image-slider .prev-img-btn {
+    width: 100px;
+    height: 50px;
+    background: #ffee58;
+    display: block;
+    float: left; }
+  .image-slider .dot-container {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    margin: calc(-50px/2) 0 0 calc(-250px/2); }
+    .image-slider .dot-container .dot1,
+    .image-slider .dot-container .dot2,
+    .image-slider .dot-container .dot3,
+    .image-slider .dot-container .dot4 {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 100px;
+      float: left;
+      margin: 1%; }
+
 .login-page {
   display: none; }
 
@@ -7622,7 +7735,8 @@ svg {
 .wrapper {
   width: 100%;
   height: auto;
-  font-size: 15px; }
+  font-size: 15px;
+  background: black; }
 
 #canvas {
   position: absolute;
@@ -7649,6 +7763,12 @@ svg {
   position: absolute;
   background-size: contain;
   z-index: -99999999999999; }
+
+.perspective {
+  perspective: 1000px; }
+
+.preserve-3d {
+  transform-style: preserve-3d; }
 
 .header-menu {
   position: absolute;
@@ -7989,19 +8109,19 @@ svg {
 .machine-arm {
   width: 30px;
   height: 40px;
-  background: #ff9800;
   position: absolute;
   top: 42%;
   left: 74%;
   z-index: 9999999;
+  background: url("../images/machine1.png") no-repeat;
   -ms-transform-origin: center top;
   transform-origin: center top;
   transform: rotateZ(71deg);
   z-index: 9999999; }
   .machine-arm .machine-arm2 {
+    background: url("../images/machine2.png") no-repeat;
     width: 20px;
     height: 58px;
-    background: #ffcc80;
     position: absolute;
     top: 25%;
     left: 17%;
@@ -8022,9 +8142,9 @@ svg {
       width: 50px;
       height: 50px;
       position: absolute;
-      background: #fbc02d;
+      background: url("../images/machine3.png") no-repeat;
       top: 100%;
-      left: -62%;
+      left: -69%;
       transform-origin: center top;
       animation: swipe 3s linear infinite; }
 @keyframes swipe {
@@ -8087,8 +8207,11 @@ svg {
   left: 0;
   z-index: 5;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  backface-visibility: hidden;
+  transform-origin: center left;
+  transform-style: preserve-3d;
   background: linear-gradient(to bottom, #c2185b, #f8bbd0, #c2185b);
   transform: translateZ(0px); }
 
@@ -8098,9 +8221,12 @@ svg {
   left: 0;
   z-index: 4;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  backface-visibility: hidden;
+  transform-origin: center left;
+  transform-style: preserve-3d;
   transform: translateZ(0px); }
 
 .awake-third-section {
@@ -8109,9 +8235,12 @@ svg {
   left: 0;
   z-index: 0;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  backface-visibility: hidden;
+  transform-origin: center left;
+  transform-style: preserve-3d;
   transform: translateZ(0px); }
 
 .awake-fourth-section {
@@ -8120,9 +8249,12 @@ svg {
   left: 0;
   z-index: 0;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  backface-visibility: hidden;
+  transform-origin: center left;
+  transform-style: preserve-3d;
   transform: translateZ(0px); }
 
 .awake-fifth-section {
@@ -8131,9 +8263,12 @@ svg {
   left: 0;
   z-index: 0;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  backface-visibility: hidden;
+  transform-origin: center left;
+  transform-style: preserve-3d;
   transform: translateZ(0px); }
 
 .prologue-first-section {
@@ -8142,9 +8277,12 @@ svg {
   left: 0;
   z-index: 3;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  backface-visibility: hidden;
+  transform-origin: center left;
+  transform-style: preserve-3d;
   transform: translateZ(0px); }
 
 .location-first-section {
@@ -8153,9 +8291,12 @@ svg {
   left: 0;
   z-index: 2;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #bbdefb, #1976d2);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  backface-visibility: hidden;
+  transform-origin: center left;
+  transform-style: preserve-3d;
   transform: translateZ(0px); }
 
 .epilogue-first-section {
@@ -8164,9 +8305,12 @@ svg {
   left: 0;
   z-index: 1;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #fff9c4, #f57c00);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  backface-visibility: hidden;
+  transform-origin: center left;
+  transform-style: preserve-3d;
   transform: translateZ(0px); }
 
 .judo-btn {
@@ -8467,7 +8611,7 @@ svg {
 .aside-boxcontrol {
   position: absolute;
   top: 27%;
-  left: 0%;
+  left: 2%;
   display: block;
   width: 50px;
   height: 150px;

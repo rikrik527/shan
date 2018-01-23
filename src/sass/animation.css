@@ -59,6 +59,21 @@ iframe:focus {
 iframe[seamless] {
   display: block; }
 
+/* awake page animation */
+.rotatey {
+  animation: rotatey 5s linear forwards; }
+@keyframes rotatey {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(-360deg); } }
+.rotateyback {
+  animation: rotateyback 5s linear forwards; }
+@keyframes rotateyback {
+  from {
+    transform: rotateY(-360deg); }
+  to {
+    transform: rotateY(0deg); } }
 /* animation hand set */
 .handboxcontrol1 {
   animation: handboxcontrol 1s linear 2s infinite; }

@@ -1,6 +1,33 @@
 @import './color';
 @import './judoVariable';
 
+/* awake page animation */
+
+.rotatey {
+    animation: rotatey 5s linear forwards;
+    @keyframes rotatey {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-360deg)
+        }
+    }
+}
+
+.rotateyback {
+    animation: rotateyback 5s linear forwards;
+    @keyframes rotateyback {
+        from {
+            transform: rotateY(-360deg);
+        }
+        to {
+            transform: rotateY(0deg)
+        }
+    }
+}
+
+
 /* animation hand set */
 
 .handboxcontrol1 {

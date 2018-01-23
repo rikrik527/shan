@@ -68,7 +68,6 @@
     left: 50%;
     margin: calc(-50px/2) 0 0 calc(-250px/2);
     top: 116%;
-    border: 2px solid pink;
     border-radius: 0 0 10px 10px;
     overflow: hidden; }
   #todo-list .todo1,

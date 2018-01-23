@@ -10,11 +10,14 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+@media screen and (min-width: 901px) and (max-width: 5000px) {
+  .l-display-none {
+    display: none; } }
 @media screen and (min-width: 505px) and (max-width: 900px) {
   .shan-btn,
   .shan-btn2 {
-    margin: calc(-28.750em/2) 0 0 calc(-50.5em/2) !important;
-    width: 50.5em !important;
+    margin: calc(-28.750em/2) 0 0 calc(-95%/2) !important;
+    width: 95% !important;
     background-size: cover !important;
     background-position: 43% !important; }
 
@@ -22,8 +25,36 @@
     left: 69% !important; }
 
   .machine-arm {
-    left: 62% !important; } }
+    left: 62% !important; }
+
+  .m-display-none {
+    display: none; } }
 @media screen and (min-width: 320px) and (max-width: 504px) {
+  .xs-menu {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ad1457, #f8bbd0);
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start; }
+
+  .xs-menu-section {
+    width: 100vw; }
+
+  .xs-awake,
+  .xs-epilogue,
+  .xs-location,
+  .xs-prologue {
+    color: paleturquoise;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px; }
+
+  .xs-display-none {
+    display: none; }
+
   .header-brand {
     left: 38% !important;
     width: 400px !important; }
@@ -92,7 +123,7 @@
 
   #todo-list {
     width: 64% !important;
-    left: 36% !important; }
+    left: 31% !important; }
 
   /* form */
   .title-shan {

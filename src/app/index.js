@@ -1,6 +1,6 @@
 require('../sass/app.scss');
 var $ = require('jquery');
-
+var prologue = require('./prologue');
 
 var obj = require('./getall');
 
@@ -15,13 +15,22 @@ var location = require('./location');
 var awake = require('./spa');
 window.onload = function() {
 
+    document.querySelector('.xs-menu').style.display = 'none';
+    obj.get('.todo-add-btn').onclick = function() {
+        obj.get('.xs-menu').style.display = 'flex';
+        setTimeout(() => {
+            obj.get('.xs-menu').style.display = 'none';
+        }, 3000);
+    }
     awake.facebook.addScript();
 
     awake.call.shanAppear();
 
     awake.image.show();
 
-
+    (function() {
+        awake.canvas.octagon();
+    })();
 
     // awake.shanLiAwaken.story();
     awake.command.nameSvg();
@@ -33,6 +42,7 @@ window.onload = function() {
 
 
     awake.button.select('.awake').onclick = function() {
+        console.log('clicked')
         if (awake.command.awakeFirst().style.top == "-100%") {
             console.log('its -100%');
         } else {
@@ -67,23 +77,23 @@ btn.onclick = (function() {
     return function() {
         switch (click) {
             case 1:
-                awake.command.awakeFirst().style.top = '-100%';
+                awake.command.awakeFirst().classList.add('rotatey');
                 console.log(click);
                 break;
             case 2:
-                awake.command.awakeSecond().style.top = '-100%';
+                awake.command.awakeSecond().classList.add('rotatey');
                 console.log(click);
                 break;
             case 3:
-                awake.command.prologue().style.top = '-100%';
+                awake.command.prologue().classList.add('rotatey');
                 console.log(click);
                 break;
             case 4:
-                awake.command.location().style.top = '-100%';
+                awake.command.location().classList.add('rotatey');
                 console.log(click);
                 break;
             case 5:
-                awake.command.epilogue().style.top = '-100%';
+                awake.command.epilogue().classList.add('rotatey');
                 btn.style.display = 'none';
                 btnBack.style.display = 'block';
                 console.log(click);
@@ -92,11 +102,11 @@ btn.onclick = (function() {
         click++;
         btnBack.onclick = function() {
 
-            awake.command.awakeFirst().style = '0%';
-            awake.command.awakeSecond().style = '0%';
-            awake.command.prologue().style = '0%';
-            awake.command.location().style = '0%';
-            awake.command.epilogue().style = '0%';
+            awake.command.awakeFirst().classList.remove('rotatey');
+            awake.command.awakeSecond().classList.remove('rotatey');
+            awake.command.prologue().classList.remove('rotatey');
+            awake.command.location().classList.remove('rotatey');
+            awake.command.epilogue().classList.remove('rotatey');
             btnBack.style.display = 'none';
             btn.style.display = 'block';
         }
