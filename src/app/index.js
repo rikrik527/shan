@@ -22,6 +22,17 @@ window.onload = function() {
             obj.get('.xs-menu').style.display = 'none';
         }, 3000);
     }
+    var todoList = obj.getId('todo-list');
+    todoList.ontouchstart = function(e) {
+        var touch = e.touches[0];
+        console.log('touches');
+    }
+    todoList.ontouchmove = function(e) {
+        var touchX = e.changedTouches[0].clientX;
+        var touchY = e.changedTouches[0].clientY;
+        this.style.left = touchX;
+        this.style.top = touchY;
+    }
     awake.facebook.addScript();
 
     awake.call.shanAppear();
