@@ -26,8 +26,10 @@
   height: 50%;
   background: #90a4ae; }
   #track #slider {
+    border-radius: 10px;
+    width: 100%;
     position: absolute;
-    background: linear-gradient(to right, #64b5f6, white, #64b5f6);
+    background: linear-gradient(to right, #e1f5c4, #ece473, #e1f5c4);
     cursor: pointer; }
 
 .image-slider {

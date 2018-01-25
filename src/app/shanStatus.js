@@ -11,33 +11,37 @@ shanLi.ability = {
     emotion: 0,
     battery: 0,
     action: 0,
-    parts: [],
+    parts: []
 
 }
 
 
-// shanLi.conversationLev = 0;
-// shanLi.programmingLev = 0;
-// shanLi.designLev = 0;
-// shanLi.musicLev = 0;
-// shanLi.kongfuLev = 0;
-shanLi.knowledge = [
-    { name: 'conversation', level: 0 },
-    { name: 'programming language', level: 0 },
-    { name: 'modern design', level: 0 },
-    { name: 'music create', level: 0 },
-    { name: 'kong-fu', level: 0 },
 
-]
-shanLi.knowledge = {
-    conversation: {
-        sigh: ['....'],
-        greeting: ['!你好,很高興見到你', '!我叫做雨珊請多指教!', '!今天過得如何?', '!吃飯了嗎?']
+shanLi.knowledgeskill = {
+        name: [
+            'conversation',
+            'programming',
+            'design',
+            'music',
+            'art'
+        ],
+        level: {
+            conversation: 0,
+            programming: 0,
+            design: 0,
+            music: 0,
+            art: 0
+        }
+    },
+    shanLi.knowledge = {
+        conversation: {
+            sigh: ['....'],
+            greeting: ['!博士,很高興見到你', '!博士,今天也要加油哦!', '!博士,吃過了嗎?', '!博士,甘巴爹!我愛你!']
+        }
+
+
+
     }
-
-
-
-}
 
 
 module.exports = shanLi;

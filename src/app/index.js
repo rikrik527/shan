@@ -15,6 +15,8 @@ var location = require('./location');
 var awake = require('./spa');
 window.onload = function() {
 
+
+    prologue.slides();
     document.querySelector('.xs-menu').style.display = 'none';
     obj.get('.todo-add-btn').onclick = function() {
         obj.get('.xs-menu').style.display = 'flex';
@@ -28,10 +30,10 @@ window.onload = function() {
         console.log('touches');
     }
     todoList.ontouchmove = function(e) {
-        var touchX = e.changedTouches[0].clientX;
-        var touchY = e.changedTouches[0].clientY;
-        this.style.left = touchX;
-        this.style.top = touchY;
+        var touches = e.changedTouches[0].identifier;
+        console.log('touchmove', touches)
+        todoList.style.left = touches.clientX;
+        todoList.style.top = touches.clientY;
     }
     awake.facebook.addScript();
 
@@ -47,8 +49,10 @@ window.onload = function() {
     awake.command.nameSvg();
 
     awake.shanLiAwaken.title();
-    shan.talkBot.talkingDialog();
-    shan.talkBot.createLi('greeting')
+    shan.talk.talkingDialog();
+    setTimeout(() => {
+        shan.talk.createLi.call(shanLi, 1, 2);
+    }, 5000);
 
 
 

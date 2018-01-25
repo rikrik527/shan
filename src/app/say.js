@@ -1,11 +1,11 @@
 var obj = require('./getall');
 var object = require('./object');
 exports.choice = function(a, b) {
-
+    var answer = this.answer;
     if (a > b) {
-        return alert(JSON.stringify(this.conversation["sigh"]));
+        answer = "sign";
     } else if (b < a) {
-        return alert(JSON.stringify(this.conversation["greeting"]));
+        answer = "greeting";
     }
 
 }

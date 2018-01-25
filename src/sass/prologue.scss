@@ -16,8 +16,10 @@
     height: 50%;
     background: $bluegrey4;
     #slider {
+        border-radius: 10px;
+        width: 100%;
         position: absolute;
-        background: linear-gradient(to right, $blue4, white, $blue4);
+        background: linear-gradient(to right, $apple-white, $apple-skin, $apple-white);
         cursor: pointer;
     }
 }
