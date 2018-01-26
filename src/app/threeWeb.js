@@ -1,7 +1,7 @@
 var THREE = require('three');
 var threeLoader = require('three-json-loader');
 var obj = require('./getall');
-var labJson = require('https://github.com/rikrik527/shan/blob/master/src/json/lab.json');
+import labJson from '../json/lab.js';
 module.exports.lab = function() {
     var scene = new THREE.Scene();
 

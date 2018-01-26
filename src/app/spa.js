@@ -97,7 +97,7 @@ awake.command = {
     // },
 
     nameSvg: function() {
-        var svg = '<svg width="150" height="200" viewBox="0 0 300 900"><pattern id="rain" viewBox="100 100 100 100" patternUnits="userSpaceOnUse" width="150" height="200" x="0" y="150"><image xlink:href="https://github.com/rikrik527/shan/blob/master/src/images/rain.gif" width="100" height="150"/></pattern><text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text">雨珊</text></svg>';
+        var svg = '<svg width="150" height="200" viewBox="0 0 300 900"><pattern id="rain" viewBox="100 100 100 100" patternUnits="userSpaceOnUse" width="150" height="200" x="0" y="150"><image xlink:href="../images/rain.gif" width="100" height="150"/></pattern><text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text">雨珊</text></svg>';
         var imgShan = obj.get('.the-game');
         imgShan.innerHTML = svg;
 

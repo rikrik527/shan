@@ -41,21 +41,37 @@
     width: 100%;
     height: 10px;
     background: wheat;
-    top: 34%; }
+    top: 34%;
+    transform-origin: center right;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1); }
 
   .xs-menu-line {
     position: absolute;
     width: 100%;
     height: 10px;
     background: wheat;
-    top: 21%; }
+    top: 21%;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-origin: center right; }
 
   .xs-menu-trigger {
     position: absolute;
     width: 46px;
     height: 100px;
     top: 53%;
-    left: 78%; }
+    left: 78%;
+    z-index: 999999999;
+    cursor: pointer; }
+    .xs-menu-trigger:hover .xs-menu-line {
+      transform: rotateZ(-40deg);
+      background: #fdd835;
+      top: 11%; }
+    .xs-menu-trigger:hover .xs-menu-line2 {
+      transform: rotateZ(40deg);
+      background: #fdd835;
+      top: 40%; }
+    .xs-menu-trigger:hover .xs-menu-text {
+      top: 35%; }
 
   .xs-menu {
     display: flex;

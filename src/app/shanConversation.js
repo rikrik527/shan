@@ -56,17 +56,25 @@ shan.talk = {
         console.log('this', this, 'that', this);
         var sigh = 'sigh';
         var greeting = 'greeting';
+        var quotes = 'guotes';
         var sigh = this.knowledge['conversation'][sigh];
         var greeting = this.knowledge['conversation'][greeting];
+        var quotes = this.knowledge['conversation'][quotes];
         // greeting and sigh refers to shanLi.knowledge.conversation
         if (a > b) {
-            create().innerHTML = yushan + '!' + sigh;
+            console.log('a')
+            create().innerHTML = yushan + '!' + greeting[qq()];
         } else if (a < b) {
-            create().innerHTML = yushan + moment() + '!' + greeting[jj()];
+            console.log('b')
+            create().innerHTML = yushan + moment() + '!' + quotes[jj()];
+        }
+
+        function qq() {
+            return Math.floor(Math.random() * greeting.length);
         }
 
         function jj() {
-            return Math.floor(Math.random() * greeting.length);
+            return Math.floor(Math.random() * quotes.length);
         }
 
         function create() {
@@ -79,7 +87,7 @@ shan.talk = {
 
         function moment() {
             var words = '';
-            var txt = document.createTextNode(words);
+            var c = document.createTextNode(words);
             var dayTime = ['早安', '午安', '晚安'];
             var dateNow = new Date();
             var getHours = dateNow.getHours();
