@@ -17,7 +17,9 @@
     display: none;
 }
 
-#rain {}
+#rain {
+    background: url('../images/rain.gif')no-repeat;
+}
 
 svg {
     position: absolute;

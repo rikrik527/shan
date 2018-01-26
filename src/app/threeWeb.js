@@ -1,6 +1,7 @@
 var THREE = require('three');
 var threeLoader = require('three-json-loader');
 var obj = require('./getall');
+var labJson = require('https://github.com/rikrik527/shan/blob/master/src/json/lab.json');
 module.exports.lab = function() {
     var scene = new THREE.Scene();
 
@@ -22,7 +23,7 @@ module.exports.lab = function() {
     }
     awake.insertAdjacentElement('afterbegin', renderer.domElement);
     var loader = new THREE.JSONLoader();
-    loader.load('../json/lab.json', function(geometry, met) {
+    loader.load(labJson, function(geometry, met) {
         mesh = new THREE.Mesh(geometry, mat[0]);
         mesh.scale.x = 15;
         mesh.scale.y = 15;
