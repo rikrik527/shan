@@ -38,7 +38,7 @@
         background: wheat;
         top: 34%;
         transform-origin: center right;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     .xs-menu-line {
         position: absolute;
@@ -46,7 +46,7 @@
         height: 10px;
         background: wheat;
         top: 21%;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         transform-origin: center right;
     }
     .xs-menu-trigger {
@@ -57,26 +57,10 @@
         left: 78%;
         z-index: 999999999;
         cursor: pointer;
-        &:hover {
-            .xs-menu-line {
-                transform: rotateZ(-40deg);
-                background: $yellow7;
-                top: 11%;
-            }
-            .xs-menu-line2 {
-                transform: rotateZ(40deg);
-                background: $yellow7;
-                top: 40%;
-            }
-            .xs-menu-text {
-                top: 35%;
-            }
-        }
     }
     .xs-menu {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
+        display: none;
+        height: 700px;
         background: linear-gradient(to bottom, #ad1457, #f8bbd0);
         justify-content: center;
         flex-direction: column;

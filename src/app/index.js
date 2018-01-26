@@ -12,24 +12,20 @@ var shanLi = require('./shanStatus');
 var shan = require('./shanConversation');
 var say = require('./say');
 
-
 var location = require('./location');
 var awake = require('./spa');
+var xsMenu = require('./xsMenu');
 window.onload = function() {
 
 
     prologue.slides();
-    document.querySelector('.xs-menu').style.display = 'none';
-    obj.get('.xs-menu-trigger').onclick = function() {
-        obj.get('.xs-menu').style.display = 'flex';
-        setTimeout(() => {
-            obj.get('.xs-menu').style.display = 'none';
-        }, 3000);
-    }
+
+
     var todoList = obj.getId('todo-list');
-    todoList.ontouchstart = function(e) {
+    window.ontouchstart = function(e) {
         var touch = e.touches[0];
-        console.log('touches');
+        var xsMenu = obj.get('.xs-menu');
+        xsMenu.style.display = 'none';
     }
     todoList.ontouchmove = function(e) {
         var touches = e.changedTouches[0].identifier;
@@ -53,10 +49,10 @@ window.onload = function() {
     awake.shanLiAwaken.title();
     shan.talk.talkingDialog();
     setTimeout(() => {
-        shan.talk.createLi.call(shanLi, Math.floor(Math.random() * 10), Math.floor(Math.random() * 10));
-    }, 5000);
+        shan.talk.createLi.call(shanLi, Math.floor(Math.random() * Date.now()), Math.floor(Math.random() * Date.now()));
+    }, 3000);
 
-
+    xsMenu.toggleXsmenu();
 
     awake.button.select('.awake').onclick = function() {
         console.log('clicked')

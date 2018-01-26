@@ -56,7 +56,7 @@ shan.talk = {
         console.log('this', this, 'that', this);
         var sigh = 'sigh';
         var greeting = 'greeting';
-        var quotes = 'guotes';
+        var quotes = 'quotes';
         var sigh = this.knowledge['conversation'][sigh];
         var greeting = this.knowledge['conversation'][greeting];
         var quotes = this.knowledge['conversation'][quotes];
