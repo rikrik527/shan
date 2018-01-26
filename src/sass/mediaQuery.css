@@ -157,7 +157,6 @@
       transform: translateX(3px); } }
   #todo-list {
     width: 64% !important;
-    left: 31% !important;
     z-index: 999999999999999; }
 
   /* form */

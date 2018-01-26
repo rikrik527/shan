@@ -28,8 +28,6 @@
   border-radius: 5px;
   border: 2px solid pink;
   position: absolute;
-  top: 0%;
-  left: 56%;
   z-index: 99999999999999999999999; }
   #todo-list .todo-close {
     width: 30px;

@@ -19,19 +19,50 @@ window.onload = function() {
 
 
     prologue.slides();
-
-
+    var touchDown = false;
+    var position = [34, 0, 0];
+    var lastposition = [null, null];
     var todoList = obj.getId('todo-list');
-    window.ontouchstart = function(e) {
-        var touch = e.touches[0];
-        var xsMenu = obj.get('.xs-menu');
-        xsMenu.style.display = 'none';
-    }
+
+
+    todoList.style.left = '34%';
     todoList.ontouchmove = function(e) {
-        var touches = e.changedTouches[0].identifier;
+        if (!touchDown) {
+            return false;
+        }
+        var touches = e.targetTouches[0];
         console.log('touchmove', touches)
-        todoList.style.left = touches.clientX;
-        todoList.style.top = touches.clientY;
+        var changeX = 0,
+            changeY = 0;
+        if (lastposition[0]) {
+            console.log('lastpostion[0]', lastposition[0]);
+            changeX = (lastposition[0] - touches.pageX) / 2;
+            if (Math.abs(changeX) > 20) {
+                console.log('Math.abs(changeX)>20', Math.abs(changeX));
+            }
+        }
+        if (lastposition[1]) {
+            changeY = (lastposition[1] - touches.pageY / 2);
+            if (Math.abs(changeY) > 20) {
+                changeY = 0;
+            }
+        }
+        lastposition = [touches.pageX, touches.pageY];
+        position[0] -= changeX;
+        position[1] += changeY;
+
+        todoList.style.left = position[0] + '%';
+        todoList.style.top = position[1] + '%';
+        e.preventDefault();
+        console.log(todoList.style.left);
+    }
+    todoList.ontouchstart = function(e) {
+        touchDown = true;
+        console.log('touched')
+    }
+    todoList.ontouchend = function(e) {
+        touchDown = false;
+        console.log('touchend');
     }
     awake.facebook.addScript();
 

@@ -64,9 +64,11 @@ shan.talk = {
         if (a > b) {
             console.log('a')
             create().innerHTML = yushan + '!' + greeting[qq()];
+            speech(moment() + greeting[qq()])
         } else if (a < b) {
             console.log('b')
             create().innerHTML = yushan + moment() + '!' + quotes[jj()];
+            speech(moment() + quotes[jj()]);
         }
 
         function qq() {
@@ -100,12 +102,19 @@ shan.talk = {
                 words = dayTime[1];
                 console.log('afternoon')
             };
-            if (getHours >= 19 && getHours <= 3) {
+            if (getHours >= 19 && getHours <= 24 || getHours <= 3) {
                 words = dayTime[2];
                 console.log('evening');
             };
             console.log(words);
             return words;
+        }
+
+        function speech(say) {
+            if ('speechSynthesis' in window) {
+                var utterance = new SpeechSynthesisUtterance(say);
+                speechSynthesis.speak(utterance);
+            }
         }
 
         console.log('finished li');
@@ -114,12 +123,7 @@ shan.talk = {
 
 }
 
-function speech(say) {
-    if ('speechSynthesis' in window) {
-        var utterance = new SpeechSynthesisUtterance(say);
-        speechSynthesis.speak(utterance);
-    }
-}
+
 
 
 

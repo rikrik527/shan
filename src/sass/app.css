@@ -170,7 +170,6 @@
       transform: translateX(3px); } }
   #todo-list {
     width: 64% !important;
-    left: 31% !important;
     z-index: 999999999999999; }
 
   /* form */
@@ -7594,8 +7593,6 @@ iframe[seamless] {
   border-radius: 5px;
   border: 2px solid pink;
   position: absolute;
-  top: 0%;
-  left: 56%;
   z-index: 99999999999999999999999; }
   #todo-list .todo-close {
     width: 30px;
