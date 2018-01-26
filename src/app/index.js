@@ -1,4 +1,5 @@
 require('../sass/app.scss');
+var threeWeb = require('./threeWeb');
 var $ = require('jquery');
 var prologue = require('./prologue');
 
@@ -15,7 +16,7 @@ var location = require('./location');
 var awake = require('./spa');
 window.onload = function() {
 
-
+    threeWeb.lab();
     prologue.slides();
     document.querySelector('.xs-menu').style.display = 'none';
     obj.get('.todo-add-btn').onclick = function() {
