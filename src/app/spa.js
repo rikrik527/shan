@@ -445,12 +445,4 @@ awake.canvas = {
     }
 
 }
-awake.command.awakeFirst().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
-awake.command.awakeSecond().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
-awake.command.awakeThird().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
-awake.command.awakeFourth().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
-awake.command.awakeFifth().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
-awake.command.prologue().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
-awake.command.location().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
-awake.command.epilogue().style.transition = 'all 1s cubic-bezier(.58,-0.07,.99,-0.69)';
 module.exports = awake;

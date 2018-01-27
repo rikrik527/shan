@@ -138,8 +138,8 @@
   .shan-btn2 {
     width: 24.5em !important;
     margin: calc(-28.750em/2) 0 0 calc(-24.5em/2) !important;
-    background-size: cover !important;
-    background-position: 48% 54% !important; }
+    background-size: 245% !important;
+    background-position: 48% 61% !important; }
 
   .shan-talk {
     width: 36% !important;
