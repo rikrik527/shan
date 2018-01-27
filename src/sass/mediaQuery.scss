@@ -53,14 +53,14 @@
         position: absolute;
         width: 46px;
         height: 100px;
-        top: 53%;
+        top: 0%;
         left: 78%;
         z-index: 999999999;
         cursor: pointer;
     }
     .xs-menu {
         display: none;
-        height: 700px;
+        height: 100vh;
         background: linear-gradient(to bottom, #ad1457, #f8bbd0);
         justify-content: center;
         flex-direction: column;
@@ -73,7 +73,10 @@
     .xs-menu-section {
         width: 100vw;
     }
-    .xs-menu-menu {}
+    .xs-menu-menu {
+        display: flex;
+        flex-direction: column;
+    }
     .xs-awake,
     .xs-epilogue,
     .xs-location,
@@ -82,6 +85,7 @@
         cursor: pointer;
         height: 50px;
         line-height: 50px;
+        align-self: center;
     }
     .xs-awake {}
     .xs-prologue {}
@@ -96,18 +100,29 @@
     }
     .production {
         top: 85px!important;
-        left: 115px!important;
+        left: 30%!important;
+    }
+    .quote {
+        position: absolute;
+        top: 105%;
+        left: 31%;
+        color: white;
+        font-size: 10px;
+        font-family: fantasy;
     }
     #shan-li-image {
-        left: 10px!important;
-        top: 67px!important;
+        left: 10% !important;
+        top: 67% !important;
+        width: 17%!important;
+        height: 94%!important;
     }
     .developer {
         color: transparent!important;
     }
     .the-game {
-        top: 40px!important;
-        left: 85px!important;
+        top: 29% !important;
+        left: 19% !important;
+        font-size: 8em!important;
     }
     .awake {
         left: 25%!important;

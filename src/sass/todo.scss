@@ -133,4 +133,25 @@
     left: 58%;
     border-radius: 10px;
     border: 1px solid pink;
+    #top-tip-explan {
+        color: $pink7;
+        text-shadow: 1px -1px 3px $pink2;
+    }
+}
+
+#todo-submit-btn {
+    width: 21%;
+    height: 20px;
+    background: pink;
+    border-radius: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 103%;
+    left: 81%;
+    border: 2px solid hotpink;
+    color: deeppink;
+    &:hover {
+        background: $pink9;
+        color: white;
+    }
 }

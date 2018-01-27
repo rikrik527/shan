@@ -21,7 +21,24 @@
     </div>
 
     <article class='wrapper'>
+        <section class="xs-menu-trigger l-display-none m-display-none">
+            <div class="xs-menu-line"></div>
+            <div class="xs-menu-line2"></div>
+            <p class="xs-menu-text">MENU</p>
+        </section>
+        <div class="xs-menu l-display-none m-display-none">
+            <article class="xs-menu-section">
+                <ul class="xs-menu-menu">
+                    <li class="xs-awake">甦醒 Awake</li>
+                    <li class="xs-prologue">前言 Prologue</li>
+                    <li class="xs-location">方位 Location</li>
+                    <li class="xs-epilogue">後記 epilogue</li>
+                </ul>
 
+
+
+            </article>
+        </div>
         <main class="main-boxcontrol">
             <header class="header-menu">
 
@@ -32,24 +49,7 @@
 								<small class="quote">the posibilities are endless</small>																	<h1 class='the-game'>
 																										雨珊
 																							</h1>
-																							<img id='shan-li-image' alt="雨珊" width="100px" height="160px"><section class="xs-menu-trigger l-display-none m-display-none">
-<div class="xs-menu-line"></div>
-<div class="xs-menu-line2"></div>
-<p class="xs-menu-text">MENU</p>
-                                                                                            </section>
-										<div class="xs-menu l-display-none m-display-none">
-                                            <article class="xs-menu-section">
-                                            <ul class="xs-menu-menu">
-<li class="xs-awake">甦醒 Awake</li>
-<li class="xs-prologue">前言 Prologue</li>
-<li class="xs-location">方位 Location</li>
-<li class="xs-epilogue">後記 epilogue</li>
-                                            </ul>
-
-
-
-                                            </article>
-                                        </div>													<div class="awake xs-display-none">
+																							<img id='shan-li-image' alt="雨珊" width="100px" height="160px">													<div class="awake xs-display-none">
 																									<div class="awake-border-up"></div>
 
 																									<div class="awake-border-down"></div>
@@ -142,17 +142,22 @@
                                 <ul class='aside-menu'>
                                     <li class="nav todo-list">
 
-                                        <span class="tips pos">ToDoList</span>
+                                        <span class="tips pos">待辦事項</span>
                                     </li>
                                     <li class='nav icon-personal'>
 
-                                        <span class="tips pos1">Calendar</span>
-
+                                        <span class="tips pos1">道具</span>
+                                        <li class="nav icon-calender">
+                                            <span class="tips pos3">時間日期</span>
+                                        </li>
                                     </li>
                                     <li class='nav icon-service'>
 
-                                        <span class="tips pos2">Chat with Shan-li</span>
+                                        <span class="tips pos2">跟雨珊談談</span>
+                                        <li class="nav icon-service-list"><span class="tips pos4">雨珊的功能</span>
+                                            <li id="list-form" class="list-form">日常對話<span class="tips pos5" id="conversation"></span></li>
 
+                                        </li>
                                     </li>
                                 </ul>
                             </aside>
@@ -284,6 +289,7 @@
                                 <div class="todo-set">
                                     <p id="todo-tip-explan"></p>
                                 </div>
+                                <input type="button" value="確定" id="todo-submit-btn">
                             </article>
                             <article class="todo-status">
                                 <section id="todo-progress">數據
