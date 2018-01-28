@@ -800,90 +800,6 @@ svg {
     }
 }
 
-.beast-btn {
-    display: none;
-    background: $link-orange2;
-    animation: beast-btn 2s ease 2s;
-    @include btn(10%,
-    10%,
-    0%,
-    0%);
-    .beast-lowbox {
-        @include lowbox(10%,
-        10%,
-        0%,
-        0%);
-    }
-}
-
-.nopo-btn {
-    background: $storm-red;
-    animation: nopo-btn 2s ease 2.5s;
-    @include btn(10%,
-    10%,
-    0%,
-    0%);
-    .nopo-lowbox {
-        @include lowbox(10%,
-        10%,
-        0%,
-        0%);
-    }
-}
-
-.samurai-btn {
-    display: none;
-    background: $storm-grey2;
-    animation: samurai-btn 2s ease 3s;
-    @include btn(10%,
-    10%,
-    0%,
-    0%);
-    .samurai-lowbox {
-        @include lowbox(10%,
-        10%,
-        0%,
-        0%);
-    }
-}
-
-.magic-btn {
-    display: none;
-    background: $sun-pink;
-    animation: magic-btn 2s ease 3.5s;
-    @include btn(10%,
-    10%,
-    0%,
-    0%);
-    .magic-lowbox {
-        @include lowbox(10%,
-        10%,
-        0%,
-        0%);
-    }
-}
-
-
-/* wrapper */
-
-.judo-lowbox {
-    box-shadow: 0px 0px 8px 3px $blue5;
-}
-
-.shan-lowbox {
-    background: $red2;
-    box-shadow: 0px 0px 8px 3px $red5;
-    color: $red2;
-    text-shadow: 0px 0px 3px $red8;
-}
-
-.crazy-lowbox {
-    background: $green2;
-    box-shadow: 0px 0px 8px 3px $green5;
-    color: $green2;
-    text-shadow: 0px 0px 3px $green8;
-}
-
 .tips {
     animation: tips 1s linear infinite;
     @keyframes tips {
@@ -895,7 +811,10 @@ svg {
 
 .pos,
 .pos1,
-.pos2 {
+.pos2,
+.pos3,
+.pos4,
+.pos5 {
     animation: pos 1s linear infinite;
     @keyframes pos {
         40% {
@@ -905,34 +824,6 @@ svg {
             transform: translateX(1px);
         }
     }
-}
-
-.beast-lowbox {
-    background: $yellow2;
-    box-shadow: 0px 0px 8px 3px $yellow5;
-    color: white;
-    text-shadow: 0px 0px 3px $yellow8;
-}
-
-.nopo-lowbox {
-    background: $red2;
-    box-shadow: 0px 0px 8px 3px $red5;
-    color: $red2;
-    text-shadow: 0px 0px 3px $red8;
-}
-
-.samurai-lowbox {
-    background: $red2;
-    box-shadow: 0px 0px 8px 3px $red5;
-    color: $red2;
-    text-shadow: 0px 0px 3px $red8;
-}
-
-.magic-lowbox {
-    background: $red2;
-    box-shadow: 0px 0px 8px 3px $red5;
-    color: $red2;
-    text-shadow: 0px 0px 3px $red8;
 }
 
 .footer-boxcontrol {
@@ -953,13 +844,13 @@ svg {
 
 .shan-talk {
     position: absolute;
-    top: 63%;
+    top: 66%;
     left: 2%;
     z-index: 99;
     display: block;
     overflow: scroll;
-    width: 300px;
-    height: 150px;
+    width: 40%;
+    height: 33%;
     border-radius: 5px;
     background: #f48fb1;
     box-shadow: 0px 0px 3px 3px #c2185b;
@@ -972,6 +863,7 @@ svg {
         display: inline-block;
         margin: auto;
         width: 100%;
+        padding: 2%;
         height: auto;
         background: $pink2;
         font-size: 10px;

@@ -7594,12 +7594,37 @@ iframe[seamless] {
 .todotips {
   width: auto;
   height: auto;
+  top: -14%;
+  padding: 1%;
   font-size: 10px;
-  background: rgba(255, 100, 100, 0.3);
   border-radius: 5px;
-  border: 1px solid #e91e63;
+  border: 2px solid gold;
   position: absolute;
-  z-index: 9999999999999; }
+  z-index: 9999999999999;
+  color: white;
+  background: rgba(250, 200, 0, 0.5);
+  box-shadow: 1px 1px 6px gold;
+  text-shadow: 0px 0px 3px deepskyblue;
+  animation: todotips 1s linear infinite; }
+@keyframes todotips {
+  30% {
+    transform: translateX(-1px); }
+  60% {
+    transform: translateX(1px); } }
+.todo-pos1 {
+  left: -4%; }
+
+.todo-pos2 {
+  left: 16%; }
+
+.todo-pos3 {
+  left: 35%; }
+
+.todo-pos4 {
+  left: 56%; }
+
+.todo-pos5 {
+  left: 76%; }
 
 #todo-list {
   width: 250px;
@@ -7682,18 +7707,19 @@ iframe[seamless] {
     background: url("../images/shan-icon.png") no-repeat;
     background-position-x: -200px; }
   #todo-list .todo-set {
-    width: 103%;
+    width: 81%;
     height: 20px;
-    background: rgba(5, 100, 200, 0.6);
-    border-radius: 8px;
+    background: linear-gradient(to left, pink, rgba(200, 110, 100, 0.5));
+    border-radius: 8px 0px 0px 8px;
     left: 11%;
     margin: calc(-21px/2) 0 0 calc(-59px/2);
     position: absolute;
     top: 115%;
     text-align: center;
     font-size: 10px;
-    border: 2px solid darkcyan; }
-    #todo-list .todo-set #todo-tip-explain {
+    border: 2px solid hotpink;
+    overflow: hidden; }
+    #todo-list .todo-set #todo-tip-explan {
       color: #ffa726; }
 
 .todo-status {
@@ -7712,17 +7738,18 @@ iframe[seamless] {
 #todo-submit-btn {
   width: 21%;
   height: 20px;
-  background: pink;
-  border-radius: 10px;
+  background: #e91e63;
+  border-radius: 0px 8px 8px 0;
   font-size: 10px;
   position: absolute;
   top: 103%;
-  left: 81%;
+  left: 80%;
   border: 2px solid hotpink;
-  color: deeppink; }
+  color: #ffcc80;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1); }
   #todo-submit-btn:hover {
-    background: #ad1457;
-    color: white; }
+    background: #ffcc80;
+    color: #e91e63; }
 
 /*fashion set 1 smooth*/
 /*set2 sun*/
@@ -8483,109 +8510,6 @@ svg {
     transition: all .3s linear;
     font-family: "Cutive Mono",monospace; }
 
-.beast-btn {
-  display: none;
-  background: #ed4d34;
-  animation: beast-btn 2s ease 2s;
-  position: absolute;
-  width: 10%;
-  height: 10%;
-  margin: 1%;
-  transition: all .3s linear;
-  top: 0%;
-  left: 0%;
-  padding: 1%; }
-  .beast-btn .beast-lowbox {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    overflow: hidden;
-    top: 0%;
-    left: 0%;
-    transition: all .3s linear;
-    font-family: "Cutive Mono",monospace; }
-
-.nopo-btn {
-  background: #cc527a;
-  animation: nopo-btn 2s ease 2.5s;
-  position: absolute;
-  width: 10%;
-  height: 10%;
-  margin: 1%;
-  transition: all .3s linear;
-  top: 0%;
-  left: 0%;
-  padding: 1%; }
-  .nopo-btn .nopo-lowbox {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    overflow: hidden;
-    top: 0%;
-    left: 0%;
-    transition: all .3s linear;
-    font-family: "Cutive Mono",monospace; }
-
-.samurai-btn {
-  display: none;
-  background: #363636;
-  animation: samurai-btn 2s ease 3s;
-  position: absolute;
-  width: 10%;
-  height: 10%;
-  margin: 1%;
-  transition: all .3s linear;
-  top: 0%;
-  left: 0%;
-  padding: 1%; }
-  .samurai-btn .samurai-lowbox {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    overflow: hidden;
-    top: 0%;
-    left: 0%;
-    transition: all .3s linear;
-    font-family: "Cutive Mono",monospace; }
-
-.magic-btn {
-  display: none;
-  background: #c06c84;
-  animation: magic-btn 2s ease 3.5s;
-  position: absolute;
-  width: 10%;
-  height: 10%;
-  margin: 1%;
-  transition: all .3s linear;
-  top: 0%;
-  left: 0%;
-  padding: 1%; }
-  .magic-btn .magic-lowbox {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    overflow: hidden;
-    top: 0%;
-    left: 0%;
-    transition: all .3s linear;
-    font-family: "Cutive Mono",monospace; }
-
-/* wrapper */
-.judo-lowbox {
-  box-shadow: 0px 0px 8px 3px #42a5f5; }
-
-.shan-lowbox {
-  background: #ffcdd2;
-  box-shadow: 0px 0px 8px 3px #ef5350;
-  color: #ffcdd2;
-  text-shadow: 0px 0px 3px #d32f2f; }
-
-.crazy-lowbox {
-  background: #c8e6c9;
-  box-shadow: 0px 0px 8px 3px #66bb6a;
-  color: #c8e6c9;
-  text-shadow: 0px 0px 3px #388e3c; }
-
 .tips {
   animation: tips 1s linear infinite; }
 @keyframes tips {
@@ -8593,37 +8517,16 @@ svg {
     background: rbga(255, 100, 100, 0.7); } }
 .pos,
 .pos1,
-.pos2 {
+.pos2,
+.pos3,
+.pos4,
+.pos5 {
   animation: pos 1s linear infinite; }
 @keyframes pos {
   40% {
     transform: translateX(-1px); }
   80% {
     transform: translateX(1px); } }
-.beast-lowbox {
-  background: #fff9c4;
-  box-shadow: 0px 0px 8px 3px #ffee58;
-  color: white;
-  text-shadow: 0px 0px 3px #fbc02d; }
-
-.nopo-lowbox {
-  background: #ffcdd2;
-  box-shadow: 0px 0px 8px 3px #ef5350;
-  color: #ffcdd2;
-  text-shadow: 0px 0px 3px #d32f2f; }
-
-.samurai-lowbox {
-  background: #ffcdd2;
-  box-shadow: 0px 0px 8px 3px #ef5350;
-  color: #ffcdd2;
-  text-shadow: 0px 0px 3px #d32f2f; }
-
-.magic-lowbox {
-  background: #ffcdd2;
-  box-shadow: 0px 0px 8px 3px #ef5350;
-  color: #ffcdd2;
-  text-shadow: 0px 0px 3px #d32f2f; }
-
 .footer-boxcontrol {
   position: absolute;
   bottom: 0;
@@ -8639,13 +8542,13 @@ svg {
 
 .shan-talk {
   position: absolute;
-  top: 63%;
+  top: 66%;
   left: 2%;
   z-index: 99;
   display: block;
   overflow: scroll;
-  width: 300px;
-  height: 150px;
+  width: 40%;
+  height: 33%;
   border-radius: 5px;
   background: #f48fb1;
   box-shadow: 0px 0px 3px 3px #c2185b;
@@ -8658,6 +8561,7 @@ svg {
     display: inline-block;
     margin: auto;
     width: 100%;
+    padding: 2%;
     height: auto;
     background: #f8bbd0;
     font-size: 10px;

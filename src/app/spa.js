@@ -197,11 +197,10 @@ awake.app = {
     calendar: '<div class="month"><span class="close">X</span><ul><li class="prev">❮</li><li class="next">❯</li><li class="full-month-cycle">August<br><span class="full-year-cycle">2018</span></li></ul></div><ul class="weekdays"><li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li><li>Su</li></ul><ul class="days"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li><li>19</li><li>20</li><li>21</li><li>22</li><li>23</li><li>24</li><li>25</li><li>26</li><li>27</li><li>28</li><li>29</li><li>30</li><li>31</li></ul>',
 
     calendarApp: function() {
-        var iconPersonal = obj.get('.icon-personal');
+        var iconCalender = obj.get('.icon-calender');
         var div = obj.create('div');
         div.className = 'calender';
-        div.style.display = 'none';
-        iconPersonal.insertAdjacentElement('afterend', div);
+        iconCalender.appendChild(d);
         div.innerHTML = this.calendar;
         var close = obj.get('.close');
         close.addEventListener('click', closeIt, false);
@@ -418,11 +417,13 @@ awake.canvas = {
     },
     octagon: function() {
         var shanBtn = obj.get('.shan-btn');
+        console.log('getbtn')
         this.canvas = obj.getId('canvas');
         this.context = canvas.getContext('2d');
         this.canvas.width = shanBtn.clientWidth;
         this.canvas.height = shanBtn.clientHeight;
         window.onresize = function() {
+            console.log('resizing')
             this.canvas.width = shanBtn.clientWidth;
             this.canvas.height = shanBtn.clientHeight;
         };
@@ -432,14 +433,19 @@ awake.canvas = {
             xCenter = 100,
             yCenter = 100;
         this.context.beginPath();
+        console.log('pathbegin')
         this.context.moveTo(xCenter + size * Math.cos(0), yCenter + size * Math.sin(0));
         console.log(this.context);
         for (var i = 0; i <= numberOfSide; i++) {
             this.context.lineTo(xCenter + size * Math.cos(i * 2 * Math.PI / numberOfSide), yCenter + size * Math.sin(i * 2 * Math.PI / numberOfSide));
+            console.log('for excuted')
         }
         this.context.strokeStyle = 'white';
         this.context.lineWidth = 20;
         this.context.stroke();
+        this.context.closePath();
+
+        console.log('excuted where is octagon')
 
 
     }
