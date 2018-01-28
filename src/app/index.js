@@ -5,7 +5,7 @@ var $ = require('jquery');
 var prologue = require('./prologue');
 
 var obj = require('./getall');
-var threeWeb = require('./threeWeb');
+
 var object = require('./object');
 var shanLi = require('./shanStatus');
 
@@ -40,7 +40,7 @@ window.onload = function() {
         }, 3000);
 
         xsMenu.toggleXsmenu();
-        threeWeb.lab();
+
         awake.button.select('.awake').onclick = function() {
             console.log('clicked')
             if (awake.command.awakeFirst().style.top == "-100%") {
