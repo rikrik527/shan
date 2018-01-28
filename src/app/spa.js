@@ -200,7 +200,7 @@ awake.app = {
         var iconCalender = obj.get('.icon-calender');
         var div = obj.create('div');
         div.className = 'calender';
-        iconCalender.appendChild(d);
+        iconCalender.appendChild(div);
         div.innerHTML = this.calendar;
         var close = obj.get('.close');
         close.addEventListener('click', closeIt, false);

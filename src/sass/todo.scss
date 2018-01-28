@@ -52,6 +52,8 @@
     border-radius: 5px;
     border: 2px solid pink;
     position: absolute;
+    left: 74%;
+    top: 0%;
     z-index: 99999999999999999999999;
     .todo-close {
         width: 30px;
@@ -92,7 +94,6 @@
         margin: calc(-50px/2) 0 0 calc(-250px/2);
         top: 74%;
         border-radius: 0 0 10px 10px;
-        overflow: hidden;
     }
     .todo1,
     .todo2,

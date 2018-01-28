@@ -1,11 +1,11 @@
 require('../sass/app.scss');
 
-
+var todo = require('./todo');
 var $ = require('jquery');
 var prologue = require('./prologue');
 
 var obj = require('./getall');
-
+var threeWeb = require('./threeWeb');
 var object = require('./object');
 var shanLi = require('./shanStatus');
 
@@ -17,97 +17,53 @@ var awake = require('./spa');
 var xsMenu = require('./xsMenu');
 window.onload = function() {
 
+        todo.touchElement()
+        prologue.slides();
 
-    prologue.slides();
-    var touchDown = false;
-    var position = [34, 0, 0];
-    var lastposition = [null, null];
-    var todoList = obj.getId('todo-list');
+        awake.facebook.addScript();
 
+        awake.call.shanAppear();
 
-    todoList.style.left = '34%';
-    todoList.ontouchmove = function(e) {
-        if (!touchDown) {
-            return false;
-        }
-        var touches = e.targetTouches[0];
-        console.log('touchmove', touches)
-        var changeX = 0,
-            changeY = 0;
-        if (lastposition[0]) {
-            console.log('lastpostion[0]', lastposition[0]);
-            changeX = (lastposition[0] - touches.pageX) / 2;
-            if (Math.abs(changeX) > 20) {
-                console.log('Math.abs(changeX)>20', Math.abs(changeX));
+        awake.image.show();
+
+        (function() {
+            awake.canvas.octagon();
+        })();
+
+        // awake.shanLiAwaken.story();
+        awake.command.nameSvg();
+
+        awake.shanLiAwaken.title();
+        shan.talk.talkingDialog();
+        setTimeout(() => {
+            shan.talk.createLi.call(shanLi, Math.floor(Math.random() * Date.now()), Math.floor(Math.random() * Date.now()));
+        }, 3000);
+
+        xsMenu.toggleXsmenu();
+        threeWeb.lab();
+        awake.button.select('.awake').onclick = function() {
+            console.log('clicked')
+            if (awake.command.awakeFirst().style.top == "-100%") {
+                console.log('its -100%');
+            } else {
+                awake.command.awakeFirst().style.top = '0%';
             }
+            console.log('yesyeysyeysyeysyeyes');
         }
-        if (lastposition[1]) {
-            changeY = (lastposition[1] - touches.pageY / 2);
-            if (Math.abs(changeY) > 20) {
-                changeY = 0;
-            }
-        }
-        lastposition = [touches.pageX, touches.pageY];
-        position[0] -= changeX;
-        position[1] += changeY;
+        awake.button.select('.prologue').onclick = function() {
+            console.log('yesyeysyeysyeysyeyes');
+        };
+        awake.button.select('.location').onclick = function() {
+            console.log('yesyeysyeysyeysyeyes');
+        };
+        awake.button.select('.epilogue').onclick = function() {
+            console.log('yesyeysyeysyeysyeyes');
+        };
 
-        todoList.style.left = position[0] + '%';
-        todoList.style.top = position[1] + '%';
-        e.preventDefault();
-        console.log(todoList.style.left);
+
+
     }
-    todoList.ontouchstart = function(e) {
-        touchDown = true;
-        console.log('touched')
-    }
-    todoList.ontouchend = function(e) {
-        touchDown = false;
-        console.log('touchend');
-    }
-    awake.facebook.addScript();
-
-    awake.call.shanAppear();
-
-    awake.image.show();
-
-    (function() {
-        awake.canvas.octagon();
-    })();
-
-    // awake.shanLiAwaken.story();
-    awake.command.nameSvg();
-
-    awake.shanLiAwaken.title();
-    shan.talk.talkingDialog();
-    setTimeout(() => {
-        shan.talk.createLi.call(shanLi, Math.floor(Math.random() * Date.now()), Math.floor(Math.random() * Date.now()));
-    }, 3000);
-
-    xsMenu.toggleXsmenu();
-
-    awake.button.select('.awake').onclick = function() {
-        console.log('clicked')
-        if (awake.command.awakeFirst().style.top == "-100%") {
-            console.log('its -100%');
-        } else {
-            awake.command.awakeFirst().style.top = '0%';
-        }
-        console.log('yesyeysyeysyeysyeyes');
-    }
-    awake.button.select('.prologue').onclick = function() {
-        console.log('yesyeysyeysyeysyeyes');
-    };
-    awake.button.select('.location').onclick = function() {
-        console.log('yesyeysyeysyeysyeyes');
-    };
-    awake.button.select('.epilogue').onclick = function() {
-        console.log('yesyeysyeysyeysyeyes');
-    };
-
-
-
-}
-awake.app.calendarApp();
+    // awake.app.calendarApp();
 var btn = obj.get('.btn-next');
 btn.innerHTML = '<pre>&#10597;</pre>';
 btn.insertAdjacentHTML('afterend', '<div class="btn-back"></div>');

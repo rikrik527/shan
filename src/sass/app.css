@@ -41,7 +41,10 @@
     left: 62% !important; }
 
   .m-display-none {
-    display: none; } }
+    display: none; }
+
+  #todo-list {
+    left: 68% !important; } }
 @media screen and (min-width: 320px) and (max-width: 504px) {
   .xs-menu-text {
     position: absolute;
@@ -118,11 +121,11 @@
 
   .quote {
     position: absolute;
-    top: 105%;
-    left: 31%;
-    color: white;
+    top: 106%;
+    left: -13%;
     font-size: 10px;
-    font-family: fantasy; }
+    color: white;
+    width: 200px; }
 
   #shan-li-image {
     left: 10% !important;
@@ -185,7 +188,7 @@
     50% {
       transform: translateX(3px); } }
   #todo-list {
-    width: 64% !important;
+    left: 54%;
     z-index: 999999999999999; }
 
   /* form */
@@ -7634,6 +7637,8 @@ iframe[seamless] {
   border-radius: 5px;
   border: 2px solid pink;
   position: absolute;
+  left: 74%;
+  top: 0%;
   z-index: 99999999999999999999999; }
   #todo-list .todo-close {
     width: 30px;
@@ -7671,8 +7676,7 @@ iframe[seamless] {
     left: 50%;
     margin: calc(-50px/2) 0 0 calc(-250px/2);
     top: 74%;
-    border-radius: 0 0 10px 10px;
-    overflow: hidden; }
+    border-radius: 0 0 10px 10px; }
   #todo-list .todo1,
   #todo-list .todo2,
   #todo-list .todo3,
@@ -7914,8 +7918,6 @@ svg {
         color: white;
         font: status-bar;
         font-size: 10px; }
-        .header-menu .menu-boxcontrol .header-brand .production small {
-          color: #90caf9; }
       .header-menu .menu-boxcontrol .header-brand .mr-judo-made {
         width: 150px;
         height: 100px;
@@ -7970,14 +7972,14 @@ svg {
         left: 0%;
         width: calc(120px/2);
         border-top: 1px solid white;
-        transition: all 1s linear .5s; }
+        transition: all .1s linear .5s; }
       .header-menu .menu-boxcontrol .awake .awake-border-down {
         position: absolute;
         top: 95%;
         left: 100%;
         width: calc(120px/2);
         border-top: 1px solid white;
-        transition: all 1s linear .5s;
+        transition: all .1s linear .5s;
         transform: rotateY(-180deg);
         transform-origin: left bottom; }
       .header-menu .menu-boxcontrol .awake .awake-down {
@@ -8028,14 +8030,14 @@ svg {
         left: 0%;
         width: calc(120px/2);
         border-top: 1px solid white;
-        transition: all 1s linear .5s; }
+        transition: all .1s linear .5s; }
       .header-menu .menu-boxcontrol .prologue .prologue-border-down {
         position: absolute;
         top: 95%;
         left: 100%;
         width: calc(120px/2);
         border-top: 1px solid white;
-        transition: all 1s linear .5s;
+        transition: all .1s linear .5s;
         transform: rotateY(-180deg);
         transform-origin: left bottom; }
       .header-menu .menu-boxcontrol .prologue .prologue-down {
@@ -8086,14 +8088,14 @@ svg {
         left: 0%;
         width: calc(120px/2);
         border-top: 1px solid white;
-        transition: all 1s linear .5s; }
+        transition: all .1s linear .5s; }
       .header-menu .menu-boxcontrol .location .location-border-down {
         position: absolute;
         top: 95%;
         left: 100%;
         width: calc(120px/2);
         border-top: 1px solid white;
-        transition: all 1s linear .5s;
+        transition: all .1s linear .5s;
         transform: rotateY(-180deg);
         transform-origin: left bottom; }
       .header-menu .menu-boxcontrol .location .location-down {
@@ -8143,14 +8145,14 @@ svg {
         left: 0%;
         width: calc(120px/2);
         border-top: 1px solid white;
-        transition: all 1s linear .5s; }
+        transition: all .1s linear .5s; }
       .header-menu .menu-boxcontrol .epilogue .epilogue-border-down {
         position: absolute;
         top: 95%;
         left: 100%;
         width: calc(120px/2);
         border-top: 1px solid white;
-        transition: all 1s linear .5s;
+        transition: all .1s linear .5s;
         transform: rotateY(-180deg);
         transform-origin: left bottom; }
       .header-menu .menu-boxcontrol .epilogue .epilogue-down {
@@ -8415,26 +8417,6 @@ svg {
   transform-style: preserve-3d;
   transform: translateZ(0px); }
 
-.judo-btn {
-  display: block;
-  float: left;
-  margin: 1%;
-  padding: 1%;
-  width: 45%;
-  height: 40%;
-  background: #acdbc9;
-  transition: all .3s linear;
-  transform-style: preserve-3d; }
-  .judo-btn .judo-lowbox {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    overflow: hidden;
-    top: 0%;
-    left: 0%;
-    transition: all .3s linear;
-    font-family: "Cutive Mono",monospace; }
-
 .external-cover-btn {
   position: absolute;
   width: 62.5em;
@@ -8491,25 +8473,6 @@ svg {
     transition: all .3s linear;
     font-family: "Cutive Mono",monospace; }
 
-.crazy-btn {
-  display: block;
-  float: left;
-  margin: 1%;
-  padding: 1%;
-  width: 30%;
-  height: 33%;
-  background: #527a82;
-  animation: crazy-btn 2s ease 1.5s; }
-  .crazy-btn .crazy-lowbox {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    overflow: hidden;
-    top: 0%;
-    left: 0%;
-    transition: all .3s linear;
-    font-family: "Cutive Mono",monospace; }
-
 .tips {
   animation: tips 1s linear infinite; }
 @keyframes tips {
@@ -8550,7 +8513,7 @@ svg {
   width: 40%;
   height: 33%;
   border-radius: 5px;
-  background: #f48fb1;
+  background: rgba(255, 100, 190, 0.5);
   box-shadow: 0px 0px 3px 3px #c2185b;
   color: white;
   text-overflow: clip;
@@ -8663,20 +8626,12 @@ svg {
   text-align: center;
   font-size: 10px; }
 
+.pos2,
+.pos1,
 .pos {
   top: 0%;
   left: 53%;
-  display: none; }
-
-.pos1 {
-  top: 0%;
-  left: 53%;
-  display: none; }
-
-.pos2 {
-  top: 0%;
-  left: 53%;
-  display: none; }
+  display: block; }
 
 .actived {
   background: rgba(27, 194, 185, 0.5); }

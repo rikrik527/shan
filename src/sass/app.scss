@@ -117,9 +117,7 @@ svg {
                 color: white;
                 font: status-bar;
                 font-size: 10px;
-                small {
-                    color: $blue3;
-                }
+                .quote {}
             }
             .mr-judo-made {
                 width: 150px;
@@ -184,7 +182,7 @@ svg {
                 left: 0%;
                 width: calc(120px/2);
                 border-top: 1px solid white;
-                transition: all 1s linear .5s;
+                transition: all .1s linear .5s;
             }
             .awake-border-down {
                 position: absolute;
@@ -192,7 +190,7 @@ svg {
                 left: 100%;
                 width: calc(120px/2);
                 border-top: 1px solid white;
-                transition: all 1s linear .5s;
+                transition: all .1s linear .5s;
                 transform: rotateY(-180deg);
                 transform-origin: left bottom;
             }
@@ -252,7 +250,7 @@ svg {
                 left: 0%;
                 width: calc(120px/2);
                 border-top: 1px solid white;
-                transition: all 1s linear .5s;
+                transition: all .1s linear .5s;
             }
             .prologue-border-down {
                 position: absolute;
@@ -260,7 +258,7 @@ svg {
                 left: 100%;
                 width: calc(120px/2);
                 border-top: 1px solid white;
-                transition: all 1s linear .5s;
+                transition: all .1s linear .5s;
                 transform: rotateY(-180deg);
                 transform-origin: left bottom;
             }
@@ -320,7 +318,7 @@ svg {
                 left: 0%;
                 width: calc(120px/2);
                 border-top: 1px solid white;
-                transition: all 1s linear .5s;
+                transition: all .1s linear .5s;
             }
             .location-border-down {
                 position: absolute;
@@ -328,7 +326,7 @@ svg {
                 left: 100%;
                 width: calc(120px/2);
                 border-top: 1px solid white;
-                transition: all 1s linear .5s;
+                transition: all .1s linear .5s;
                 transform: rotateY(-180deg);
                 transform-origin: left bottom;
             }
@@ -387,7 +385,7 @@ svg {
                 left: 0%;
                 width: calc(120px/2);
                 border-top: 1px solid white;
-                transition: all 1s linear .5s;
+                transition: all .1s linear .5s;
             }
             .epilogue-border-down {
                 position: absolute;
@@ -395,7 +393,7 @@ svg {
                 left: 100%;
                 width: calc(120px/2);
                 border-top: 1px solid white;
-                transition: all 1s linear .5s;
+                transition: all .1s linear .5s;
                 transform: rotateY(-180deg);
                 transform-origin: left bottom;
             }
@@ -703,24 +701,6 @@ svg {
     transform: translateZ(0px);
 }
 
-.judo-btn {
-    display: block;
-    float: left;
-    margin: 1%;
-    padding: 1%;
-    width: 45%;
-    height: 40%;
-    background: $light-blue;
-    transition: all .3s linear;
-    transform-style: preserve-3d;
-    .judo-lowbox {
-        @include lowbox(10%,
-        10%,
-        0%,
-        0%);
-    }
-}
-
 .external-cover-btn {
     position: absolute;
     width: 62.5em;
@@ -783,23 +763,6 @@ svg {
     }
 }
 
-.crazy-btn {
-    display: block;
-    float: left;
-    margin: 1%;
-    padding: 1%;
-    width: 30%;
-    height: 33%;
-    background: $deep-blue;
-    animation: crazy-btn 2s ease 1.5s;
-    .crazy-lowbox {
-        @include lowbox(10%,
-        10%,
-        0%,
-        0%);
-    }
-}
-
 .tips {
     animation: tips 1s linear infinite;
     @keyframes tips {
@@ -852,7 +815,7 @@ svg {
     width: 40%;
     height: 33%;
     border-radius: 5px;
-    background: #f48fb1;
+    background: rgba(255, 100, 190, .5);
     box-shadow: 0px 0px 3px 3px #c2185b;
     color: white;
     text-overflow: clip;
@@ -993,22 +956,12 @@ svg {
     font-size: 10px;
 }
 
+.pos2,
+.pos1,
 .pos {
     top: 0%;
     left: 53%;
-    display: none;
-}
-
-.pos1 {
-    top: 0%;
-    left: 53%;
-    display: none;
-}
-
-.pos2 {
-    top: 0%;
-    left: 53%;
-    display: none;
+    display: block;
 }
 
 .actived {

@@ -22,6 +22,9 @@
     .m-display-none {
         display: none;
     }
+    #todo-list {
+        left: 68%!important;
+    }
 }
 
 @media screen and(min-width:320px)and(max-width:504px) {
@@ -104,11 +107,11 @@
     }
     .quote {
         position: absolute;
-        top: 105%;
-        left: 31%;
-        color: white;
+        top: 106%;
+        left: -13%;
         font-size: 10px;
-        font-family: fantasy;
+        color: white;
+        width: 200px;
     }
     #shan-li-image {
         left: 10% !important;
@@ -180,7 +183,7 @@
     .pos1,
     .pos2 {}
     #todo-list {
-        width: 64%!important;
+        left: 54%;
         z-index: 999999999999999;
     }
     /* form */
