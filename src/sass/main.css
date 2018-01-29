@@ -44,7 +44,7 @@
     display: none; }
 
   #todo-list {
-    left: 68% !important; } }
+    left: 68%; } }
 @media screen and (min-width: 320px) and (max-width: 504px) {
   .xs-menu-text {
     position: absolute;

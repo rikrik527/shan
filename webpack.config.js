@@ -12,11 +12,12 @@ module.exports = {
 
         app: ["./app/index.js"],
         form: ["./form/index.js"],
-        login: ["./login/index.js"],
-        'vendor': ['./app/index.js', './form/index.js', './login/index.js']
+        login: ["./login/index.js"]
+            // vendor: ["./vendor/vendor.js", './app/index.js', './form/index.js', './login/index.js']
 
 
     },
+
     output: {
         path: path.join(__dirname, 'public', 'assets'),
         filename: 'js/[name].bundle.js',
@@ -88,11 +89,12 @@ module.exports = {
                     name: 'media/[name].[ext]?[hash]'
                 }
 
-            }, {
+            },
+            {
                 test: /\.json$/,
                 loader: 'json-loader',
                 query: {
-                    name: 'models/[name].[ext]?[hash]'
+                    name: 'json/[name].[ext]?[hash]'
 
                 },
             },
@@ -112,12 +114,19 @@ module.exports = {
                 minimize: true,
                 postcss: [
                     autoprefixer({
-                        browsers: ['last 2 version', 'Chrome >=49', 'Firefox >=49', 'Edge >= 11', 'ie >= 9']
+                        browsers: ['last 2 version', 'Chrome >=49', 'iOS >= 8',
+                            'Safari >= 8', 'Firefox >=49', 'Edge >= 11', 'ie >= 9'
+                        ]
                     }),
                 ]
             }
 
         }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor',
+        //     filename: 'vendor.bundle.js',
+        //     'minChunks': 3
+        // }),
 
 
         //        new webpack.optimize.CommonsChunkPlugin({
