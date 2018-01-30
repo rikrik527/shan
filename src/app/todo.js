@@ -133,3 +133,7 @@ module.exports.touchElement = function() {
         console.log('touchend');
     });
 }
+
+module.exports.icon = function() {
+
+}

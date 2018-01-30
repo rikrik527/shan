@@ -3,7 +3,7 @@ require('../sass/app.scss');
 var todo = require('./todo');
 var $ = require('jquery');
 var prologue = require('./prologue');
-
+var add = require('./addAbility');
 var obj = require('./getall');
 
 var object = require('./object');
@@ -17,7 +17,7 @@ var awake = require('./spa');
 var xsMenu = require('./xsMenu');
 window.onload = function() {
 
-        todo.touchElement()
+        todo.touchElement();
         prologue.slides();
 
         awake.script.addScript(sourceUrl[0]);
@@ -40,7 +40,7 @@ window.onload = function() {
         }, 3000);
 
         xsMenu.toggleXsmenu();
-
+        add.parts();
         awake.button.select('.awake').onclick = function() {
             console.log('clicked')
             if (awake.command.awakeFirst().style.top == "-100%") {
@@ -65,53 +65,73 @@ window.onload = function() {
     }
     // awake.app.calendarApp();
 var btn = obj.get('.btn-next');
-btn.innerHTML = '<pre>&#10597;</pre>';
-btn.insertAdjacentHTML('afterend', '<div class="btn-back"></div>');
+
+
 var btnBack = obj.get('.btn-back');
-btnBack.style.transition = 'all 1s ease-in-out';
-btnBack.style.display = 'none';
-btnBack.innerHTML = '<pre>&#10595</pre>';
+
+
 var click = 1;
 btn.onclick = (function() {
-    if (click = 5) click = 1;
+    if (click = 4) click = 1;
     return function() {
         switch (click) {
             case 1:
                 awake.command.awakeFirst().classList.add('rotatey');
                 console.log(click);
                 break;
+
             case 2:
-                awake.command.awakeSecond().classList.add('rotatey');
-                console.log(click);
-                break;
-            case 3:
                 awake.command.prologue().classList.add('rotatey');
                 console.log(click);
                 break;
-            case 4:
+            case 3:
                 awake.command.location().classList.add('rotatey');
                 console.log(click);
                 break;
-            case 5:
+            case 4:
                 awake.command.epilogue().classList.add('rotatey');
-                btn.style.display = 'none';
-                btnBack.style.display = 'block';
+
                 console.log(click);
                 break;
         }
         click++;
-        btnBack.onclick = function() {
-
-            awake.command.awakeFirst().classList.remove('rotatey');
-            awake.command.awakeSecond().classList.remove('rotatey');
-            awake.command.prologue().classList.remove('rotatey');
-            awake.command.location().classList.remove('rotatey');
-            awake.command.epilogue().classList.remove('rotatey');
-            btnBack.style.display = 'none';
-            btn.style.display = 'block';
-        }
     }
 })();
+btnBack.onclick = (function() {
+
+    if (click = 1) click = 4;
+    return function() {
+        switch (click) {
+            case 1:
+                awake.command.epilogue().classList.add('rotateyback');
+
+                console.log(click);
+
+
+
+
+                break;
+
+            case 2:
+                awake.command.location().classList.add('rotateyback');
+                console.log(click);
+
+                break;
+            case 3:
+                awake.command.prologue().classList.add('rotateyback');
+                console.log(click);
+
+                break;
+            case 4:
+                awake.command.awakeFirst().classList.add('rotateyback');
+                console.log(click);
+
+                break;
+        }
+        click--;
+    }
+})();
+
 
 // window.onresize = function() {
 //     awake.canvas.resize();
