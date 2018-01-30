@@ -22,6 +22,41 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+a {
+  outline: none;
+  color: #fff;
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
+figure {
+  position: absolute; }
+
+ul,
+li,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none !important; }
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
 .clearfix:after {
   display: block;
   visibility: hidden;
@@ -39,7 +74,9 @@
 .clearfix {
   display: flow-root; }
 
-input[type='button'], input[type='submit'], button {
+input[type=button],
+input[type=submit],
+button {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -59,6 +96,47 @@ iframe:focus {
 iframe[seamless] {
   display: block; }
 
+progress {
+  display: block;
+  /* default: inline-block */
+  width: 100%;
+  margin: 2em auto;
+  padding: 4px;
+  border: 0 none;
+  background: #444;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
 .shan-li-boxcontrol {
   width: 43px;
   height: 115px;
@@ -67,7 +145,10 @@ iframe[seamless] {
   top: 61%;
   left: 51%;
   transform-style: preserve-3d;
-  transform-origin: center bottom; }
+  -webkit-transform-style: preserve-3d;
+  transform-origin: center bottom;
+  -webkit-transform-origin: center bottom;
+  -o-transform-origin: center bottom; }
   .shan-li-boxcontrol .shan-li-hair1 {
     width: 45px;
     height: 18px;
@@ -103,7 +184,16 @@ iframe[seamless] {
     border-bottom-right-radius: 17px;
     position: absolute;
     top: -4px;
-    left: 1px; }
+    left: 1px;
+    -webkit-border-bottom-right-radius: 17px;
+    -webkit-border-bottom-left-radius: 17px;
+    -moz-border-radius-bottomright: 17px;
+    -moz-border-radius-bottomleft: 17px;
+    border-bottom-right-radius: 17px;
+    border-bottom-left-radius: 17px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; }
     .shan-li-boxcontrol .shan-li-head .shan-li-eyebrow {
       position: absolute;
       width: 11px;
@@ -112,7 +202,9 @@ iframe[seamless] {
       top: 4px;
       left: 3px;
       -ms-transform: rotate(15deg);
-      transform: rotatez(15deg); }
+      transform: rotatez(15deg);
+      -webkit-transform: rotateZ(15deg);
+      -o-transform: rotateZ(15deg); }
     .shan-li-boxcontrol .shan-li-head .shan-li-eyebrow2 {
       position: absolute;
       width: 11px;
@@ -121,7 +213,24 @@ iframe[seamless] {
       top: 4px;
       left: 21px;
       -ms-transform: rotate(-15deg);
-      transform: rotateZ(-15deg); }
+      transform: rotateX();
+      transform: rotatey();
+      transform: rotatez(-15deg);
+      transform: translateX();
+      transform: translatey();
+      transform: translatez();
+      -webkit-transform: rotatex();
+      -o-transform: rotateX();
+      -webkit-transform: rotatey();
+      -o-transform: rotatey();
+      -webkit-transform: rotatez(-15deg);
+      -o-transform: rotatez(-15deg);
+      -webkit-transform: translatex();
+      -o-transform: translateX();
+      -webkit-transform: translatey();
+      -o-transform: translatey();
+      -webkit-transform: translatez();
+      -o-transform: translatez(); }
     .shan-li-boxcontrol .shan-li-head .shan-li-eye {
       position: absolute;
       width: 13px;
@@ -134,7 +243,24 @@ iframe[seamless] {
       border-bottom-left-radius: 5px;
       border-top-right-radius: 10px;
       -ms-transform: rotate(15deg);
-      transform: rotateZ(5deg); }
+      transform: rotateX(5deg);
+      transform: rotatey();
+      transform: rotatez();
+      transform: translateX();
+      transform: translatey();
+      transform: translatez();
+      -webkit-transform: rotatex(5deg);
+      -o-transform: rotateX(5deg);
+      -webkit-transform: rotatey();
+      -o-transform: rotatey();
+      -webkit-transform: rotatez();
+      -o-transform: rotatez();
+      -webkit-transform: translatex();
+      -o-transform: translateX();
+      -webkit-transform: translatey();
+      -o-transform: translatey();
+      -webkit-transform: translatez();
+      -o-transform: translatez(); }
       .shan-li-boxcontrol .shan-li-head .shan-li-eye .shan-li-eyeball {
         position: absolute;
         width: 8px;
@@ -143,7 +269,9 @@ iframe[seamless] {
         top: -1px;
         left: 3px;
         border-radius: 10px;
-        animation: lieyeball 5s ease-in-out backwards infinite; }
+        animation: lieyeball 5s ease-in-out backwards infinite;
+        -webkit-animation: lieyeball 5s ease-in-out backwards infinite;
+        -moz-animation: lieyeball 5s ease-in-out backwards infinite; }
     .shan-li-boxcontrol .shan-li-head .shan-li-eye2 {
       position: absolute;
       width: 13px;
@@ -153,10 +281,27 @@ iframe[seamless] {
       top: 10px;
       left: 20px;
       -ms-transform: rotate(-15deg);
-      transform: rotateZ(-8deg);
       border-top-left-radius: 10px;
       border-bottom-right-radius: 5px;
-      overflow: hidden; }
+      overflow: hidden;
+      transform: rotateX();
+      transform: rotatey();
+      transform: rotatez(-8deg);
+      transform: translateX();
+      transform: translatey();
+      transform: translatez();
+      -webkit-transform: rotatex();
+      -o-transform: rotateX();
+      -webkit-transform: rotatey();
+      -o-transform: rotatey();
+      -webkit-transform: rotatez(-8deg);
+      -o-transform: rotatez(-8deg);
+      -webkit-transform: translatex();
+      -o-transform: translateX();
+      -webkit-transform: translatey();
+      -o-transform: translatey();
+      -webkit-transform: translatez();
+      -o-transform: translatez(); }
       .shan-li-boxcontrol .shan-li-head .shan-li-eye2 .shan-li-eyeball2 {
         position: absolute;
         width: 8px;
@@ -165,7 +310,9 @@ iframe[seamless] {
         top: 0px;
         left: 0px;
         border-radius: 10px;
-        animation: lieyeball 5s ease-in-out infinite; }
+        animation: lieyeball 5s ease-in-out infinite;
+        -webkit-animation: lieyeball 5s ease-in-out infinite;
+        -moz-animation: lieyeball 5s ease-in-out infinite; }
 @keyframes lieyeball {
   30% {
     background: #42a5f5; }
@@ -242,7 +389,12 @@ iframe[seamless] {
       background: #f48fb1;
       top: 9px;
       left: -2px;
-      border-radius: 50px; }
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box; }
     .shan-li-boxcontrol .shan-li-body .shan-li-mimi2 {
       position: absolute;
       width: 14px;
@@ -250,7 +402,12 @@ iframe[seamless] {
       background: #f48fb1;
       top: 9px;
       left: 18px;
-      border-radius: 50px; }
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box; }
   .shan-li-boxcontrol .shan-li-arm {
     position: absolute;
     width: 10px;

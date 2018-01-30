@@ -39,7 +39,9 @@
 .clearfix {
   display: flow-root; }
 
-input[type='button'], input[type='submit'], button {
+input[type='button'],
+input[type='submit'],
+button {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;

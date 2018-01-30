@@ -11,7 +11,7 @@ var shanLi = require('./shanStatus');
 
 var shan = require('./shanConversation');
 var say = require('./say');
-
+var sourceUrl = ["//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"];
 var location = require('./location');
 var awake = require('./spa');
 var xsMenu = require('./xsMenu');
@@ -20,7 +20,7 @@ window.onload = function() {
         todo.touchElement()
         prologue.slides();
 
-        awake.facebook.addScript();
+        awake.script.addScript(sourceUrl[0]);
 
         awake.call.shanAppear();
 

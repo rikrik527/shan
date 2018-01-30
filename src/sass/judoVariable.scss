@@ -20,20 +20,15 @@ $per8:8.25%;
 $num3:3.8;
 $p8:8%;
 $p10:10%;
-
-
-
-
 @mixin name($namec, $namec2) {
     display: inline-block;
     width: 100%;
     height: 2em;
     background: repeating-linear-gradient($namec, $namec2);
-   color: black;
+    color: black;
     text-align: center;
-   font-size: 16px;
-   line-height: 33px;
-
+    font-size: 16px;
+    line-height: 33px;
 }
 
 @mixin status($r1, $r2) {
@@ -42,7 +37,7 @@ $p10:10%;
     padding: 2px;
     width: 100%;
     height: 12em;
-    background: repeating-linear-gradient(to right,$r1, $r2);
+    background: repeating-linear-gradient(to right, $r1, $r2);
 }
 
 @mixin s($sw, $sh, $sb, $st, $sf) {
@@ -84,18 +79,18 @@ $p10:10%;
     display: flow-root;
 }
 
-input[type='button'],input[type = 'submit'],button {
+input[type='button'],
+input[type='submit'],
+button {
     -webkit-appearance: none;
     -moz-appearance: none;
-    -ms-appearance:none;
-    -o-appearance:none;
-    appearance:none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
     outline: none;
-    border:none;
-    background:none;
+    border: none;
+    background: none;
     cursor: pointer;
-
-
 }
 
 button {
@@ -120,15 +115,6 @@ iframe[seamless] {
     margin: 10px 10px 5px 5px;
     width: $per47;
     outline: 1px solid;
-}
-
-@mixin shanli($slw, $slh, $slbg, $slt, $sll) {
-    position: absolute;
-    top: $slt;
-    left: $sll;
-    width: $slw;
-    height: $slh;
-    background: $slbg;
 }
 
 @mixin judo($w, $h, $bg, $t, $l, $rz, $rx, $name, $sec) {
@@ -160,7 +146,8 @@ iframe[seamless] {
     height: $ch;
     background: $cb;
 }
-@mixin lowname(){
+
+@mixin lowname() {
     display: inline-block;
     width: 100%;
     height: 2em;
@@ -170,58 +157,53 @@ iframe[seamless] {
     font-size: 14px;
     line-height: 23px;
 }
-@mixin input($inputop,$inputleft,$bgcolor,$color){
+
+@mixin input($inputop, $inputleft, $bgcolor, $color) {
     position: absolute;
     top: $inputop;
-    left:$inputleft;
+    left: $inputleft;
     width: 10%;
     height: auto;
     font-size: 12px;
-    transition:all 1.5s linear;
+    transition: all 1.5s linear;
     background: $bgcolor;
     color: $color;
-    -moz-border-radius:10px;
-    border-radius:10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
 
+@mixin radius($radius) {
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -webkit-border-radius: $radius;
 }
-@mixin radius($radius){
-  -moz-border-radius:$radius;
-  -o-border-radius:$radius;
-  -ms-border-radius:$radius;
-  -webkit-border-radius:$radius;
-}
-@mixin photo(){
+
+@mixin photo() {
     display: inline-block;
-
     width: 100%;
-
 }
-@mixin btn ($btnwidth,$btnheight,$btntop,$btnleft) {
-position: absolute;
-    width:$btnwidth;
-    height:$btnheight;
-    margin:1%;
 
+@mixin btn ($btnwidth, $btnheight, $btntop, $btnleft) {
+    position: absolute;
+    width: $btnwidth;
+    height: $btnheight;
+    margin: 1%;
     transition: all .3s linear;
-    top:$btntop;
-    left:$btnleft;
-    padding:1%;
-
-
+    top: $btntop;
+    left: $btnleft;
+    padding: 1%;
 }
-@mixin lowbox($lwidth,$lheight,$ltop,$lleft){
-   position: absolute;
+
+@mixin lowbox($lwidth, $lheight, $ltop, $lleft) {
+    position: absolute;
     width: $lwidth;
     height: $lheight;
     overflow: hidden;
-    top:$ltop;
-    left:$lleft;
+    top: $ltop;
+    left: $lleft;
     transition: all .3s linear;
-
-    font-family: "Cutive Mono",monospace;
-
-
-
+    font-family: "Cutive Mono", monospace;
 }
 
 @mixin btnz($btnzw, $btnzh, $btnzt, $btnzl) {
@@ -243,7 +225,6 @@ position: absolute;
     border-radius: 100px;
     background-image: linear-gradient(to top, $color3 40%, $color8 60%), url('../images/earth.png');
     animation: $aniname 90s linear infinite;
-
     background-blend-mode: $blendmode;
     @keyframes #{$aniname} {
         0% {

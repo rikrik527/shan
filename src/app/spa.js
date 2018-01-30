@@ -387,11 +387,12 @@ awake.call = {
 
     }
 }
-awake.facebook = {
-    jquery: "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js",
-    addScript: function() {
+awake.script = {
+
+    addScript: function(sourceUrl) {
+        this.sourceUrl = sourceUrl;
         var script = obj.create('script');
-        script.src = this.jquery;
+        script.src = sourceUrl;
         var head = document.getElementsByTagName('head')[0];
         head.appendChild(script);
     }

@@ -90,7 +90,7 @@ iframe[seamless] {
 progress {
     display: block;
     /* default: inline-block */
-    width: 300px;
+    width: 100%;
     margin: 2em auto;
     padding: 4px;
     border: 0 none;
@@ -118,4 +118,94 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
     border-radius: 12px;
     box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+input[type='button'],
+input[type='submit'],
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@mixin transform($rx, $ry, $rz, $tx, $ty, $tz) {
+    transform: rotateX($rx);
+    transform: rotatey($ry);
+    transform: rotatez($rz);
+    transform: translateX($tx);
+    transform: translatey($ty);
+    transform: translatez($tz);
+    -webkit-transform: rotatex($rx);
+    -o-transform: rotateX($rx);
+    -webkit-transform: rotatey($ry);
+    -o-transform: rotatey($ry);
+    -webkit-transform: rotatez($rz);
+    -o-transform: rotatez($rz);
+    -webkit-transform: translatex($tx);
+    -o-transform: translateX($tx);
+    -webkit-transform: translatey($ty);
+    -o-transform: translatey($ty);
+    -webkit-transform: translatez($tz);
+    -o-transform: translatez($tz);
+}
+
+@mixin preserved-3d() {
+    -webkit-transform-style: preserved-3d;
+    transform-style: preserve-3d;
+}
+
+@mixin shanli($slw, $slh, $slbg, $slt, $sll) {
+    position: absolute;
+    top: $slt;
+    left: $sll;
+    width: $slw;
+    height: $slh;
+    background: $slbg;
+}
+
+@mixin border-radius ($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+@mixin border-radiuses ($topright, $bottomright, $bottomleft, $topleft) {
+    -webkit-border-top-right-radius: $topright;
+    -webkit-border-bottom-right-radius: $bottomright;
+    -webkit-border-bottom-left-radius: $bottomleft;
+    -webkit-border-top-left-radius: $topleft;
+    -moz-border-radius-topright: $topright;
+    -moz-border-radius-bottomright: $bottomright;
+    -moz-border-radius-bottomleft: $bottomleft;
+    -moz-border-radius-topleft: $topleft;
+    border-top-right-radius: $topright;
+    border-bottom-right-radius: $bottomright;
+    border-bottom-left-radius: $bottomleft;
+    border-top-left-radius: $topleft;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+@mixin perspective ($value) {
+    -webkit-perspective: $value;
+    -moz-perspective: $value;
+    -ms-perspective: $value;
+    perspective: $value;
+}
+
+@mixin transform-origin ($x, $y) {
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin: $x $y;
+    -ms-transform-origin: $x $y;
+    -o-transform-origin: $x $y;
 }
