@@ -29,8 +29,6 @@
 @media screen and (min-width: 505px) and (max-width: 900px) {
   .shan-btn,
   .shan-btn2 {
-    margin: calc(-28.750em/2) 0 0 calc(-95%/2) !important;
-    width: 95% !important;
     background-size: cover !important;
     background-position: 43% !important; }
 
@@ -41,10 +39,7 @@
     left: 62% !important; }
 
   .m-display-none {
-    display: none; }
-
-  #todo-list {
-    left: 68%; } }
+    display: none; } }
 @media screen and (min-width: 320px) and (max-width: 504px) {
   .xs-menu-text {
     position: absolute;
@@ -87,9 +82,6 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: flex-start; }
-
-  .header-menu {
-    top: 0% !important; }
 
   .xs-menu-section {
     width: 100vw; }
@@ -155,8 +147,6 @@
 
   .shan-btn,
   .shan-btn2 {
-    width: 24.5em !important;
-    margin: calc(-28.750em/2) 0 0 calc(-24.5em/2) !important;
     background-size: 245% !important;
     background-position: 48% 61% !important; }
 
@@ -187,10 +177,6 @@
   @keyframes leftarrow {
     50% {
       transform: translateX(3px); } }
-  #todo-list {
-    left: 54%;
-    z-index: 999999999999999; }
-
   /* form */
   .title-shan {
     top: -1% !important;
@@ -488,7 +474,7 @@ button {
   height: 115px;
   position: absolute;
   margin: calc(-115px/2) 0 0 calc(-43px/2);
-  top: 61%;
+  top: 55%;
   left: 51%;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
@@ -5541,6 +5527,15 @@ iframe[seamless] {
     transform: rotateY(0deg); }
   to {
     transform: rotateY(-90deg); } }
+.todoset {
+  animation: todoset 2s linear; }
+@keyframes todoset {
+  from {
+    width: 0vw;
+    opacity: 0; }
+  to {
+    width: 100vw;
+    opacity: 1; } }
 .rotateyback {
   animation: rotateyback 5s linear forwards; }
 @keyframes rotateyback {
@@ -7805,7 +7800,7 @@ iframe[seamless] {
 /* in text */
 /*fashion set 1 smooth*/
 .todotips {
-  width: auto;
+  width: 12%;
   height: auto;
   top: -7%;
   padding: 1%;
@@ -7828,34 +7823,36 @@ iframe[seamless] {
   left: -4%; }
 
 .todo-pos2 {
-  left: 16%; }
+  left: 11%; }
 
 .todo-pos3 {
-  left: 35%; }
+  left: 26%; }
 
 .todo-pos4 {
-  left: 56%; }
+  left: 41%; }
 
 .todo-pos5 {
-  left: 76%; }
+  left: 56%; }
 
 #todo-list {
-  width: 250px;
+  width: 100vw;
   height: 92px;
   display: block;
-  background: hotpink;
-  border: 2px solid lightpink;
+  margin: calc(-92px/2) 0 0 calc(-100vw/2);
+  /* background: hotpink; */
+  /* border: 2px solid lightpink; */
   position: absolute;
   color: white;
   text-shadow: 1px 1px 4px #fbc02d;
-  left: 74%;
+  /* float: right; */
   font-size: 14px;
   text-align: center;
   line-height: 13px;
-  top: 0%;
-  padding: 16px;
-  border-radius: 11px 11px 0 0;
-  z-index: 99999999999999999999999; }
+  top: 47%;
+  left: 0%;
+  /* padding: 16px; */
+  /* border-radius: 11px 11px 0 0; */
+  z-index: 999999999; }
   #todo-list .todo-close {
     width: 30px;
     height: 30px;
@@ -7863,27 +7860,31 @@ iframe[seamless] {
     cursor: pointer;
     /* position: absolute; */
     /* left: 86%; */
+    font-size: 26px;
     /* top: 113%; */
     padding: 3%;
-    color: black;
-    background: #ffee58;
-    border: 2px solid darkred;
-    border-radius: 100px;
+    color: white;
+    /* background: #ffee58; */
+    /* border: 2px solid darkred; */
+    /* border-radius: 100px; */
     z-index: 999999;
-    float: right;
-    margin-top: -12px;
-    margin-right: -15px; }
+    /* float: right; */
+    /* margin-top: -12px; */
+    /* margin-right: -15px; */
+    position: absolute;
+    top: -157%;
+    left: 135%; }
   #todo-list .todo-add-list {
-    width: 250px;
+    width: 350px;
     /* display: block; */
     /* float: left; */
     height: 50px;
+    position: absolute;
     /* outline: 1px solid; */
     position: absolute;
-    left: 50%;
+    left: 103%;
     margin: calc(-50px/2) 0 0 calc(-250px/2);
-    top: 74%;
-    border-radius: 0 0 10px 10px; }
+    top: -102%; }
   #todo-list .todo1,
   #todo-list .todo2,
   #todo-list .todo3,
@@ -7892,43 +7893,62 @@ iframe[seamless] {
     width: 50px;
     height: 50px;
     display: block;
-    float: left;
+    transform: scale(0.8);
     cursor: pointer;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    background-blend-mode: lighten; }
+    position: absolute;
+    cursor: pointer;
+    border: 3px solid lightblue;
+    border-radius: 100px; }
     #todo-list .todo1:hover,
     #todo-list .todo2:hover,
     #todo-list .todo3:hover,
     #todo-list .todo4:hover,
     #todo-list .todo5:hover {
-      background-color: deeppink; }
+      background-color: deeppink;
+      transform: scale(1.2); }
+      #todo-list .todo1:hover .todo1,
+      #todo-list .todo2:hover .todo1,
+      #todo-list .todo3:hover .todo1,
+      #todo-list .todo4:hover .todo1,
+      #todo-list .todo5:hover .todo1 {
+        background-position: -152px -149px; }
   #todo-list .todo1 {
-    background: url("../images/shan-icon.png") no-repeat;
-    background-position-x: 0px; }
+    background: url("../images/icon2.svg"), #e5eec1 no-repeat;
+    background-position: -8px -149px;
+    background-size: 445%;
+    left: -3%; }
   #todo-list .todo2 {
     background: url("../images/shan-icon.png") no-repeat;
-    background-position-x: -50px; }
+    background-position-x: -50px;
+    margin-left: 7%;
+    left: 5%; }
   #todo-list .todo3 {
     background: url("../images/shan-icon.png") no-repeat;
-    background-position-x: -100px; }
+    background-position-x: -100px;
+    margin-left: 14%;
+    left: 13%; }
   #todo-list .todo4 {
     background: url("../images/shan-icon.png") no-repeat;
-    background-position-x: -150px; }
+    background-position-x: -150px;
+    margin-left: 21%;
+    left: 21%; }
   #todo-list .todo5 {
     background: url("../images/shan-icon.png") no-repeat;
-    background-position-x: -200px; }
+    background-position-x: -200px;
+    margin-left: 28%;
+    left: 29%; }
   #todo-list .todo-set {
-    width: 102%;
-    height: 20px;
+    height: 26px;
     background: linear-gradient(to left, darkcyan, rgba(200, 10, 250, 0.5));
     color: white;
     left: 11%;
-    margin: calc(-21px/2) 0 0 calc(-59px/2);
+    opacity: 0;
+    line-height: 20px;
+    margin: calc(-26px/2) 0 0 calc(-100vw/2);
     position: absolute;
-    top: 115%;
-    text-align: center;
-    font-size: 10px;
-    border: 2px solid lightpink;
+    top: 121%;
+    left: 100%;
     overflow: hidden; }
 
 .todo-status {
@@ -7954,29 +7974,35 @@ iframe[seamless] {
     text-align: center; }
 
 #todo-submit-btn {
-  width: 51%;
-  height: 20px;
+  width: 78px;
+  height: 78px;
   background: hotpink;
-  font-size: 10px;
+  font-size: 21px;
   position: absolute;
-  top: 126%;
-  left: -1%;
-  border: 2px solid lightpink;
-  color: white; }
+  top: -33%;
+  border: 10px solid lemonchiffon;
+  left: 123%;
+  border-radius: 100px;
+  /* border: 2px solid lightpink; */
+  color: white;
+  z-index: 999; }
   #todo-submit-btn:hover {
     background: #ffcc80;
     color: #e91e63; }
 
 #todo-reset-btn {
-  width: 51%;
-  height: 20px;
-  background: hotpink;
+  width: 48px;
+  height: 48px;
+  background: darkorange;
   font-size: 10px;
   position: absolute;
-  top: 126%;
-  left: 50%;
-  border: 2px solid lightpink;
-  color: white; }
+  top: 54%;
+  left: 126%;
+  border: 7px solid brown;
+  color: white;
+  border-radius: 100px;
+  cursor: pointer;
+  cursor: pointer; }
   #todo-reset-btn:hover {
     background: #ffcc80;
     color: #e91e63; }
@@ -8051,6 +8077,225 @@ iframe[seamless] {
       float: left;
       margin: 1%; }
 
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+a {
+  outline: none;
+  color: #fff;
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
+figure {
+  position: absolute; }
+
+ul,
+li,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none !important; }
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type=button],
+input[type=submit],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+progress {
+  display: block;
+  /* default: inline-block */
+  width: 100%;
+  margin: 2em auto;
+  padding: 4px;
+  border: 0 none;
+  background: #444;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+.aside-boxcontrol {
+  position: absolute;
+  top: 32%;
+  left: 5%;
+  display: block;
+  width: 50px;
+  height: 211px;
+  z-index: 9999999999; }
+  .aside-boxcontrol .aside-menu .nav {
+    border-radius: 100px;
+    position: absolute; }
+  .aside-boxcontrol .aside-menu .todo-list {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    background-image: url("../images/icon2.svg");
+    background-color: lightyellow;
+    text-align: center;
+    line-height: 10px;
+    border: 3px solid pink;
+    background-position: 0px -5px;
+    background-size: 400%;
+    cursor: pointer; }
+    .aside-boxcontrol .aside-menu .todo-list:hover {
+      background-color: palevioletred;
+      animation: todolist 0.5s steps(3) forwards; }
+@keyframes todolist {
+  from {
+    background-position: 0px -5px; }
+  to {
+    background-position: -133px -5px; } }
+      .aside-boxcontrol .aside-menu .todo-list:hover .pos {
+        display: block; }
+  .aside-boxcontrol .aside-menu .icon-personal {
+    top: 33%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    background: url("../images/icon2.svg"), lightyellow no-repeat;
+    border: 3px solid pink;
+    background-position: -3px -51px;
+    background-size: 430%;
+    cursor: pointer; }
+    .aside-boxcontrol .aside-menu .icon-personal:hover .pos1 {
+      display: block; }
+  .aside-boxcontrol .aside-menu .icon-service {
+    top: 66%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    background-image: url("../images/icon2.svg");
+    background-color: lightyellow;
+    border: 3px solid pink;
+    background-position: -3px -97px;
+    background-size: 430%;
+    cursor: pointer; }
+    .aside-boxcontrol .aside-menu .icon-service:hover {
+      background-color: palevioletred;
+      animation: iconservice 0.5s steps(3) forwards; }
+@keyframes iconservice {
+  from {
+    background-position: -3px -97px; }
+  to {
+    background-position: -143px -97px; } }
+      .aside-boxcontrol .aside-menu .icon-service:hover .pos2 {
+        display: block; }
+  .aside-boxcontrol .aside-menu .icon-calendar {
+    top: 33%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    background: url("../images/icon2.svg"), lightyellow no-repeat;
+    text-align: center;
+    border: 3px solid pink;
+    line-height: 10px;
+    background-position: 0px -5px;
+    background-size: 400%;
+    cursor: pointer; }
+
 .login-page {
   display: none; }
 
@@ -8110,8 +8355,8 @@ svg {
   transform-style: preserve-3d; }
 
 .header-menu {
-  position: absolute;
-  top: 8%;
+  position: fixed;
+  top: 0%;
   width: 100vw;
   height: 15vh;
   z-index: 999999; }
@@ -8122,7 +8367,6 @@ svg {
     padding: 10px;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, rgba(255, 155, 241, 0.5), rgba(255, 155, 55, 0.5));
     text-align: center;
     transform: translateZ(10px); }
     .header-menu .menu-boxcontrol .header-brand {
@@ -8677,26 +8921,17 @@ svg {
 
 .shan-btn {
   position: absolute;
-  top: 56%;
-  left: 50%;
   overflow: hidden;
-  margin: calc(-28.750em/2) 0 0 calc(-57.5em/2);
-  width: 57.5em;
-  height: 28.750em;
+  width: 100vw;
+  height: 70vh;
+  left: 50%;
+  top: 50%;
+  margin: calc(-70vh/2) 0 0 calc(-100vw/2);
   background: url("../images/section1.png") no-repeat;
   transition: all .3s linear;
   background-position: 65% 64%;
   background-size: contain;
   animation: shanbtn 3s linear 5s; }
-  .shan-btn .shan-lowbox {
-    position: absolute;
-    width: 10%;
-    height: 10%;
-    overflow: hidden;
-    top: 0%;
-    left: 0%;
-    transition: all .3s linear;
-    font-family: "Cutive Mono", monospace; }
 
 .tips {
   animation: tips 1s linear infinite; }
@@ -8780,75 +9015,6 @@ svg {
   50% {
     height: 17%;
     opacity: 0.7; } }
-.aside-boxcontrol {
-  position: absolute;
-  top: 27%;
-  left: 2%;
-  display: block;
-  width: 50px;
-  height: 150px;
-  z-index: 999999999; }
-  .aside-boxcontrol .aside-menu .nav {
-    border-radius: 100px;
-    position: absolute; }
-  .aside-boxcontrol .aside-menu .todo-list {
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 50px;
-    background: url("../images/icon2.svg"), lightyellow no-repeat;
-    text-align: center;
-    line-height: 10px;
-    border: 3px solid pink;
-    background-position: 0px -5px;
-    background-size: 400%;
-    cursor: pointer; }
-    .aside-boxcontrol .aside-menu .todo-list:hover .pos {
-      display: block; }
-  .aside-boxcontrol .aside-menu .icon-personal {
-    top: 33%;
-    left: 0%;
-    width: 100%;
-    height: 50px;
-    background: url("../images/icon2.svg"), lightyellow no-repeat;
-    border: 3px solid pink;
-    background-position: -3px -51px;
-    background-size: 430%;
-    cursor: pointer; }
-    .aside-boxcontrol .aside-menu .icon-personal:hover .pos1 {
-      display: block; }
-  .aside-boxcontrol .aside-menu .icon-service {
-    top: 66%;
-    left: 0%;
-    width: 100%;
-    height: 50px;
-    background: url("../images/icon2.svg"), lightyellow no-repeat;
-    border: 3px solid pink;
-    background-position: -3px -97px;
-    background-size: 430%;
-    cursor: pointer; }
-    .aside-boxcontrol .aside-menu .icon-service:hover {
-      animation: iconservice 0.5s steps(3) forwards; }
-@keyframes iconservice {
-  from {
-    background-position: -3px -97px; }
-  to {
-    background-position: -143px -97px; } }
-      .aside-boxcontrol .aside-menu .icon-service:hover .pos2 {
-        display: block; }
-  .aside-boxcontrol .aside-menu .icon-calendar {
-    top: 33%;
-    left: 0%;
-    width: 100%;
-    height: 50px;
-    background: url("../images/icon2.svg"), lightyellow no-repeat;
-    text-align: center;
-    border: 3px solid pink;
-    line-height: 10px;
-    background-position: 0px -5px;
-    background-size: 400%;
-    cursor: pointer; }
-
 .todo-append {
   width: 300px;
   height: auto;

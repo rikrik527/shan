@@ -69,6 +69,15 @@ iframe[seamless] {
     transform: rotateY(0deg); }
   to {
     transform: rotateY(-90deg); } }
+.todoset {
+  animation: todoset 2s linear; }
+@keyframes todoset {
+  from {
+    width: 0vw;
+    opacity: 0; }
+  to {
+    width: 100vw;
+    opacity: 1; } }
 .rotateyback {
   animation: rotateyback 5s linear forwards; }
 @keyframes rotateyback {

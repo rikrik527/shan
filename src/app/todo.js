@@ -24,7 +24,7 @@ module.exports.touchElement = function() {
     var mlastposition = [null, null];
     var lastposition = [null, null];
     var todoList = obj.getId('todo-list');
-    todoList.style.left = position[0] + 'px';
+
 
 
     todoList.addEventListener('touchmove', function(e) {

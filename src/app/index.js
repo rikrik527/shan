@@ -17,7 +17,7 @@ var awake = require('./spa');
 var xsMenu = require('./xsMenu');
 window.onload = function() {
 
-        todo.touchElement();
+
         prologue.slides();
 
         awake.script.addScript(sourceUrl[0]);
