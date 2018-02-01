@@ -113,18 +113,27 @@
         border: 3px solid lightblue;
         border-radius: 100px;
         &:hover {
-            background-color: deeppink;
             transform: scale(1.2);
-            .todo1 {
-                background-position: -152px -149px;
-            }
         }
     }
     .todo1 {
-        background: url('../images/icon2.svg'), $deep-white no-repeat;
+        background-image: url('../images/icon2.svg');
+        background-color: $deep-white;
         background-position: -8px -149px;
         background-size: 445%;
         left: -3%;
+        &:hover {
+            background: $blue2;
+            animation: todo1 .5s steps(4) forwards;
+            @keyframes todo1 {
+                from {
+                    background-position: -8px -149px;
+                }
+                to {
+                    background-position: -153px -149px;
+                }
+            }
+        }
     }
     .todo2 {
         background: url('../images/shan-icon.png')no-repeat;
@@ -172,22 +181,11 @@
     position: absolute;
     top: 66%;
     left: 55%;
-    border-radius: 10px;
+    border-radius: 0 10px 10px 10px;
     font-size: 10px;
     border: 1px solid pink;
-    .upside {
-        width: 20px;
-        height: 10px;
-        float: left;
-        display: block;
-        font-size: 10px;
-        border-radius: 10px 0 0 0;
-    }
-    #todo-progress {
-        background: $yellow8;
-        color: $pink2;
-        text-align: center;
-    }
+    .upside {}
+    #todo-progress {}
 }
 
 #todo-submit-btn {

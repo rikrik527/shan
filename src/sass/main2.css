@@ -193,6 +193,44 @@
     position: absolute;
     z-index: 9999999999999;
     top: 14% !important; } }
+@media (max-device-width: 360px) and (max-device-height: 640px) {
+  .upside {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    display: block;
+    font-size: 10px;
+    top: -14%;
+    left: -1%;
+    border-radius: 10px 0 0 0;
+    line-height: 20px;
+    background: rgba(190, 90, 100, 0.8);
+    color: white;
+    text-align: center; }
+
+  .todo-name-parts {
+    color: palegreen;
+    display: inline-block;
+    width: 100%;
+    margin-top: 1%;
+    margin-left: 1%; }
+
+  .todo-parts {
+    float: left; }
+    .todo-parts -webkit-progress-bar {
+      background: palegreen; }
+
+  .todo-name-iq {
+    color: #fff59d; }
+
+  .todo-name-emotion {
+    color: #ce93d8; }
+
+  .todo-name-battery {
+    color: #90caf9; }
+
+  .todo-name-action {
+    color: #ef9a9a; } }
 /* iphone 6 6s 7 8 */
 /* samsung */
 /* ipad mini */
@@ -359,18 +397,18 @@ progress {
   margin: 2em auto;
   padding: 4px;
   border: 0 none;
-  background: #444;
+  background: currentColor;
   border-radius: 14px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
 
 progress::-moz-progress-bar {
   border-radius: 12px;
-  background: #FFF;
+  background: currentColor;
   box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
 
 progress::-webkit-progress-bar {
   border-radius: 12px;
-  background: #FFF;
+  background: currentColor;
   box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
 
 progress::-webkit-progress-bar {

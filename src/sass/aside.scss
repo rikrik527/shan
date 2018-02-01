@@ -1,8 +1,26 @@
 @import './color';
 @import './prefix';
+.game-menu {
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/icon2.svg');
+    z-index: 9999999999;
+    background-color: $pink;
+    border: 3px solid $pink4;
+    border-radius: 100px;
+    animation: gamemenu 1s linear infinite;
+    @keyframes gamemenu {
+        from {}
+        to {}
+    }
+}
+
 .aside-boxcontrol {
     position: absolute;
-    top: 32%;
+    top: 29%;
     left: 5%;
     display: block;
     width: 50px;
