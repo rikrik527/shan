@@ -3,14 +3,29 @@
 
 /* awake page animation */
 
-.rotatey {
-    animation: rotatey 5s linear forwards;
-    @keyframes rotatey {
+.gamemenu {
+    animation: gamemenu .5s steps(7) forwards;
+    @keyframes gamemenu {
         from {
-            transform: rotateY(0deg);
+            background-position: -12px -207px
         }
         to {
-            transform: rotateY(-90deg)
+            background-color: $red8;
+            background-position: -423px -207px
+        }
+    }
+}
+
+.gamemenu-reverse {
+    animation: gamemenureverse .5s steps(7) forwards;
+    @keyframes gamemenureverse {
+        from {
+            background-color: $red8;
+            background-position: -423px -207px;
+        }
+        to {
+            background-color: $orange8;
+            background-position: -12px -207px;
         }
     }
 }

@@ -62,13 +62,23 @@ iframe[seamless] {
   display: block; }
 
 /* awake page animation */
-.rotatey {
-  animation: rotatey 5s linear forwards; }
-@keyframes rotatey {
+.gamemenu {
+  animation: gamemenu 0.5s steps(7) forwards; }
+@keyframes gamemenu {
   from {
-    transform: rotateY(0deg); }
+    background-position: -12px -207px; }
   to {
-    transform: rotateY(-90deg); } }
+    background-color: #d32f2f;
+    background-position: -423px -207px; } }
+.gamemenu-reverse {
+  animation: gamemenureverse 0.5s steps(7) forwards; }
+@keyframes gamemenureverse {
+  from {
+    background-color: #d32f2f;
+    background-position: -423px -207px; }
+  to {
+    background-color: #f57c00;
+    background-position: -12px -207px; } }
 .todoset {
   animation: todoset 2s linear; }
 @keyframes todoset {

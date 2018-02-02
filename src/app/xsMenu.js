@@ -88,13 +88,15 @@ module.exports.gameMenu = function() {
         console.log('click gamenu');
         switch (click) {
             case 1:
-
+                gameMenu.classList.remove('gamemenu-reverse');
+                gameMenu.classList.add('gamemenu');
                 asideDown();
                 console.log(click)
                 console.log('aside clicked down')
                 break;
             case 2:
-
+                gameMenu.classList.remove('gamemenu');
+                gameMenu.classList.add('gamemenu-reverse');
                 asideUp();
                 console.log(click)
                 console.log('aside clicked up');
@@ -140,9 +142,11 @@ module.exports.gameMenu = function() {
                 iconToto.style.top = '-27%';
                 iconPersonal.style.top = '-27%';
                 iconService.style.top = '-27%';
-                asideBc.style.zIndex = '0';
-            }, 150);
 
+            }, 150);
+            setTimeout(() => {
+                asideBc.style.zIndex = '0';
+            }, 500);
 
 
         }

@@ -5556,13 +5556,23 @@ iframe[seamless] {
   display: block; }
 
 /* awake page animation */
-.rotatey {
-  animation: rotatey 5s linear forwards; }
-@keyframes rotatey {
+.gamemenu {
+  animation: gamemenu 0.5s steps(7) forwards; }
+@keyframes gamemenu {
   from {
-    transform: rotateY(0deg); }
+    background-position: -12px -207px; }
   to {
-    transform: rotateY(-90deg); } }
+    background-color: #d32f2f;
+    background-position: -423px -207px; } }
+.gamemenu-reverse {
+  animation: gamemenureverse 0.5s steps(7) forwards; }
+@keyframes gamemenureverse {
+  from {
+    background-color: #d32f2f;
+    background-position: -423px -207px; }
+  to {
+    background-color: #f57c00;
+    background-position: -12px -207px; } }
 .todoset {
   animation: todoset 2s linear; }
 @keyframes todoset {
@@ -8275,12 +8285,12 @@ button {
   height: 50px;
   background-image: url("../images/icon2.svg");
   z-index: 999999;
-  background-size: 430%;
-  background-position: -3px -192px;
-  background-color: #fce4ec;
-  border: 3px solid #f06292;
-  border-radius: 100px;
-  animation: gamemenu 1s linear infinite; }
+  background-size: 1600%;
+  background-color: #f57c00;
+  border: 3px solid white;
+  background-position: -12px -207px;
+  transition: all 1s ease-in-out;
+  border-radius: 100px; }
 
 .aside-boxcontrol {
   position: absolute;
@@ -8302,8 +8312,8 @@ button {
     text-align: center;
     line-height: 10px;
     border: 3px solid pink;
-    background-position: 0px -5px;
-    background-size: 400%;
+    background-position: -10px -8px;
+    background-size: 1600%;
     transition: all 1s ease-in-out;
     cursor: pointer; }
     .aside-boxcontrol .aside-menu .icon-todo:hover {
@@ -8311,9 +8321,9 @@ button {
       animation: todolist 0.5s steps(3) forwards; }
 @keyframes todolist {
   from {
-    background-position: 0px -5px; }
+    background-position: -10px -8px; }
   to {
-    background-position: -133px -5px; } }
+    background-position: -161px -8px; } }
       .aside-boxcontrol .aside-menu .icon-todo:hover .pos {
         display: block; }
   .aside-boxcontrol .aside-menu .icon-personal {
@@ -8321,8 +8331,8 @@ button {
     height: 50px;
     background: url("../images/icon2.svg"), lightyellow no-repeat;
     border: 3px solid pink;
-    background-position: -3px -51px;
-    background-size: 430%;
+    background-position: -11px -54px;
+    background-size: 1600%;
     transition: all 1s ease-in-out;
     cursor: pointer; }
     .aside-boxcontrol .aside-menu .icon-personal:hover .pos1 {
@@ -8334,17 +8344,17 @@ button {
     background-image: url("../images/icon2.svg");
     background-color: lightyellow;
     border: 3px solid pink;
-    background-position: -3px -97px;
-    background-size: 430%;
+    background-position: -13px -104px;
+    background-size: 1600%;
     cursor: pointer; }
     .aside-boxcontrol .aside-menu .icon-service:hover {
       background-color: palevioletred;
       animation: iconservice 0.5s steps(3) forwards; }
 @keyframes iconservice {
   from {
-    background-position: -3px -97px; }
+    background-position: -13px -104px; }
   to {
-    background-position: -143px -97px; } }
+    background-position: -163px -97px; } }
       .aside-boxcontrol .aside-menu .icon-service:hover .pos2 {
         display: block; }
 
