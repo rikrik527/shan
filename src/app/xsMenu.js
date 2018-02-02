@@ -50,7 +50,7 @@ module.exports.toggleXsmenu = function() {
         var shanLiImage = obj.get('#shan-li-image');
         shanLiImage.style.opacity = '0';
         obj.get('.the-game').style.opacity = '0';
-        obj.get('.production').style.opacity = '0';
+
     }
 
     function xsMenuClose() {
@@ -65,7 +65,86 @@ module.exports.toggleXsmenu = function() {
         var shanLiImage = obj.get('#shan-li-image');
         shanLiImage.style.opacity = '1';
         obj.get('.the-game').style.opacity = '1';
-        obj.get('.production').style.opacity = '1';
+
 
     }
+}
+module.exports.gameMenu = function() {
+    var gameMenu = obj.get('.game-menu'),
+        iconToto = obj.get('.icon-todo'),
+        iconPersonal = obj.get('.icon-personal'),
+        asideBc = obj.get('.aside-boxcontrol'),
+        iconService = obj.get('.icon-service');
+
+    iconToto.style.top = '-27%';
+    iconPersonal.style.top = '-27%';
+    iconService.style.top = '-27%';
+    iconToto.style.left = '-5%';
+    iconPersonal.style.left = '-5%';
+    iconService.style.left = '-5%';
+    var click = 1;
+    gameMenu.onclick = (function() {
+        if (click == 3) click = 1;
+        console.log('click gamenu');
+        switch (click) {
+            case 1:
+
+                asideDown();
+                console.log(click)
+                console.log('aside clicked down')
+                break;
+            case 2:
+
+                asideUp();
+                console.log(click)
+                console.log('aside clicked up');
+                break;
+
+        }
+        click++
+
+        function asideDown() {
+
+            setTimeout(() => {
+                iconToto.style.top = '0%';
+                iconPersonal.style.top = '0%';
+                iconService.style.top = '0%';
+
+            }, 50);
+            setTimeout(() => {
+                iconPersonal.style.top = '26%';
+                iconService.style.top = '26%';
+                asideBc.style.zIndex = '99999999'
+            }, 100);
+            setTimeout(() => {
+                iconService.style.top = '51%';
+            }, 150);
+
+
+
+
+        }
+
+
+        function asideUp() {
+
+            setTimeout(() => {
+                iconService.style.top = '26%';
+
+            }, 50);
+            setTimeout(() => {
+                iconPersonal.style.top = '0%';
+                iconService.style.top = '0%';
+            }, 100);
+            setTimeout(() => {
+                iconToto.style.top = '-27%';
+                iconPersonal.style.top = '-27%';
+                iconService.style.top = '-27%';
+                asideBc.style.zIndex = '0';
+            }, 150);
+
+
+
+        }
+    })
 }

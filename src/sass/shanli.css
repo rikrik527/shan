@@ -99,7 +99,6 @@ iframe[seamless] {
 progress {
   display: block;
   /* default: inline-block */
-  width: 100%;
   margin: 2em auto;
   padding: 4px;
   border: 0 none;
