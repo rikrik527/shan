@@ -136,94 +136,22 @@ button {
   background: none;
   cursor: pointer; }
 
-.game-menu {
-  position: absolute;
-  top: 1%;
-  left: 0%;
-  width: 100px;
-  height: 100px;
-  background-image: url("../images/icon2.svg");
-  z-index: 999999;
-  background-size: 1933%;
-  background-position: 0px -633px; }
-
-.aside-boxcontrol {
-  position: absolute;
-  top: 29%;
-  left: 7%;
-  display: block;
-  width: 50px;
-  height: 211px;
-  z-index: 999;
-  transition: all .3s ease-in-out; }
-  .aside-boxcontrol .aside-menu .nav {
-    border-radius: 100px;
-    position: absolute; }
-  .aside-boxcontrol .aside-menu .icon-todo {
-    width: 100%;
-    height: 50px;
-    background-image: url("../images/icon2.svg");
-    background-color: lightyellow;
-    text-align: center;
-    line-height: 10px;
-    border: 3px solid pink;
-    background-position: -10px -8px;
-    background-size: 1600%;
-    transition: all 1s ease-in-out;
-    cursor: pointer; }
-    .aside-boxcontrol .aside-menu .icon-todo:hover {
-      background-color: palevioletred;
-      animation: todolist 0.5s steps(3) forwards; }
-@keyframes todolist {
-  from {
-    background-position: -10px -8px; }
-  to {
-    background-position: -161px -8px; } }
-      .aside-boxcontrol .aside-menu .icon-todo:hover .pos {
-        display: block; }
-  .aside-boxcontrol .aside-menu .icon-personal {
-    width: 100%;
-    height: 50px;
-    background: url("../images/icon2.svg"), lightyellow no-repeat;
-    border: 3px solid pink;
-    background-position: -11px -54px;
-    background-size: 1600%;
-    transition: all 1s ease-in-out;
-    cursor: pointer; }
-    .aside-boxcontrol .aside-menu .icon-personal:hover .pos1 {
-      display: block; }
-  .aside-boxcontrol .aside-menu .icon-service {
-    width: 100%;
-    height: 50px;
-    transition: all 1s ease-in-out;
-    background-image: url("../images/icon2.svg");
-    background-color: lightyellow;
-    border: 3px solid pink;
-    background-position: -13px -104px;
-    background-size: 1600%;
-    cursor: pointer; }
-    .aside-boxcontrol .aside-menu .icon-service:hover {
-      background-color: palevioletred;
-      animation: iconservice 0.5s steps(3) forwards; }
-@keyframes iconservice {
-  from {
-    background-position: -13px -104px; }
-  to {
-    background-position: -163px -104px; } }
-      .aside-boxcontrol .aside-menu .icon-service:hover .pos2 {
-        display: block; }
-
-.icon-calendar {
-  top: 33%;
-  left: 0%;
+.xs-player-status {
   width: 100%;
-  height: 50px;
-  background: url("../images/icon2.svg"), lightyellow no-repeat;
-  text-align: center;
-  border: 3px solid pink;
-  line-height: 10px;
-  background-position: 0px -5px;
-  background-size: 400%;
-  cursor: pointer; }
+  height: 15vh;
+  background: hotpink;
+  position: fixed;
+  top: 0;
+  left: 0%; }
 
-/*# sourceMappingURL=aside.css.map */
+.xs-player-stamina {
+  width: 100px;
+  height: 20px;
+  font-size: 10px;
+  outline: 1px solid;
+  position: absolute;
+  left: 45%;
+  top: 24%;
+  line-height: 20px; }
+
+/*# sourceMappingURL=xs-player-status.css.map */

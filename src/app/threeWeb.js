@@ -1,18 +1,17 @@
 var obj = require('./getall');
+var THREE = require('threejs-utils');
 var labJson = require('../json/lab2.json');
 var awake = require('./spa');
-var source = require(['../libs/three'], ['../libs/ColladaLoader'], ['../libs/OBJLoader']);
+
 module.exports.lab = function() {
-    awake.script.addScript(source[0]);
-    awake.script.addScript(source[1]);
-    awake.script.addScript(source[1]);
+
     var scene = new THREE.Scene();
     var scene2 = new THREE.Scene();
     var scene3 = new THREE.Scene();
 
     var shanBtn = obj.get('.shan-btn');
-    var width = window.innerWidth;
-    var height = window.innerHeight;
+    var width = shanBtn.clientWidth;
+    var height = shanBtn.clientHeight;
     var viewAngle = 45;
     var near = 0.1;
     var far = 10000;
@@ -43,14 +42,16 @@ module.exports.lab = function() {
 
     }
     var mesh;
-    var loader = new THREE.JSONLoader();
-    loader.load(labJson, function(geometry, met) {
-        mesh = new THREE.Mesh(geometry, mat[0]);
-        mesh.scale.x = 15;
-        mesh.scale.y = 15;
-        mesh.scale.z = 15;
+    var model;
+    var loader = new THREE.ColladaLoader();
+    loader.load('../json/lab.dae', function(collada) {
+        model = collada.scene;
+        model.scale.set(0.1, 0.1, 0.1);
+        model.position.y = -300;
+        model.rotation.x = -Math.PI / 2
+        model.updateMatrix();
 
-        scene.add(mesh);
-    }, '../json/')
+        scene.add(model);
+    });
     renderer.render(scene, camera);
 }

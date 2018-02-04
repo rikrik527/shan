@@ -112,15 +112,15 @@ module.exports.gameMenu = function() {
                 iconPersonal.style.top = '0%';
                 iconService.style.top = '0%';
 
-            }, 50);
+            }, 1000);
             setTimeout(() => {
                 iconPersonal.style.top = '26%';
                 iconService.style.top = '26%';
                 asideBc.style.zIndex = '99999999'
-            }, 100);
+            }, 1200);
             setTimeout(() => {
                 iconService.style.top = '51%';
-            }, 150);
+            }, 1300);
 
 
 
