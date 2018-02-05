@@ -69,6 +69,10 @@ module.exports.toggleXsmenu = function() {
 
     }
 }
+module.exports.oldRobot = function() {
+    var oldRobot = obj.get('.game-menu');
+
+}
 module.exports.gameMenu = function() {
     var gameMenu = obj.get('.game-menu'),
         iconToto = obj.get('.icon-todo'),

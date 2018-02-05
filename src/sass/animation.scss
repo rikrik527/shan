@@ -4,25 +4,25 @@
 /* awake page animation */
 
 .gamemenu {
-    animation: gamemenu 1s steps(14) forwards;
+    animation: gamemenu 1s steps(24) forwards;
     @keyframes gamemenu {
         from {
-            background-position: 0px -633px
+            background-position: -15px -627px
         }
         to {
-            background-position: -1600px -633px
+            background-position: -5766px -627px
         }
     }
 }
 
 .gamemenu-reverse {
-    animation: gamemenureverse 1s steps(14) forwards;
+    animation: gamemenureverse 1s steps(24) forwards;
     @keyframes gamemenureverse {
         from {
-            background-position: -1600px -633px;
+            background-position: -5766px -627px;
         }
         to {
-            background-position: 0px -633px;
+            background-position: -15px -627px;
         }
     }
 }
