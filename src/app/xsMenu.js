@@ -47,9 +47,7 @@ module.exports.toggleXsmenu = function() {
         line2.style.top = '40%';
         var text = obj.get('.xs-menu-text');
         text.style.top = '35%';
-        var shanLiImage = obj.get('#shan-li-image');
-        shanLiImage.style.opacity = '0';
-        obj.get('.the-game').style.opacity = '0';
+
 
     }
 
@@ -62,9 +60,8 @@ module.exports.toggleXsmenu = function() {
         line2.style.top = '34%';
         var text = obj.get('.xs-menu-text');
         text.style.top = '31%';
-        var shanLiImage = obj.get('#shan-li-image');
-        shanLiImage.style.opacity = '1';
-        obj.get('.the-game').style.opacity = '1';
+
+
 
 
     }
@@ -78,14 +75,10 @@ module.exports.gameMenu = function() {
         iconToto = obj.get('.icon-todo'),
         iconPersonal = obj.get('.icon-personal'),
         asideBc = obj.get('.aside-boxcontrol'),
+
         iconService = obj.get('.icon-service');
 
-    iconToto.style.top = '-27%';
-    iconPersonal.style.top = '-27%';
-    iconService.style.top = '-27%';
-    iconToto.style.left = '-5%';
-    iconPersonal.style.left = '-5%';
-    iconService.style.left = '-5%';
+
     var click = 1;
     gameMenu.onclick = (function() {
         if (click == 3) click = 1;
@@ -94,14 +87,14 @@ module.exports.gameMenu = function() {
             case 1:
                 gameMenu.classList.remove('gamemenu-reverse');
                 gameMenu.classList.add('gamemenu');
-                asideDown();
+
                 console.log(click)
                 console.log('aside clicked down')
                 break;
             case 2:
                 gameMenu.classList.remove('gamemenu');
                 gameMenu.classList.add('gamemenu-reverse');
-                asideUp();
+
                 console.log(click)
                 console.log('aside clicked up');
                 break;

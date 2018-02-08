@@ -21,27 +21,26 @@ window.onload = function() {
 
     prologue.slides();
 
-    awake.script.addScript(sourceUrl[0]);
+
 
     awake.call.shanAppear();
 
-    awake.image.show();
 
     (function() {
         awake.canvas.octagon();
     })();
 
     // awake.shanLiAwaken.story();
-    awake.command.nameSvg();
 
-    awake.shanLiAwaken.title();
+
+
     shan.talk.talkingDialog();
     setTimeout(() => {
         shan.talk.createLi.call(shanLi, Math.floor(Math.random() * Date.now()), Math.floor(Math.random() * Date.now()));
     }, 3000);
 
     xsMenu.toggleXsmenu();
-    add.parts();
+
     xsMenu.gameMenu();
 }
 

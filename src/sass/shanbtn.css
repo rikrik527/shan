@@ -1,0 +1,23 @@
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+.game-action {
+  background-image: url("../images/icon2.svg");
+  top: -14%;
+  position: absolute;
+  background-position: -2px -287px;
+  background-size: 2000%;
+  left: -59%;
+  width: 100px;
+  height: 100px; }
+
+/*# sourceMappingURL=shanbtn.css.map */

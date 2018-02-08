@@ -3,37 +3,20 @@
 @import './mediaQuery';
 @import './prefix';
 @import './shanli';
-@import './judo';
-@import './crazy';
 @import './animation';
-@import './elements';
-@import './beast';
-@import './samurai';
-@import './magic';
-@import './nopo';
-@import './todo';
 @import './prologue';
-@import './aside';
+@import './xs-menu-trigger';
 @import './xs-player-status';
+@import './shanbtn';
+@import './header';
 .login-page {
     display: none;
-}
-
-#rain {
-    background: url('../images/rain.gif')no-repeat;
 }
 
 svg {
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
-.text {
-    fill: url(#rain);
-    stroke: hotpink;
-    stroke-width: 9;
-    stroke-opacity: 1;
 }
 
 .iframe {
@@ -52,478 +35,8 @@ svg {
     background: black;
 }
 
-.overflow {
-    width: 100vw;
-    height: 15vh;
-    position: relative;
-    overflow: hidden;
-    top: -10%;
-    left: -1%;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-.paralax1 {
-    width: 300px;
-    height: 473px;
-    top: -157px;
-    left: 0%;
-    transform: translateZ(-100px);
-    /* position: fixed; */
-    /* outline: 1px solid red; */
-    position: absolute;
-    background-size: contain;
-    z-index: -99999999999999;
-}
-
-.perspective {
-    perspective: 1000px;
-}
-
-.preserve-3d {
-    transform-style: preserve-3d;
-}
-
-.header-menu {
-    position: fixed;
-    top: 0%;
-    width: 100vw;
-    height: 15vh;
-    z-index: 999999;
-    .menu-boxcontrol {
-        position: absolute;
-        top: 0%;
-        z-index: 999999999999999999999;
-        padding: 10px;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transform: translateZ(10px);
-        .header-brand {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            margin: calc(-15vh/2) 0 0 calc(-300px/2);
-            width: 300px;
-            height: 15vh;
-            text-align: center;
-            font-weight: bolder;
-            font-size: 21px;
-            line-height: 16px;
-            .production {
-                position: absolute;
-                top: 23%;
-                left: -61%;
-                z-index: 9999;
-                color: white;
-                font: status-bar;
-                font-size: 10px;
-                .quote {}
-            }
-            .mr-judo-made {
-                width: 150px;
-                height: 100px;
-                letter-spacing: 1px;
-            }
-            .the-game {
-                position: absolute;
-                top: -19%;
-                left: -44%;
-                z-index: 99999999;
-                margin: -50px 0 0 -75px;
-                width: 150px;
-                height: 200px;
-                text-shadow: 2px -1px 1px white;
-                font: 10.5em/1 Open Sans, Impact;
-                -webkit-text-decoration-line: underline;
-            }
-        }
-        .awake {
-            position: absolute;
-            top: 100%;
-            left: 47%;
-            width: 60px;
-            height: 28px;
-            background: rgba(255, 155, 225, 0.5);
-            text-align: center;
-            font-size: 13px;
-            line-height: 22px;
-            transition: all .1s linear;
-            &:hover {
-                background: rgba(27, 194, 185, 0.5);
-                .awake-up {
-                    top: -10px;
-                    opacity: 0;
-                }
-                .awake-down {
-                    top: 3px;
-                    opacity: 1;
-                    transition: all .1s linear;
-                }
-                .awake-border-up {
-                    width: 0px;
-                }
-                .awake-border-down {
-                    width: 0px;
-                }
-            }
-            .awake-up {
-                position: absolute;
-                top: 4px;
-                left: 25%;
-                z-index: 9099999;
-                color: white;
-                opacity: 1;
-                cursor: pointer;
-                transition: all 0.1s linear;
-            }
-            .awake-border-up {
-                position: absolute;
-                top: -1px;
-                left: 0%;
-                width: calc(120px/2);
-                border-top: 1px solid white;
-                transition: all .1s linear .5s;
-            }
-            .awake-border-down {
-                position: absolute;
-                top: 95%;
-                left: 100%;
-                width: calc(120px/2);
-                border-top: 1px solid white;
-                transition: all .1s linear .5s;
-                transform: rotateY(-180deg);
-                transform-origin: left bottom;
-            }
-            .awake-down {
-                position: absolute;
-                top: 25px;
-                left: 25%;
-                display: block;
-                color: maroon;
-                text-shadow: -1px 1px 5px white;
-                opacity: 0;
-                transition: all 0.1s linear;
-            }
-        }
-        .prologue {
-            position: absolute;
-            top: 100%;
-            left: 67%;
-            width: 60px;
-            height: 28px;
-            background: rgba(255, 155, 225, 0.5);
-            text-align: center;
-            font-size: 13px;
-            line-height: 22px;
-            transition: all .1s linear;
-            &:hover {
-                background: rgba(27, 194, 185, 0.5);
-                .prologue-up {
-                    top: -10px;
-                    opacity: 0;
-                }
-                .prologue-down {
-                    top: 3px;
-                    opacity: 1;
-                    transition: all .1s linear;
-                }
-                .prologue-border-up {
-                    width: 0px;
-                }
-                .prologue-border-down {
-                    width: 0px;
-                }
-            }
-            .prologue-up {
-                position: absolute;
-                top: 4px;
-                left: 25%;
-                z-index: 9099999;
-                color: white;
-                opacity: 1;
-                cursor: pointer;
-                transition: all 0.1s linear;
-            }
-            .prologue-border-up {
-                position: absolute;
-                top: -1px;
-                left: 0%;
-                width: calc(120px/2);
-                border-top: 1px solid white;
-                transition: all .1s linear .5s;
-            }
-            .prologue-border-down {
-                position: absolute;
-                top: 95%;
-                left: 100%;
-                width: calc(120px/2);
-                border-top: 1px solid white;
-                transition: all .1s linear .5s;
-                transform: rotateY(-180deg);
-                transform-origin: left bottom;
-            }
-            .prologue-down {
-                position: absolute;
-                top: 25px;
-                left: 25%;
-                display: block;
-                color: maroon;
-                text-shadow: -1px 1px 5px white;
-                opacity: 0;
-                transition: all 0.1s linear;
-            }
-        }
-        .location {
-            position: absolute;
-            top: 100%;
-            left: 87%;
-            width: 60px;
-            height: 28px;
-            background: rgba(255, 155, 225, 0.5);
-            text-align: center;
-            font-size: 13px;
-            line-height: 22px;
-            transition: all .1s linear;
-            &:hover {
-                background: rgba(27, 194, 185, 0.5);
-                .location-up {
-                    top: -10px;
-                    opacity: 0;
-                }
-                .location-down {
-                    top: 3px;
-                    opacity: 1;
-                    transition: all .1s linear;
-                }
-                .location-border-up {
-                    width: 0px;
-                }
-                .location-border-down {
-                    width: 0px;
-                }
-            }
-            .location-up {
-                position: absolute;
-                top: 4px;
-                left: 25%;
-                z-index: 9099999;
-                color: white;
-                opacity: 1;
-                cursor: pointer;
-                transition: all 0.1s linear;
-            }
-            .location-border-up {
-                position: absolute;
-                top: -1px;
-                left: 0%;
-                width: calc(120px/2);
-                border-top: 1px solid white;
-                transition: all .1s linear .5s;
-            }
-            .location-border-down {
-                position: absolute;
-                top: 95%;
-                left: 100%;
-                width: calc(120px/2);
-                border-top: 1px solid white;
-                transition: all .1s linear .5s;
-                transform: rotateY(-180deg);
-                transform-origin: left bottom;
-            }
-            .location-down {
-                position: absolute;
-                top: 25px;
-                left: 25%;
-                display: block;
-                color: maroon;
-                text-shadow: -1px 1px 5px white;
-                opacity: 0;
-                transition: all 0.1s linear;
-            }
-        }
-        .epilogue {
-            position: absolute;
-            top: 100%;
-            left: 107%;
-            width: 60px;
-            height: 28px;
-            background: rgba(255, 155, 225, 0.5);
-            text-align: center;
-            font-size: 13px;
-            line-height: 22px;
-            transition: all .1s linear;
-            &:hover {
-                background: rgba(27, 194, 185, 0.5);
-                .epilogue-up {
-                    top: -10px;
-                    opacity: 0;
-                }
-                .epilogue-down {
-                    top: 3px;
-                    opacity: 1;
-                }
-                .epilogue-border-up {
-                    width: 0px;
-                }
-                .epilogue-border-down {
-                    width: 0px;
-                }
-            }
-            .epilogue-up {
-                position: absolute;
-                top: 4px;
-                left: 25%;
-                z-index: 9099999;
-                color: white;
-                opacity: 1;
-                cursor: pointer;
-                transition: all 0.1s linear;
-            }
-            .epilogue-border-up {
-                position: absolute;
-                top: -1px;
-                left: 0%;
-                width: calc(120px/2);
-                border-top: 1px solid white;
-                transition: all .1s linear .5s;
-            }
-            .epilogue-border-down {
-                position: absolute;
-                top: 95%;
-                left: 100%;
-                width: calc(120px/2);
-                border-top: 1px solid white;
-                transition: all .1s linear .5s;
-                transform: rotateY(-180deg);
-                transform-origin: left bottom;
-            }
-            .epilogue-down {
-                position: absolute;
-                top: 25px;
-                left: 25%;
-                display: block;
-                color: maroon;
-                text-shadow: -1px 1px 5px white;
-                opacity: 0;
-                transition: all 0.1s linear;
-            }
-        }
-    }
-}
-
-.awaken-title {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    outline: 1px solid white;
-    top: 0%;
-    left: 0%;
-    .awaken-awa {
-        position: absolute;
-        color: $bluegrey5;
-        font-size: 20px;
-        top: 0%;
-        left: 0%;
-    }
-    .awaken-ken {
-        position: absolute;
-        color: $bluegrey5;
-        font-size: 20px;
-        top: 0%;
-        left: 0%;
-    }
-}
-
-#shan-li-image {
-    position: absolute;
-    left: 0%;
-    height: 160px;
-    width: 100px;
-    top: 0%;
-    border: 3px solid white;
-    box-shadow: -1px 1px 18px 5px deeppink;
-    -ms-transform-origin: top left;
-    transform-origin: top left;
-    transition: all .5s ease-in-out;
-    z-index: 999999999;
-}
-
-.shan-img-ani {
-    animation: shanliimage 3s linear infinite;
-    @keyframes shanliimage {
-        20% {
-            transform: rotatex(30deg)rotatez(20deg);
-            filter: hue-rotate(180deg)
-        }
-        80% {
-            transform: rotateX(-30deg)rotateZ(-10deg);
-            filter: hue-rotate(360deg)blur(3px);
-        }
-    }
-}
-
 #canvas {
     z-index: -1;
-}
-
-.machine-arm {
-    width: 30px;
-    height: 40px;
-    position: absolute;
-    top: 42%;
-    left: 74%;
-    z-index: 9999999;
-    background: url('../images/machine1.png')no-repeat;
-    -ms-transform-origin: center top;
-    transform-origin: center top;
-    transform: rotateZ(71deg);
-    z-index: 9999999;
-    .machine-arm2 {
-        background: url('../images/machine2.png')no-repeat;
-        width: 20px;
-        height: 58px;
-        position: absolute;
-        top: 25%;
-        left: 17%;
-        -ms-transform-origin: center top;
-        transform-origin: center top;
-        transform: rotateZ(-17deg)rotateX(59deg);
-        animation: parts 3s linear infinite;
-        @keyframes parts {
-            30% {
-                transform: rotateZ(-2deg)rotateX(59deg);
-            }
-            60%,
-            70%,
-            80%,
-            90%,
-            100% {
-                transform: rotateZ(-2deg)rotateX(0deg);
-            }
-        }
-        .machine-hand {
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            background: url('../images/machine3.png')no-repeat;
-            top: 100%;
-            left: -69%;
-            transform-origin: center top;
-            animation: swipe 3s linear infinite;
-            @keyframes swipe {
-                60%,
-                80%,
-                100% {
-                    transform: rotatex(30deg)
-                }
-                70%,
-                90% {
-                    transform: rotatex(0deg)
-                }
-            }
-        }
-    }
 }
 
 .light1 {}
@@ -531,44 +44,6 @@ svg {
 .light2 {}
 
 .light3 {}
-
-.btn-back {
-    position: fixed;
-    bottom: 4%;
-    left: 8%;
-    z-index: 9999999999999999;
-    margin: -25px 0 0 -25px;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    border-radius: 100px;
-    background: yellow;
-    text-align: center;
-    cursor: pointer;
-}
-
-.btn-next {
-    position: fixed;
-    bottom: 4%;
-    right: 3%;
-    z-index: 9999999999999999;
-    margin: -25px 0 0 -25px;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    border-radius: 100px;
-    background: yellow;
-    text-align: center;
-    cursor: pointer;
-}
-
-.extend {
-    display: inline-block;
-    margin: 1%;
-    width: 100%;
-    height: 2000px;
-    background: green;
-}
 
 .main-boxcontrol {
     position: relative;
@@ -701,86 +176,17 @@ svg {
     transform: translateZ(0px);
 }
 
-.external-cover-btn {
-    position: absolute;
-    width: 62.5em;
-    height: 28.750em;
-    background: black;
-    transition: all 1s linear;
-    animation: externalcoverbtn 1s linear 3s forwards;
-    @keyframes externalcoverbtn {
-        10%,
-        30%,
-        60%,
-        90% {
-            opacity: 0.6;
-        }
-        20%,
-        40%,
-        60%,
-        80%,
-        100% {
-            opacity: 0.3;
-        }
-    }
-}
-
-.black-story {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: black;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 16px;
-    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-}
-
-.black-story-text {
-    line-height: 16px;
-    color: $bluegrey3;
-}
-
 .shan-btn {
     position: absolute;
     overflow: hidden;
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     left: 50%;
     top: 50%;
-    margin: calc(-70vh/2) 0 0 calc(-100vw/2);
-    background: url('../images/section1.png')no-repeat;
+    margin: calc(-100vh/2) 0 0 calc(-100vw/2);
     transition: all .3s linear;
     background-position: 65% 64%;
     background-size: contain;
-    animation: shanbtn 3s linear 5s;
-    @keyframes shanbtn {}
-}
-
-.tips {
-    animation: tips 1s linear infinite;
-    @keyframes tips {
-        50% {
-            background: rbga(255, 100, 100, 0.7);
-        }
-    }
-}
-
-.pos,
-.pos1,
-.pos2,
-.pos3,
-.pos4,
-.pos5 {
-    animation: pos 1s linear infinite;
-    @keyframes pos {
-        40% {
-            transform: translateX(-1px);
-        }
-        80% {
-            transform: translateX(1px);
-        }
-    }
 }
 
 .footer-boxcontrol {
@@ -791,23 +197,15 @@ svg {
     #footer-content {}
 }
 
-#lab {
-    position: absolute;
-    z-index: 99999999;
-    width: 1000px;
-    height: 460px;
-    transform: translateZ(12px);
-}
-
 .shan-talk {
     position: absolute;
-    top: 66%;
-    left: 2%;
+    top: 75%;
+    left: 3%;
     z-index: 99;
     display: block;
     overflow: scroll;
-    width: 40%;
-    height: 33%;
+    width: 39%;
+    height: 24%;
     border-radius: 5px;
     background: rgba(255, 100, 190, .5);
     box-shadow: 0px 0px 3px 3px #c2185b;
@@ -824,71 +222,21 @@ svg {
         height: auto;
         background: $pink2;
         font-size: 10px;
-        animation: shanconversation 1s linear forwards;
+        transition: all .1s linear;
+        animation: shanconversation .5s linear infinite;
         @keyframes shanconversation {
             10%,
             50%,
             90% {
-                opacity: 0;
+                opacity: 0.6;
+                background-color: pink;
+            }
+            20%,
+            100% {
+                opacity: 0.9;
             }
         }
     }
-}
-
-.reflect {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-}
-
-.light1 {
-    width: 18%;
-    height: 6%;
-    background: linear-gradient(to top, rgba(50, 200, 250, 0.1), rgba(50, 200, 250, 0.7));
-    position: absolute;
-    top: 36%;
-    left: 20%;
-    z-index: 99999999;
-    transform-origin: center top;
-    transform: rotateZ(-56deg);
-    transition: all 1s linear;
-    animation: light1 2s linear infinite;
-    @keyframes light1 {
-        50% {
-            height: 17%;
-            opacity: 0.7
-        }
-    }
-}
-
-.todo-append {
-    width: 300px;
-    height: auto;
-    outline: 1px solid yellow;
-    position: absolute;
-    top: -126px;
-    left: 142%;
-}
-
-.tips {
-    position: absolute;
-    width: 105px;
-    height: auto;
-    /* outline: 1px solid #ad1457; */
-    border-radius: 3px;
-    background: rgba(255, 100, 100, 0.3);
-    box-shadow: -1px 1px 8px 3px lightpink;
-    color: snow;
-    text-align: center;
-    font-size: 10px;
-}
-
-.pos2,
-.pos1,
-.pos {
-    top: 0%;
-    left: 53%;
-    display: block;
 }
 
 .actived {

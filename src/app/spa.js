@@ -24,7 +24,7 @@ awake.image = {
     }
 }
 
-awake.command = {
+awake.selector = {
     count: 0,
     awakeFirst: function() {
         return document.querySelector('.awake-first-section')
@@ -132,15 +132,17 @@ awake.command = {
 
 
 }
-awake.button = {
+awake.get = {
     select: function(select) {
         return obj.get(select);
     }
 }
-awake.shanLiAwaken = {
-    year: '西元二零二七年',
-    location: '位於:24.09.25.98北,120.38.44.90東,拔海高度90公尺的一間老舊的生化人研究中心',
-    event: '發生了電磁波亂流事件,這是超強的電磁波散佈在空氣中所產生的電磁亂流,方圓一萬公里的機械用品全部在這次事件中故障,而引起這股動亂的主因,是"老舊的生化人研究所中心"製造的人工智慧雨珊生化人啟動了....',
+awake.story = {
+    shanLiAwaken: {
+        year: '西元二零二七年',
+        location: '位於:24.09.25.98北,120.38.44.90東,拔海高度90公尺的一間老舊的生化人研究中心',
+        event: '發生了電磁波亂流事件,這是超強的電磁波散佈在空氣中所產生的電磁亂流,方圓一萬公里的機械用品全部在這次事件中故障,而引起這股動亂的主因,是"老舊的生化人研究所中心"製造的人工智慧雨珊生化人啟動了....'
+    },
     story: function(method) {
         this.method = method;
         var div = obj.create('div');
@@ -451,5 +453,23 @@ awake.canvas = {
 
     }
 
+
+}
+awake.ex = {
+    addName: function(cls) {
+        this.cls = cls;
+        return document.querySelector(cls)
+    },
+    createDiv: function(div) {
+        this.div = div;
+        return document.createElement(div);
+    },
+    append: function() {
+
+        return function() {
+            createDiv()
+            addName().appendChild(cls)
+        }
+    }
 }
 module.exports = awake;

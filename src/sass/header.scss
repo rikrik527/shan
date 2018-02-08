@@ -1,0 +1,288 @@
+@import './color';
+@import './prefix';
+.game-robots {
+    width: 100vw;
+    height: 15vh;
+    /* outline: 1px solid; */
+    /* float: left; */
+    z-index: 9999999999999999999;
+    position: fixed;
+    /* margin: calc(-15vh/2) 0 0 calc(-100vw/2); */
+    top: 0%;
+    /* left: 50%; */
+}
+
+.game-menu {
+    background-image: url('../images/icon2.svg');
+    display: block;
+    /* margin: -50px 0 0 -50px; */
+    width: 5rem;
+    height: 5rem;
+    z-index: 999999;
+    background-size: 1600%;
+    background-position: -20px -224px;
+    cursor: pointer;
+    float: left;
+    /* align-self: center; */
+    /* outline: 1px solid; */
+    margin: 2rem 1rem 0rem 1rem;
+    border-radius: 100px;
+    box-shadow: 0px 0px 3px 6px rgba(200, 80, 250, 0.7);
+    background-color: black;
+}
+
+.game-status {
+    width: 7em;
+    height: 8rem;
+    display: grid;
+    position: relative;
+    float: left;
+    font-size: 10px;
+    padding: 0%;
+    margin-top: 2%;
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+    margin-left: -2%;
+}
+
+.xs-player-name {
+    width: 5.1rem;
+    height: 1.7rem;
+    background: green;
+    line-height: 28px;
+    color: white;
+    /* border-radius: 10px; */
+    float: left;
+    /* margin: 1%; */
+    text-align: center;
+}
+
+.xs-player-experience {
+    width: 100%;
+    height: 1.7rem;
+    line-height: 30px;
+    background: green;
+    /* padding: 5%; */
+    text-align: center;
+    float: left;
+    /* margin: 1%; */
+}
+
+.player-experience {
+    color: white;
+}
+
+.xs-player-level {
+    width: 100%;
+    height: 1.7rem;
+    line-height: 30px;
+    background: yellow;
+    /* padding: 5%; */
+    text-align: center;
+    float: left;
+}
+
+.xs-player-experience-icon,
+.xs-player-money-icon,
+.xs-player-level-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    float: left;
+    background-color: lightpink;
+    background-image: url('../images/icon2.svg');
+}
+
+.xs-player-level-icon {
+    background-position: -9px -42px;
+    background-size: 1600%;
+}
+
+.xs-player-experience-icon {
+    background-position: 0;
+    background-size: 100%;
+}
+
+.xs-player-money-icon {
+    background-size: 1600%;
+    background-position: -9px -41px;
+}
+
+.experience-limit {
+    color: red;
+}
+
+.xs-player-money {
+    width: 100%;
+    height: 1.7rem;
+    line-height: 30px;
+    background: yellow;
+    /* padding: 5%; */
+    text-align: center;
+    float: left;
+}
+
+.aside-tips {
+    width: 100%;
+    position: absolute;
+    width: auto;
+    padding: 1%;
+    font-size: 12px;
+    color: white;
+    height: auto;
+    background: rgba(37, 138, 236, 0.3);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 238, 236, 0.6);
+}
+
+.play-level {
+    position: absolute;
+    left: 60%;
+}
+
+.aside-boxcontrol {
+    width: 7em;
+    height: 8rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    float: left;
+    font-size: 10px;
+    margin-top: 2%;
+    margin-left: 1%;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    .icon-todo {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100px;
+        align-self: center;
+        margin: auto;
+        background-image: url('../images/icon2.svg');
+        background-color: lightyellow;
+        text-align: center;
+        background-position: -10px -8px;
+        background-size: 1600%;
+        cursor: pointer;
+        display: block;
+        &:hover {
+            background-color: palevioletred;
+            animation: todolist .5s steps(3) forwards;
+            @keyframes todolist {
+                from {
+                    background-position: -10px -8px;
+                }
+                to {
+                    background-position: -161px -8px;
+                }
+            }
+            .pos {
+                display: block;
+            }
+        }
+    }
+    .icon-personal {
+        background-image: url('../images/icon2.svg');
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100px;
+        align-self: center;
+        margin: auto;
+        text-align: center;
+        background-color: lightyellow;
+        background-position: -10px -8px;
+        background-size: 1600%;
+        cursor: pointer;
+        &:hover {
+            .pos1 {
+                display: block;
+            }
+        }
+    }
+    .icon-service {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100px;
+        align-self: center;
+        margin: auto;
+        background-image: url('../images/icon2.svg');
+        cursor: pointer;
+        background-color: lightyellow;
+        background-position: -10px -8px;
+        background-size: 1600%;
+        cursor: pointer;
+        &:hover {
+            background-color: palevioletred;
+            animation: iconservice .5s steps(3)forwards;
+            @keyframes iconservice {
+                from {
+                    background-position: -13px -104px;
+                }
+                to {
+                    background-position: -163px -104px;
+                }
+            }
+            .pos2 {
+                display: block;
+            }
+        }
+    }
+    .icon-service-list {}
+}
+
+.icon-calendar {
+    top: 33%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    background: url('../images/icon2.svg'), lightyellow no-repeat;
+    text-align: center;
+    border: 3px solid pink;
+    line-height: 10px;
+    background-position: 0px -5px;
+    background-size: 400%;
+    cursor: pointer;
+}
+
+.tips {
+    position: absolute;
+    width: 105px;
+    height: auto;
+    /* outline: 1px solid #ad1457; */
+    border-radius: 3px;
+    background: rgba(255, 100, 100, 0.3);
+    box-shadow: -1px 1px 8px 3px lightpink;
+    color: snow;
+    text-align: center;
+    font-size: 10px;
+    animation: tips 1s linear infinite;
+    @keyframes tips {
+        50% {
+            background: rbga(255, 100, 100, 0.7);
+        }
+    }
+}
+
+.pos2,
+.pos1,
+.pos {
+    left: 53%;
+    display: none;
+}
+
+.pos,
+.pos1,
+.pos2,
+.pos3,
+.pos4,
+.pos5 {
+    animation: pos 1s linear infinite;
+    @keyframes pos {
+        40% {
+            transform: translateX(-1px);
+        }
+        80% {
+            transform: translateX(1px);
+        }
+    }
+}
