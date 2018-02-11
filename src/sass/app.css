@@ -2902,6 +2902,42 @@ button {
   width: 100px;
   height: 100px; }
 
+.robot-outline {
+  position: absolute;
+  width: 6.25rem;
+  height: 6.25rem;
+  top: 25%;
+  /* outline: 1px solid white; */
+  left: 10%; }
+  .robot-outline #robot {
+    width: 6.25rem;
+    height: 6.25rem;
+    background-image: url("../images/icon2.svg");
+    background-position: -14px -13px;
+    background-size: 1600%; }
+  .robot-outline .robot-energy {
+    width: 100px;
+    background: white;
+    height: 10px;
+    overflow: hidden;
+    border-radius: 10px; }
+    .robot-outline .robot-energy .robot-energy-bar {
+      width: 100px;
+      left: 0px;
+      height: 10px;
+      border-radius: 10px;
+      background: #64b5f6;
+      position: absolute; }
+    .robot-outline .robot-energy .icon-energy {
+      width: 1.7rem;
+      height: 1.7rem;
+      background-image: url("../images/icon2.svg");
+      position: absolute;
+      background-size: 1700%;
+      left: -14px;
+      top: 91px;
+      background-position: -9px -238px; }
+
 /*fashion set 1 smooth*/
 /*set2 sun*/
 /*set3 grass*/
@@ -3076,15 +3112,14 @@ button {
   position: relative;
   float: left;
   font-size: 10px;
-  padding: 0%;
-  margin-top: 2%;
+  margin-top: 1rem;
   /* justify-content: space-between; */
   /* align-items: flex-start; */
-  margin-left: -2%; }
+  margin-left: 1rem; }
 
 .xs-player-name {
   width: 5.1rem;
-  height: 1.7rem;
+  height: 2rem;
   background: green;
   line-height: 28px;
   color: white;
@@ -3095,22 +3130,24 @@ button {
 
 .xs-player-experience {
   width: 100%;
-  height: 1.7rem;
+  height: 2rem;
   line-height: 30px;
-  background: green;
-  /* padding: 5%; */
+  background-image: url("../images/icon2.svg");
+  background-size: 1800%;
+  background-position: 0px 0px;
   text-align: center;
-  float: left;
-  /* margin: 1%; */ }
+  float: left; }
 
 .player-experience {
   color: white; }
 
 .xs-player-level {
   width: 100%;
-  height: 1.7rem;
+  height: 2rem;
   line-height: 30px;
-  background: yellow;
+  background-image: url("../images/icon2.svg");
+  background-size: 1800%;
+  background-position: 0px 0px;
   /* padding: 5%; */
   text-align: center;
   float: left; }
@@ -3118,10 +3155,11 @@ button {
 .xs-player-experience-icon,
 .xs-player-money-icon,
 .xs-player-level-icon {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 2rem;
+  height: 2rem;
   float: left;
-  background-color: lightpink;
+  background-size: 1800%;
+  background-position: -14px -294px;
   background-image: url("../images/icon2.svg"); }
 
 .xs-player-level-icon {
@@ -3141,9 +3179,11 @@ button {
 
 .xs-player-money {
   width: 100%;
-  height: 1.7rem;
+  height: 2rem;
   line-height: 30px;
-  background: yellow;
+  background-image: url("../images/icon2.svg");
+  background-size: 1800%;
+  background-position: 0px 0px;
   /* padding: 5%; */
   text-align: center;
   float: left; }
@@ -3269,7 +3309,7 @@ button {
 .pos1,
 .pos {
   left: 53%;
-  display: none; }
+  display: block; }
 
 .pos,
 .pos1,

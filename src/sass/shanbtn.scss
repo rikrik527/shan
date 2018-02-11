@@ -9,3 +9,44 @@
     width: 100px;
     height: 100px;
 }
+
+.robot-outline {
+    position: absolute;
+    width: 6.25rem;
+    height: 6.25rem;
+    top: 25%;
+    /* outline: 1px solid white; */
+    left: 10%;
+    #robot {
+        width: 6.25rem;
+        height: 6.25rem;
+        background-image: url('../images/icon2.svg');
+        background-position: -14px -13px;
+        background-size: 1600%;
+    }
+    .robot-energy {
+        width: 100px;
+        background: white;
+        height: 10px;
+        overflow: hidden;
+        border-radius: 10px;
+        .robot-energy-bar {
+            width: 100px;
+            left: 0px;
+            height: 10px;
+            border-radius: 10px;
+            background: $blue4;
+            position: absolute;
+        }
+        .icon-energy {
+            width: 1.7rem;
+            height: 1.7rem;
+            background-image: url('../images/icon2.svg');
+            position: absolute;
+            background-size: 1700%;
+            left: -14px;
+            top: 91px;
+            background-position: -9px -238px;
+        }
+    }
+}

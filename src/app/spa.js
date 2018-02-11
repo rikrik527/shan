@@ -400,24 +400,7 @@ awake.script = {
     }
 }
 awake.canvas = {
-    pic: require('../images/shan-li.png'),
-    canvas: null,
-    context: null,
-    img: null,
-    setup: function() {
-        var shanBtn = obj.get('.shan-btn');
-        this.canvas = obj.getId('canvas');
-        this.context = canvas.getContext('2d');
-        this.canvas.width = shanBtn.clientWidth;
-        this.canvas.height = shanBtn.clientHeight;
 
-        this.img = new Image();
-        this.img.onload = onImageLoad;
-        this.img.src = this.pic;
-    },
-    onImageLoad: function() {
-        console.log('image');
-    },
     octagon: function() {
         var shanBtn = obj.get('.shan-btn');
         console.log('getbtn')

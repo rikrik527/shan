@@ -172,15 +172,14 @@ button {
   position: relative;
   float: left;
   font-size: 10px;
-  padding: 0%;
-  margin-top: 2%;
+  margin-top: 1rem;
   /* justify-content: space-between; */
   /* align-items: flex-start; */
-  margin-left: -2%; }
+  margin-left: 1rem; }
 
 .xs-player-name {
   width: 5.1rem;
-  height: 1.7rem;
+  height: 2rem;
   background: green;
   line-height: 28px;
   color: white;
@@ -191,22 +190,24 @@ button {
 
 .xs-player-experience {
   width: 100%;
-  height: 1.7rem;
+  height: 2rem;
   line-height: 30px;
-  background: green;
-  /* padding: 5%; */
+  background-image: url("../images/icon2.svg");
+  background-size: 1800%;
+  background-position: 0px 0px;
   text-align: center;
-  float: left;
-  /* margin: 1%; */ }
+  float: left; }
 
 .player-experience {
   color: white; }
 
 .xs-player-level {
   width: 100%;
-  height: 1.7rem;
+  height: 2rem;
   line-height: 30px;
-  background: yellow;
+  background-image: url("../images/icon2.svg");
+  background-size: 1800%;
+  background-position: 0px 0px;
   /* padding: 5%; */
   text-align: center;
   float: left; }
@@ -214,10 +215,11 @@ button {
 .xs-player-experience-icon,
 .xs-player-money-icon,
 .xs-player-level-icon {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 2rem;
+  height: 2rem;
   float: left;
-  background-color: lightpink;
+  background-size: 1800%;
+  background-position: -14px -294px;
   background-image: url("../images/icon2.svg"); }
 
 .xs-player-level-icon {
@@ -237,9 +239,11 @@ button {
 
 .xs-player-money {
   width: 100%;
-  height: 1.7rem;
+  height: 2rem;
   line-height: 30px;
-  background: yellow;
+  background-image: url("../images/icon2.svg");
+  background-size: 1800%;
+  background-position: 0px 0px;
   /* padding: 5%; */
   text-align: center;
   float: left; }
@@ -365,7 +369,7 @@ button {
 .pos1,
 .pos {
   left: 53%;
-  display: none; }
+  display: block; }
 
 .pos,
 .pos1,

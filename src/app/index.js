@@ -15,7 +15,7 @@ var sourceUrl = ["//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"];
 var location = require('./location');
 var awake = require('./spa');
 var xsMenu = require('./xsMenu');
-
+var gametest = require('./gametest');
 window.onload = function() {
 
 
@@ -26,9 +26,9 @@ window.onload = function() {
     awake.call.shanAppear();
 
 
-    (function() {
-        awake.canvas.octagon();
-    })();
+    // (function() {
+    //     awake.canvas.octagon();
+    // })();
 
     // awake.shanLiAwaken.story();
 
