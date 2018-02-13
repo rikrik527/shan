@@ -16,6 +16,7 @@ var location = require('./location');
 var awake = require('./spa');
 var xsMenu = require('./xsMenu');
 var gametest = require('./gametest');
+
 window.onload = function() {
 
 
