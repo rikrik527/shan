@@ -2934,8 +2934,8 @@ button {
       background-image: url("../images/icon2.svg");
       position: absolute;
       background-size: 1700%;
-      left: -14px;
-      top: 91px;
+      left: -2px;
+      top: 94px;
       background-position: -9px -238px; }
 
 /*fashion set 1 smooth*/
@@ -3090,103 +3090,110 @@ button {
 .game-menu {
   background-image: url("../images/icon2.svg");
   display: block;
-  /* margin: -50px 0 0 -50px; */
   width: 5rem;
   height: 5rem;
   z-index: 999999;
   background-size: 1600%;
-  background-position: -20px -224px;
+  background-position: -13px -107px;
   cursor: pointer;
-  float: left;
-  /* align-self: center; */
-  /* outline: 1px solid; */
-  margin: 2rem 1rem 0rem 1rem;
-  border-radius: 100px;
-  box-shadow: 0px 0px 3px 6px rgba(200, 80, 250, 0.7);
-  background-color: black; }
+  position: absolute;
+  top: 5px;
+  left: 5px; }
 
 .game-status {
-  width: 7em;
-  height: 8rem;
-  display: grid;
-  position: relative;
-  float: left;
+  width: 18em;
+  height: 2rem;
+  position: absolute;
+  /* float: left; */
   font-size: 10px;
-  margin-top: 1rem;
+  display: flex;
+  /* margin-top: 1rem; */
   /* justify-content: space-between; */
   /* align-items: flex-start; */
-  margin-left: 1rem; }
+  /* margin-left: 1rem; */
+  top: 16px;
+  left: 92px; }
 
 .xs-player-name {
   width: 5.1rem;
-  height: 2rem;
-  background: green;
-  line-height: 28px;
+  height: 1.4rem;
+  background: lightsalmon;
+  line-height: 24px;
   color: white;
-  /* border-radius: 10px; */
-  float: left;
+  border-radius: 10px;
+  /* float: left; */
   /* margin: 1%; */
-  text-align: center; }
+  position: absolute;
+  text-align: center;
+  top: 76px;
+  font-size: 10px; }
 
 .xs-player-experience {
+  float: left;
   width: 100%;
   height: 2rem;
-  line-height: 30px;
-  background-image: url("../images/icon2.svg");
-  background-size: 1800%;
-  background-position: 0px 0px;
+  line-height: 31px;
+  background-color: rgba(200, 0, 100, 0.5);
   text-align: center;
-  float: left; }
+  border: 2px solid hotpink;
+  border-radius: 13px; }
 
 .player-experience {
   color: white; }
 
 .xs-player-level {
+  float: left;
   width: 100%;
   height: 2rem;
-  line-height: 30px;
-  background-image: url("../images/icon2.svg");
-  background-size: 1800%;
-  background-position: 0px 0px;
-  /* padding: 5%; */
+  line-height: 31px;
+  background-color: rgba(200, 0, 100, 0.5);
   text-align: center;
-  float: left; }
+  border: 2px solid hotpink;
+  border-radius: 13px; }
+
+.player-level {
+  position: absolute;
+  left: 88%;
+  top: 5%; }
 
 .xs-player-experience-icon,
 .xs-player-money-icon,
 .xs-player-level-icon {
   width: 2rem;
   height: 2rem;
+  background-color: hotpink;
   float: left;
+  /* margin-right: -8px; */
+  /* position: absolute; */
   background-size: 1800%;
-  background-position: -14px -294px;
+  border-radius: 19px;
+  margin: -2px;
   background-image: url("../images/icon2.svg"); }
 
 .xs-player-level-icon {
-  background-position: -9px -42px;
-  background-size: 1600%; }
+  background-position: -106px -290px;
+  background-size: 1800%; }
 
 .xs-player-experience-icon {
-  background-position: 0;
-  background-size: 100%; }
+  background-position: -58px -291px;
+  background-size: 1800%; }
 
 .xs-player-money-icon {
-  background-size: 1600%;
-  background-position: -9px -41px; }
+  background-position: -154px -290px;
+  background-size: 1800%; }
 
 .experience-limit {
-  color: red; }
+  color: coral; }
 
 .xs-player-money {
+  float: left;
   width: 100%;
   height: 2rem;
-  line-height: 30px;
-  background-image: url("../images/icon2.svg");
-  background-size: 1800%;
-  background-position: 0px 0px;
-  /* padding: 5%; */
+  line-height: 31px;
+  background-color: rgba(200, 0, 100, 0.5);
   text-align: center;
-  float: left; }
+  border: 2px solid hotpink;
+  border-radius: 13px; }
 
 .aside-tips {
   width: 100%;
@@ -3200,82 +3207,59 @@ button {
   border-radius: 10px;
   border: 2px solid rgba(255, 238, 236, 0.6); }
 
-.play-level {
-  position: absolute;
-  left: 60%; }
-
 .aside-boxcontrol {
-  width: 7em;
-  height: 8rem;
+  width: 18em;
+  height: 2rem;
   display: flex;
-  position: relative;
-  flex-direction: column;
-  float: left;
+  position: absolute;
+  /* flex-direction: row; */
+  /* float: left; */
   font-size: 10px;
-  margin-top: 2%;
-  margin-left: 1%;
-  justify-content: center;
-  align-items: center;
-  align-content: flex-start; }
+  /* margin-top: 8px; */
+  /* margin-left: 38px; */
+  /* grid-row: 3; */
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  left: 69px;
+  top: 54px;
+  align-content: center;
+  justify-content: space-between;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  /* grid-auto-rows: minmax(34px,auto); */
+  /* justify-items: start; */ }
   .aside-boxcontrol .icon-todo {
     width: 2rem;
     height: 2rem;
-    border-radius: 100px;
-    align-self: center;
     margin: auto;
     background-image: url("../images/icon2.svg");
-    background-color: lightyellow;
-    text-align: center;
-    background-position: -10px -8px;
-    background-size: 1600%;
+    background-position: -236px -341px;
+    background-size: 2100%;
     cursor: pointer;
     display: block; }
-    .aside-boxcontrol .icon-todo:hover {
-      background-color: palevioletred;
-      animation: todolist 0.5s steps(3) forwards; }
-@keyframes todolist {
-  from {
-    background-position: -10px -8px; }
-  to {
-    background-position: -161px -8px; } }
-      .aside-boxcontrol .icon-todo:hover .pos {
-        display: block; }
+    .aside-boxcontrol .icon-todo:hover .pos {
+      display: none; }
   .aside-boxcontrol .icon-personal {
     background-image: url("../images/icon2.svg");
     width: 2rem;
     height: 2rem;
-    border-radius: 100px;
-    align-self: center;
     margin: auto;
     text-align: center;
-    background-color: lightyellow;
-    background-position: -10px -8px;
-    background-size: 1600%;
+    background-position: -293px -341px;
+    background-size: 2100%;
     cursor: pointer; }
     .aside-boxcontrol .icon-personal:hover .pos1 {
-      display: block; }
+      display: none; }
   .aside-boxcontrol .icon-service {
     width: 2rem;
     height: 2rem;
-    border-radius: 100px;
-    align-self: center;
     margin: auto;
     background-image: url("../images/icon2.svg");
     cursor: pointer;
-    background-color: lightyellow;
-    background-position: -10px -8px;
-    background-size: 1600%;
+    background-position: -347px -341px;
+    background-size: 2100%;
     cursor: pointer; }
-    .aside-boxcontrol .icon-service:hover {
-      background-color: palevioletred;
-      animation: iconservice 0.5s steps(3) forwards; }
-@keyframes iconservice {
-  from {
-    background-position: -13px -104px; }
-  to {
-    background-position: -163px -104px; } }
-      .aside-boxcontrol .icon-service:hover .pos2 {
-        display: block; }
+    .aside-boxcontrol .icon-service:hover .pos2 {
+      display: none; }
 
 .icon-calendar {
   top: 33%;
@@ -3308,8 +3292,16 @@ button {
 .pos2,
 .pos1,
 .pos {
-  left: 53%;
   display: block; }
+
+.pos {
+  left: 18%; }
+
+.pos1 {
+  left: 52%; }
+
+.pos2 {
+  left: 85%; }
 
 .pos,
 .pos1,
@@ -3341,8 +3333,7 @@ svg {
   background: black; }
 
 #canvas {
-  position: absolute;
-  background: black; }
+  position: absolute; }
 
 #canvas {
   z-index: -1; }
