@@ -143,11 +143,12 @@
         height: 3rem;
         margin: auto;
         background-image: url('../images/icon2.svg');
-        background-position: -125px -631px;
-        background-size: 2500%;
+        background-position: -697px -603px;
+        background-size: 2400%;
         cursor: pointer;
         display: block;
         position: absolute;
+        top: 2px;
         transition: all .3s linear;
         &:hover {
             .pos {
@@ -166,8 +167,7 @@
         background-size: 2100%;
         position: absolute;
         top: 8px;
-        z-index: -9;
-        transition: all .3s linear;
+        transition: all 1s linear;
         cursor: pointer;
         &:hover {
             .pos1 {
@@ -186,8 +186,7 @@
         background-size: 2100%;
         position: absolute;
         top: 8px;
-        z-index: -9;
-        transition: all .3s linear;
+        transition: all 1s linear;
         cursor: pointer;
         &:hover {
             .pos2 {
@@ -206,8 +205,7 @@
         background-size: 2100%;
         position: absolute;
         top: 8px;
-        z-index: -9;
-        transition: all .3s linear;
+        transition: all 1s linear;
         cursor: pointer;
         &:hover {
             .pos1 {

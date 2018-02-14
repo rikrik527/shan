@@ -10,15 +10,17 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
-.game-action {
-  background-image: url("../images/icon2.svg");
-  top: -14%;
+.game-action-outline {
+  width: 6.25rem;
+  height: 6.25rem;
   position: absolute;
-  background-position: -2px -287px;
-  background-size: 2000%;
-  left: -59%;
-  width: 100px;
-  height: 100px; }
+  top: 44%;
+  left: 32%;
+  z-index: 999999999; }
+
+.game-action {
+  width: 6.25rem;
+  height: 6.25rem; }
 
 .robot-outline {
   position: absolute;
@@ -65,7 +67,8 @@
     background-image: url("../images/icon2.svg");
     background-position: -14px -13px;
     background-size: 1600%;
-    transition: all 1s linear; }
+    transition: all 1s linear;
+    transform: translateX(0px) translateY(0px); }
   .robot-outline .robot-energy {
     width: 100px;
     background: white;

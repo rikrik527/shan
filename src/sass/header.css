@@ -266,11 +266,12 @@ button {
     height: 3rem;
     margin: auto;
     background-image: url("../images/icon2.svg");
-    background-position: -125px -631px;
-    background-size: 2500%;
+    background-position: -697px -603px;
+    background-size: 2400%;
     cursor: pointer;
     display: block;
     position: absolute;
+    top: 2px;
     transition: all .3s linear; }
     .aside-boxcontrol .icon-todo:hover .pos {
       display: none; }
@@ -285,8 +286,7 @@ button {
     background-size: 2100%;
     position: absolute;
     top: 8px;
-    z-index: -9;
-    transition: all .3s linear;
+    transition: all 1s linear;
     cursor: pointer; }
     .aside-boxcontrol .icon-personal:hover .pos1 {
       display: none; }
@@ -301,8 +301,7 @@ button {
     background-size: 2100%;
     position: absolute;
     top: 8px;
-    z-index: -9;
-    transition: all .3s linear;
+    transition: all 1s linear;
     cursor: pointer; }
     .aside-boxcontrol .icon-service:hover .pos2 {
       display: none; }
@@ -317,8 +316,7 @@ button {
     background-size: 2100%;
     position: absolute;
     top: 8px;
-    z-index: -9;
-    transition: all .3s linear;
+    transition: all 1s linear;
     cursor: pointer; }
     .aside-boxcontrol .icon-fix:hover .pos1 {
       display: none; }

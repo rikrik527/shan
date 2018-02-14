@@ -5300,9 +5300,37 @@ iframe[seamless] {
   animation: robotfly 0.5s steps(2) infinite; }
 @keyframes robotfly {
   from {
-    background-position: -34px -284px; }
+    background-position: -14px -282px; }
   to {
-    background-position: -295px -284px; } }
+    background-position: -283px -282px; } }
+.heart-explode {
+  background-image: url("../images/icon2.svg");
+  background-size: 1600%;
+  animation: heartexplode 0.5s steps(2) infinite; }
+@keyframes heartexplode {
+  from {
+    background-position: -412px -295px; }
+  to {
+    background-position: -672px -295px; } }
+.robot-fix-1 {
+  animation: robotfixlevel1 1s steps(10) infinite; }
+@keyframes robotfixlevel1 {
+  from {
+    background-position: -11px -13px; }
+  to {
+    background-position: -1354px -13px; } }
+.robot-outline-fly {
+  animation: robotoutlinefly 3s ease-in-out forwards; }
+@keyframes robotoutlinefly {
+  to {
+    transform: translateX(60px) translateY(100px); } }
+.robot-outline-fly-back {
+  animation: robotoutlineflyback 3s ease-in-out forwards; }
+@keyframes robotoutlineflyback {
+  from {
+    transform: translateX(60px) translateY(100px); }
+  to {
+    transform: translateX(0px) translateY(0px); } }
 .todoset {
   animation: todoset 2s linear; }
 @keyframes todoset {
