@@ -17,12 +17,48 @@
     top: 25%;
     /* outline: 1px solid white; */
     left: 10%;
+    .robot-saying {
+        width: 100px;
+        height: 50px;
+        background: steelblue;
+        position: absolute;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        font-size: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        left: 91%;
+        top: -31%;
+        .robot-speak {
+            width: 100%;
+            height: auto;
+            line-height: 20px;
+            /* background: lightblue; */
+            color: white;
+            padding-left: 3px;
+            word-break: break-all;
+            text-overflow: ellipsis;
+            /* vertical-align: middle; */
+            display: block;
+        }
+    }
+    .robot-triangle {
+        border-top: 35px solid steelblue;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        position: absolute;
+        left: 128%;
+        top: 13%;
+        transform-origin: top;
+        transform: rotateZ(52deg);
+    }
     #robot {
         width: 6.25rem;
         height: 6.25rem;
         background-image: url('../images/icon2.svg');
         background-position: -14px -13px;
         background-size: 1600%;
+        transition: all 1s linear;
     }
     .robot-energy {
         width: 100px;
@@ -44,8 +80,8 @@
             background-image: url('../images/icon2.svg');
             position: absolute;
             background-size: 1700%;
-            left: -2px;
-            top: 94px;
+            left: -5px;
+            top: 92px;
             background-position: -9px -238px;
         }
     }

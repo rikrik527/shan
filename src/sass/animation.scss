@@ -27,6 +27,18 @@
     }
 }
 
+.robot-fly {
+    animation: robotfly .5s steps(2) infinite;
+    @keyframes robotfly {
+        from {
+            background-position: -34px -284px;
+        }
+        to {
+            background-position: -295px -284px
+        }
+    }
+}
+
 .todoset {
     animation: todoset 2s linear;
     @keyframes todoset {

@@ -5,7 +5,7 @@ var $ = require('jquery');
 var prologue = require('./prologue');
 var add = require('./addAbility');
 var obj = require('./getall');
-
+var fix = require('./fix');
 var object = require('./object');
 var shanLi = require('./shanStatus');
 
@@ -33,8 +33,7 @@ window.onload = function() {
 
     // awake.shanLiAwaken.story();
 
-
-
+    fix.fixMenu();
     shan.talk.talkingDialog();
     setTimeout(() => {
         shan.talk.createLi.call(shanLi, Math.floor(Math.random() * Date.now()), Math.floor(Math.random() * Date.now()));
