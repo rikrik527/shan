@@ -24,8 +24,8 @@
     justify-content: space-between;
     align-items: flex-start;
     /* margin-left: 1rem; */
-    top: 16px;
-    left: 8px;
+    top: 16%;
+    left: 3%;
 }
 
 .xs-player-experience {
@@ -107,12 +107,12 @@
     font-size: 12px;
     color: white;
     text-align: center;
-    display: none;
     height: auto;
     background: rgba(37, 138, 236, 0.3);
     border-radius: 10px;
     border: 2px solid rgba(255, 238, 236, 0.6);
     z-index: 99;
+    top: 72%;
 }
 
 .aside-boxcontrol {
@@ -128,8 +128,8 @@
     /* grid-row: 3; */
     /* justify-content: flex-start; */
     /* align-items: center; */
-    left: 8px;
-    top: 54px;
+    left: 3%;
+    top: 47%;
     /* align-items: flex-start; */
     /* flex-flow: row nowrap; */
     /* align-content: center; */
@@ -150,9 +150,24 @@
         position: absolute;
         top: 2px;
         transition: all .3s linear;
-        &:hover {
-            .pos {
-                display: none;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 41%;
+            background: white;
+            box-shadow: 0px 0px 1px 1px lightblue;
+            border-radius: 100px;
+            animation: todo .5s ease-out infinite;
+            left: 35%;
+            @keyframes todo {
+                from {
+                    transform: rotatez(0deg)translate(20px);
+                }
+                to {
+                    transform: rotatez(360deg)translate(20px)
+                }
             }
         }
     }
@@ -169,11 +184,6 @@
         top: 8px;
         transition: all 1s linear;
         cursor: pointer;
-        &:hover {
-            .pos1 {
-                display: none;
-            }
-        }
     }
     .icon-service {
         border-radius: 100px;
@@ -188,11 +198,6 @@
         top: 8px;
         transition: all 1s linear;
         cursor: pointer;
-        &:hover {
-            .pos2 {
-                display: none;
-            }
-        }
     }
     .icon-fix {
         border-radius: 100px;
@@ -207,19 +212,14 @@
         top: 8px;
         transition: all 1s linear;
         cursor: pointer;
-        &:hover {
-            .pos1 {
-                display: none;
-            }
-        }
     }
     .icon-submit {
         width: 4rem;
         height: 4rem;
         background: black;
         position: absolute;
-        left: 253px;
-        top: 40px;
+        left: 95%;
+        top: 123%;
     }
 }
 
@@ -257,15 +257,19 @@
 }
 
 .pos {
-    left: 64%;
+    left: 21%;
 }
 
 .pos1 {
-    left: 52%;
+    left: 24%;
 }
 
 .pos2 {
-    left: 85%;
+    left: 18%;
+}
+
+.pos3 {
+    left: 24%;
 }
 
 .pos,
@@ -274,6 +278,7 @@
 .pos3,
 .pos4,
 .pos5 {
+    display: none;
     animation: pos 1s linear infinite;
     @keyframes pos {
         40% {

@@ -3170,8 +3170,8 @@ button {
   justify-content: space-between;
   align-items: flex-start;
   /* margin-left: 1rem; */
-  top: 16px;
-  left: 8px; }
+  top: 16%;
+  left: 3%; }
 
 .xs-player-experience {
   flex: 50px 2;
@@ -3242,12 +3242,12 @@ button {
   font-size: 12px;
   color: white;
   text-align: center;
-  display: none;
   height: auto;
   background: rgba(37, 138, 236, 0.3);
   border-radius: 10px;
   border: 2px solid rgba(255, 238, 236, 0.6);
-  z-index: 99; }
+  z-index: 99;
+  top: 72%; }
 
 .aside-boxcontrol {
   width: 25em;
@@ -3262,8 +3262,8 @@ button {
   /* grid-row: 3; */
   /* justify-content: flex-start; */
   /* align-items: center; */
-  left: 8px;
-  top: 54px;
+  left: 3%;
+  top: 47%;
   /* align-items: flex-start; */
   /* flex-flow: row nowrap; */
   /* align-content: center; */
@@ -3284,8 +3284,22 @@ button {
     position: absolute;
     top: 2px;
     transition: all .3s linear; }
-    .aside-boxcontrol .icon-todo:hover .pos {
-      display: none; }
+    .aside-boxcontrol .icon-todo:before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 41%;
+      background: white;
+      box-shadow: 0px 0px 1px 1px lightblue;
+      border-radius: 100px;
+      animation: todo .5s ease-out infinite;
+      left: 35%; }
+@keyframes todo {
+  from {
+    transform: rotatez(0deg) translate(20px); }
+  to {
+    transform: rotatez(360deg) translate(20px); } }
   .aside-boxcontrol .icon-personal {
     border-radius: 100px;
     background-image: url("../images/icon2.svg");
@@ -3299,8 +3313,6 @@ button {
     top: 8px;
     transition: all 1s linear;
     cursor: pointer; }
-    .aside-boxcontrol .icon-personal:hover .pos1 {
-      display: none; }
   .aside-boxcontrol .icon-service {
     border-radius: 100px;
     width: 2rem;
@@ -3314,8 +3326,6 @@ button {
     top: 8px;
     transition: all 1s linear;
     cursor: pointer; }
-    .aside-boxcontrol .icon-service:hover .pos2 {
-      display: none; }
   .aside-boxcontrol .icon-fix {
     border-radius: 100px;
     background-image: url("../images/icon2.svg");
@@ -3329,15 +3339,13 @@ button {
     top: 8px;
     transition: all 1s linear;
     cursor: pointer; }
-    .aside-boxcontrol .icon-fix:hover .pos1 {
-      display: none; }
   .aside-boxcontrol .icon-submit {
     width: 4rem;
     height: 4rem;
     background: black;
     position: absolute;
-    left: 253px;
-    top: 40px; }
+    left: 95%;
+    top: 123%; }
 
 .icon-calendar {
   top: 33%;
@@ -3368,13 +3376,16 @@ button {
   50% {
     background: rbga(255, 100, 100, 0.7); } }
 .pos {
-  left: 64%; }
+  left: 21%; }
 
 .pos1 {
-  left: 52%; }
+  left: 24%; }
 
 .pos2 {
-  left: 85%; }
+  left: 18%; }
+
+.pos3 {
+  left: 24%; }
 
 .pos,
 .pos1,
@@ -3382,6 +3393,7 @@ button {
 .pos3,
 .pos4,
 .pos5 {
+  display: none;
   animation: pos 1s linear infinite; }
 @keyframes pos {
   40% {

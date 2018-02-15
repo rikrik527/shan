@@ -1,9 +1,10 @@
 var obj = require('./getall');
+
 module.exports.setGame = function() {
     var canvas = null,
         context = null,
         img = null;
-    var assets = ['../images/r1.png', '../images/r2.png', '../images/r3.png', '../images/r4.png', '../images/r5.png', '../images/r6.png', '../images/r7.png', '../images/r8.png', '../images/r9.png', '../images/r10.png', '../images/r11.png'];
+    var assets = ['r1.png', 'r2.png', 'r3.png', 'r4.png', 'r5.png', 'r6.png', 'r7.png', 'r8.png', 'r9.png', 'r10.png', 'r11.png'];
     var frameRate = 1000 / 30,
         frame = 0,
         frames = [];
@@ -28,7 +29,7 @@ module.exports.setGame = function() {
     };
     var animate = function() {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(frames[assets], 192, 192);
+        context.drawImage(frames[frame], 192, 192);
         frame = (frame + 1) % frames.length;
     }
     setup();

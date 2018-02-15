@@ -16,6 +16,10 @@ module.exports.fixMenu = function() {
         robotTriangle = obj.get('.robot-triangle'),
         robotEnergyBar = obj.get('.robot-energy-bar'),
         gameActionOutline = obj.get('.game-action-outline'),
+        pos = obj.get('.pos'),
+        pos1 = obj.get('.pos1'),
+        pos2 = obj.get('.pos2'),
+        pos3 = obj.get('.pos3'),
         gameAction = obj.get('.game-action');
     iconPersonal.style.left = '0px';
     iconService.style.left = '0px';
@@ -39,18 +43,15 @@ module.exports.fixMenu = function() {
                     setTimeout(function() {
                         iconTodo.style.boxShadow = '0px 0px 0px 0px transparent';
                     }, 500);
-                    setTimeout(function() {
-                        iconPersonal.style.left = '64px';
-                        iconService.style.left = '64px';
-                        iconFix.style.left = '64px';
-                    }, 0);
-                    setTimeout(function() {
-                        iconService.style.left = '120px';
-                        iconFix.style.left = '120px';
-                    }, 500);
-                    setTimeout(function() {
-                        iconFix.style.left = '180px';
-                    }, 1000);
+
+                    iconPersonal.style.left = '64px';
+
+
+                    iconService.style.left = '120px';
+
+
+                    iconFix.style.left = '180px';
+
                     iconFix.style.zIndex = '999';
                     iconPersonal.style.zIndex = '9999';
                     iconService.style.zIndex = '99999';
@@ -60,22 +61,16 @@ module.exports.fixMenu = function() {
                     setTimeout(function() {
                         iconTodo.style.boxShadow = '0px 0px 0px 0px transparent';
                     }, 500);
-                    setTimeout(function() {
-                        iconFix.style.left = '120px';
 
-                        console.log('0')
-                    }, 0);
-                    setTimeout(function() {
-                        iconService.style.left = '64px';
-                        iconFix.style.left = '64px';
-                        console.log('500')
-                    }, 500);
-                    setTimeout(function() {
-                        iconFix.style.left = '0px';
-                        iconPersonal.style.left = '0px';
-                        iconService.style.left = '0px';
-                        console.log('1000')
-                    }, 1000);
+                    iconFix.style.left = '0px';
+
+
+
+                    iconService.style.left = '0px';
+
+                    iconPersonal.style.left = '0px';
+
+
                     iconFix.style.zIndex = '-9';
                     iconPersonal.style.zIndex = '-9';
                     iconService.style.zIndex = '-9';
