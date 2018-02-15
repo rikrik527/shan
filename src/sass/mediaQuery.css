@@ -11,14 +11,49 @@
 /* in text */
 /*fashion set 1 smooth*/
 @media screen and (min-width: 901px) and (max-width: 5000px) {
+  .background {
+    width: 1000px;
+    height: 100vh;
+    z-index: -9999;
+    margin: -50vh 0 0 -500px;
+    left: 50%;
+    top: 50%; }
+
   .l-display-none {
     display: none; } }
 @media screen and (min-width: 505px) and (max-width: 900px) {
+  .background {
+    background-size: 600%;
+    background-position: 2% -1%;
+    position: fixed;
+    width: 100%;
+    height: 100vh; }
+
   .m-display-none {
     display: none; } }
 @media screen and (min-width: 320px) and (max-width: 504px) {
+  .background {
+    background-size: 600%;
+    background-position: 2% -8%;
+    position: fixed;
+    width: 100%;
+    height: 100vh; }
+
   .xs-display-none {
     display: none; } }
+@media (max-device-width: 360px) and (max-device-height: 640px) {
+  .background {
+    background-size: 600%;
+    background-position: 2% -12%;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    animation: backgroundxperia steps(4) 0.5s infinite; }
+  @keyframes backgroundxperia {
+    from {
+      background-position: 2% -12%; }
+    to {
+      background-position: 97.7% -12%; } } }
 /* iphone 6 6s 7 8 */
 /* samsung */
 /* ipad mini */

@@ -24,14 +24,49 @@
 /* in text */
 /*fashion set 1 smooth*/
 @media screen and (min-width: 901px) and (max-width: 5000px) {
+  .background {
+    width: 1000px;
+    height: 100vh;
+    z-index: -9999;
+    margin: -50vh 0 0 -500px;
+    left: 50%;
+    top: 50%; }
+
   .l-display-none {
     display: none; } }
 @media screen and (min-width: 505px) and (max-width: 900px) {
+  .background {
+    background-size: 600%;
+    background-position: 2% -1%;
+    position: fixed;
+    width: 100%;
+    height: 100vh; }
+
   .m-display-none {
     display: none; } }
 @media screen and (min-width: 320px) and (max-width: 504px) {
+  .background {
+    background-size: 600%;
+    background-position: 2% -8%;
+    position: fixed;
+    width: 100%;
+    height: 100vh; }
+
   .xs-display-none {
     display: none; } }
+@media (max-device-width: 360px) and (max-device-height: 640px) {
+  .background {
+    background-size: 600%;
+    background-position: 2% -12%;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    animation: backgroundxperia steps(4) 0.5s infinite; }
+  @keyframes backgroundxperia {
+    from {
+      background-position: 2% -12%; }
+    to {
+      background-position: 97.7% -12%; } } }
 /* iphone 6 6s 7 8 */
 /* samsung */
 /* ipad mini */
@@ -2997,17 +3032,26 @@ button {
       left: 0px;
       height: 10px;
       border-radius: 10px;
-      background: #64b5f6;
+      background: #81c784;
       position: absolute; }
     .robot-outline .robot-energy .icon-energy {
-      width: 1.7rem;
-      height: 1.7rem;
       background-image: url("../images/icon2.svg");
+      width: 2.5rem;
+      height: 2.5rem;
       position: absolute;
-      background-size: 1700%;
-      left: -5px;
-      top: 92px;
-      background-position: -9px -238px; }
+      background-size: 2400%;
+      left: -14px;
+      top: 77px;
+      background-position: -579px -979px; }
+
+.background-outline {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto; }
+  .background-outline .background {
+    background-image: url("../images/background.svg");
+    z-index: -9999999; }
 
 /*fashion set 1 smooth*/
 /*set2 sun*/
@@ -3160,7 +3204,7 @@ button {
 
 .game-status {
   width: 25em;
-  height: 2rem;
+  height: 2.5rem;
   position: absolute;
   /* float: left; */
   font-size: 10px;
@@ -3175,64 +3219,68 @@ button {
 
 .xs-player-experience {
   flex: 50px 2;
-  height: 2rem;
+  height: 2.5rem;
   line-height: 31px;
   background-color: rgba(200, 0, 100, 0.5);
   text-align: center;
   border: 2px solid hotpink;
-  border-radius: 13px; }
+  border-radius: 33px; }
 
 .player-experience {
-  color: white; }
+  color: white;
+  position: absolute;
+  top: 5px; }
 
 .xs-player-level {
   flex: 50px;
-  height: 2rem;
+  height: 2.5rem;
   line-height: 31px;
   background-color: rgba(200, 0, 100, 0.5);
   text-align: center;
   border: 2px solid hotpink;
-  border-radius: 13px; }
+  border-radius: 100px; }
 
 .player-level {
   position: absolute;
-  left: 88%;
-  top: 5%; }
+  left: 91%;
+  top: 5px;
+  color: white; }
+
+.player-money {
+  position: absolute;
+  top: 5px;
+  color: white; }
 
 .xs-player-experience-icon,
 .xs-player-money-icon,
 .xs-player-level-icon {
-  width: 2rem;
-  height: 2rem;
-  background-color: hotpink;
+  width: 2.5rem;
+  height: 2.5rem;
   float: left;
   /* margin-right: -8px; */
   /* position: absolute; */
-  background-size: 2000%;
+  background-size: 2400%;
   border-radius: 19px;
   margin: -2px;
   background-image: url("../images/icon2.svg"); }
 
 .xs-player-level-icon {
-  background-position: -120px -325px; }
+  background-position: -579px -741px; }
 
 .xs-player-experience-icon {
-  background-position: -68px -326px; }
+  background-position: -579px -820px; }
 
 .xs-player-money-icon {
-  background-position: -174px -326px; }
-
-.experience-limit {
-  color: coral; }
+  background-position: -579px -659px; }
 
 .xs-player-money {
   flex: 50px 2;
-  height: 2rem;
+  height: 2.5rem;
   line-height: 31px;
   background-color: rgba(200, 0, 100, 0.5);
   text-align: center;
   border: 2px solid hotpink;
-  border-radius: 13px; }
+  border-radius: 100px; }
 
 .aside-tips {
   width: 100%;
@@ -3263,7 +3311,7 @@ button {
   /* justify-content: flex-start; */
   /* align-items: center; */
   left: 3%;
-  top: 47%;
+  top: 56%;
   /* align-items: flex-start; */
   /* flex-flow: row nowrap; */
   /* align-content: center; */
@@ -3277,7 +3325,7 @@ button {
     height: 3rem;
     margin: auto;
     background-image: url("../images/icon2.svg");
-    background-position: -697px -603px;
+    background-position: -697px -1086px;
     background-size: 2400%;
     cursor: pointer;
     display: block;
@@ -3303,25 +3351,25 @@ button {
   .aside-boxcontrol .icon-personal {
     border-radius: 100px;
     background-image: url("../images/icon2.svg");
-    width: 2rem;
-    height: 2rem;
-    margin: auto;
+    width: 2.5rem;
+    height: 2.5rem;
     text-align: center;
-    background-position: -293px -341px;
-    background-size: 2100%;
+    background-position: -579px -498px;
+    background-size: 2400%;
+    margin: auto;
     position: absolute;
     top: 8px;
     transition: all 1s linear;
     cursor: pointer; }
   .aside-boxcontrol .icon-service {
     border-radius: 100px;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin: auto;
     background-image: url("../images/icon2.svg");
     cursor: pointer;
-    background-position: -347px -341px;
-    background-size: 2100%;
+    background-position: -579px -419px;
+    background-size: 2400%;
     position: absolute;
     top: 8px;
     transition: all 1s linear;
@@ -3329,12 +3377,12 @@ button {
   .aside-boxcontrol .icon-fix {
     border-radius: 100px;
     background-image: url("../images/icon2.svg");
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin: auto;
     text-align: center;
-    background-position: -239px -341px;
-    background-size: 2100%;
+    background-position: -579px -579px;
+    background-size: 2400%;
     position: absolute;
     top: 8px;
     transition: all 1s linear;
