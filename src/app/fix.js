@@ -21,12 +21,12 @@ module.exports.fixMenu = function() {
         pos2 = obj.get('.pos2'),
         pos3 = obj.get('.pos3'),
         gameAction = obj.get('.game-action');
-    iconPersonal.style.left = '0px';
-    iconService.style.left = '0px';
-    iconFix.style.left = '0px';
-    iconFix.style.zIndex = '-9';
-    iconPersonal.style.zIndex = '-9';
-    iconService.style.zIndex = '-9';
+    iconPersonal.style.left = '4px';
+    iconService.style.left = '4px';
+    iconFix.style.left = '4px';
+    iconFix.style.display = 'none';
+    iconPersonal.style.display = 'none';
+    iconService.style.display = 'none';
     iconTodo.onclick = (function() {
         var click = 0;
 
@@ -39,41 +39,34 @@ module.exports.fixMenu = function() {
             console.log(click)
             switch (click) {
                 case 1:
-                    iconTodo.style.boxShadow = ' 0px -3px 52px 5px yellow';
+
+                    iconTodo.classList.add('icontodo');
+
+                    iconPersonal.style.cssText = 'transform:rotate(16deg)translate(79px);transition:all 1s linear';
+                    iconPersonal.addEventListener('click', function() {
+                        iconPersonal.classList.add('iconpersonal');
+                    })
+
+
+
+                    iconService.style.cssText = 'transform:rotate(29deg)translate(114px);transition:all 1s linear';
+                    iconService.addEventListener('click', function() {
+                        iconService.classList.add('iconservice');
+                    })
+
+
+                    iconFix.style.cssText = 'transform:rotate(40deg)translate(142px);transition:all 1s linear';
+                    iconFix.addEventListener('click', function() {
+                        iconFix.classList.add('iconfix');
+                    })
                     setTimeout(function() {
-                        iconTodo.style.boxShadow = '0px 0px 0px 0px transparent';
+                        iconFix.style.display = 'block';
+                        iconPersonal.style.display = 'block';
+                        iconService.style.display = 'block';
                     }, 500);
 
-                    iconPersonal.style.left = '64px';
-
-
-                    iconService.style.left = '120px';
-
-
-                    iconFix.style.left = '180px';
-
-                    iconFix.style.zIndex = '999';
-                    iconPersonal.style.zIndex = '9999';
-                    iconService.style.zIndex = '99999';
                     break;
                 case 2:
-                    iconTodo.style.boxShadow = ' 0px -3px 52px 5px yellow';
-                    setTimeout(function() {
-                        iconTodo.style.boxShadow = '0px 0px 0px 0px transparent';
-                    }, 500);
-
-                    iconFix.style.left = '0px';
-
-
-
-                    iconService.style.left = '0px';
-
-                    iconPersonal.style.left = '0px';
-
-
-                    iconFix.style.zIndex = '-9';
-                    iconPersonal.style.zIndex = '-9';
-                    iconService.style.zIndex = '-9';
                     break;
             }
 
@@ -85,32 +78,5 @@ module.exports.fixMenu = function() {
     iconTodo.onmouseout = function() {
         robotSpeak.textContent = '';
     }
-
-    iconFix.onclick = function() {
-        iconFix.style.boxShadow = '0px 0px 52px 3px yellow';
-        robotOutLine.classList.remove('robot-outline-fly-back');
-        setTimeout(function() {
-            iconFix.style.boxShadow = '0px 0px 0px 0px transparent';
-
-        }, 100);
-        robot.classList.add('robot-fly');
-        setTimeout(function() {
-            robotOutLine.classList.add('robot-outline-fly');
-        }, 1000);
-
-        setTimeout(function() {
-            robot.classList.remove('robot-fly');
-            robot.classList.add('robot-fix-1');
-        }, 3000);
-        setTimeout(function() {
-            gameAction.classList.add('heart-explode');
-        }, 4000);
-        setTimeout(function() {
-            robotOutLine.classList.remove('robot-outline-fly');
-            robotOutLine.classList.add('robot-outline-fly-back');
-            robot.classList.remove('robot-fix-1');
-            gameAction.classList.remove('heart-explode');
-        }, 10000);
-    };
 
 }

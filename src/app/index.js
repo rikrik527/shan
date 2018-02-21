@@ -24,7 +24,7 @@ window.onload = function() {
 
 
 
-    awake.call.shanAppear();
+
 
 
     // (function() {

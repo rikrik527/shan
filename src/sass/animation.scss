@@ -86,6 +86,66 @@
     }
 }
 
+.icontodo {
+    animation: icontodo .5s steps(5) forwards;
+    @keyframes icontodo {
+        from {
+            background-position: -761px -1036px;
+        }
+        to {
+            background-position: -1032px -1036px;
+        }
+    }
+}
+
+.iconpersonal {
+    animation: iconpersonal .5s steps(1) forwards;
+    @keyframes iconpersonal {
+        from {
+            background-position: -704px -654px;
+        }
+        to {
+            background-position: -754px -654px;
+        }
+    }
+}
+
+.iconservice {
+    animation: iconservice .5s steps(1) forwards;
+    @keyframes iconservice {
+        from {
+            background-position: -704px -607px;
+        }
+        to {
+            background-position: -754px -607px;
+        }
+    }
+}
+
+.iconfix {
+    animation: iconfix .5s steps(1) forwards;
+    @keyframes iconfix {
+        from {
+            background-position: -705px -706px;
+        }
+        to {
+            background-position: -754px -706px;
+        }
+    }
+}
+
+.backgroundxperia {
+    animation: backgroundxperia steps(4) infinite;
+    @keyframes backgroundxperia {
+        from {
+            background-position: 2% -12%;
+        }
+        to {
+            background-position: 97.7% -12%;
+        }
+    }
+}
+
 .todoset {
     animation: todoset 2s linear;
     @keyframes todoset {

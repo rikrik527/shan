@@ -15,9 +15,10 @@
 
 .robot-outline {
     position: absolute;
-    width: 6.25rem;
-    height: 6.25rem;
+    width: 100px;
+    height: 100px;
     top: 25%;
+    transition: all 1s linear;
     /* outline: 1px solid white; */
     left: 10%;
     .robot-saying {
@@ -56,13 +57,12 @@
         transform: rotateZ(52deg);
     }
     #robot {
-        width: 6.25rem;
-        height: 6.25rem;
+        width: 100px;
+        height: 100px;
+        background-position: -6px -106px;
+        background-size: 2500%;
+        transform: translateX(0px) translateY(0px);
         background-image: url('../images/icon2.svg');
-        background-position: -14px -13px;
-        background-size: 1600%;
-        transition: all 1s linear;
-        transform: translateX(0px)translateY(0px);
     }
     .robot-energy {
         width: 100px;
@@ -75,7 +75,7 @@
             left: 0px;
             height: 10px;
             border-radius: 10px;
-            background: $green4;
+            background: $green8;
             position: absolute;
         }
         .icon-energy {
@@ -96,8 +96,275 @@
     width: 100%;
     height: 100vh;
     margin: 0 auto;
+    background: black;
+    z-index: -9999999999999;
     .background {
-        background-image: url('../images/background.svg');
+        background: url('../images/b1.svg');
+        background-size: contain;
+        background-repeat: repeat-x;
+        bottom: 0;
+        margin: 0 auto;
+        width: 2000px;
         z-index: -9999999;
+        height: 200px;
+        position: absolute;
+        max-height: 500px;
+    }
+    .background-2 {
+        position: absolute;
+        width: 100%;
+        height: 166px;
+        bottom: 0%;
+        background: black;
+        z-index: -99999999999;
+        transition: all 10s linear;
+        animation: background2 10s linear infinite;
+        @keyframes background2 {
+            40% {
+                background: orangered;
+            }
+            80% {
+                background: $red9;
+            }
+        }
+    }
+    .background-3 {
+        background: url('../images/b12.svg')repeat-x;
+        background-size: contain;
+        bottom: 25%;
+        width: 2000px;
+        margin: 0 auto;
+        height: 200px;
+        z-index: -99999999999;
+        position: fixed;
+    }
+}
+
+.shanli-outline {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    top: 76%;
+    left: 70%;
+    #shan-li {
+        width: 7rem;
+        height: 7rem;
+        background-position: -5px -973px;
+        background-size: 1300%;
+        transition: all 1s linear;
+        transform: translateX(0px) translateY(0px);
+        background-image: url('../images/icon2.svg');
+    }
+    .shanli-energy {
+        width: 100px;
+        background: $red6;
+        height: 10px;
+        overflow: hidden;
+        border-radius: 10px;
+        animation: shanlienergy .5s linear infinite;
+        @keyframes shanlienergy {
+            40% {
+                background: $red8;
+            }
+            80% {
+                background: $red2;
+            }
+        }
+        .shanli-energy-bar {
+            width: 20px;
+            left: 0px;
+            height: 10px;
+            border-radius: 10px;
+            background: $green8;
+            position: absolute;
+        }
+        .icon-energy {
+            background-image: url('../images/icon2.svg');
+            width: 2.5rem;
+            height: 2.5rem;
+            position: absolute;
+            background-size: 2400%;
+            background-position: -579px -979px;
+        }
+        .energy-pos2 {
+            left: -18px;
+            top: 89px;
+        }
+    }
+}
+
+.energy-pos1 {
+    left: -14px;
+    top: 77px;
+}
+
+.aside-tips {
+    width: 100%;
+    position: absolute;
+    /* width: auto; */
+    padding: 1%;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    height: auto;
+    background: rgba(37, 138, 236, 0.3);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 238, 236, 0.6);
+    z-index: 99;
+    top: 72%;
+}
+
+.aside-boxcontrol {
+    width: 25em;
+    height: 2rem;
+    /* display: flex; */
+    position: absolute;
+    /* flex-direction: row; */
+    /* float: left; */
+    font-size: 10px;
+    /* margin-top: 8px; */
+    /* margin-left: 38px; */
+    /* grid-row: 3; */
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    left: 3%;
+    top: 56%;
+    /* align-items: flex-start; */
+    /* flex-flow: row nowrap; */
+    /* align-content: center; */
+    /* justify-content: flex-start; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    /* grid-auto-rows: minmax(34px,auto); */
+    /* justify-items: start; */
+    .icon-todo {
+        border-radius: 100px;
+        width: 3rem;
+        height: 3rem;
+        margin: auto;
+        background-position: -761px -1036px;
+        background-size: 2700%;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: -87px;
+        background-image: url('../images/icon2.svg');
+        transition: all .3s linear;
+    }
+    .icon-personal {
+        border-radius: 100px;
+        background-image: url('../images/icon2.svg');
+        width: 2.5rem;
+        height: 2.5rem;
+        text-align: center;
+        background-position: -704px -654px;
+        background-size: 3000%;
+        margin: auto;
+        position: absolute;
+        top: -82px;
+        transition: all 1s linear;
+        cursor: pointer;
+    }
+    .icon-service {
+        border-radius: 100px;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: auto;
+        background-image: url('../images/icon2.svg');
+        cursor: pointer;
+        background-position: -704px -607px;
+        background-size: 3000%;
+        position: absolute;
+        top: -82px;
+        transition: all 1s linear;
+        cursor: pointer;
+    }
+    .icon-fix {
+        border-radius: 100px;
+        background-image: url('../images/icon2.svg');
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: auto;
+        text-align: center;
+        background-position: -705px -706px;
+        background-size: 3000%;
+        position: absolute;
+        top: -82px;
+        transition: all 1s linear;
+        cursor: pointer;
+    }
+    .icon-submit {
+        width: 4rem;
+        height: 4rem;
+        background: black;
+        position: absolute;
+        left: 95%;
+        top: 123%;
+    }
+}
+
+.icon-calendar {
+    top: 33%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    background: url('../images/icon2.svg'), lightyellow no-repeat;
+    text-align: center;
+    border: 3px solid pink;
+    line-height: 10px;
+    background-position: 0px -5px;
+    background-size: 400%;
+    cursor: pointer;
+}
+
+.tips {
+    position: absolute;
+    width: 105px;
+    height: auto;
+    /* outline: 1px solid #ad1457; */
+    border-radius: 3px;
+    background: rgba(255, 100, 100, 0.3);
+    box-shadow: -1px 1px 8px 3px lightpink;
+    color: snow;
+    text-align: center;
+    font-size: 10px;
+    animation: tips 1s linear infinite;
+    @keyframes tips {
+        50% {
+            background: rbga(255, 100, 100, 0.7);
+        }
+    }
+}
+
+.pos {
+    left: 21%;
+}
+
+.pos1 {
+    left: 24%;
+}
+
+.pos2 {
+    left: 18%;
+}
+
+.pos3 {
+    left: 24%;
+}
+
+.pos,
+.pos1,
+.pos2,
+.pos3,
+.pos4,
+.pos5 {
+    display: block;
+    animation: pos 1s linear infinite;
+    @keyframes pos {
+        40% {
+            transform: translateX(-1px);
+        }
+        80% {
+            transform: translateX(1px);
+        }
     }
 }

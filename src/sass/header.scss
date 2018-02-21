@@ -75,22 +75,22 @@
     float: left;
     /* margin-right: -8px; */
     /* position: absolute; */
-    background-size: 2400%;
+    background-size: 3500%;
     border-radius: 19px;
     margin: -2px;
     background-image: url('../images/icon2.svg');
 }
 
 .xs-player-level-icon {
-    background-position: -579px -741px;
+    background-position: -825px -941px;
 }
 
 .xs-player-experience-icon {
-    background-position: -579px -820px;
+    background-position: -825px -998px;
 }
 
 .xs-player-money-icon {
-    background-position: -579px -659px;
+    background-position: -825px -882px;
 }
 
 .xs-player-money {
@@ -101,195 +101,4 @@
     text-align: center;
     border: 2px solid hotpink;
     border-radius: 100px;
-}
-
-.aside-tips {
-    width: 100%;
-    position: absolute;
-    /* width: auto; */
-    padding: 1%;
-    font-size: 12px;
-    color: white;
-    text-align: center;
-    height: auto;
-    background: rgba(37, 138, 236, 0.3);
-    border-radius: 10px;
-    border: 2px solid rgba(255, 238, 236, 0.6);
-    z-index: 99;
-    top: 72%;
-}
-
-.aside-boxcontrol {
-    width: 25em;
-    height: 2rem;
-    /* display: flex; */
-    position: absolute;
-    /* flex-direction: row; */
-    /* float: left; */
-    font-size: 10px;
-    /* margin-top: 8px; */
-    /* margin-left: 38px; */
-    /* grid-row: 3; */
-    /* justify-content: flex-start; */
-    /* align-items: center; */
-    left: 3%;
-    top: 56%;
-    /* align-items: flex-start; */
-    /* flex-flow: row nowrap; */
-    /* align-content: center; */
-    /* justify-content: flex-start; */
-    /* grid-template-rows: 1fr 1fr 1fr; */
-    /* grid-auto-rows: minmax(34px,auto); */
-    /* justify-items: start; */
-    .icon-todo {
-        border-radius: 100px;
-        width: 3rem;
-        height: 3rem;
-        margin: auto;
-        background-image: url('../images/icon2.svg');
-        background-position: -697px -1086px;
-        background-size: 2400%;
-        cursor: pointer;
-        display: block;
-        position: absolute;
-        top: 2px;
-        transition: all .3s linear;
-        &:before {
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            top: 41%;
-            background: white;
-            box-shadow: 0px 0px 1px 1px lightblue;
-            border-radius: 100px;
-            animation: todo .5s ease-out infinite;
-            left: 35%;
-            @keyframes todo {
-                from {
-                    transform: rotatez(0deg)translate(20px);
-                }
-                to {
-                    transform: rotatez(360deg)translate(20px)
-                }
-            }
-        }
-    }
-    .icon-personal {
-        border-radius: 100px;
-        background-image: url('../images/icon2.svg');
-        width: 2.5rem;
-        height: 2.5rem;
-        text-align: center;
-        background-position: -579px -498px;
-        background-size: 2400%;
-        margin: auto;
-        position: absolute;
-        top: 8px;
-        transition: all 1s linear;
-        cursor: pointer;
-    }
-    .icon-service {
-        border-radius: 100px;
-        width: 2.5rem;
-        height: 2.5rem;
-        margin: auto;
-        background-image: url('../images/icon2.svg');
-        cursor: pointer;
-        background-position: -579px -419px;
-        background-size: 2400%;
-        position: absolute;
-        top: 8px;
-        transition: all 1s linear;
-        cursor: pointer;
-    }
-    .icon-fix {
-        border-radius: 100px;
-        background-image: url('../images/icon2.svg');
-        width: 2.5rem;
-        height: 2.5rem;
-        margin: auto;
-        text-align: center;
-        background-position: -579px -579px;
-        background-size: 2400%;
-        position: absolute;
-        top: 8px;
-        transition: all 1s linear;
-        cursor: pointer;
-    }
-    .icon-submit {
-        width: 4rem;
-        height: 4rem;
-        background: black;
-        position: absolute;
-        left: 95%;
-        top: 123%;
-    }
-}
-
-.icon-calendar {
-    top: 33%;
-    left: 0%;
-    width: 100%;
-    height: 50px;
-    background: url('../images/icon2.svg'), lightyellow no-repeat;
-    text-align: center;
-    border: 3px solid pink;
-    line-height: 10px;
-    background-position: 0px -5px;
-    background-size: 400%;
-    cursor: pointer;
-}
-
-.tips {
-    position: absolute;
-    width: 105px;
-    height: auto;
-    /* outline: 1px solid #ad1457; */
-    border-radius: 3px;
-    background: rgba(255, 100, 100, 0.3);
-    box-shadow: -1px 1px 8px 3px lightpink;
-    color: snow;
-    text-align: center;
-    font-size: 10px;
-    animation: tips 1s linear infinite;
-    @keyframes tips {
-        50% {
-            background: rbga(255, 100, 100, 0.7);
-        }
-    }
-}
-
-.pos {
-    left: 21%;
-}
-
-.pos1 {
-    left: 24%;
-}
-
-.pos2 {
-    left: 18%;
-}
-
-.pos3 {
-    left: 24%;
-}
-
-.pos,
-.pos1,
-.pos2,
-.pos3,
-.pos4,
-.pos5 {
-    display: none;
-    animation: pos 1s linear infinite;
-    @keyframes pos {
-        40% {
-            transform: translateX(-1px);
-        }
-        80% {
-            transform: translateX(1px);
-        }
-    }
 }
