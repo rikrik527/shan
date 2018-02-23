@@ -104,6 +104,19 @@ iframe[seamless] {
 @keyframes robotoutlinefly {
   to {
     transform: translateX(60px) translateY(100px); } }
+.todolistshow {
+  animation: todolistshow 1s linear forwards; }
+@keyframes todolistshow {
+  10% {
+    opacity: 0.2; }
+  30% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.2; }
+  70% {
+    opacity: 0.7; }
+  90% {
+    opacity: 0.2; } }
 .robot-outline-fly-back {
   animation: robotoutlineflyback 3s ease-in-out forwards; }
 @keyframes robotoutlineflyback {
