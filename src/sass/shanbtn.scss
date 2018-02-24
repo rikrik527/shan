@@ -214,9 +214,8 @@
 }
 
 .aside-boxcontrol {
-    width: 25em;
-    height: 2rem;
     /* display: flex; */
+    z-index: 999999999;
     position: absolute;
     /* flex-direction: row; */
     /* float: left; */
@@ -226,8 +225,8 @@
     /* grid-row: 3; */
     /* justify-content: flex-start; */
     /* align-items: center; */
-    left: 3%;
-    top: 56%;
+    left: 0%;
+    top: 0%;
     /* align-items: flex-start; */
     /* flex-flow: row nowrap; */
     /* align-content: center; */
@@ -236,22 +235,20 @@
     /* grid-auto-rows: minmax(34px,auto); */
     /* justify-items: start; */
     .icon-personal {
-        border-radius: 100px;
         background-image: url('../images/icon2.svg');
         width: 2.5rem;
         height: 2.5rem;
-        text-align: center;
         background-position: -704px -654px;
         background-size: 3000%;
         margin: auto;
         position: absolute;
-        top: 49px;
+        top: 0px;
         left: -10px;
         transition: all 1s linear;
         cursor: pointer;
+        z-index: 99999999;
     }
     .icon-service {
-        border-radius: 100px;
         width: 2.5rem;
         height: 2.5rem;
         margin: auto;
@@ -260,25 +257,25 @@
         background-position: -704px -607px;
         background-size: 3000%;
         position: absolute;
-        top: 49px;
+        top: 0px;
         left: 37px;
         transition: all 1s linear;
         cursor: pointer;
+        z-index: 99999999;
     }
     .icon-fix {
-        border-radius: 100px;
         background-image: url('../images/icon2.svg');
         width: 2.5rem;
         height: 2.5rem;
         margin: auto;
-        text-align: center;
         background-position: -705px -706px;
         background-size: 3000%;
         position: absolute;
-        top: 49px;
+        top: 0px;
         left: 81px;
         transition: all 1s linear;
         cursor: pointer;
+        z-index: 99999999;
     }
     .icon-submit {
         width: 4rem;
@@ -358,6 +355,7 @@
 }
 
 .todo-list {
+    z-index: 999999999999;
     width: 250px;
     height: 300px;
     background: yellow;
@@ -386,6 +384,7 @@
         width: 500px;
         height: 50px;
         position: absolute;
+        transition: all 1s linear;
     }
     .todo-title {
         width: 100%;

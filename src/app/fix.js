@@ -60,33 +60,39 @@ module.exports.fixMenu = function() {
         div.className = 'hands' + i;
         div.innerHTML = i;
     }
-    todoIconSlide.style.left = '-250px';
+    todoIconSlide.style.left = '0px';
     var lastPosition = null;
     var mouseDown = false;
-    todoIconSlide.onmousemove = function(e) {
+    var left = 0;
+    obj.get('.todo-icon-slide').addEventListener('pointermove', function(e) {
         if (!mouseDown) {
             return false;
-            console.log('false')
-        } else if (mouseDown == true) {
-            console.log('mosemove')
-            var pos = e.clientX / 2;
-            if (lastPosition) {
-                console.log('null');
-            }
-            todoIconSlide.style.left = pos + 'px';
+            console.log('!mousedown')
         }
-    }
-    todoIconSlide.onmousedown = function(e) {
-        document.onmousedown = true;
+        var changex = 0;
+        if (lastPosition) {
+            console.log('last', lastPosition);
+            changex = (lastPosition - e.screenX) / 1.1;
+            if (Math.abs(changex) > 20) {
+                changex = 0;
+                console.log('math.abs > 20', Math.abs(changex))
+            }
+        }
+        lastPosition = e.screenX;
+        left += changex;
+        var lr = left + 'px';
+        obj.get('.todo-icon-slide').style.left = lr;
+
+
+    });
+    obj.get('.todo-icon-slide').addEventListener('pointerdown', function(e) {
         mouseDown = true;
-        lastPosition = e.clientX;
-        console.log('moudown')
-    }
-    todoIconSlide.onmouseup = function(e) {
+    });
+    obj.get('.todo-icon-slide').addEventListener('pointerup', function(e) {
         mouseDown = false;
-        document.onmouseup = true;
-        console.log('up')
-    }
-
-
+    })
+    obj.get('.todo-icon-slide').addEventListener('pointerleave', function(e) {
+        mouseDown = false;
+        console.log('stop')
+    })
 }
