@@ -1,9 +1,11 @@
 var obj = require('./getall');
+var Hammer = require('hammerjs');
 var iconTodo = obj.get('.icon-todo');
 var robotOutLine = obj.get('.robot-outline');
 var robot = obj.getId('robot');
 var robotE = obj.get('.robot-energy-bar');
-module.exports.fixMenu = function() {
+
+module.exports.robotMenu = function() {
     var iconPersonal = obj.get('.icon-personal'),
         iconService = obj.get('.icon-service'),
         iconFix = obj.get('.icon-fix'),
@@ -27,72 +29,118 @@ module.exports.fixMenu = function() {
         pos2 = obj.get('.pos2'),
         pos3 = obj.get('.pos3'),
         gameAction = obj.get('.game-action');
-    todoList.style.display = 'none';
 
     iconFix.onclick = (function() {
-
         var click = 0;
-
         return function() {
-            console.log('i have been excuted');
-
             click++;
-            console.log(click)
-            if (click == 3) click = 1
-            console.log(click)
+            if (click == 3) click = 1;
             switch (click) {
                 case 1:
                     todoList.style.display = 'block';
                     todoList.classList.add('todolistshow');
+                    iconFix.style.cssText = 'transform:scale(1.5)';
 
                     break;
                 case 2:
                     todoList.style.display = 'none';
                     todoList.classList.remove('todolistshow');
+                    iconFix.style.cssText = 'transform:scale(1)';
                     break;
             }
-
         }
+
     })();
-    for (var i = 0; i < 10; i++) {
-        var div = obj.create('div');
-        todoIconSlide.appendChild(div);
-        div.className = 'hands' + i;
-        div.innerHTML = i;
-    }
-    todoIconSlide.style.left = '0px';
-    var lastPosition = null;
-    var mouseDown = false;
-    var left = 0;
-    obj.get('.todo-icon-slide').addEventListener('pointermove', function(e) {
-        if (!mouseDown) {
-            return false;
-            console.log('!mousedown')
-        }
-        var changex = 0;
-        if (lastPosition) {
-            console.log('last', lastPosition);
-            changex = (lastPosition - e.screenX) / 1.1;
-            if (Math.abs(changex) > 20) {
-                changex = 0;
-                console.log('math.abs > 20', Math.abs(changex))
+
+
+
+
+}
+module.exports.topMenu = function() {
+    var hands = obj.getAll('.hands0,.hands1, .hands2, .hands3, .hands4, .hands5, .hands6, .hands7, .hands8, .hands9');
+    hands.forEach(function(idx, arr) {
+        (function(arr) {
+            hands[arr].onclick = function() {
+                appendLi();
             }
-        }
-        lastPosition = e.screenX;
-        left += changex;
-        var lr = left + 'px';
-        obj.get('.todo-icon-slide').style.left = lr;
+
+        })(arr)
+    })
 
 
-    });
-    obj.get('.todo-icon-slide').addEventListener('pointerdown', function(e) {
-        mouseDown = true;
-    });
-    obj.get('.todo-icon-slide').addEventListener('pointerup', function(e) {
-        mouseDown = false;
-    })
-    obj.get('.todo-icon-slide').addEventListener('pointerleave', function(e) {
-        mouseDown = false;
-        console.log('stop')
-    })
+
+    function appendLi() {
+        console.log('i have been excuted')
+        var todoTitle = obj.get('.todo-title');
+        var li = obj.create('li');
+        li.className = 'outside';
+
+        todoTitle.appendChild(li);
+
+
+        li.innerHTML = '愛的能源';
+        console.log('excuted');
+
+        var outside = obj.get('.outside');
+        outside.insertAdjacentHTML('afterbegin', '<span class="love"></span>');
+
+        console.log('span')
+
+
+
+    }
+}
+module.exports.robot = function() {
+    var robot = obj.getId('robot'),
+        asideBc = obj.get('.aside-boxcontrol'),
+        robotSaying = obj.get('.robot-saying');
+    robotOutLine = obj.get('.robot-outline');
+    robotOutLine.style.cssText = 'top:-27%;left:35%';
+    robotOutLine.style.transition = 'all 5s linear';
+    asideBc.style.display = 'none';
+    robotSaying.style.display = 'none';
+    robot.classList.add('robot-fly-down');
+    setTimeout(function() {
+        robotOutLine.style.top = '37%';
+    }, 3000);
+    setTimeout(function() {
+
+        robot.classList.remove('robot-fly-down');
+        robot.classList.add('robot-talk');
+
+        talk('請下命令,主要目標是修復雨珊!', 2000);
+
+    }, 8000);
+    setTimeout(() => {
+        robot.classList.remove('robot-talk');
+        robot.classList.add('robot-right');
+
+        robotOutLine.style.cssText = 'top:17%;left:11%;transition:all 5s linear';
+    }, 10000);
+    setTimeout(() => {
+        robot.classList.remove('robot-right');
+        robot.classList.add('robot-origin');
+
+        asideBc.style.display = 'block';
+        talk('變身', 2000)
+    }, 13000);
+    setTimeout(() => {
+        robot.classList.remove('robot-origin');
+        robot.classList.add('robot-change');
+    }, 15000);
+
+    function talk(word, time) {
+        var robotSaying = obj.get('.robot-saying');
+        robotSaying.style.display = 'block';
+        var txt = document.createTextNode(word);
+        var div = obj.create('div');
+        var robotSaying = obj.get('.robot-saying');
+        robotSaying.appendChild(div);
+        div.classList.add('robot-speak');
+        div.innerHTML = word;
+        setTimeout(() => {
+            div.innerHTML = '';
+            robotSaying.style.display = 'none';
+        }, time);
+    }
 }

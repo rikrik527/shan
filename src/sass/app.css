@@ -2175,6 +2175,29 @@ iframe[seamless] {
 @keyframes robotoutlinefly {
   to {
     transform: translateX(60px) translateY(100px); } }
+.robot-fly-down {
+  background-position: -6px -308px; }
+
+.robot-talk {
+  animation: robottalk 0.5s steps(8) forwards; }
+@keyframes robottalk {
+  from {
+    background-position: -6px -308px; }
+  to {
+    background-position: -829px -308px; } }
+.robot-change {
+  animation: robotchange 1.5s steps(10) forwards; }
+@keyframes robotchange {
+  from {
+    background-position: 0px -110px; }
+  to {
+    background-position: -1038px -110px; } }
+.robot-right {
+  background-position: -312px -514px; }
+
+.robot-origin {
+  background-position: -7px -106px; }
+
 .todolistshow {
   animation: todolistshow 1s linear forwards; }
 @keyframes todolistshow {
@@ -2991,10 +3014,7 @@ button {
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 25%;
-  transition: all 1s linear;
-  /* outline: 1px solid white; */
-  left: 10%; }
+  /* outline: 1px solid white; */ }
   .robot-outline .robot-saying {
     width: 100px;
     height: 50px;
@@ -3029,7 +3049,6 @@ button {
   .robot-outline #robot {
     width: 100px;
     height: 100px;
-    background-position: -6px -106px;
     background-size: 2500%;
     transform: translateX(0px) translateY(0px);
     background-image: url("../images/icon2.svg"); }
@@ -3037,8 +3056,8 @@ button {
     width: 100px;
     background: white;
     height: 10px;
-    overflow: hidden;
-    border-radius: 10px; }
+    border-radius: 10px;
+    position: absolute; }
     .robot-outline .robot-energy .robot-energy-bar {
       width: 100px;
       left: 0px;
@@ -3051,10 +3070,10 @@ button {
       width: 2.5rem;
       height: 2.5rem;
       position: absolute;
-      background-size: 2400%;
+      background-size: 4000%;
       left: -14px;
-      top: 77px;
-      background-position: -579px -979px; }
+      top: -23px;
+      background-position: -944px -1209px; }
 
 .background-outline {
   position: absolute;
@@ -3116,7 +3135,6 @@ button {
     width: 100px;
     background: #f44336;
     height: 10px;
-    overflow: hidden;
     border-radius: 10px;
     animation: shanlienergy .5s linear infinite; }
 @keyframes shanlienergy {
@@ -3131,13 +3149,6 @@ button {
       border-radius: 10px;
       background: #388e3c;
       position: absolute; }
-    .shanli-outline .shanli-energy .icon-energy {
-      background-image: url("../images/icon2.svg");
-      width: 2.5rem;
-      height: 2.5rem;
-      position: absolute;
-      background-size: 2400%;
-      background-position: -579px -979px; }
     .shanli-outline .shanli-energy .energy-pos2 {
       left: -18px;
       top: 89px; }
@@ -3174,7 +3185,7 @@ button {
   /* justify-content: flex-start; */
   /* align-items: center; */
   left: 0%;
-  top: 0%;
+  top: 109%;
   /* align-items: flex-start; */
   /* flex-flow: row nowrap; */
   /* align-content: center; */
@@ -3284,16 +3295,13 @@ button {
   80% {
     transform: translateX(1px); } }
 .todo-list {
-  z-index: 999999999999;
   width: 250px;
   height: 300px;
   background: yellow;
-  position: absolute;
-  left: 48%;
-  top: -76%;
-  border-radius: 10px;
+  float: left;
   overflow: visible;
-  display: none; }
+  display: none;
+  margin-left: 130%; }
   .todo-list .icon-close-todo {
     width: 25px;
     height: 25px;
@@ -3301,8 +3309,9 @@ button {
     float: right;
     margin: 1%; }
   .todo-list .todo-icon {
-    position: relative;
+    position: sticky;
     width: 250px;
+    padding: 2.5px;
     height: 50px;
     background: green;
     display: block;
@@ -3328,6 +3337,30 @@ button {
     border-radius: 10px;
     border: 1px solid; }
 
+.right {
+  position: absolute;
+  right: -4%;
+  width: 25px;
+  height: 25px;
+  /* background: red; */
+  z-index: 99999999;
+  top: 25%;
+  border-left: 15px solid red;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent; }
+
+.left {
+  position: absolute;
+  left: -5%;
+  width: 25px;
+  height: 25px;
+  /* background: red; */
+  z-index: 99999999;
+  top: 25%;
+  border-right: 15px solid red;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent; }
+
 .hands0,
 .hands1,
 .hands2,
@@ -3341,7 +3374,30 @@ button {
   background-image: url("../images/icon2.svg");
   width: 50px;
   height: 50px;
-  float: left; }
+  float: left;
+  cursor: pointer; }
+
+.outside {
+  text-align: left;
+  width: 250px;
+  height: 25px;
+  background: blanchedalmond;
+  line-height: 25px;
+  font-size: 10px;
+  color: deeppink; }
+
+.love {
+  background-image: url("../images/icon2.svg");
+  width: 25px;
+  height: 25px;
+  float: left;
+  width: 25px;
+  height: 25px;
+  float: left;
+  /* outline: 3px solid red; */
+  background-size: 10000%;
+  background-position: -1183px -52px;
+  margin-right: 10px; }
 
 .hands0 {
   background: yellow; }

@@ -74,6 +74,42 @@
     }
 }
 
+.robot-fly-down {
+    background-position: -6px -308px;
+}
+
+.robot-talk {
+    animation: robottalk .5s steps(8) forwards;
+    @keyframes robottalk {
+        from {
+            background-position: -6px -308px
+        }
+        to {
+            background-position: -829px -308px;
+        }
+    }
+}
+
+.robot-change {
+    animation: robotchange 1.5s steps(10) forwards;
+    @keyframes robotchange {
+        from {
+            background-position: 0px -110px;
+        }
+        to {
+            background-position: -1038px -110px;
+        }
+    }
+}
+
+.robot-right {
+    background-position: -312px -514px;
+}
+
+.robot-origin {
+    background-position: -7px -106px;
+}
+
 .todolistshow {
     animation: todolistshow 1s linear forwards;
     @keyframes todolistshow {

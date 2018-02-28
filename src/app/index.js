@@ -32,8 +32,10 @@ window.onload = function() {
     // })();
 
     // awake.shanLiAwaken.story();
+    fix.robot();
 
-    fix.fixMenu();
+    fix.robotMenu();
+    fix.topMenu();
     shan.talk.talkingDialog();
     setTimeout(() => {
         shan.talk.createLi.call(shanLi, Math.floor(Math.random() * Date.now()), Math.floor(Math.random() * Date.now()));
