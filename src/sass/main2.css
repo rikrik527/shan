@@ -5334,6 +5334,22 @@ iframe[seamless] {
     background-position: -6px -308px; }
   to {
     background-position: -829px -308px; } }
+.robotlove {
+  animation: robotlove 1s steps(11) infinite; }
+@keyframes robotlove {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: -1188px 0px; } }
+.love {
+  animation: love 1s linear infinite; }
+@keyframes love {
+  from {
+    background-position: -1375px 0px;
+    left: 0px; }
+  to {
+    background-position: 1375px 0px;
+    left: 100%; } }
 .robot-change {
   animation: robotchange 1.5s steps(10) forwards; }
 @keyframes robotchange {

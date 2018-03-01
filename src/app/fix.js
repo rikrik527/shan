@@ -57,21 +57,36 @@ module.exports.robotMenu = function() {
 
 }
 module.exports.topMenu = function() {
+
     var hands = obj.getAll('.hands0,.hands1, .hands2, .hands3, .hands4, .hands5, .hands6, .hands7, .hands8, .hands9');
-    hands.forEach(function(idx, arr) {
-        (function(arr) {
-            hands[arr].onclick = function() {
-                appendLi();
+    hands[0].onclick = (function() {
+        var love = 0;
+        return function() {
+            love++;
+            if (love == 3) love = 1;
+            switch (love) {
+                case 1:
+                    appendLi();
+
+                    break;
+                case 2:
+                    removeLi();
+
+                    break;
             }
-
-        })(arr)
-    })
+        }
 
 
+    })();
+
+
+    var submit = false;
 
     function appendLi() {
-        console.log('i have been excuted')
+        submit = true;
+
         var todoTitle = obj.get('.todo-title');
+
         var li = obj.create('li');
         li.className = 'outside';
 
@@ -83,12 +98,77 @@ module.exports.topMenu = function() {
 
         var outside = obj.get('.outside');
         outside.insertAdjacentHTML('afterbegin', '<span class="love"></span>');
-
         console.log('span')
 
 
 
+
     }
+
+    function removeLi() {
+        submit = false;
+        var li = obj.get('.outside');
+        li.parentNode.removeChild(li);
+    }
+    var submitBtn = obj.get('.submit-btn').onclick = function() {
+        if (!submit) {
+            return false;
+            console.log('not gonna happen');
+        }
+        var todolist = obj.get('.todo-list').style.display = 'none';
+        var robot = obj.getId('robot');
+        robot.classList.remove('robot-change');
+        robot.classList.add('robotlove');
+        var gameActionOutline = obj.get('.game-action-outline').style.display = 'block'
+        var gameAction = obj.get('.game-action');
+        gameAction.classList.add('love');
+    }
+
+
+
+}
+module.exports.arrows = function() {
+    var right = obj.get('.right');
+    var left = obj.get('.left');
+    left.onclick = (function() {
+        var todoIconSlide = obj.get('.todo-icon-slide');
+        var click = 0;
+        return function() {
+            click++;
+            if (click === 10) click = 1;
+            switch (click) {
+                case 1:
+                    todoIconSlide.style.left = '-50px';
+                    break;
+                case 2:
+                    todoIconSlide.style.left = '-100px';
+                    break;
+                case 3:
+                    todoIconSlide.style.left = '-150px';
+                    break;
+                case 4:
+                    todoIconSlide.style.left = '-200px';
+                    break;
+                case 5:
+                    todoIconSlide.style.left = '-250px';
+                    break;
+                case 6:
+                    todoIconSlide.style.left = '-300px';
+                    break;
+                case 7:
+                    todoIconSlide.style.left = '-350px';
+                    break;
+                case 8:
+                    todoIconSlide.style.left = '-400px';
+                    break;
+                case 9:
+                    todoIconSlide.style.left = '-450px';
+                    break;
+
+
+            }
+        }
+    })();
 }
 module.exports.robot = function() {
     var robot = obj.getId('robot'),

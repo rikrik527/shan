@@ -1,16 +1,19 @@
 @import './color';
 .game-action-outline {
     width: 6.25rem;
-    height: 6.25rem;
+    height: 31.25rem;
     position: absolute;
-    top: 44%;
-    left: 32%;
-    z-index: 999999999;
+    top: 21%;
+    left: 47%;
+    transform: rotatez(-40deg);
+    display: none;
 }
 
 .game-action {
     width: 6.25rem;
-    height: 6.25rem;
+    height: 6.25em;
+    background-image: url('../images/icon2.svg');
+    background-size: 3000%;
 }
 
 .robot-outline {
@@ -429,8 +432,8 @@
 .hands9,
 {
     background-image: url('../images/icon2.svg');
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     float: left;
     cursor: pointer;
 }
