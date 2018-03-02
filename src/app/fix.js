@@ -66,11 +66,11 @@ module.exports.topMenu = function() {
             if (love == 3) love = 1;
             switch (love) {
                 case 1:
-                    appendLi();
+                    loveEnergy();
 
                     break;
                 case 2:
-                    removeLi();
+                    removeLoveEnergy();
 
                     break;
             }
@@ -81,31 +81,10 @@ module.exports.topMenu = function() {
 
 
     var submit = false;
-
-    function appendLi() {
-        submit = true;
-
-        var todoTitle = obj.get('.todo-title');
-
-        var li = obj.create('li');
-        li.className = 'outside';
-
-        todoTitle.appendChild(li);
+    var fire = false;
 
 
-        li.innerHTML = '愛的能源';
-        console.log('excuted');
-
-        var outside = obj.get('.outside');
-        outside.insertAdjacentHTML('afterbegin', '<span class="love"></span>');
-        console.log('span')
-
-
-
-
-    }
-
-    function removeLi() {
+    function removeLoveEnergy() {
         submit = false;
         var li = obj.get('.outside');
         li.parentNode.removeChild(li);
@@ -119,10 +98,63 @@ module.exports.topMenu = function() {
         var robot = obj.getId('robot');
         robot.classList.remove('robot-change');
         robot.classList.add('robotlove');
-        var gameActionOutline = obj.get('.game-action-outline').style.display = 'block'
+
         var gameAction = obj.get('.game-action');
         gameAction.classList.add('love');
+        removeLoveEnergy();
+        fire = true;
+        console.log(fire)
+        if (fire == true) {
+            loveBomb();
+            console.log('fired')
+        }
+
+
     }
+
+
+
+    function loveBomb() {
+        var gameAction = obj.get('.game-action');
+        gameAction.style.cssText = 'left:20%;top:23%;display:none';
+        console.log('i got fired')
+        var shanLi = obj.get('.shanli-outline');
+        var shanLiTop = window.getComputedStyle(shanLi).getPropertyValue('top');
+        var shanLiLeft = window.getComputedStyle(shanLi).getPropertyValue('left');
+
+        gameAction.style.cssText = 'left:70%;top:76%;display:block;transition:all 1s linear;opacity:1';
+        var div = obj.create('div');
+        div.className = 'fireball';
+        gameAction.insertAdjacentElement('afterend', div);
+        var bigWords = obj.get('.big-words');
+        bigWords.textContent = love;
+
+
+    }
+
+    function loveEnergy() {
+        submit = true;
+
+        var todoTitle = obj.get('.todo-title');
+
+        var li = obj.create('li');
+        li.className = 'outside';
+
+        todoTitle.appendChild(li);
+
+        var love = '愛的能源';
+        li.innerHTML = love;
+        console.log('excuted');
+
+        var outside = obj.get('.outside');
+        outside.insertAdjacentHTML('afterbegin', '<span class="love"></span>');
+        console.log('span')
+
+
+
+
+    }
+
 
 
 

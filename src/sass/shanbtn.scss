@@ -1,19 +1,52 @@
 @import './color';
-.game-action-outline {
-    width: 6.25rem;
-    height: 31.25rem;
-    position: absolute;
-    top: 21%;
-    left: 47%;
-    transform: rotatez(-40deg);
-    display: none;
-}
-
 .game-action {
     width: 6.25rem;
     height: 6.25em;
     background-image: url('../images/icon2.svg');
     background-size: 3000%;
+    transition: all 1s linear;
+    position: absolute;
+    display: none;
+}
+
+.big-words {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    margin: -100px 0 0 -200px;
+    top: 50%;
+    text-align: center;
+    font-stretch: extra-expanded;
+    font-size: 24px;
+    background-color: orangered;
+    animation: leftright 1s linear forwards;
+    @keyframes leftright {
+        0% {
+            left: 0%;
+        }
+        20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+            left: 50%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+}
+
+.fireball {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top: 26%;
+    left: 27%;
+    background-image: url('../images/icon2.svg');
+    background-size: 5000%;
+    background-position: -750px -20px;
 }
 
 .robot-outline {
@@ -446,20 +479,6 @@
     line-height: 25px;
     font-size: 10px;
     color: deeppink;
-}
-
-.love {
-    background-image: url('../images/icon2.svg');
-    width: 25px;
-    height: 25px;
-    float: left;
-    width: 25px;
-    height: 25px;
-    float: left;
-    /* outline: 3px solid red; */
-    background-size: 10000%;
-    background-position: -1183px -52px;
-    margin-right: 10px;
 }
 
 .hands0 {

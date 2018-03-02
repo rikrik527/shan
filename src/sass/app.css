@@ -32,11 +32,31 @@
 @media screen and (min-width: 320px) and (max-width: 504px) {
   .xs-display-none {
     display: none; } }
+@media (max-device-width: 360px) and (max-device-height: 640px) {
+  .todo-list {
+    margin-left: 85% !important;
+    transform: scale(0.7);
+    margin-top: -85%; } }
 /* iphone 6 6s 7 8 */
+@media (max-device-width: 414px) and (max-device-height: 736px) {
+  .todo-list {
+    margin-left: 85% !important;
+    transform: scale(0.7);
+    margin-top: -85%; } }
 /* samsung */
+@media (max-device-width: 360px) and (max-device-height: 740px) {
+  .todo-list {
+    margin-left: 85% !important;
+    transform: scale(0.7);
+    margin-top: -85%; } }
 /* ipad mini */
 /* xpreia */
 /* iphone 6 plus */
+@media (max-device-width: 414px) and (max-device-height: 736px) {
+  .todo-list {
+    margin-left: 85% !important;
+    transform: scale(0.7);
+    margin-top: -85%; } }
 /* iphone 6*/
 /* iphone5 */
 /* laptop */
@@ -2186,21 +2206,21 @@ iframe[seamless] {
   to {
     background-position: -829px -308px; } }
 .robotlove {
-  animation: robotlove 1s steps(11) infinite; }
+  animation: robotlove 1s steps(10) infinite; }
 @keyframes robotlove {
   from {
-    background-position: 0px 0px; }
+    background-position: 0px -10px; }
   to {
-    background-position: -1188px 0px; } }
+    background-position: -1042px -10px; } }
 .love {
-  animation: love 1s linear infinite; }
+  animation: love 0.5s steps(4) infinite;
+  transition: all .5s linear; }
 @keyframes love {
   from {
-    background-position: -1375px 0px;
-    left: 0px; }
+    background-position: -1386px -25px;
+    transform: scale(2); }
   to {
-    background-position: 1375px 0px;
-    left: 100%; } }
+    background-position: -1864px -25px; } }
 .robot-change {
   animation: robotchange 1.5s steps(10) forwards; }
 @keyframes robotchange {
@@ -3014,20 +3034,47 @@ button {
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
-.game-action-outline {
-  width: 6.25rem;
-  height: 31.25rem;
-  position: absolute;
-  top: 21%;
-  left: 47%;
-  transform: rotatez(-40deg);
-  display: none; }
-
 .game-action {
   width: 6.25rem;
   height: 6.25em;
   background-image: url("../images/icon2.svg");
-  background-size: 3000%; }
+  background-size: 3000%;
+  transition: all 1s linear;
+  position: absolute;
+  display: none; }
+
+.big-words {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  margin: -100px 0 0 -200px;
+  top: 50%;
+  text-align: center;
+  font-stretch: extra-expanded;
+  font-size: 24px;
+  background-color: orangered;
+  animation: leftright 1s linear forwards; }
+@keyframes leftright {
+  0% {
+    left: 0%; }
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    left: 50%; }
+  100% {
+    left: 100%; } }
+.fireball {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 26%;
+  left: 27%;
+  background-image: url("../images/icon2.svg");
+  background-size: 5000%;
+  background-position: -750px -20px; }
 
 .robot-outline {
   position: absolute;
@@ -3404,19 +3451,6 @@ button {
   line-height: 25px;
   font-size: 10px;
   color: deeppink; }
-
-.love {
-  background-image: url("../images/icon2.svg");
-  width: 25px;
-  height: 25px;
-  float: left;
-  width: 25px;
-  height: 25px;
-  float: left;
-  /* outline: 3px solid red; */
-  background-size: 10000%;
-  background-position: -1183px -52px;
-  margin-right: 10px; }
 
 .hands0 {
   background: yellow; }

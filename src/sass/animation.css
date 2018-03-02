@@ -115,21 +115,21 @@ iframe[seamless] {
   to {
     background-position: -829px -308px; } }
 .robotlove {
-  animation: robotlove 1s steps(11) infinite; }
+  animation: robotlove 1s steps(10) infinite; }
 @keyframes robotlove {
   from {
-    background-position: 0px 0px; }
+    background-position: 0px -10px; }
   to {
-    background-position: -1188px 0px; } }
+    background-position: -1042px -10px; } }
 .love {
-  animation: love 1s linear infinite; }
+  animation: love 0.5s steps(4) infinite;
+  transition: all .5s linear; }
 @keyframes love {
   from {
-    background-position: -1375px 0px;
-    left: 0px; }
+    background-position: -1386px -25px;
+    transform: scale(2); }
   to {
-    background-position: 1375px 0px;
-    left: 100%; } }
+    background-position: -1864px -25px; } }
 .robot-change {
   animation: robotchange 1.5s steps(10) forwards; }
 @keyframes robotchange {
