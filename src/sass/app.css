@@ -2221,6 +2221,21 @@ iframe[seamless] {
     transform: scale(2); }
   to {
     background-position: -1864px -25px; } }
+.leftright {
+  display: block;
+  animation: leftright 1s linear forwards; }
+@keyframes leftright {
+  0% {
+    left: 0%; }
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    left: 50%; }
+  100% {
+    left: 200%; } }
 .robot-change {
   animation: robotchange 1.5s steps(10) forwards; }
 @keyframes robotchange {
@@ -3052,20 +3067,8 @@ button {
   text-align: center;
   font-stretch: extra-expanded;
   font-size: 24px;
-  background-color: orangered;
-  animation: leftright 1s linear forwards; }
-@keyframes leftright {
-  0% {
-    left: 0%; }
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    left: 50%; }
-  100% {
-    left: 100%; } }
+  background-color: orangered; }
+
 .fireball {
   position: absolute;
   width: 2rem;

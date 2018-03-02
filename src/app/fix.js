@@ -79,10 +79,11 @@ module.exports.topMenu = function() {
 
     })();
 
-
+    var love = '愛的能源';
     var submit = false;
     var fire = false;
-
+    var bigWords = obj.get('.big-words');
+    bigWords.style.display = 'none';
 
     function removeLoveEnergy() {
         submit = false;
@@ -127,7 +128,12 @@ module.exports.topMenu = function() {
         div.className = 'fireball';
         gameAction.insertAdjacentElement('afterend', div);
         var bigWords = obj.get('.big-words');
+        bigWords.style.display = 'none';
+        bigWords.classList.add('leftright');
         bigWords.textContent = love;
+        setTimeout(() => {
+            bigWords.classList.remove('leftright');
+        }, 2000);
 
 
     }
@@ -142,7 +148,7 @@ module.exports.topMenu = function() {
 
         todoTitle.appendChild(li);
 
-        var love = '愛的能源';
+
         li.innerHTML = love;
         console.log('excuted');
 
