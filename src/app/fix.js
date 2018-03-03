@@ -1,6 +1,7 @@
 var obj = require('./getall');
 var Hammer = require('hammerjs');
 var memories = require('../audio/memories.mp3');
+var epic = require('../audio/epic.mp3');
 var iconTodo = obj.get('.icon-todo');
 var robotOutLine = obj.get('.robot-outline');
 var robot = obj.getId('robot');
@@ -99,10 +100,12 @@ module.exports.topMenu = function() {
         var todolist = obj.get('.todo-list').style.display = 'none';
         var robot = obj.getId('robot');
         robot.classList.remove('robot-change');
-        robot.classList.add('robotlove');
+        setTimeout(function() {
+            robot.classList.add('robotlove');
 
-        var gameAction = obj.get('.game-action');
-        gameAction.classList.add('love');
+            var gameAction = obj.get('.game-action');
+            gameAction.classList.add('love');
+        }, 4000);
         removeLoveEnergy();
         fire = true;
         console.log(fire)
@@ -130,11 +133,50 @@ module.exports.topMenu = function() {
         gameAction.insertAdjacentElement('afterend', div);
         var bigWords = obj.get('.big-words');
         bigWords.style.display = 'none';
-        bigWords.classList.add('leftright');
-        bigWords.textContent = love;
+        setTimeout(() => {
+            bigWords.style.display = 'block';
+            bigWords.classList.add('leftright');
+            bigWords.textContent = love;
+        }, 2000);
+
         setTimeout(() => {
             bigWords.classList.remove('leftright');
-        }, 2000);
+            console.log(bigWords);
+        }, 3000);
+        setTimeout(function() {
+            var fire = function() {
+
+                var id = setInterval(frame, 500);
+
+                function frame() {
+
+                    var top = 26;
+                    var left = 27;
+                    console.log('frame is fired');
+                    return (function() {
+                        console.log('return function');
+                        top += 1;
+                        left += 1;
+                        div.style.top = top + '%';
+                        div.style.left = left + '%';
+                        console.log('div', div);
+                        console.log(top, left);
+                        if (top > 76 && left > 70) {
+                            top = 26;
+                            left = 27;
+                            console.log('top compare i have been excuted');
+                        }
+
+
+
+                    })();
+                }
+            };
+            fire();
+            console.log('var fire is fired fired');
+        }, 4000);
+
+
 
 
     }
@@ -273,24 +315,32 @@ module.exports.robot = function() {
         var robotSaying = obj.get('.robot-saying');
         robotSaying.appendChild(div);
         div.classList.add('robot-speak');
-        var session = sessionStorage.setItem(wholeContext.push(word));
-        var getSession = sessionStorage.getItem(session);
+        var local = localStorage.setItem('history', wholeContext.push(word));
+        var getLocal = localStorage.getItem('history');
         div.innerHTML = word;
         setTimeout(() => {
+            var robotSpeak = obj.get('.robot-speak');
             div.innerHTML = '';
             robotSaying.style.display = 'none';
-            robotSpeak.parentNode.removeChild();
+            robotSpeak.parentNode.removeChild(robotSpeak);
             console.log('removed');
         }, time);
         var historyBtn = obj.get('.history-btn');
         historyBtn.onclick = function() {
             var historyBoard = obj.get('.history-board');
-            historyBoard.innerHTML = getSession;
+            historyBoard.innerHTML = getLocal.toString();
         }
     }
 }
 module.exports.music = function() {
     var mp3File = obj.getId('mp3file');
     mp3File.src = memories;
+    var audio = new Audio();
+    var songList = [epic, memories];
+
+    audio.src = songList[0];
+
     audio.play();
+    console.log(audio)
+    audio.loop = true;
 }

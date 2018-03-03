@@ -37,7 +37,7 @@ window.onload = function() {
     fix.robotMenu();
     fix.topMenu();
     fix.arrows();
-
+    fix.music();
     shan.talk.talkingDialog();
     setTimeout(() => {
         shan.talk.createLi.call(shanLi, Math.floor(Math.random() * Date.now()), Math.floor(Math.random() * Date.now()));

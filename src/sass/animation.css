@@ -135,7 +135,7 @@ iframe[seamless] {
   animation: leftright 1s linear forwards; }
 @keyframes leftright {
   0% {
-    left: 0%; }
+    left: -100%; }
   20%,
         30%,
         40%,
