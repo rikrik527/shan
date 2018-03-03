@@ -3399,12 +3399,14 @@ button {
     float: right;
     background: orangered;
     border-radius: 10px;
-    color: white; }
+    color: white;
+    cursor: pointer; }
   .todo-list .submit-btn {
     float: right;
     background: aliceblue;
     border-radius: 10px;
-    border: 1px solid; }
+    border: 1px solid;
+    cursor: pointer; }
 
 .right {
   position: absolute;
@@ -3416,7 +3418,8 @@ button {
   top: 25%;
   border-left: 15px solid red;
   border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent; }
+  border-bottom: 13px solid transparent;
+  cursor: pointer; }
 
 .left {
   position: absolute;
@@ -3428,7 +3431,8 @@ button {
   top: 25%;
   border-right: 15px solid red;
   border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent; }
+  border-bottom: 13px solid transparent;
+  cursor: pointer; }
 
 .hands0,
 .hands1,
@@ -3875,7 +3879,25 @@ svg {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 15vh; }
+  height: 15vh;
+  background-color: rgba(27, 194, 185, 0.5);
+  z-index: 9999; }
+  .footer-boxcontrol .history-btn {
+    width: 100px;
+    height: 50px;
+    background: #f48fb1;
+    color: #ad1457;
+    border-radius: 10px;
+    float: right; }
+  .footer-boxcontrol .history-board {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    background: rgba(255, 100, 100, 0.5);
+    color: white;
+    padding: 1%;
+    float: right;
+    text-overflow: ellipsis; }
 
 .shan-talk {
   position: absolute;

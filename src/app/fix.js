@@ -1,5 +1,6 @@
 var obj = require('./getall');
 var Hammer = require('hammerjs');
+var memories = require('../audio/memories.mp3');
 var iconTodo = obj.get('.icon-todo');
 var robotOutLine = obj.get('.robot-outline');
 var robot = obj.getId('robot');
@@ -168,44 +169,60 @@ module.exports.topMenu = function() {
 module.exports.arrows = function() {
     var right = obj.get('.right');
     var left = obj.get('.left');
+    var click = 0;
     left.onclick = (function() {
         var todoIconSlide = obj.get('.todo-icon-slide');
-        var click = 0;
+
         return function() {
             click++;
-            if (click === 10) click = 1;
+            if (click === 5) click = 5;
             switch (click) {
                 case 1:
-                    todoIconSlide.style.left = '-50px';
+                    todoIconSlide.style.left -= 50 + 'px';
                     break;
                 case 2:
-                    todoIconSlide.style.left = '-100px';
+                    todoIconSlide.style.left -= 50 + 'px';
                     break;
                 case 3:
-                    todoIconSlide.style.left = '-150px';
+                    todoIconSlide.style.left -= 50 + 'px';
                     break;
                 case 4:
-                    todoIconSlide.style.left = '-200px';
+                    todoIconSlide.style.left -= 50 + 'px';
                     break;
                 case 5:
-                    todoIconSlide.style.left = '-250px';
+                    todoIconSlide.style.left -= 50 + 'px';
                     break;
-                case 6:
-                    todoIconSlide.style.left = '-300px';
-                    break;
-                case 7:
-                    todoIconSlide.style.left = '-350px';
-                    break;
-                case 8:
-                    todoIconSlide.style.left = '-400px';
-                    break;
-                case 9:
-                    todoIconSlide.style.left = '-450px';
-                    break;
-
 
             }
         }
+        console.log(click);
+    })();
+    right.onclick = (function() {
+        var todoIconSlide = obj.get('.todo-icon-slide');
+
+        return function() {
+            click--;
+            if (click === 0) click = 0;
+            switch (click) {
+                case 1:
+                    todoIconSlide.style.left += 50 + 'px';
+                    break;
+                case 2:
+                    todoIconSlide.style.left += 50 + 'px';
+                    break;
+                case 3:
+                    todoIconSlide.style.left += 50 + 'px';
+                    break;
+                case 4:
+                    todoIconSlide.style.left += 50 + 'px';
+                    break;
+                case 5:
+                    todoIconSlide.style.left += 50 + 'px';
+                    break;
+
+            }
+        }
+        console.log(click);
     })();
 }
 module.exports.robot = function() {
@@ -246,6 +263,7 @@ module.exports.robot = function() {
         robot.classList.remove('robot-origin');
         robot.classList.add('robot-change');
     }, 15000);
+    var wholeContext = [];
 
     function talk(word, time) {
         var robotSaying = obj.get('.robot-saying');
@@ -255,10 +273,24 @@ module.exports.robot = function() {
         var robotSaying = obj.get('.robot-saying');
         robotSaying.appendChild(div);
         div.classList.add('robot-speak');
+        var session = sessionStorage.setItem(wholeContext.push(word));
+        var getSession = sessionStorage.getItem(session);
         div.innerHTML = word;
         setTimeout(() => {
             div.innerHTML = '';
             robotSaying.style.display = 'none';
+            robotSpeak.parentNode.removeChild();
+            console.log('removed');
         }, time);
+        var historyBtn = obj.get('.history-btn');
+        historyBtn.onclick = function() {
+            var historyBoard = obj.get('.history-board');
+            historyBoard.innerHTML = getSession;
+        }
     }
+}
+module.exports.music = function() {
+    var mp3File = obj.getId('mp3file');
+    mp3File.src = memories;
+    audio.play();
 }

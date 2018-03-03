@@ -401,12 +401,14 @@
         background: orangered;
         border-radius: 10px;
         color: white;
+        cursor: pointer;
     }
     .submit-btn {
         float: right;
         background: aliceblue;
         border-radius: 10px;
         border: 1px solid;
+        cursor: pointer;
     }
 }
 
@@ -421,6 +423,7 @@
     border-left: 15px solid red;
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
+    cursor: pointer;
 }
 
 .left {
@@ -434,6 +437,7 @@
     border-right: 15px solid red;
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
+    cursor: pointer;
 }
 
 .hands0,

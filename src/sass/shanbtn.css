@@ -360,12 +360,14 @@
     float: right;
     background: orangered;
     border-radius: 10px;
-    color: white; }
+    color: white;
+    cursor: pointer; }
   .todo-list .submit-btn {
     float: right;
     background: aliceblue;
     border-radius: 10px;
-    border: 1px solid; }
+    border: 1px solid;
+    cursor: pointer; }
 
 .right {
   position: absolute;
@@ -377,7 +379,8 @@
   top: 25%;
   border-left: 15px solid red;
   border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent; }
+  border-bottom: 13px solid transparent;
+  cursor: pointer; }
 
 .left {
   position: absolute;
@@ -389,7 +392,8 @@
   top: 25%;
   border-right: 15px solid red;
   border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent; }
+  border-bottom: 13px solid transparent;
+  cursor: pointer; }
 
 .hands0,
 .hands1,
