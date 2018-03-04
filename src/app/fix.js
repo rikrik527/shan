@@ -1,5 +1,6 @@
 var obj = require('./getall');
 var Hammer = require('hammerjs');
+var robot = require('./robot');
 var memories = require('../audio/memories.mp3');
 var epic = require('../audio/epic.mp3');
 var iconTodo = obj.get('.icon-todo');
@@ -144,42 +145,47 @@ module.exports.topMenu = function() {
             console.log(bigWords);
         }, 3000);
         setTimeout(function() {
-            var fire = function() {
-
-                var id = setInterval(frame, 500);
-
-                function frame() {
-
-                    var top = 26;
-                    var left = 27;
-                    console.log('frame is fired');
-                    return (function() {
-                        console.log('return function');
-                        top += 1;
-                        left += 1;
-                        div.style.top = top + '%';
-                        div.style.left = left + '%';
-                        console.log('div', div);
-                        console.log(top, left);
-                        if (top > 76 && left > 70) {
-                            top = 26;
-                            left = 27;
-                            console.log('top compare i have been excuted');
-                        }
-
-
-
-                    })();
-                }
-            };
             fire();
-            console.log('var fire is fired fired');
-        }, 4000);
 
 
 
-
+        });
     }
+
+    function fire() {
+
+        var id = setInterval(frame, 500);
+        console.log('fire is fired');
+
+        function frame() {
+
+            var top = 26;
+            var left = 27;
+            console.log('frame is fired');
+            return (function() {
+                console.log('return function');
+                top += 1;
+                left += 1;
+                div.style.top = top + '%';
+                div.style.left = left + '%';
+                console.log('div', div);
+                console.log(top, left);
+                if (top > 76 && left > 70) {
+                    top = 26;
+                    left = 27;
+                    console.log('top compare i have been excuted');
+                }
+            })();
+
+
+        }
+    }
+
+
+
+
+
+
 
     function loveEnergy() {
         submit = true;
@@ -203,6 +209,7 @@ module.exports.topMenu = function() {
 
 
     }
+
 
 
 
@@ -339,8 +346,55 @@ module.exports.music = function() {
     var songList = [epic, memories];
 
     audio.src = songList[0];
-
     audio.play();
+
     console.log(audio)
     audio.loop = true;
+}
+
+function removeIcons() {
+    var asideBc = obj.get('.aside-boxcontrol');
+    asideBc.style.display = 'none';
+}
+
+
+module.exports.talkToYuShan = function() {
+    var yushanBtn = obj.get('.icon-talk-to-yushan');
+    yushanBtn.onclick = function() {
+        var robot = obj.getId('robot');
+        robot.removeAttribute('class');
+        robot.setAttribute('class', 'robot-fly');
+
+        talkShan();
+        talkBar(4000);
+
+    };
+
+
+
+    function talkBar(time) {
+        var robotSaying = obj.get('.robot-saying');
+        robotSaying.style.display = 'block';
+        var div = obj.create('div');
+        div.classList.add('robot-speak');
+        robotSaying.appendChild(div);
+        var robotTalk = '看看雨珊怎麼樣了';
+        div.innerHTML = robotTalk;
+
+
+        setTimeout(() => {
+            div.parentNode.removeChild(div);
+            robotSaying.style.display = 'none';
+        }, time);
+    }
+
+    function talkShan() {
+        console.log('yushanbtn have been clicked')
+        removeIcons();
+        var robotOutLine = obj.get('.robot-outline');
+        robotOutLine.style.cssText = 'top:70%;left:58%;transition:all 4s ease-in;';
+    }
+
+
+
 }

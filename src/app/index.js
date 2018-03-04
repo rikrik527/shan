@@ -1,3 +1,5 @@
+import { talkBar } from './fix';
+
 require('../sass/app.scss');
 
 var todo = require('./todo');
@@ -16,6 +18,7 @@ var location = require('./location');
 var awake = require('./spa');
 var xsMenu = require('./xsMenu');
 var gametest = require('./gametest');
+var robot = require('./robot');
 
 window.onload = function() {
 
@@ -38,10 +41,9 @@ window.onload = function() {
     fix.topMenu();
     fix.arrows();
     fix.music();
+    fix.talkToYuShan();
     shan.talk.talkingDialog();
-    setTimeout(() => {
-        shan.talk.createLi.call(shanLi, Math.floor(Math.random() * Date.now()), Math.floor(Math.random() * Date.now()));
-    }, 3000);
+
 
     xsMenu.toggleXsmenu();
 

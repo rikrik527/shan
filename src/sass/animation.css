@@ -107,6 +107,13 @@ iframe[seamless] {
 .robot-fly-down {
   background-position: -6px -308px; }
 
+.robot-fly {
+  animation: robotfly 0.5s steps(2) infinite; }
+@keyframes robotfly {
+  from {
+    background-position: 0px -213px; }
+  to {
+    background-position: -205px -213px; } }
 .robot-talk {
   animation: robottalk 0.5s steps(8) forwards; }
 @keyframes robottalk {
