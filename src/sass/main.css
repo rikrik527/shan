@@ -5344,6 +5344,9 @@ iframe[seamless] {
 @keyframes robotoutlinefly {
   to {
     transform: translateX(60px) translateY(100px); } }
+.robot-love-arrow {
+  background-position: -105px -418px; }
+
 .robot-fly-down {
   background-position: -6px -308px; }
 

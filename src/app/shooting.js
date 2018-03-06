@@ -12,7 +12,7 @@ module.exports.shooting = function() {
         canvas.height = window.innerHeight;
     }
 
-    function arc(x, y, radius, start, end) {
+    this.arc = function(x, y, radius, start, end) {
         this.x = x;
         this.y = y;
         this.radius = radius;

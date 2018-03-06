@@ -98,15 +98,12 @@ module.exports.topMenu = function() {
             return false;
             console.log('not gonna happen');
         }
+        var iconFix = obj.get('.icon-fix');
+        iconFix.style.transform = 'scale(1)';
         var todolist = obj.get('.todo-list').style.display = 'none';
         var robot = obj.getId('robot');
         robot.classList.remove('robot-change');
-        setTimeout(function() {
-            robot.classList.add('robotlove');
-
-            var gameAction = obj.get('.game-action');
-            gameAction.classList.add('love');
-        }, 4000);
+        robot.classList.add('robot-love-arrow');
         removeLoveEnergy();
         fire = true;
         console.log(fire)
@@ -121,17 +118,13 @@ module.exports.topMenu = function() {
 
 
     function loveBomb() {
-        var gameAction = obj.get('.game-action');
-        gameAction.style.cssText = 'left:20%;top:23%;display:none';
+
         console.log('i got fired')
         var shanLi = obj.get('.shanli-outline');
-        var shanLiTop = window.getComputedStyle(shanLi).getPropertyValue('top');
-        var shanLiLeft = window.getComputedStyle(shanLi).getPropertyValue('left');
 
-        gameAction.style.cssText = 'left:70%;top:76%;display:block;transition:all 1s linear;opacity:1';
-        var div = obj.create('div');
-        div.className = 'fireball';
-        gameAction.insertAdjacentElement('afterend', div);
+
+
+
         var bigWords = obj.get('.big-words');
         bigWords.style.display = 'none';
         setTimeout(() => {
@@ -145,41 +138,72 @@ module.exports.topMenu = function() {
             console.log(bigWords);
         }, 3000);
         setTimeout(function() {
-            fire();
+            shooting();
 
 
 
-        });
+        }, 4000);
     }
 
     function fire() {
 
-        var id = setInterval(frame, 500);
-        console.log('fire is fired');
-
-        function frame() {
-
-            var top = 26;
-            var left = 27;
-            console.log('frame is fired');
-            return (function() {
-                console.log('return function');
-                top += 1;
-                left += 1;
-                div.style.top = top + '%';
-                div.style.left = left + '%';
-                console.log('div', div);
-                console.log(top, left);
-                if (top > 76 && left > 70) {
-                    top = 26;
-                    left = 27;
-                    console.log('top compare i have been excuted');
-                }
-            })();
 
 
+    }
+    var robotOutLine = obj.get('.robot-outline');
+    var loveArrow = obj.get('.love-arrow');
+    var arrowBc = obj.get('.arrow-boxcontrol');
+    var mouseDown = false;
+    var isHandled = false;
+    var handle = obj.get('.handle');
+    var mouseX, mouseY;
+    var gravity = 1;
+    var straight = 0;
+    var maxPower = 90;
+    var minPower = 30;
+    arrowBc.onmousedown = function(e) {
+        mouseDown = true;
+        console.log('mousedown');
+        if (e.target.className === 'handle') {
+            console.log('got handle');
+            isHandled = true;
         }
     }
+    arrowBc.onmouseup = function(e) {
+        mouseDown = false;
+        isHandled = false;
+    }
+    arrowBc.onmousemove = function(e) {
+
+        if (!mouseDown) {
+            return false;
+            console.log('arrow isnt down');
+
+        }
+        if (isHandled) {
+            console.log('ishandled');
+            mouseX = Math.floor(e.clientX / 10 * 7);
+            mouseY = Math.floor(e.clientY / 5);
+            if (mouseX == maxPower) {
+                mouseX = 90;
+
+            } else if (mouseX == minPower) {
+                mouseX = 30;
+
+            }
+            switch (mouseX) {
+                case 80:
+                    console.log('power is 80');
+            }
+            robotOutLine.style.transform = 'rotatez(' + mouseX / 2 + 'deg)';
+            robotOutLine.style.transform = 'rotatez(' + (-mouseX / 2) + 'deg)';
+            handle.style.left = mouseX + 'px';
+            handle.style.top = mouseY + 'px';
+            console.log(mouseX, mouseY)
+        }
+
+    }
+
 
 
 
@@ -210,6 +234,47 @@ module.exports.topMenu = function() {
 
     }
 
+    function shooting(e) {
+        var gameAction = obj.get('.game-action');
+        gameAction.style.display = 'block';
+        console.log('shooting star')
+        var canvas = obj.getId('shooting');
+        var ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.addEventListener('resize', onWindowResize, false);
+
+        function onWindowResize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+
+
+        function arc() {
+            var x = mouse.x;
+            var y = mouse.y;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+
+            ctx.arc(x, y, 100, 0, 2 * Math.PI);
+
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = '5';
+
+            ctx.stroke();
+            ctx.closePath();
+        }
+        canvas.onmousemove = function(e) {
+            arc();
+            var mouse = {
+                x: e.clientX,
+                y: e.clientY
+            }
+            console.log(mouse.x, mouse.y);
+        }
+
+    }
 
 
 
@@ -311,6 +376,7 @@ module.exports.robot = function() {
     setTimeout(() => {
         robot.classList.remove('robot-origin');
         robot.classList.add('robot-change');
+        robotOutLine.style.transition = 'none';
     }, 15000);
     var wholeContext = [];
 
@@ -331,7 +397,9 @@ module.exports.robot = function() {
             robotSaying.style.display = 'none';
             robotSpeak.parentNode.removeChild(robotSpeak);
             console.log('removed');
+
         }, time);
+
         var historyBtn = obj.get('.history-btn');
         historyBtn.onclick = function() {
             var historyBoard = obj.get('.history-board');
@@ -350,6 +418,12 @@ module.exports.music = function() {
 
     console.log(audio)
     audio.loop = true;
+    document.onkeydown = function(e) {
+        var key = e.which || e.keyCode;
+        if (key == 81) {
+            audio.pause();
+        }
+    }
 }
 
 function removeIcons() {
