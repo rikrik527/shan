@@ -74,6 +74,16 @@
     }
 }
 
+.maxpower {
+    animation: maxpower .5s linear infinite;
+    @keyframes maxpower {
+        50% {
+            transform: scale(2)rotatez(30deg);
+            background-color: yellow;
+        }
+    }
+}
+
 .robot-love-arrow {
     background-position: -105px -418px;
 }

@@ -18,7 +18,27 @@ var location = require('./location');
 var awake = require('./spa');
 var xsMenu = require('./xsMenu');
 var gametest = require('./gametest');
-var robot = require('./robot');
+var ctx = require('./context');
+var sprite = require('./sprite');
+$(document).ready(function() {
+    //initialize canvas
+
+    ctx.create('canvas');
+    console.log('yes finished jquery')
+    var wall = require('../images/background-rock.png');
+
+
+    var image = new sprite(wall, false);
+    var pattern = new sprite(wall, true);
+    var angle = 0;
+    setInterval(function() {
+        ctx.context.fillStyle = 'black';
+        ctx.context.fillRect(0, 0, 800, 800);
+        image.draw(0, 0, 64, 64);
+        image.draw(0, 74, 256, 32);
+    }, 25)
+})
+
 
 window.onload = function() {
 

@@ -1,6 +1,6 @@
 var obj = require('./getall');
 var Hammer = require('hammerjs');
-var robot = require('./robot');
+
 var memories = require('../audio/memories.mp3');
 var epic = require('../audio/epic.mp3');
 var iconTodo = obj.get('.icon-todo');
@@ -85,6 +85,7 @@ module.exports.topMenu = function() {
     var love = '愛的能源';
     var submit = false;
     var fire = false;
+
     var bigWords = obj.get('.big-words');
     bigWords.style.display = 'none';
 
@@ -104,6 +105,7 @@ module.exports.topMenu = function() {
         var robot = obj.getId('robot');
         robot.classList.remove('robot-change');
         robot.classList.add('robot-love-arrow');
+        robot.style.transform = 'rotatez(25deg)';
         removeLoveEnergy();
         fire = true;
         console.log(fire)
@@ -138,8 +140,10 @@ module.exports.topMenu = function() {
             console.log(bigWords);
         }, 3000);
         setTimeout(function() {
-            shooting();
-
+            var loveArrow = obj.get('.love-arrow');
+            loveArrow.style.display = 'block';
+            var handle = obj.get('.handle');
+            handle.style.display = 'block';
 
 
         }, 4000);
@@ -152,16 +156,20 @@ module.exports.topMenu = function() {
     }
     var robotOutLine = obj.get('.robot-outline');
     var loveArrow = obj.get('.love-arrow');
+    var loveLeft = window.getComputedStyle(loveArrow).getPropertyValue('left');
     var arrowBc = obj.get('.arrow-boxcontrol');
     var mouseDown = false;
     var isHandled = false;
     var handle = obj.get('.handle');
     var mouseX, mouseY;
-    var gravity = 1;
+    var power = 0;
     var straight = 0;
-    var maxPower = 90;
-    var minPower = 30;
+    var maxPower = 30;
+    var minPower = 60;
+
+
     arrowBc.onmousedown = function(e) {
+
         mouseDown = true;
         console.log('mousedown');
         if (e.target.className === 'handle') {
@@ -172,8 +180,16 @@ module.exports.topMenu = function() {
     arrowBc.onmouseup = function(e) {
         mouseDown = false;
         isHandled = false;
+
+    }
+
+    function fireball(e) {
+
+        var fireball = obj.get('.fireball');
+
     }
     arrowBc.onmousemove = function(e) {
+
 
         if (!mouseDown) {
             return false;
@@ -182,27 +198,53 @@ module.exports.topMenu = function() {
         }
         if (isHandled) {
             console.log('ishandled');
-            mouseX = Math.floor(e.clientX / 10 * 7);
+            mouseX = Math.floor(e.clientX / 10 * 6);
             mouseY = Math.floor(e.clientY / 5);
-            if (mouseX == maxPower) {
-                mouseX = 90;
-
-            } else if (mouseX == minPower) {
+            if (mouseX <= maxPower) {
+                loveArrow.style.transform = 'rotate(30deg)translatex(' + mouseX + 'px)';
                 mouseX = 30;
+                handle.classList.add('maxpower');
 
+                arrowBc.onmouseup = function() {
+
+                }
+
+
+            } else if (mouseX > maxPower) {
+                handle.classList.remove('maxpower');
+
+            } else if (mouseX >= minPower) {
+                mouseX = 60;
+                console.log('60');
+                loveArrow.style.transform = 'rotatez(30deg)translatex(' + (-mouseX) + 'px)';
             }
             switch (mouseX) {
-                case 80:
-                    console.log('power is 80');
+                case 30:
+                    power = 30;
+                    console.log('case30', power)
+                    break;
+                case 40:
+                    power = 20;
+                    console.log('case40', power)
+                    break;
+                case 50:
+                    power = 10;
+                    console.log('case50', power);
+                    break;
+                case 60:
+                    power = 0;
+                    console.log('case60', power);
+                    break;
             }
-            robotOutLine.style.transform = 'rotatez(' + mouseX / 2 + 'deg)';
-            robotOutLine.style.transform = 'rotatez(' + (-mouseX / 2) + 'deg)';
-            handle.style.left = mouseX + 'px';
-            handle.style.top = mouseY + 'px';
-            console.log(mouseX, mouseY)
+
+            handle.style.transform = 'translatex(' + mouseX + 'px)';
+
+            console.log(mouseX)
         }
 
     }
+
+
 
 
 

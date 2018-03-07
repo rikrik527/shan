@@ -104,6 +104,12 @@ iframe[seamless] {
 @keyframes robotoutlinefly {
   to {
     transform: translateX(60px) translateY(100px); } }
+.maxpower {
+  animation: maxpower .5s linear infinite; }
+@keyframes maxpower {
+  50% {
+    transform: scale(2) rotatez(30deg);
+    background-color: yellow; } }
 .robot-love-arrow {
   background-position: -105px -418px; }
 

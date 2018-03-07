@@ -2195,6 +2195,12 @@ iframe[seamless] {
 @keyframes robotoutlinefly {
   to {
     transform: translateX(60px) translateY(100px); } }
+.maxpower {
+  animation: maxpower .5s linear infinite; }
+@keyframes maxpower {
+  50% {
+    transform: scale(2) rotatez(30deg);
+    background-color: yellow; } }
 .robot-love-arrow {
   background-position: -105px -418px; }
 
@@ -3104,6 +3110,9 @@ button {
   text-shadow: 1px 1px 7px darkred; }
 
 .fireball {
+  left: 136px;
+  top: 193px;
+  transform: rotatez(0deg) translate(0px, 0px);
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -3555,18 +3564,18 @@ button {
 
 .arrow-boxcontrol {
   position: absolute;
-  width: 200px;
+  width: 100px;
   height: 100px;
   top: 18%;
-  left: 3%;
-  outline: 1px solid white; }
+  left: 3%; }
   .arrow-boxcontrol .love-arrow {
     width: 60px;
     height: 2px;
     background: yellow;
     position: absolute;
-    left: 48%;
-    top: 46%;
+    left: 75%;
+    top: 54%;
+    transform: rotateZ(30deg) translateX(27px);
     display: none; }
   .arrow-boxcontrol .arrow-head {
     width: 10px;
@@ -3579,11 +3588,13 @@ button {
   .arrow-boxcontrol .handle {
     width: 25px;
     height: 25px;
-    background: rgba(255, 100, 100, 0.5);
+    background-color: rgba(255, 100, 100, 0.5);
     border-radius: 100px;
     position: absolute;
-    top: 38%;
-    left: 42%; }
+    transform: scale(1) rotatez(30deg);
+    top: 33%;
+    left: 77%;
+    display: none; }
 
 /*fashion set 1 smooth*/
 /*set2 sun*/
