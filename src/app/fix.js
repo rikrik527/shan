@@ -1,6 +1,6 @@
 var obj = require('./getall');
 var Hammer = require('hammerjs');
-
+var speech = require('./speech');
 var memories = require('../audio/memories.mp3');
 var epic = require('../audio/epic.mp3');
 var iconTodo = obj.get('.icon-todo');
@@ -133,6 +133,7 @@ module.exports.topMenu = function() {
             bigWords.style.display = 'block';
             bigWords.classList.add('leftright');
             bigWords.textContent = love;
+            speech(love)
         }, 2000);
 
         setTimeout(() => {
@@ -157,18 +158,19 @@ module.exports.topMenu = function() {
     var robotOutLine = obj.get('.robot-outline');
     var loveArrow = obj.get('.love-arrow');
     var loveLeft = window.getComputedStyle(loveArrow).getPropertyValue('left');
-    var arrowBc = obj.get('.arrow-boxcontrol');
+    var touchBc = obj.get('.touch-boxcontrol');
+    var powerMb = obj.get('.power-meter-bar');
     var mouseDown = false;
     var isHandled = false;
     var handle = obj.get('.handle');
     var mouseX, mouseY;
     var power = 0;
     var straight = 0;
-    var maxPower = 30;
-    var minPower = 60;
+    var maxPower = 10;
+    var minPower = 40;
 
 
-    arrowBc.onmousedown = function(e) {
+    touchBc.onmousedown = function(e) {
 
         mouseDown = true;
         console.log('mousedown');
@@ -177,7 +179,7 @@ module.exports.topMenu = function() {
             isHandled = true;
         }
     }
-    arrowBc.onmouseup = function(e) {
+    touchBc.onmouseup = function(e) {
         mouseDown = false;
         isHandled = false;
 
@@ -188,7 +190,7 @@ module.exports.topMenu = function() {
         var fireball = obj.get('.fireball');
 
     }
-    arrowBc.onmousemove = function(e) {
+    touchBc.onmousemove = function(e) {
 
 
         if (!mouseDown) {
@@ -201,8 +203,8 @@ module.exports.topMenu = function() {
             mouseX = Math.floor(e.clientX / 10 * 6);
             mouseY = Math.floor(e.clientY / 5);
             if (mouseX <= maxPower) {
-                loveArrow.style.transform = 'rotate(30deg)translatex(' + mouseX + 'px)';
-                mouseX = 30;
+                powerMb.style.left = mouseX + 'px';
+                mouseX = 10;
                 handle.classList.add('maxpower');
 
                 arrowBc.onmouseup = function() {
@@ -214,30 +216,30 @@ module.exports.topMenu = function() {
                 handle.classList.remove('maxpower');
 
             } else if (mouseX >= minPower) {
-                mouseX = 60;
+                mouseX = 40;
                 console.log('60');
-                loveArrow.style.transform = 'rotatez(30deg)translatex(' + (-mouseX) + 'px)';
+                handle.style.left = (-mouseX) + 'px)';
             }
             switch (mouseX) {
-                case 30:
+                case 10:
                     power = 30;
                     console.log('case30', power)
                     break;
-                case 40:
+                case 20:
                     power = 20;
                     console.log('case40', power)
                     break;
-                case 50:
+                case 30:
                     power = 10;
                     console.log('case50', power);
                     break;
-                case 60:
+                case 40:
                     power = 0;
                     console.log('case60', power);
                     break;
             }
 
-            handle.style.transform = 'translatex(' + mouseX + 'px)';
+            handle.style.transform = 'scale(1)rotatez(30deg)translatex(' + mouseX + 'px)';
 
             console.log(mouseX)
         }
@@ -399,7 +401,7 @@ module.exports.robot = function() {
         robot.classList.remove('robot-fly-down');
         robot.classList.add('robot-talk');
 
-        talk('請下命令,主要目標是修復雨珊!', 2000);
+        speech(talk('請下命令,主要目標是修復雨珊!', 2000));
 
     }, 8000);
     setTimeout(() => {
@@ -413,7 +415,7 @@ module.exports.robot = function() {
         robot.classList.add('robot-origin');
 
         asideBc.style.display = 'block';
-        talk('變身', 2000)
+        speech(talk('變身', 2000));
     }, 13000);
     setTimeout(() => {
         robot.classList.remove('robot-origin');
@@ -495,6 +497,7 @@ module.exports.talkToYuShan = function() {
         div.classList.add('robot-speak');
         robotSaying.appendChild(div);
         var robotTalk = '看看雨珊怎麼樣了';
+        speech(robotTalk);
         div.innerHTML = robotTalk;
 
 
