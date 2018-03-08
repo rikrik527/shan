@@ -10,7 +10,7 @@ var sprite = function(filename, is_pattern) {
         this.image = new Image();
         this.image.src = filename;
         if (is_pattern) {
-            this.pattern = ctx.context.create(this.image, 'repeat');
+            this.pattern = ctx.create(this.image, 'repeat');
         }
     } else {
         console.log('unable to load sprite');

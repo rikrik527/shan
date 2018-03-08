@@ -145,7 +145,8 @@ module.exports.topMenu = function() {
             loveArrow.style.display = 'block';
             var handle = obj.get('.handle');
             handle.style.display = 'block';
-
+            var touchBc = obj.get('.touch-boxcontrol');
+            touchBc.style.display = 'block';
 
         }, 4000);
     }
@@ -200,10 +201,10 @@ module.exports.topMenu = function() {
         }
         if (isHandled) {
             console.log('ishandled');
-            mouseX = Math.floor(e.clientX / 10 * 6);
+            mouseX = Math.floor(e.clientX / 10 * 5);
             mouseY = Math.floor(e.clientY / 5);
             if (mouseX <= maxPower) {
-                powerMb.style.left = mouseX + 'px';
+                powerMb.style.left = mouseX - 300 + 'px';
                 mouseX = 10;
                 handle.classList.add('maxpower');
 
@@ -239,7 +240,7 @@ module.exports.topMenu = function() {
                     break;
             }
 
-            handle.style.transform = 'scale(1)rotatez(30deg)translatex(' + mouseX + 'px)';
+            handle.style.left = mouseX + 'px';
 
             console.log(mouseX)
         }
