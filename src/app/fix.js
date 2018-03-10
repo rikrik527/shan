@@ -104,14 +104,19 @@ module.exports.topMenu = function() {
         var todolist = obj.get('.todo-list').style.display = 'none';
         var robot = obj.getId('robot');
         robot.classList.remove('robot-change');
-        robot.classList.add('robot-love-arrow');
-        robot.style.transform = 'rotatez(25deg)';
-        removeLoveEnergy();
+
+
         fire = true;
+        removeLoveEnergy();
+
         console.log(fire)
         if (fire == true) {
             loveBomb();
-            console.log('fired')
+            console.log('lovebomb');
+            setTimeout(function() {
+                loveSparrow();
+                console.log('fire')
+            }, 7000)
         }
 
 
@@ -126,7 +131,7 @@ module.exports.topMenu = function() {
 
 
 
-
+        var robot = obj.get('#robot');
         var bigWords = obj.get('.big-words');
         bigWords.style.display = 'none';
         setTimeout(() => {
@@ -141,118 +146,48 @@ module.exports.topMenu = function() {
             console.log(bigWords);
         }, 3000);
         setTimeout(function() {
-            var loveArrow = obj.get('.love-arrow');
-            loveArrow.style.display = 'block';
+
             var handle = obj.get('.handle');
             handle.style.display = 'block';
-            var touchBc = obj.get('.touch-boxcontrol');
-            touchBc.style.display = 'block';
 
+
+        }, 8000);
+        setTimeout(() => {
+            robot.classList.add('robot-power');
+            console.log('robot-power')
         }, 4000);
+        setTimeout(function() {
+            robot.classList.remove('robot-power');
+            console.log('remove robot-power')
+            touchBc.style.display = 'block';
+        }, 7000);
     }
 
-    function fire() {
+    function loveSparrow() {
+        console.log('loveSparrow have been activeted')
 
+        var handle = obj.get('.handle');
+        robot.style.transition = 'all .5s linear';
+        robot.style.transform = 'rotatez(30deg)';
+        handle.onclick = (function() {
+            return function() {
+                var robot = obj.getId('robot');
+                console.log('remove all class');
+                robot.removeAttribute('class');
+                console.log('handle is been clicked');
 
+                robot.classList.add('robot-shooting');
+                console.log('robot-shooting')
+                return
+            };
+        })();
 
     }
     var robotOutLine = obj.get('.robot-outline');
-    var loveArrow = obj.get('.love-arrow');
-    var loveLeft = window.getComputedStyle(loveArrow).getPropertyValue('left');
+
     var touchBc = obj.get('.touch-boxcontrol');
-    var powerMb = obj.get('.power-meter-bar');
-    var mouseDown = false;
-    var isHandled = false;
-    var handle = obj.get('.handle');
-    var mouseX, mouseY;
-    var power = 0;
-    var straight = 0;
-    var maxPower = 10;
-    var minPower = 40;
 
-
-    touchBc.onmousedown = function(e) {
-
-        mouseDown = true;
-        console.log('mousedown');
-        if (e.target.className === 'handle') {
-            console.log('got handle');
-            isHandled = true;
-        }
-    }
-    touchBc.onmouseup = function(e) {
-        mouseDown = false;
-        isHandled = false;
-
-    }
-
-    function fireball(e) {
-
-        var fireball = obj.get('.fireball');
-
-    }
-    touchBc.onmousemove = function(e) {
-
-
-        if (!mouseDown) {
-            return false;
-            console.log('arrow isnt down');
-
-        }
-        if (isHandled) {
-            console.log('ishandled');
-            mouseX = Math.floor(e.clientX / 10 * 5);
-            mouseY = Math.floor(e.clientY / 5);
-            if (mouseX <= maxPower) {
-                powerMb.style.left = mouseX - 300 + 'px';
-                mouseX = 10;
-                handle.classList.add('maxpower');
-
-                arrowBc.onmouseup = function() {
-
-                }
-
-
-            } else if (mouseX > maxPower) {
-                handle.classList.remove('maxpower');
-
-            } else if (mouseX >= minPower) {
-                mouseX = 40;
-                console.log('60');
-                handle.style.left = (-mouseX) + 'px)';
-            }
-            switch (mouseX) {
-                case 10:
-                    power = 30;
-                    console.log('case30', power)
-                    break;
-                case 20:
-                    power = 20;
-                    console.log('case40', power)
-                    break;
-                case 30:
-                    power = 10;
-                    console.log('case50', power);
-                    break;
-                case 40:
-                    power = 0;
-                    console.log('case60', power);
-                    break;
-            }
-
-            handle.style.left = mouseX + 'px';
-
-            console.log(mouseX)
-        }
-
-    }
-
-
-
-
-
-
-
+    var lastPosition = null;
 
 
 
@@ -273,57 +208,7 @@ module.exports.topMenu = function() {
         var outside = obj.get('.outside');
         outside.insertAdjacentHTML('afterbegin', '<span class="love"></span>');
         console.log('span')
-
-
-
-
     }
-
-    function shooting(e) {
-        var gameAction = obj.get('.game-action');
-        gameAction.style.display = 'block';
-        console.log('shooting star')
-        var canvas = obj.getId('shooting');
-        var ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        canvas.addEventListener('resize', onWindowResize, false);
-
-        function onWindowResize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-
-
-        function arc() {
-            var x = mouse.x;
-            var y = mouse.y;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-
-            ctx.arc(x, y, 100, 0, 2 * Math.PI);
-
-            ctx.strokeStyle = 'red';
-            ctx.lineWidth = '5';
-
-            ctx.stroke();
-            ctx.closePath();
-        }
-        canvas.onmousemove = function(e) {
-            arc();
-            var mouse = {
-                x: e.clientX,
-                y: e.clientY
-            }
-            console.log(mouse.x, mouse.y);
-        }
-
-    }
-
-
-
-
 }
 module.exports.arrows = function() {
     var right = obj.get('.right');
@@ -402,7 +287,7 @@ module.exports.robot = function() {
         robot.classList.remove('robot-fly-down');
         robot.classList.add('robot-talk');
 
-        speech(talk('請下命令,主要目標是修復雨珊!', 2000));
+        talk('請下命令,主要目標是修復雨珊!', 2000);
 
     }, 8000);
     setTimeout(() => {
@@ -413,13 +298,13 @@ module.exports.robot = function() {
     }, 10000);
     setTimeout(() => {
         robot.classList.remove('robot-right');
-        robot.classList.add('robot-origin');
+        robot.classList.add('robot-fly-turn');
 
         asideBc.style.display = 'block';
-        speech(talk('變身', 2000));
+        talk('變身', 2000);
     }, 13000);
     setTimeout(() => {
-        robot.classList.remove('robot-origin');
+        robot.classList.remove('robot-fly-turn');
         robot.classList.add('robot-change');
         robotOutLine.style.transition = 'none';
     }, 15000);
@@ -435,6 +320,7 @@ module.exports.robot = function() {
         div.classList.add('robot-speak');
         var local = localStorage.setItem('history', wholeContext.push(word));
         var getLocal = localStorage.getItem('history');
+        speech(word);
         div.innerHTML = word;
         setTimeout(() => {
             var robotSpeak = obj.get('.robot-speak');
@@ -485,19 +371,17 @@ module.exports.talkToYuShan = function() {
         robot.setAttribute('class', 'robot-fly');
 
         talkShan();
-        talkBar(4000);
+        talkBar('看看雨珊怎麼樣了', 4000);
 
     };
 
-
-
-    function talkBar(time) {
+    function talkBar(robotTalk, time) {
         var robotSaying = obj.get('.robot-saying');
         robotSaying.style.display = 'block';
         var div = obj.create('div');
         div.classList.add('robot-speak');
         robotSaying.appendChild(div);
-        var robotTalk = '看看雨珊怎麼樣了';
+
         speech(robotTalk);
         div.innerHTML = robotTalk;
 
@@ -507,6 +391,8 @@ module.exports.talkToYuShan = function() {
             robotSaying.style.display = 'none';
         }, time);
     }
+
+
 
     function talkShan() {
         console.log('yushanbtn have been clicked')

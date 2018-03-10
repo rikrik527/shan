@@ -55,6 +55,7 @@ window.onload = function() {
     // })();
 
     // awake.shanLiAwaken.story();
+
     fix.robot();
 
     fix.robotMenu();
