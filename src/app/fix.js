@@ -1,4 +1,5 @@
 var obj = require('./getall');
+var requrestAnimationFrame = require('./requestAnimationFrame');
 var Hammer = require('hammerjs');
 var speech = require('./speech');
 var memories = require('../audio/memories.mp3');
@@ -155,6 +156,7 @@ module.exports.topMenu = function() {
         setTimeout(() => {
             robot.classList.add('robot-power');
             console.log('robot-power')
+            talkBar('啊啊啊啊!看我的小宇宙爆發!', 4000);
         }, 4000);
         setTimeout(function() {
             robot.classList.remove('robot-power');
@@ -163,26 +165,117 @@ module.exports.topMenu = function() {
         }, 7000);
     }
 
+    function talkBar(robotTalk, time) {
+        var robotSaying = obj.get('.robot-saying');
+        robotSaying.style.display = 'block';
+        var div = obj.create('div');
+        div.classList.add('robot-speak');
+        robotSaying.appendChild(div);
+
+        speech(robotTalk);
+        div.innerHTML = robotTalk;
+
+
+        setTimeout(() => {
+            div.parentNode.removeChild(div);
+            robotSaying.style.display = 'none';
+            robot.removeAttribute('class');
+        }, time);
+    }
+
     function loveSparrow() {
         console.log('loveSparrow have been activeted')
-
+        var robot = obj.getId('robot');
         var handle = obj.get('.handle');
         robot.style.transition = 'all .5s linear';
-        robot.style.transform = 'rotatez(30deg)';
-        handle.onclick = (function() {
-            return function() {
-                var robot = obj.getId('robot');
-                console.log('remove all class');
-                robot.removeAttribute('class');
-                console.log('handle is been clicked');
+        var idleTime = 0;
+        var setint = '';
+        var power = 0;
+        var fLeft = 0;
+        var fTop = 0;
+        var speed = 1;
+        var deg = 0;
+        var angle = 30 * Math.PI / 180;
+        var fireball = obj.get('.fireball');
 
-                robot.classList.add('robot-shooting');
-                console.log('robot-shooting')
-                return
-            };
+        var shanLiOutline = obj.get('.shanli-outline');
+        var sTop = window.getComputedStyle(shanLiOutline).getPropertyValue('top');
+        var sLeft = window.getComputedStyle(shanLiOutline).getPropertyValue('left');
+
+
+        handle.onmousedown = (function(e) {
+
+            console.log('returned')
+            fireball.style.display = 'block';
+            clearInterval(setint);
+            $('.handle').addClass('maxpower');
+            robot.classList.add('robot-shooting');
+            robot.style.transform = 'rotatez(30deg)';
+
+            power = 0;
+            setint = setInterval(function() {
+                speed += 1;
+
+                $('.power').val(++power);
+                console.log('mousehold', speed, power);
+            }, 50);
+
         })();
+        $('.handle').on('mouseleave mouseup', function() {
+            $('.power').val(power);
+            $('.handle').removeClass('maxpower');
+            clearInterval(setint);
+            shootOut();
+            console.log(power);
+        })
+
+
+
+
+
+
+        var deltaX = Math.cos(angle) * speed;
+        var deltaY = Math.sin(angle) * speed;
+        console.log(deltaX, deltaY, 'delta');
+
+        function shootOut() {
+
+            console.log('shooting');
+
+
+            setTimeout(() => {
+                robot.classList.remove('robot-shooting');
+                robot.style.transform = 'rotatez(30deg)';
+            }, 1000);
+
+            setInterval(function() {
+                fireball.style.left = (fLeft += deltaX) + '%';
+                fireball.style.top = (fTop += deltaY) + '%';
+
+
+
+            }, 60)
+            var f = fireball.getBoundingClientRect();
+            if (f.x >= window.innerWidth || f.y >= window.innerHeight) {
+                console.log('dectect bigger');
+                window.clearInterval();
+                var fireball2 = Object.assign(fireball);
+
+                fireball.parentNode.removeChild(fireball);
+                var shanBtn = obj.get('.shan-btn');
+                shanBtn.appendChild(fireball2);
+                console.log('into appends')
+            }
+            var robotEnergyBar = obj.get('.robot-energy-bar');
+            robotEnergyBar.style.width -= 30 + 'px';
+            console.log('this is end');
+
+
+        }
 
     }
+
+
     var robotOutLine = obj.get('.robot-outline');
 
     var touchBc = obj.get('.touch-boxcontrol');
@@ -222,19 +315,19 @@ module.exports.arrows = function() {
             if (click === 5) click = 5;
             switch (click) {
                 case 1:
-                    todoIconSlide.style.left -= 50 + 'px';
+                    todoIconSlide.style.left = 50 + 'px';
                     break;
                 case 2:
-                    todoIconSlide.style.left -= 50 + 'px';
+                    todoIconSlide.style.left = 100 + 'px';
                     break;
                 case 3:
-                    todoIconSlide.style.left -= 50 + 'px';
+                    todoIconSlide.style.left = 150 + 'px';
                     break;
                 case 4:
-                    todoIconSlide.style.left -= 50 + 'px';
+                    todoIconSlide.style.left = 200 + 'px';
                     break;
                 case 5:
-                    todoIconSlide.style.left -= 50 + 'px';
+                    todoIconSlide.style.left = 250 + 'px';
                     break;
 
             }
@@ -246,22 +339,22 @@ module.exports.arrows = function() {
 
         return function() {
             click--;
-            if (click === 0) click = 0;
+            if (click === 0) click = 5;
             switch (click) {
-                case 1:
-                    todoIconSlide.style.left += 50 + 'px';
+                case 5:
+                    todoIconSlide.style.left = 200 + 'px';
                     break;
                 case 2:
-                    todoIconSlide.style.left += 50 + 'px';
+                    todoIconSlide.style.left = 150 + 'px';
                     break;
                 case 3:
-                    todoIconSlide.style.left += 50 + 'px';
+                    todoIconSlide.style.left = 100 + 'px';
                     break;
                 case 4:
-                    todoIconSlide.style.left += 50 + 'px';
+                    todoIconSlide.style.left = 50 + 'px';
                     break;
                 case 5:
-                    todoIconSlide.style.left += 50 + 'px';
+                    todoIconSlide.style.left = 0 + 'px';
                     break;
 
             }
@@ -372,7 +465,7 @@ module.exports.talkToYuShan = function() {
 
         talkShan();
         talkBar('看看雨珊怎麼樣了', 4000);
-
+        talkBar('雨珊,你還好吧?', 8000);
     };
 
     function talkBar(robotTalk, time) {
@@ -389,6 +482,7 @@ module.exports.talkToYuShan = function() {
         setTimeout(() => {
             div.parentNode.removeChild(div);
             robotSaying.style.display = 'none';
+            robot.removeAttribute('class');
         }, time);
     }
 
