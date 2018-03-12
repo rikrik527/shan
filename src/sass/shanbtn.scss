@@ -60,14 +60,13 @@
     display: none;
     background-image: url('../images/icon2.svg');
     background-size: 3000%;
-    background-position: -1266px -1165px;
-    animation: fireball .5s steps(1) infinite;
+    animation: fireball .5s steps(2) infinite;
     @keyframes fireball {
         from {
             background-position: -1266px -1165px;
         }
         to {
-            background-position: -1388px -1165px;
+            background-position: -1509px -1165px;
         }
     }
 }
@@ -125,7 +124,6 @@
         border-radius: 10px;
         position: absolute;
         .robot-energy-bar {
-            width: 100px;
             left: 0px;
             height: 10px;
             border-radius: 10px;
@@ -266,6 +264,7 @@
     /* flex-direction: row; */
     /* float: left; */
     font-size: 10px;
+    display: block;
     /* margin-top: 8px; */
     /* margin-left: 38px; */
     /* grid-row: 3; */
@@ -579,12 +578,10 @@
 }
 
 .touch-boxcontrol {
-    width: 300px;
-    height: 100px;
     position: absolute;
-    margin: -50px 0 0 -150px;
+    margin: -0px 0 0 -0px;
     top: 50%;
-    left: 50%;
+    left: 76%;
     display: block;
     z-index: 9999999999;
 }
@@ -592,21 +589,21 @@
 .power {
     width: 150px;
     height: 20px;
-    background: yellow;
+    background: orangered;
     transform: rotateZ(-90deg);
     position: absolute;
-    left: 74%;
+    left: -51px;
+    top: -151px;
 }
 
 .handle {
     width: 50px;
     height: 50px;
-    background-color: rgba(300, 100, 100, 0.5);
+    background-color: rgba(255, 100, 100, 0.5);
     border-radius: 100px;
     position: absolute;
-    top: 33%;
-    left: 77%;
-    display: block;
+    top: -27px;
+    left: 0px;
     cursor: pointer;
     // animation: handle .5s linear infinite;
     // @keyframes handle {

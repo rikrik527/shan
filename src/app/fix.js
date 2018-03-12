@@ -8,6 +8,9 @@ var iconTodo = obj.get('.icon-todo');
 var robotOutLine = obj.get('.robot-outline');
 var robot = obj.getId('robot');
 var robotE = obj.get('.robot-energy-bar');
+var robotEnergy = 100;
+robotE.style.width = robotEnergy + 'px';
+console.log('robotE is style 100px');
 
 module.exports.robotMenu = function() {
     var iconPersonal = obj.get('.icon-personal'),
@@ -189,66 +192,91 @@ module.exports.topMenu = function() {
         var handle = obj.get('.handle');
         robot.style.transition = 'all .5s linear';
         var idleTime = 0;
-        var setint = '';
+        var increase = '';
+        var decrease = '';
         var power = 0;
         var fLeft = 0;
         var fTop = 0;
         var speed = 1;
         var deg = 0;
-        var angle = 30 * Math.PI / 180;
+
         var fireball = obj.get('.fireball');
 
         var shanLiOutline = obj.get('.shanli-outline');
         var sTop = window.getComputedStyle(shanLiOutline).getPropertyValue('top');
         var sLeft = window.getComputedStyle(shanLiOutline).getPropertyValue('left');
+        var angle;
 
-
-        handle.onmousedown = (function(e) {
+        handle.onpointerdown = function(e) {
 
             console.log('returned')
             fireball.style.display = 'block';
-            clearInterval(setint);
+            clearInterval(increase);
             $('.handle').addClass('maxpower');
             robot.classList.add('robot-shooting');
             robot.style.transform = 'rotatez(30deg)';
 
             power = 0;
-            setint = setInterval(function() {
-                speed += 1;
+            increase = setInterval(function() {
 
+                speed += 1;
+                deg++
+                if (deg >= 50) {
+                    deg = 50;
+                }
                 $('.power').val(++power);
-                console.log('mousehold', speed, power);
+                angle = deg * Math.PI / 180;
+                console.log('mousehold', speed, power, 'deg', deg, angle);
             }, 50);
 
-        })();
-        $('.handle').on('mouseleave mouseup', function() {
-            $('.power').val(power);
+        };
+        $('.handle').on('pointerleave pointerup', function() {
+            clearInterval(increase);
+            console.log('mouserelease', speed, power, 'deg', deg, angle);
+            setTimeout(() => {
+                power = 0;
+                speed = 0;
+                deg = 0;
+                console.log('after 2 seconds this been excuted')
+            }, 2000);
+
+
+            decrease = setInterval(function() {
+                $('.power').val(--power);
+
+
+
+            })
             $('.handle').removeClass('maxpower');
-            clearInterval(setint);
+
+            angle = deg * Math.PI / 180;
             shootOut();
             console.log(power);
         })
+        if (power >= 100) {
+            clearInterval(increase);
+            console.log('clear power');
+        }
 
 
 
 
 
 
-        var deltaX = Math.cos(angle) * speed;
-        var deltaY = Math.sin(angle) * speed;
-        console.log(deltaX, deltaY, 'delta');
 
         function shootOut() {
-
+            var deltaX = Math.cos(angle) * speed;
+            var deltaY = Math.sin(angle) * speed;
+            robotEnergy -= 10;
             console.log('shooting');
 
 
             setTimeout(() => {
                 robot.classList.remove('robot-shooting');
-                robot.style.transform = 'rotatez(30deg)';
+
             }, 1000);
 
-            setInterval(function() {
+            var shoot = setInterval(function() {
                 fireball.style.left = (fLeft += deltaX) + '%';
                 fireball.style.top = (fTop += deltaY) + '%';
 
@@ -258,18 +286,17 @@ module.exports.topMenu = function() {
             var f = fireball.getBoundingClientRect();
             if (f.x >= window.innerWidth || f.y >= window.innerHeight) {
                 console.log('dectect bigger');
-                window.clearInterval();
+                window.clearInterval(shoot);
                 var fireball2 = Object.assign(fireball);
 
                 fireball.parentNode.removeChild(fireball);
                 var shanBtn = obj.get('.shan-btn');
-                shanBtn.appendChild(fireball2);
+                var fireballex = shanBtn.appendChild(fireball2);
+                fireballex.style.cssText = 'left:0%;top:0%;'
                 console.log('into appends')
             }
-            var robotEnergyBar = obj.get('.robot-energy-bar');
-            robotEnergyBar.style.width -= 30 + 'px';
-            console.log('this is end');
-
+            robotE.style.width = robotEnergy + 'px';
+            robot.style.transform = 'rotatez(0deg)';
 
         }
 
@@ -307,69 +334,75 @@ module.exports.arrows = function() {
     var right = obj.get('.right');
     var left = obj.get('.left');
     var click = 0;
-    left.onclick = (function() {
+    left.onclick = function() {
         var todoIconSlide = obj.get('.todo-icon-slide');
 
-        return function() {
-            click++;
-            if (click === 5) click = 5;
-            switch (click) {
-                case 1:
-                    todoIconSlide.style.left = 50 + 'px';
-                    break;
-                case 2:
-                    todoIconSlide.style.left = 100 + 'px';
-                    break;
-                case 3:
-                    todoIconSlide.style.left = 150 + 'px';
-                    break;
-                case 4:
-                    todoIconSlide.style.left = 200 + 'px';
-                    break;
-                case 5:
-                    todoIconSlide.style.left = 250 + 'px';
-                    break;
 
-            }
+        console.log('arrows left clicked')
+        click++;
+        if (click === 6) click = 0;
+        switch (click) {
+            case 1:
+                todoIconSlide.style.left += 50 + 'px';
+                console.log('case1')
+                break;
+            case 2:
+                todoIconSlide.style.left += 50 + 'px';
+                break;
+            case 3:
+                todoIconSlide.style.left += 50 + 'px';
+                break;
+            case 4:
+                todoIconSlide.style.left += 50 + 'px';
+                break;
+            case 5:
+                todoIconSlide.style.left += 50 + 'px';
+                console.log('case2')
+                break;
+
         }
+
         console.log(click);
-    })();
-    right.onclick = (function() {
+    };
+    right.onclick = function() {
         var todoIconSlide = obj.get('.todo-icon-slide');
 
-        return function() {
-            click--;
-            if (click === 0) click = 5;
-            switch (click) {
-                case 5:
-                    todoIconSlide.style.left = 200 + 'px';
-                    break;
-                case 2:
-                    todoIconSlide.style.left = 150 + 'px';
-                    break;
-                case 3:
-                    todoIconSlide.style.left = 100 + 'px';
-                    break;
-                case 4:
-                    todoIconSlide.style.left = 50 + 'px';
-                    break;
-                case 5:
-                    todoIconSlide.style.left = 0 + 'px';
-                    break;
 
-            }
+        console.log('right clicked')
+        click--;
+        if (click === 0) click = 5;
+        switch (click) {
+            case 5:
+                todoIconSlide.style.left -= 50 + 'px';
+                console.log('right case5')
+                break;
+            case 2:
+                todoIconSlide.style.left -= 50 + 'px';
+                break;
+            case 3:
+                todoIconSlide.style.left -= 50 + 'px';
+                break;
+            case 4:
+                todoIconSlide.style.left -= 50 + 'px';
+                break;
+            case 5:
+                todoIconSlide.style.left -= 50 + 'px';
+                console.log('right case1')
+                break;
+
         }
+
         console.log(click);
-    })();
+    };
 }
 module.exports.robot = function() {
     var robot = obj.getId('robot'),
-        asideBc = obj.get('.aside-boxcontrol'),
+
         robotSaying = obj.get('.robot-saying');
     robotOutLine = obj.get('.robot-outline');
     robotOutLine.style.cssText = 'top:-27%;left:35%';
     robotOutLine.style.transition = 'all 5s linear';
-    asideBc.style.display = 'none';
+
     robotSaying.style.display = 'none';
     robot.classList.add('robot-fly-down');
     setTimeout(function() {
@@ -393,7 +426,7 @@ module.exports.robot = function() {
         robot.classList.remove('robot-right');
         robot.classList.add('robot-fly-turn');
 
-        asideBc.style.display = 'block';
+
         talk('變身', 2000);
     }, 13000);
     setTimeout(() => {
@@ -450,10 +483,7 @@ module.exports.music = function() {
     }
 }
 
-function removeIcons() {
-    var asideBc = obj.get('.aside-boxcontrol');
-    asideBc.style.display = 'none';
-}
+
 
 
 module.exports.talkToYuShan = function() {
@@ -490,7 +520,7 @@ module.exports.talkToYuShan = function() {
 
     function talkShan() {
         console.log('yushanbtn have been clicked')
-        removeIcons();
+
         var robotOutLine = obj.get('.robot-outline');
         robotOutLine.style.cssText = 'top:70%;left:58%;transition:all 4s ease-in;';
     }
