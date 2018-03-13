@@ -3445,6 +3445,9 @@ button {
 .pos4 {
   left: 30%; }
 
+.pos5 {
+  left: 0%; }
+
 .pos,
 .pos1,
 .pos2,
@@ -3649,6 +3652,30 @@ button {
     border-radius: 10px;
     border: 1px solid;
     cursor: pointer; }
+
+#mp3file {
+  display: none; }
+
+#hands {
+  position: absolute;
+  background-image: url("../images/finger.png") no-repeat;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 0px; }
+  #hands .walk-through {
+    max-width: 50%;
+    min-width: 150px;
+    background: honeydew;
+    color: plum;
+    text-shadow: 1px 1px 3px #c2185b;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    font-size: 10px;
+    border-radius: 20px;
+    border: 1px solid #c2185b;
+    float: left;
+    clear: left; }
 
 /*fashion set 1 smooth*/
 /*set2 sun*/
@@ -4060,6 +4087,14 @@ svg {
     padding: 1%;
     float: right;
     text-overflow: ellipsis; }
+  .footer-boxcontrol .icon-latest-update {
+    width: 2em;
+    height: 2em;
+    background-image: url("../images/icon2.svg");
+    position: absolute;
+    background-size: 4000%;
+    background-position: -1666px -1780px;
+    left: 50%; }
 
 .shan-talk {
   position: absolute;
@@ -4068,8 +4103,10 @@ svg {
   z-index: 99;
   display: block;
   overflow: scroll;
-  width: 39%;
-  height: 24%;
+  max-width: 50%;
+  min-width: 39%;
+  max-height: 50%;
+  min-height: 24%;
   border-radius: 5px;
   background: rgba(255, 100, 190, 0.5);
   box-shadow: 0px 0px 3px 3px #c2185b;

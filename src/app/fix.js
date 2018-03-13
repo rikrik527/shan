@@ -4,6 +4,13 @@ var Hammer = require('hammerjs');
 var speech = require('./speech');
 var memories = require('../audio/memories.mp3');
 var epic = require('../audio/epic.mp3');
+var robotFix = require('./skill');
+
+
+
+
+
+
 var iconTodo = obj.get('.icon-todo');
 var robotOutLine = obj.get('.robot-outline');
 var robot = obj.getId('robot');
@@ -115,7 +122,7 @@ module.exports.topMenu = function() {
 
         console.log(fire)
         if (fire == true) {
-            loveBomb();
+            loveBomb.call(robotFix, 0);
             console.log('lovebomb');
             setTimeout(function() {
                 loveSparrow();
@@ -128,7 +135,7 @@ module.exports.topMenu = function() {
 
 
 
-    function loveBomb() {
+    function loveBomb(arr) {
 
         console.log('i got fired')
         var shanLi = obj.get('.shanli-outline');
@@ -141,8 +148,8 @@ module.exports.topMenu = function() {
         setTimeout(() => {
             bigWords.style.display = 'block';
             bigWords.classList.add('leftright');
-            bigWords.textContent = love;
-            speech(love)
+            bigWords.textContent = this.skill[arr];
+            speech(this.skill[arr])
         }, 2000);
 
         setTimeout(() => {
@@ -199,7 +206,7 @@ module.exports.topMenu = function() {
         var fTop = 0;
         var speed = 1;
         var deg = 0;
-
+        var down = false;
         var fireball = obj.get('.fireball');
 
         var shanLiOutline = obj.get('.shanli-outline');
@@ -231,6 +238,7 @@ module.exports.topMenu = function() {
 
         };
         $('.handle').on('pointerleave pointerup', function() {
+
             clearInterval(increase);
             console.log('mouserelease', speed, power, 'deg', deg, angle);
             setTimeout(() => {
@@ -252,11 +260,12 @@ module.exports.topMenu = function() {
             angle = deg * Math.PI / 180;
             shootOut();
             console.log(power);
+            if (power >= 100) {
+                clearInterval(increase);
+                console.log('clear power');
+            }
         })
-        if (power >= 100) {
-            clearInterval(increase);
-            console.log('clear power');
-        }
+
 
 
 
@@ -283,10 +292,12 @@ module.exports.topMenu = function() {
 
 
             }, 60)
+
             var f = fireball.getBoundingClientRect();
             if (f.x >= window.innerWidth || f.y >= window.innerHeight) {
                 console.log('dectect bigger');
-                window.clearInterval(shoot);
+                clearInterval(shoot);
+                fireball.removeAttribute('style');
                 var fireball2 = Object.assign(fireball);
 
                 fireball.parentNode.removeChild(fireball);
@@ -300,8 +311,20 @@ module.exports.topMenu = function() {
 
         }
 
-    }
 
+    }
+    module.exports.getFireballPos = function() {
+        var robot = obj.getId('robot');
+        var fireball = obj.get('.fireball');
+        var rx = robot.getBoundingClientRect().x + robot.offsetWidth / 2;
+        var ry = robot.getBoundingClientRect().y + robot.offsetHeight / 2;
+        console.log('rx', rx, 'ry', ry);
+        return (function() {
+            fireball.style.left = rx + 'px';
+            fireball.style.top = rx + 'px';
+            console.log('left', window.getComputedStyle(fireball).getPropertyValue('left'), 'top', window.getComputedStyle(fireball).getPropertyValue('top'));
+        })();
+    }
 
     var robotOutLine = obj.get('.robot-outline');
 

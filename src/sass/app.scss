@@ -214,6 +214,15 @@ svg {
         float: right;
         text-overflow: ellipsis;
     }
+    .icon-latest-update {
+        width: 2em;
+        height: 2em;
+        background-image: url('../images/icon2.svg');
+        position: absolute;
+        background-size: 4000%;
+        background-position: -1666px -1780px;
+        left: 50%;
+    }
 }
 
 .shan-talk {
@@ -223,8 +232,10 @@ svg {
     z-index: 99;
     display: block;
     overflow: scroll;
-    width: 39%;
-    height: 24%;
+    max-width: 50%;
+    min-width: 39%;
+    max-height: 50%;
+    min-height: 24%;
     border-radius: 5px;
     background: rgba(255, 100, 190, .5);
     box-shadow: 0px 0px 3px 3px #c2185b;

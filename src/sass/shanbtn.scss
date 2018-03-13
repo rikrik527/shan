@@ -416,6 +416,10 @@
     left: 30%;
 }
 
+.pos5 {
+    left: 0%;
+}
+
 .pos,
 .pos1,
 .pos2,
@@ -666,5 +670,32 @@
         border-radius: 10px;
         border: 1px solid;
         cursor: pointer;
+    }
+}
+
+#mp3file {
+    display: none;
+}
+
+#hands {
+    position: absolute;
+    background-image: url('../images/finger.png')no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    .walk-through {
+        max-width: 50%;
+        min-width: 150px;
+        background: honeydew;
+        color: plum;
+        text-shadow: 1px 1px 3px $pink8;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        font-size: 10px;
+        border-radius: 20px;
+        border: 1px solid $pink8;
+        float: left;
+        clear: left;
     }
 }

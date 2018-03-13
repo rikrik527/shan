@@ -1,5 +1,5 @@
 require('../sass/app.scss');
-
+var robotMenu = require('./robotMenu');
 var todo = require('./todo');
 var $ = require('jquery');
 var prologue = require('./prologue');
@@ -64,14 +64,16 @@ window.onload = function() {
     fix.music();
     fix.talkToYuShan();
     shan.talk.talkingDialog();
-
+    robotMenu.fightList();
 
     xsMenu.toggleXsmenu();
 
     xsMenu.gameMenu();
 }
 
-
+window.onresize = function() {
+    fix.getFireballPos();
+}
 
 
 timerIncrease();
