@@ -61,7 +61,7 @@ window.onload = function() {
     fix.robotMenu();
     fix.topMenu();
     fix.arrows();
-    fix.music();
+    fix.selectMusic();
     fix.talkToYuShan();
     shan.talk.talkingDialog();
     robotMenu.fightList();

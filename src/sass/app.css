@@ -2213,9 +2213,9 @@ iframe[seamless] {
   animation: robotpower 0.5s steps(2) infinite; }
 @keyframes robotpower {
   from {
-    background-position: -516px -420px; }
+    background-position: -0px -416px; }
   to {
-    background-position: -719px -420px; } }
+    background-position: -203px -416px; } }
 .robot-love-arrow {
   background-position: -105px -418px; }
 
@@ -3453,7 +3453,9 @@ button {
 .pos2,
 .pos3,
 .pos4,
-.pos5 {
+.pos5,
+.pos6,
+.pos7 {
   display: block;
   animation: pos 1s linear infinite; }
 @keyframes pos {
@@ -3608,8 +3610,8 @@ button {
 .todo-list {
   width: 250px;
   height: 300px;
-  background: yellow;
   /* float: left; */
+  background-image: url("../images/fix.svg") no-repeat;
   overflow: visible;
   display: none;
   margin: -150px 0 0 -125px;
@@ -3641,16 +3643,15 @@ button {
     background: blue;
     float: left; }
   .todo-list .reset-btn {
+    background-image: url("../images/reset.svg") no-repeat;
+    width: 50px;
+    height: 20px;
     float: right;
-    background: orangered;
-    border-radius: 10px;
-    color: white;
     cursor: pointer; }
   .todo-list .submit-btn {
+    width: 50px;
+    height: 20px;
     float: right;
-    background: aliceblue;
-    border-radius: 10px;
-    border: 1px solid;
     cursor: pointer; }
 
 #mp3file {

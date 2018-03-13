@@ -5,6 +5,11 @@ var speech = require('./speech');
 var memories = require('../audio/memories.mp3');
 var epic = require('../audio/epic.mp3');
 var robotFix = require('./skill');
+var wind = require('../audio/b1.wav');
+var robotmove = require('../audio/robotmove.wav');
+var gameover = require('../audio/gameover.wav');
+var fire1 = require('../audio/fire1.wav');
+var charging = require('../audio/charging.wav');
 
 
 
@@ -487,17 +492,21 @@ module.exports.robot = function() {
         }
     }
 }
-module.exports.music = function() {
-    var mp3File = obj.getId('mp3file');
-    mp3File.src = memories;
+module.exports.selectMusic = function() {
+    var AudioContext = window.AudioContext || window.webkitAudioContext;
+    var context = new window.AudioContext;
     var audio = new Audio();
-    var songList = [epic, memories];
+    var audio2 = new Audio();
+    var songList = [epic, memories, wind, gameover, charging, fire1, robotmove];
 
     audio.src = songList[0];
     audio.play();
+    audio2.src = songList[2];
+    audio2.play();
 
     console.log(audio)
     audio.loop = true;
+    audio2.loop = true;
     document.onkeydown = function(e) {
         var key = e.which || e.keyCode;
         if (key == 81) {
