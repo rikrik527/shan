@@ -1,4 +1,12 @@
 require('../sass/app.scss');
+import React from 'react';
+import { Component } from 'react';
+import ReactDom from 'react-dom';
+import SearchBar from '../component/search_bar';
+const API_KEY = 'AIzaSyBFSDdU03uRqcU7QWNXV966pf1HJVJqxLE';
+
+var update = require('./update');
+var helper = require('./helperFunction');
 var robotMenu = require('./robotMenu');
 var todo = require('./todo');
 var $ = require('jquery');
@@ -18,6 +26,15 @@ var xsMenu = require('./xsMenu');
 var gametest = require('./gametest');
 var ctx = require('./context');
 var sprite = require('./context');
+
+
+
+obj.get('.icon-personal').onclick = function() {
+    obj.get('.awake-first-section').style.transform = 'rotatey(180deg)'
+    console.log('personal clicked');
+}
+
+
 
 window.onload = function() {
 
@@ -65,14 +82,19 @@ window.onload = function() {
     fix.talkToYuShan();
     shan.talk.talkingDialog();
     robotMenu.fightList();
-
+    fix.updates();
     xsMenu.toggleXsmenu();
 
     xsMenu.gameMenu();
+    // robotMenu.handlePress();
+    // robotMenu.handleRelease();
+    // robotMenu.shootOut();
 }
-
+fix.add('circle', 'div', 'circle', obj.get('.shan-btn'))
+fix.add('number', 'div', 'number', obj.getId('shan-li'));
 window.onresize = function() {
     fix.getFireballPos();
+    console.log('resize');
 }
 
 

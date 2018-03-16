@@ -57,9 +57,9 @@
 .fireball {
   left: 136px;
   top: 193px;
-  position: absolute;
   width: 100px;
   height: 50px;
+  position: absolute;
   transform: rotateZ(30deg);
   transition: all .5s ease-in-out;
   display: none;
@@ -375,7 +375,8 @@
   left: 30%; }
 
 .pos5 {
-  left: 0%; }
+  left: 66%;
+  top: -30%; }
 
 .pos,
 .pos1,
@@ -540,7 +541,8 @@
   width: 250px;
   height: 300px;
   /* float: left; */
-  background-image: url("../images/fix.svg") no-repeat;
+  background-image: url("../images/fix.svg");
+  background-repeat: no-repeat;
   overflow: visible;
   display: none;
   margin: -150px 0 0 -125px;
@@ -571,17 +573,21 @@
     height: 200px;
     background: blue;
     float: left; }
-  .todo-list .reset-btn {
-    background-image: url("../images/reset.svg") no-repeat;
-    width: 50px;
-    height: 20px;
-    float: right;
-    cursor: pointer; }
+  .todo-list .reset-btn,
   .todo-list .submit-btn {
+    font-size: 10px;
+    border-radius: 10px;
     width: 50px;
     height: 20px;
     float: right;
-    cursor: pointer; }
+    cursor: pointer;
+    color: white; }
+  .todo-list .reset-btn {
+    border: 1px solid lightsalmon;
+    background: #e53935; }
+  .todo-list .submit-btn {
+    border: 1px solid lightcoral;
+    background: darksalmon; }
 
 #mp3file {
   display: none; }
@@ -606,5 +612,15 @@
     border: 1px solid #c2185b;
     float: left;
     clear: left; }
+
+.number {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 35px;
+  left: 55px;
+  color: white;
+  transition: all 1s linear;
+  display: none; }
 
 /*# sourceMappingURL=shanbtn.css.map */

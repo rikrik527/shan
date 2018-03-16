@@ -172,6 +172,68 @@ robotMenu = {
     fightList: function() {
         this.shanBtn.insertAdjacentHTML('afterend', '<section class="fight-list"><span class="icon-close-fight"></span><div class="fight-icon"><div class="fight-right"></div><div class="fight-left"></div><div class="fight-icon-slide"></div></div><ul class="fight-title"></ul><input type="reset" class="fight-reset-btn"><input type="submit" class="fight-submit-btn"></section>');
 
+    },
+    increase: '',
+    decrease: '',
+    power: 0,
+    fLeft: 0,
+    fTop: 0,
+    speed: 1,
+    deg: 0,
+
+    handlePress: function() {
+        var angle = this.deg * Math.PI / 180;
+        $('.handle').on('pointerdown', function() {
+            this.fireball.style.display = 'block';
+            this.handle.classList.add('maxpower');
+            this.robot.classList.add('robot-shooting');
+            this.robot.style.transform = 'rotate(30deg)';
+            this.increase = setInterval(function() {
+                this.power++;
+                this.deg++;
+                this.speed++;
+                $('.power').val(this.power);
+                if (this.deg >= 50) {
+                    this.deg = 50;
+                }
+                if (this.power >= 100) {
+                    this.power = 100;
+                }
+            }, 60);
+        })
+    },
+    handleRelease: function() {
+        var angle = this.deg * Math.PI / 180;
+        $('.handle').on('poinerleave pointerup', function() {
+            clearInterval(this.increase);
+            console.log(this.increase);
+            setTimeout(() => {
+                this.power = 0;
+                this.deg = 0;
+                this.speed = 0;
+                console.log('2sec', this.power, this.deg, this.speed);
+            }, 1000);
+            $('.handle').removeClass('maxpower');
+            setInterval(this.shootOut(), 60);
+        })
+    },
+    shootOut: function() {
+        var deltaX = Math.cos(this.angle) * this.speed;
+        var deltaY = Math.sin(this.angle) * this.speed;
+        this.robotE -= 10;
+        this.robotEnergyBar.style.width = this.robotE + 'px';
+        setTimeout(() => {
+            this.robot.classList.remove('robot-shooting');
+            console.log('1000s remove robot class');
+        }, 1000);
+        this.fireball.style.left = (this.fLeft += deltaX) + '%';
+        this.fireball.style.top = (this.fTop += deltaY) + '%';
+        var f = this.fireball.getBoundingClient();
+        if (f.left > window.innerWidth || f.top > window.innerHeight) {
+            console.log('dectect outside window', f.top, f.left);
+            clearInterval(shootout);
+
+        }
     }
 
 

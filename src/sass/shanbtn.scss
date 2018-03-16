@@ -50,9 +50,9 @@
 .fireball {
     left: 136px;
     top: 193px;
-    position: absolute;
     width: 100px;
     height: 50px;
+    position: absolute;
     transform: rotateZ(30deg);
     transition: all .5s ease-in-out;
     // top: 26%;
@@ -417,7 +417,8 @@
 }
 
 .pos5 {
-    left: 0%;
+    left: 66%;
+    top: -30%;
 }
 
 .pos,
@@ -624,7 +625,8 @@
     width: 250px;
     height: 300px;
     /* float: left; */
-    background-image: url('../images/fix.svg')no-repeat;
+    background-image: url('../images/fix.svg');
+    background-repeat: no-repeat;
     overflow: visible;
     display: none;
     margin: -150px 0 0 -125px;
@@ -659,18 +661,23 @@
         background: blue;
         float: left;
     }
-    .reset-btn {
-        background-image: url('../images/reset.svg')no-repeat;
+    .reset-btn,
+    .submit-btn {
+        font-size: 10px;
+        border-radius: 10px;
         width: 50px;
         height: 20px;
         float: right;
         cursor: pointer;
+        color: white;
+    }
+    .reset-btn {
+        border: 1px solid lightsalmon;
+        background: $red7;
     }
     .submit-btn {
-        width: 50px;
-        height: 20px;
-        float: right;
-        cursor: pointer;
+        border: 1px solid lightcoral;
+        background: darksalmon;
     }
 }
 
@@ -699,4 +706,15 @@
         float: left;
         clear: left;
     }
+}
+
+.number {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 35px;
+    left: 55px;
+    color: white;
+    transition: all 1s linear;
+    display: none;
 }

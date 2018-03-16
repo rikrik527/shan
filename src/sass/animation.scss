@@ -65,6 +65,30 @@
     }
 }
 
+.robot-dead {
+    animation: robotdead .5s steps(6) forwards;
+    @keyframes robotdead {
+        from {
+            background-position: 0px -1048px;
+        }
+        to {
+            background-position: -721px -1048px;
+        }
+    }
+}
+
+.shanliget {
+    animation: shanliget .5s steps(4) infinite;
+    @keyframes shanliget {
+        from {
+            background-position: -250px -973px;
+        }
+        to {
+            background-position: -730px -973px;
+        }
+    }
+}
+
 .robot-outline-fly {
     animation: robotoutlinefly 3s ease-in-out forwards;
     @keyframes robotoutlinefly {
@@ -109,13 +133,13 @@
 }
 
 .robot-power {
-    animation: robotpower .5s steps(2) infinite;
+    animation: robotpower .5s steps(3) infinite;
     @keyframes robotpower {
         from {
             background-position: -0px -416px;
         }
         to {
-            background-position: -203px -416px;
+            background-position: -311px -416px;
         }
     }
 }

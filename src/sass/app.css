@@ -2184,6 +2184,20 @@ iframe[seamless] {
     background-position: -11px -13px; }
   to {
     background-position: -1354px -13px; } }
+.robot-dead {
+  animation: robotdead 0.5s steps(6) forwards; }
+@keyframes robotdead {
+  from {
+    background-position: 0px -1048px; }
+  to {
+    background-position: -721px -1048px; } }
+.shanliget {
+  animation: shanliget 0.5s steps(4) infinite; }
+@keyframes shanliget {
+  from {
+    background-position: -250px -973px; }
+  to {
+    background-position: -730px -973px; } }
 .robot-outline-fly {
   animation: robotoutlinefly 3s ease-in-out forwards; }
 @keyframes robotoutlinefly {
@@ -2210,12 +2224,12 @@ iframe[seamless] {
   to {
     background-position: -938px -938px; } }
 .robot-power {
-  animation: robotpower 0.5s steps(2) infinite; }
+  animation: robotpower 0.5s steps(3) infinite; }
 @keyframes robotpower {
   from {
     background-position: -0px -416px; }
   to {
-    background-position: -203px -416px; } }
+    background-position: -311px -416px; } }
 .robot-love-arrow {
   background-position: -105px -418px; }
 
@@ -3128,9 +3142,9 @@ button {
 .fireball {
   left: 136px;
   top: 193px;
-  position: absolute;
   width: 100px;
   height: 50px;
+  position: absolute;
   transform: rotateZ(30deg);
   transition: all .5s ease-in-out;
   display: none;
@@ -3446,7 +3460,8 @@ button {
   left: 30%; }
 
 .pos5 {
-  left: 0%; }
+  left: 66%;
+  top: -30%; }
 
 .pos,
 .pos1,
@@ -3611,7 +3626,8 @@ button {
   width: 250px;
   height: 300px;
   /* float: left; */
-  background-image: url("../images/fix.svg") no-repeat;
+  background-image: url("../images/fix.svg");
+  background-repeat: no-repeat;
   overflow: visible;
   display: none;
   margin: -150px 0 0 -125px;
@@ -3642,17 +3658,21 @@ button {
     height: 200px;
     background: blue;
     float: left; }
-  .todo-list .reset-btn {
-    background-image: url("../images/reset.svg") no-repeat;
-    width: 50px;
-    height: 20px;
-    float: right;
-    cursor: pointer; }
+  .todo-list .reset-btn,
   .todo-list .submit-btn {
+    font-size: 10px;
+    border-radius: 10px;
     width: 50px;
     height: 20px;
     float: right;
-    cursor: pointer; }
+    cursor: pointer;
+    color: white; }
+  .todo-list .reset-btn {
+    border: 1px solid lightsalmon;
+    background: #e53935; }
+  .todo-list .submit-btn {
+    border: 1px solid lightcoral;
+    background: darksalmon; }
 
 #mp3file {
   display: none; }
@@ -3677,6 +3697,16 @@ button {
     border: 1px solid #c2185b;
     float: left;
     clear: left; }
+
+.number {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 35px;
+  left: 55px;
+  color: white;
+  transition: all 1s linear;
+  display: none; }
 
 /*fashion set 1 smooth*/
 /*set2 sun*/
@@ -4070,7 +4100,7 @@ svg {
   bottom: 0;
   width: 100%;
   height: 15vh;
-  background-color: rgba(27, 194, 185, 0.5);
+  background-color: rgba(200, 0, 100, 0.3);
   z-index: 9999; }
   .footer-boxcontrol .history-btn {
     width: 100px;
@@ -4089,20 +4119,26 @@ svg {
     float: right;
     text-overflow: ellipsis; }
   .footer-boxcontrol .icon-latest-update {
-    width: 2em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
     background-image: url("../images/icon2.svg");
     position: absolute;
-    background-size: 4000%;
-    background-position: -1666px -1780px;
-    left: 50%; }
+    background-size: 5971%;
+    background-position: -1352px -1824px;
+    left: 13%;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: lightblue;
+    top: 38%;
+    border: 1px solid transparent; }
 
 .shan-talk {
   position: absolute;
-  top: 75%;
-  left: 3%;
+  top: 50%;
+  left: 50%;
+  margin: calc(-24%/2) 0 0 calc(-39%/2);
   z-index: 99;
-  display: block;
+  display: none;
   overflow: scroll;
   max-width: 50%;
   min-width: 39%;

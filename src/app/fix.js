@@ -10,6 +10,7 @@ var robotmove = require('../audio/robotmove.wav');
 var gameover = require('../audio/gameover.wav');
 var fire1 = require('../audio/fire1.wav');
 var charging = require('../audio/charging.wav');
+var helper = require('./helperFunction');
 
 
 
@@ -98,7 +99,7 @@ module.exports.topMenu = function() {
 
     })();
 
-    var love = '愛的能源';
+    var love = '愛的弓箭';
     var submit = false;
     var fire = false;
 
@@ -171,7 +172,7 @@ module.exports.topMenu = function() {
         setTimeout(() => {
             robot.classList.add('robot-power');
             console.log('robot-power')
-            talkBar('啊啊啊啊!看我的小宇宙爆發!', 4000);
+            talkBar('愛的弓箭啟動', 4000);
         }, 4000);
         setTimeout(function() {
             robot.classList.remove('robot-power');
@@ -206,6 +207,7 @@ module.exports.topMenu = function() {
         var idleTime = 0;
         var increase = '';
         var decrease = '';
+        var shoot = '';
         var power = 0;
         var fLeft = 0;
         var fTop = 0;
@@ -215,15 +217,16 @@ module.exports.topMenu = function() {
         var fireball = obj.get('.fireball');
 
         var shanLiOutline = obj.get('.shanli-outline');
-        var sTop = window.getComputedStyle(shanLiOutline).getPropertyValue('top');
-        var sLeft = window.getComputedStyle(shanLiOutline).getPropertyValue('left');
+
         var angle;
 
         handle.onpointerdown = function(e) {
 
             console.log('returned')
+            console.log(fireball);
+            var fireball = obj.get('.fireball')
             fireball.style.display = 'block';
-            clearInterval(increase);
+            clearInterval(decrease);
             $('.handle').addClass('maxpower');
             robot.classList.add('robot-shooting');
             robot.style.transform = 'rotatez(30deg)';
@@ -237,34 +240,51 @@ module.exports.topMenu = function() {
                     deg = 50;
                 }
                 $('.power').val(++power);
+
                 angle = deg * Math.PI / 180;
                 console.log('mousehold', speed, power, 'deg', deg, angle);
             }, 50);
 
         };
-        $('.handle').on('pointerleave pointerup', function() {
-
+        $('.handle').on('mouseup touchend pointerup', function() {
+            clearInterval(shoot)
             clearInterval(increase);
-            console.log('mouserelease', speed, power, 'deg', deg, angle);
+            console.log('mouserelease', speed, power, 'deg', deg, angle, increase);
+            decrease = setInterval(function(){
+                $('.power').val(--power);
+
+            },50);
             setTimeout(() => {
                 power = 0;
                 speed = 0;
                 deg = 0;
-                console.log('after 2 seconds this been excuted')
+                console.log('after 2 seconds this been excuted');
+                var fireball = obj.get('.fireball');
+                fireball.parentNode.removeChild(fireball);
+                var div = obj.create('div');
+                var shanBtn = obj.get('.shan-btn');
+                div.className = 'fireball';
+                shanBtn.appendChild(div);
+                console.log('fireball is ready');
+                var robot = obj.getId('robot');
+                var fireball = obj.get('.fireball');
+                var rx = robot.getBoundingClientRect().x + robot.offsetWidth / 2;
+                var ry = robot.getBoundingClientRect().y + robot.offsetHeight / 2;
+                console.log('rx', rx, 'ry', ry);
+
+                    fireball.style.left = rx + 'px';
+                    fireball.style.top = rx + 'px';
+                    console.log('left', window.getComputedStyle(fireball).getPropertyValue('left'), 'top', window.getComputedStyle(fireball).getPropertyValue('top'));
+                console.log('fireball is',fireball);
             }, 2000);
 
 
-            decrease = setInterval(function() {
-                $('.power').val(--power);
 
-
-
-            })
             $('.handle').removeClass('maxpower');
-
+            $('#robot').removeClass('robot-shooting')
             angle = deg * Math.PI / 180;
             shootOut();
-            console.log(power);
+            console.log('shoot first');
             if (power >= 100) {
                 clearInterval(increase);
                 console.log('clear power');
@@ -281,62 +301,121 @@ module.exports.topMenu = function() {
         function shootOut() {
             var deltaX = Math.cos(angle) * speed;
             var deltaY = Math.sin(angle) * speed;
+            var fireball = obj.get('.fireball');
+
             robotEnergy -= 10;
-            console.log('shooting');
+            console.log('shooting', deltaX, deltaY, fLeft, fTop);
 
 
             setTimeout(() => {
-                robot.classList.remove('robot-shooting');
+                robot.classList.remove('robot-stretching');
 
             }, 1000);
 
-            var shoot = setInterval(function() {
-                fireball.style.left = (fLeft += deltaX) + '%';
-                fireball.style.top = (fTop += deltaY) + '%';
+            var fleft = (fLeft += deltaX);
+            var ftop = (fTop += deltaY);
+            shoot = setInterval(fireshoot, 50);
 
+            function fireshoot() {
+                fireball.style.left = fleft + '%';
+                fireball.style.top = ftop + '%';
 
-
-            }, 60)
-
-            var f = fireball.getBoundingClientRect();
-            if (f.x >= window.innerWidth || f.y >= window.innerHeight) {
-                console.log('dectect bigger');
-                clearInterval(shoot);
-                fireball.removeAttribute('style');
-                var fireball2 = Object.assign(fireball);
-
-                fireball.parentNode.removeChild(fireball);
-                var shanBtn = obj.get('.shan-btn');
-                var fireballex = shanBtn.appendChild(fireball2);
-                fireballex.style.cssText = 'left:0%;top:0%;'
-                console.log('into appends')
             }
+            var get = function get(ele, attr) {
+                return parseInt(ele.style[attr], 10);
+            }
+
+            console.log(fleft, ftop, 'window', window.innerWidth, window.innerHeight)
+
+
+            console.log(get(fireball, 'width'), get(fireball, 'height'))
+            fireballCollision();
+
             robotE.style.width = robotEnergy + 'px';
             robot.style.transform = 'rotatez(0deg)';
+
+        }
+var shanW = 0;
+var number = 0;
+        function fireballCollision() {
+            console.log('fireballdetection have been activeted')
+            var fireball = obj.get('.fireball');
+            var shanLi = obj.getId('shan-li');
+
+            var number = obj.get('.number');
+            var fw, fh, fx, fy, sw, sh, sx, sy;
+            fw = fireball.offsetWidth;
+            fh = fireball.offsetHeight;
+            fx = fireball.offsetLeft;
+            fy = fireball.offsetTop;
+            sw = shanLi.offsetWidth;
+            sh = shanLi.offsetHeight;
+            sx = shanLi.offsetLeft;
+            sy = shanLi.offsetTop;
+            if ((fx + fw) > sx && fx < (sx + sw) && (fy + fh) > sy && fy < (sy + sh)) {
+                console.log('detected')
+                shanW+=10;
+                number+=30;
+                var shanLiEb = obj.get('.shanli-energy-bar');
+                shanLi.classList.add('shanliget');
+                shanLiEb.style.width = shanW + 'px';
+                number.style.display = 'block';
+                number.innerHTML = window.getComputedStyle(shanLiEb).getPropertyValue('width').slice(0, 2);
+                number.style.top = number + 'px';
+                setTimeout(() => {
+                    shanLi.classList.remove('shanliget');
+                    number.style.display = 'none';
+                }, 3000);
+
+
+            }
+
 
         }
 
 
     }
-    module.exports.getFireballPos = function() {
+    function getFireballPos(){
         var robot = obj.getId('robot');
-        var fireball = obj.get('.fireball');
-        var rx = robot.getBoundingClientRect().x + robot.offsetWidth / 2;
-        var ry = robot.getBoundingClientRect().y + robot.offsetHeight / 2;
-        console.log('rx', rx, 'ry', ry);
-        return (function() {
-            fireball.style.left = rx + 'px';
-            fireball.style.top = rx + 'px';
-            console.log('left', window.getComputedStyle(fireball).getPropertyValue('left'), 'top', window.getComputedStyle(fireball).getPropertyValue('top'));
-        })();
+    var fireball = obj.get('.fireball');
+    var rx = robot.getBoundingClientRect().x + robot.offsetWidth / 2;
+    var ry = robot.getBoundingClientRect().y + robot.offsetHeight / 2;
+    console.log('rx', rx, 'ry', ry);
+    return (function() {
+        fireball.style.left = rx + 'px';
+        fireball.style.top = rx + 'px';
+        console.log('left', window.getComputedStyle(fireball).getPropertyValue('left'), 'top', window.getComputedStyle(fireball).getPropertyValue('top'));
+    })();
+}
+
+
+
+
+    function detecRect(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            (rect.x + rect.width) < 0 || (rect.y + rect.height) < 0 || (rect.x > window.innerWidth || rect.y > window.innerHeight)
+        )
     }
+
+
 
     var robotOutLine = obj.get('.robot-outline');
 
     var touchBc = obj.get('.touch-boxcontrol');
 
     var lastPosition = null;
-
+    function robotDead(){
+        var audio = new Audio();
+    audio.src = gameover;
+    audio.play();
+    var robot = obj.getId('robot');
+    var iconEnergy = obj.get('icon-energy');
+    var robotEnergy = obj.get('robot-energy');
+    $('.robot-energy-bar .robot-energy .icon-energy').css('display', 'none');
+    robot.removeAttribute('class');
+    robot.setAttribute('class', 'robot-dead');
+    }
 
 
     function loveEnergy() {
@@ -357,6 +436,38 @@ module.exports.topMenu = function() {
         outside.insertAdjacentHTML('afterbegin', '<span class="love"></span>');
         console.log('span')
     }
+    var robotEnergyBar = obj.get('.robot-energy-bar');
+if (window.getComputedStyle(robotEnergyBar).getPropertyValue('width') == '0px') {
+    console.log('its over');
+    fix.robotDead();
+
+} else {
+    console.log(robotEnergyBar);
+}
+
+}
+module.exports.robotDead = function() {
+    var audio = new Audio();
+    audio.src = gameover;
+    audio.play();
+    var robot = obj.getId('robot');
+    var iconEnergy = obj.get('icon-energy');
+    var robotEnergy = obj.get('robot-energy');
+    $('.robot-energy-bar .robot-energy .icon-energy').css('display', 'none');
+    robot.removeAttribute('class');
+    robot.setAttribute('class', 'robot-dead');
+}
+module.exports.getFireballPos = function() {
+    var robot = obj.getId('robot');
+    var fireball = obj.get('.fireball');
+    var rx = robot.getBoundingClientRect().x + robot.offsetWidth / 2;
+    var ry = robot.getBoundingClientRect().y + robot.offsetHeight / 2;
+    console.log('rx', rx, 'ry', ry);
+    return (function() {
+        fireball.style.left = rx + 'px';
+        fireball.style.top = rx + 'px';
+        console.log('left', window.getComputedStyle(fireball).getPropertyValue('left'), 'top', window.getComputedStyle(fireball).getPropertyValue('top'));
+    })();
 }
 module.exports.arrows = function() {
     var right = obj.get('.right');
@@ -462,6 +573,9 @@ module.exports.robot = function() {
         robot.classList.add('robot-change');
         robotOutLine.style.transition = 'none';
     }, 15000);
+    setTimeout(() => {
+        talk('修理模式已經啟動', 3000);
+    }, 18000);
     var wholeContext = [];
 
     function talk(word, time) {
@@ -500,9 +614,9 @@ module.exports.selectMusic = function() {
     var songList = [epic, memories, wind, gameover, charging, fire1, robotmove];
 
     audio.src = songList[0];
-    audio.play();
+
     audio2.src = songList[2];
-    audio2.play();
+
 
     console.log(audio)
     audio.loop = true;
@@ -511,6 +625,7 @@ module.exports.selectMusic = function() {
         var key = e.which || e.keyCode;
         if (key == 81) {
             audio.pause();
+            audio2.pause();
         }
     }
 }
@@ -556,6 +671,47 @@ module.exports.talkToYuShan = function() {
         var robotOutLine = obj.get('.robot-outline');
         robotOutLine.style.cssText = 'top:70%;left:58%;transition:all 4s ease-in;';
     }
+
+
+
+}
+module.exports.add = function(name, type, cls, parent) {
+    this.name = name;
+    this.type = type;
+    this.cls = cls;
+    this.parent = parent;
+    this.name = obj.create(this.type);
+    this.name.className = this.cls;
+    this.parent.appendChild(this.name);
+}
+
+
+module.exports.updates = function() {
+    var click = 0;
+    var iconlatestupdate = obj.get('.icon-latest-update');
+    iconlatestupdate.onclick = function() {
+        console.log('click update')
+        click++;
+        if (click === 3) click = 1;
+
+
+
+        switch (click) {
+            case 1:
+                $('.shan-talk').css('display', 'block');
+                helper.updateLi();
+                console.log('1')
+                break;
+            case 2:
+                $('.shan-talk').css('display', 'none');
+                console.log('2')
+                break;
+
+
+
+        }
+    };
+
 
 
 
