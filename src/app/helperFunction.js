@@ -2,16 +2,33 @@ var update = require('./update');
 var helper = helper || {};
 
 helper = {
-    updateLi: function() {
-        function create() {
-            console.log('created')
+    updateLi: (function() {
+        var excute = false;
+        return function(){
+            if(!excute){
+                excute = true;
+                console.log('created');
+               
             var div = document.createElement('div');
             div.className = 'shan-conversation';
             $('.shan-talk').append(div);
-            div.innerHTML = this.month;
+            switch(this.dater()){
+                case '316':div.innerHTML = this.march16;
+                console.log('excuted')
+                break;
+                case '317':div.innerHTML = this.march17;
+                break;
+
+            }}}})(),
 
         }
-        create.call(update);
-    }
-}
+
+
+
+
+
+
+
+
+
 module.exports = helper;

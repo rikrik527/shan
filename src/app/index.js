@@ -22,10 +22,11 @@ var say = require('./say');
 var sourceUrl = ["//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"];
 var location = require('./location');
 var awake = require('./spa');
-var xsMenu = require('./xsMenu');
+
 var gametest = require('./gametest');
 var ctx = require('./context');
 var sprite = require('./context');
+var shanli = require('./shanLiAct');
 
 
 
@@ -38,29 +39,26 @@ obj.get('.icon-personal').onclick = function() {
 
 window.onload = function() {
 
-    //initialize canvas
 
-    // ctx.ctx.create('canvas');
-    // console.log('yes finished jquery')
-    // var wall = require('../images/background-rock.png');
+    switch (document.readyState) {
+        case "loading":document.querySelector('.loading-line').innerHTML = 'now loading';
 
 
-    // var image = new sprite.sprite(wall, false);
-    // var pattern = new sprite.sprite(wall, true);
-    // var angle = 0;
-    // setInterval(function() {
-    //     ctx.context.fillStyle = 'black';
-    //     ctx.context.fillRect(0, 0, 800, 800);
-    //     image.draw(0, 0, 64, 64);
-    //     image.draw(0, 74, 256, 32);
-    // }, 25)
+          break;
+        case "interactive":
+          // The document has finished loading. We can now access the DOM elements.
+          shanli.shanAppear();
+          shanli.shanCatAppear();
+          shanli.shanExAppear();
+          shanli.chatModule();
+          shanli.shanToggle();
 
-
-
-
-
-
-    prologue.slides();
+          break;
+        case "complete":
+          // The page is fully loaded.
+          document.querySelector('.loading').style.display = 'none';
+          console.log('loaded');
+          prologue.slides();
 
 
 
@@ -84,20 +82,49 @@ window.onload = function() {
     robotMenu.fightList();
     fix.updates();
     xsMenu.toggleXsmenu();
-
+helper.updateLi.call(update);
     xsMenu.gameMenu();
+    fix.repairTouch();
     // robotMenu.handlePress();
     // robotMenu.handleRelease();
     // robotMenu.shootOut();
-}
-fix.add('circle', 'div', 'circle', obj.get('.shan-btn'))
-fix.add('number', 'div', 'number', obj.getId('shan-li'));
+
+
 window.onresize = function() {
     fix.getFireballPos();
     console.log('resize');
 }
+          break;
+      }
+
+    //initialize canvas
+
+    // ctx.ctx.create('canvas');
+    // console.log('yes finished jquery')
+    // var wall = require('../images/background-rock.png');
 
 
+    // var image = new sprite.sprite(wall, false);
+    // var pattern = new sprite.sprite(wall, true);
+    // var angle = 0;
+    // setInterval(function() {
+    //     ctx.context.fillStyle = 'black';
+    //     ctx.context.fillRect(0, 0, 800, 800);
+    //     image.draw(0, 0, 64, 64);
+    //     image.draw(0, 74, 256, 32);
+    // }, 25)
+
+
+
+
+
+
+
+};
+
+fix.add('circle', 'div', 'circle', obj.get('.shan-btn'))
+fix.add('number', 'div', 'number', obj.getId('shan-li'));
+fix.add('robotNum','div','robot-number',obj.getId('robot'));
 timerIncrease();
 var idleTime = 0;
 document.onmousemove = function() {
@@ -134,5 +161,4 @@ function timerIncrease() {
         }, shan.talkBot.random(5000));
 
     }
-
-};
+}

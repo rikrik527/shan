@@ -1,4 +1,12 @@
 @import './color';
+@for $i from 0 through 9 {
+    .ball#{$i} {
+        top: 5px * $i;
+        left: 5px * $i;
+        transition: all 1s*$i linear;
+    }
+}
+
 a {
     outline: none;
     color: #fff;

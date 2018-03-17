@@ -11,7 +11,7 @@ var gameover = require('../audio/gameover.wav');
 var fire1 = require('../audio/fire1.wav');
 var charging = require('../audio/charging.wav');
 var helper = require('./helperFunction');
-
+var update = require('./update');
 
 
 
@@ -77,6 +77,17 @@ module.exports.robotMenu = function() {
 
 }
 module.exports.topMenu = function() {
+    (function(){
+        console.log('tty')
+        var robotEnergyBar = obj.get('.robot-energy-bar');
+        if (window.getComputedStyle(robotEnergyBar).getPropertyValue('width') == '0px') {
+            console.log('its over');
+            robotDead();
+
+        } else {
+            console.log(robotEnergyBar);
+        }
+    })();
 
     var hands = obj.getAll('.hands0,.hands1, .hands2, .hands3, .hands4, .hands5, .hands6, .hands7, .hands8, .hands9');
     hands[0].onclick = (function() {
@@ -162,13 +173,7 @@ module.exports.topMenu = function() {
             bigWords.classList.remove('leftright');
             console.log(bigWords);
         }, 3000);
-        setTimeout(function() {
 
-            var handle = obj.get('.handle');
-            handle.style.display = 'block';
-
-
-        }, 8000);
         setTimeout(() => {
             robot.classList.add('robot-power');
             console.log('robot-power')
@@ -202,147 +207,207 @@ module.exports.topMenu = function() {
     function loveSparrow() {
         console.log('loveSparrow have been activeted')
         var robot = obj.getId('robot');
-        var handle = obj.get('.handle');
+        var handle1 = obj.get('.handle1');
+        var handle2 = obj.get('.handle2');
+        var handle3 = obj.get('.handle3');
+        var handle4 = obj.get('.handle4');
         robot.style.transition = 'all .5s linear';
         var idleTime = 0;
-        var increase = '';
+        var increase = [];
+        var increaseS ='';
         var decrease = '';
+        var decreaseS = '';
         var shoot = '';
         var power = 0;
         var fLeft = 0;
         var fTop = 0;
-        var speed = 1;
+        var speed = 40;
         var deg = 0;
+        var translateX = 0;
+        var translateY = 0;
         var down = false;
         var fireball = obj.get('.fireball');
-
+// var increase2 = '';
+// var increase2S = '';
+// var increase3S = '';
+// var increase3 = '';
+// var decrease2S = '';
+// var decrease3S = '';
+// var decrease2 = '';
+// var decrease3 ='';
         var shanLiOutline = obj.get('.shanli-outline');
 
         var angle;
 
-        handle.onpointerdown = function(e) {
-
+        $('.handle1').on('pointerdown mousedown touchstart',function(){
             console.log('returned')
-            console.log(fireball);
-            var fireball = obj.get('.fireball')
-            fireball.style.display = 'block';
-            clearInterval(decrease);
-            $('.handle').addClass('maxpower');
-            robot.classList.add('robot-shooting');
-            robot.style.transform = 'rotatez(30deg)';
 
-            power = 0;
-            increase = setInterval(function() {
+                        var fireball = obj.get('.fireball')
+                        fireball.style.display = 'block';
 
-                speed += 1;
-                deg++
-                if (deg >= 50) {
-                    deg = 50;
-                }
-                $('.power').val(++power);
+                        $('.handle').addClass('maxpower');
+                        robot.classList.add('robot-shooting');
 
-                angle = deg * Math.PI / 180;
-                console.log('mousehold', speed, power, 'deg', deg, angle);
-            }, 50);
-
-        };
-        $('.handle').on('mouseup touchend pointerup', function() {
-            clearInterval(shoot)
-            clearInterval(increase);
-            console.log('mouserelease', speed, power, 'deg', deg, angle, increase);
-            decrease = setInterval(function(){
-                $('.power').val(--power);
-
-            },50);
-            setTimeout(() => {
-                power = 0;
-                speed = 0;
-                deg = 0;
-                console.log('after 2 seconds this been excuted');
-                var fireball = obj.get('.fireball');
-                fireball.parentNode.removeChild(fireball);
-                var div = obj.create('div');
-                var shanBtn = obj.get('.shan-btn');
-                div.className = 'fireball';
-                shanBtn.appendChild(div);
-                console.log('fireball is ready');
-                var robot = obj.getId('robot');
-                var fireball = obj.get('.fireball');
-                var rx = robot.getBoundingClientRect().x + robot.offsetWidth / 2;
-                var ry = robot.getBoundingClientRect().y + robot.offsetHeight / 2;
-                console.log('rx', rx, 'ry', ry);
-
-                    fireball.style.left = rx + 'px';
-                    fireball.style.top = rx + 'px';
-                    console.log('left', window.getComputedStyle(fireball).getPropertyValue('left'), 'top', window.getComputedStyle(fireball).getPropertyValue('top'));
-                console.log('fireball is',fireball);
-            }, 2000);
+            deg++;
+                        power ++;
+                        $('.power').val(power);
+                        fireball.style.transform = 'rotatez('+deg+'deg)';
+                        increase.push(setTimeout(function(){
+                            increase.push(setTimeout(() => {
+                             increase.push(setTimeout(() => {
+                               increase.push(setInterval(function(){
+                                   increase.push(setInterval(function(){
+                                       increase.push(setInterval(function(){
+                                          power++;
+                                          deg++;
+                                          fireball.style.transform ='rotatez('+deg+'deg)';
+                                          $('.power').val(power);
+                                          console.log('interval 100',deg)  },10));
+                                       power++;
+                                       deg++;
+                                       fireball.style.transform ='rotatez('+deg+'deg)';
+                                       $('.power').val(power);
+                                       console.log('interval 500',deg)           },1000));
+                                    power++;
+                                    deg++;
+                                    fireball.style.transform ='rotatez('+deg+'deg)';
+                                    $('.power').val(power);
+                         console.log('interval 1000',deg)      },1500));
 
 
+                       console.log('10');     },10));
 
-            $('.handle').removeClass('maxpower');
-            $('#robot').removeClass('robot-shooting')
-            angle = deg * Math.PI / 180;
-            shootOut();
-            console.log('shoot first');
-            if (power >= 100) {
-                clearInterval(increase);
-                console.log('clear power');
-            }
+                    console.log('100')    },100));
+                   console.log('500'); },500));
+
+
         })
 
 
 
 
 
+        $('.handle1').on('mouseup touchend pointerup', function() {
+            for(var i = 0; i < increase.length; i++){
+                clearInterval(increase[i]);
+            }
+
+            increase =[];
+          setTimeout(function(){
+            power = 0;
+            deg = 0;
+          },1000)
+          $('.fireball').css('transform','rotatez('+deg+'deg)');
+            $('.power').val(power);
 
 
 
-        function shootOut() {
-            var deltaX = Math.cos(angle) * speed;
-            var deltaY = Math.sin(angle) * speed;
+
+
+
+            $('.handle').removeClass('maxpower');
+
+            angle = deg * Math.PI / 180;
+
+
+
+
+        })
+
+
+    handle2.onpointerdown = function(e){
+
+
+        $('.handle2').on('pointerup mouseup touchend',function(){
+
+        })
+    }
+
+
+
+    $('.handle4').on('pointerdown mousedown touchstart',function(){
+
+        shootOut();
+        setTimeout(() => {
+
+            console.log('after 2 seconds this been excuted');
             var fireball = obj.get('.fireball');
+            fireball.parentNode.removeChild(fireball);
+            var div = obj.create('div');
+            var shanBtn = obj.get('.shan-btn');
+            div.className = 'fireball';
+            shanBtn.appendChild(div);
+            console.log('fireball is ready');
+            var robot = obj.getId('robot');
+            var fireball = obj.get('.fireball');
+            var rx = robot.getBoundingClientRect().x + robot.offsetWidth / 2;
+            var ry = robot.getBoundingClientRect().y + robot.offsetHeight * 2;
+            console.log('rx', rx, 'ry', ry);
 
-            robotEnergy -= 10;
-            console.log('shooting', deltaX, deltaY, fLeft, fTop);
-
-
-            setTimeout(() => {
-                robot.classList.remove('robot-stretching');
-
-            }, 1000);
-
-            var fleft = (fLeft += deltaX);
-            var ftop = (fTop += deltaY);
-            shoot = setInterval(fireshoot, 50);
-
-            function fireshoot() {
-                fireball.style.left = fleft + '%';
-                fireball.style.top = ftop + '%';
-
-            }
-            var get = function get(ele, attr) {
-                return parseInt(ele.style[attr], 10);
-            }
-
-            console.log(fleft, ftop, 'window', window.innerWidth, window.innerHeight)
+                fireball.style.left = rx + 'px';
+                fireball.style.top = rx + 'px';
+                console.log('left', window.getComputedStyle(fireball).getPropertyValue('left'), 'top', window.getComputedStyle(fireball).getPropertyValue('top'));
+            console.log('fireball is',fireball);
+        }, 1000);
+    })
 
 
-            console.log(get(fireball, 'width'), get(fireball, 'height'))
-            fireballCollision();
 
-            robotE.style.width = robotEnergy + 'px';
-            robot.style.transform = 'rotatez(0deg)';
+    function shootOut() {
+
+        var fireball = obj.get('.fireball');
+        for(var i = 0; i < 10; i++){
+            var div = obj.create('div');
+            div.className = 'ball'+i;
+            fireball.appendChild(div);
+            console.log(div)
+        }
+        robotEnergy -= 10;
+        console.log('shooting');
+
+
+        setTimeout(() => {
+            robot.classList.remove('robot-shooting');
+
+        }, 1000);
+
+        var fleft = (fLeft += deltaX);
+        var ftop = (fTop += deltaY);
+        shoot = setInterval(fireshoot, 50);
+
+        function fireshoot() {
+            // fireball.style.left = fleft + '%';
+            // fireball.style.top = ftop + '%';
+            fireball.style.transform ='rotatez('+deg+'deg)translate('+speed+'px'+','+ speed+'px)';
 
         }
+        var get = function get(ele, attr) {
+            return parseInt(ele.style[attr], 10);
+        }
+
+        console.log(fleft, ftop, 'window', window.innerWidth, window.innerHeight)
+
+
+        console.log(get(fireball, 'width'), get(fireball, 'height'))
+        fireballCollision();
+
+        robotE.style.width = robotEnergy + 'px';
+        robot.style.transform = 'rotatez(0deg)';
+
+    }
+
+
 var shanW = 0;
-var number = 0;
+
+var hit = false;
+var ex = 0;
+var lv = 0;
         function fireballCollision() {
             console.log('fireballdetection have been activeted')
             var fireball = obj.get('.fireball');
             var shanLi = obj.getId('shan-li');
+            var value = 0;
 
-            var number = obj.get('.number');
             var fw, fh, fx, fy, sw, sh, sx, sy;
             fw = fireball.offsetWidth;
             fh = fireball.offsetHeight;
@@ -353,19 +418,49 @@ var number = 0;
             sx = shanLi.offsetLeft;
             sy = shanLi.offsetTop;
             if ((fx + fw) > sx && fx < (sx + sw) && (fy + fh) > sy && fy < (sy + sh)) {
-                console.log('detected')
-                shanW+=10;
-                number+=30;
+                hit = true;
+                var playerEx = obj.get('.player-experience');
+                var robotNum = obj.get('.robot-number');
+                ex+=10;
+                playerEx.textContent = ex;
+                robotNum.innerHTML = ex;
+
+                    var playerLv = obj.get('.player-level');
+
+                    switch(ex){
+                        case 100: lv+=1;
+                        playerLevel();
+                        console.log('ex')
+                        case 2000: lv+=1;
+                        playerLevel();
+
+                }
+
+
+                console.log('detected');
+                shanW+=1;
+                value-=30;
+                console.log(value,shanW);
+                var number = obj.get('.number');
                 var shanLiEb = obj.get('.shanli-energy-bar');
                 shanLi.classList.add('shanliget');
                 shanLiEb.style.width = shanW + 'px';
                 number.style.display = 'block';
                 number.innerHTML = window.getComputedStyle(shanLiEb).getPropertyValue('width').slice(0, 2);
-                number.style.top = number + 'px';
+                number.style.top = value + 'px';
                 setTimeout(() => {
                     shanLi.classList.remove('shanliget');
                     number.style.display = 'none';
                 }, 3000);
+                function playerLevel(){
+                    console.log('excuting playerlevel')
+                    var playerLv = obj.get('.player-level');
+                    var robotNum = obj.get('.robot-number');
+
+                    playerLv.innerHTML = lv;
+                robotNum.innerHTML = '等級增加了'+lv;
+                robotNum.style.top = value +'px';
+            }
 
 
             }
@@ -436,14 +531,7 @@ var number = 0;
         outside.insertAdjacentHTML('afterbegin', '<span class="love"></span>');
         console.log('span')
     }
-    var robotEnergyBar = obj.get('.robot-energy-bar');
-if (window.getComputedStyle(robotEnergyBar).getPropertyValue('width') == '0px') {
-    console.log('its over');
-    fix.robotDead();
 
-} else {
-    console.log(robotEnergyBar);
-}
 
 }
 module.exports.robotDead = function() {
@@ -699,7 +787,7 @@ module.exports.updates = function() {
         switch (click) {
             case 1:
                 $('.shan-talk').css('display', 'block');
-                helper.updateLi();
+                helper.updateLi.call(update);
                 console.log('1')
                 break;
             case 2:
@@ -715,4 +803,44 @@ module.exports.updates = function() {
 
 
 
+}
+module.exports.repairTouch = function(e){
+    var touchDown = false,
+    mouseDown = false,
+    position = [34,0,0],
+    mposition = [34,0,0],
+    mlastposition = [null,null],
+    lastPosition = [null,null],
+    todoIconSlide = obj.get('.todo-icon-slide');
+
+    todoIconSlide.addEventListener('touchmove',function(e){
+        if(!touchDown){
+            return false;
+        }
+        var touches = e.changedTouches[0];
+        console.log('touches',touches);
+        var changeX = 0;
+        if(lastPosition[0]){
+            changeX = (lastPosition[0] - touches.screenX);
+            if(Math.abs(changeX)> 20){
+                changeX = 0;
+            }
+        }
+        lastPosition = [touches.screenX,touches.screenY];
+        position[0] -= changeX;
+        todoIconSlide.style.left = position[0]+'px';
+    });
+    todoIconSlide.addEventListener('touchstart',function(e){
+        var touched = e.touches[0];
+        if(e.touched.target.className == 'todo-icon-slide'){
+            console.log('touched fuck');
+            e.touched.target = todoIconSlide;
+        }
+        touchDown = true;
+        console.log('touched');
+    })
+    todoIconSlide.addEventListener('touchend',function(e){
+        touchDown = false;
+        console.log('touchend mouseup')
+    })
 }

@@ -66,6 +66,56 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
 a {
   outline: none;
   color: #fff;

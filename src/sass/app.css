@@ -66,6 +66,56 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
 a {
   outline: none;
   color: #fff;
@@ -205,6 +255,56 @@ button {
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
 a {
   outline: none;
   color: #fff;
@@ -2950,6 +3050,56 @@ iframe[seamless] {
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
 a {
   outline: none;
   color: #fff;
@@ -3156,6 +3306,24 @@ button {
     background-position: -1266px -1165px; }
   to {
     background-position: -1509px -1165px; } }
+.ball0,
+.ball1,
+.ball2,
+.ball3,
+.ball4,
+.ball5,
+.ball6,
+.ball7,
+.ball8,
+.ball9 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  transition: all 3s linear;
+  background: #e53935;
+  margin: 2%; }
+
 .robot-outline {
   position: absolute;
   width: 100px;
@@ -3599,28 +3767,74 @@ button {
   position: absolute;
   margin: -0px 0 0 -0px;
   top: 50%;
-  left: 76%;
-  display: block;
+  left: 67%;
+  display: none;
   z-index: 9999999999; }
 
 .power {
   width: 150px;
   height: 20px;
-  background: orangered;
+  background: aliceblue;
   transform: rotateZ(-90deg);
   position: absolute;
   left: -51px;
   top: -151px; }
 
-.handle {
+.power-x {
+  width: 150px;
+  height: 20px;
+  background: aliceblue;
+  transform: rotateZ(-90deg);
+  position: absolute;
+  left: -9px;
+  top: -151px; }
+
+.power-y {
+  width: 150px;
+  height: 20px;
+  background: aliceblue;
+  transform: rotateZ(-90deg);
+  position: absolute;
+  left: 33px;
+  top: -151px; }
+
+.handle1,
+.handle2,
+.handle3 {
   width: 50px;
   height: 50px;
   background-color: rgba(255, 100, 100, 0.5);
   border-radius: 100px;
   position: absolute;
   top: -27px;
-  left: 0px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
   cursor: pointer; }
+
+.handle4 {
+  width: 90px;
+  height: 50px;
+  background-color: #ffeb3b;
+  border-radius: 30px;
+  position: absolute;
+  top: 33px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 50px; }
+
+.handle4 {
+  left: 25px; }
+
+.handle3 {
+  left: 84px; }
+
+.handle2 {
+  left: 42px; }
+
+.handle1 {
+  left: 0px; }
 
 .todo-list {
   width: 250px;
@@ -3708,6 +3922,16 @@ button {
   transition: all 1s linear;
   display: none; }
 
+.robot-number {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 35px;
+  left: 55px;
+  color: #90caf9;
+  transition: all 1s linear;
+  display: none; }
+
 /*fashion set 1 smooth*/
 /*set2 sun*/
 /*set3 grass*/
@@ -3732,6 +3956,56 @@ button {
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
 a {
   outline: none;
   color: #fff;
@@ -3937,6 +4211,29 @@ button {
   text-align: center;
   border: 2px solid hotpink;
   border-radius: 100px; }
+
+.loading {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  /* top: 0px; */
+  background: #f48fb1;
+  position: fixed;
+  z-index: 999999999; }
+
+.loading-bar {
+  width: 100px;
+  height: 20px;
+  background: #f06292;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -50px; }
+  .loading-bar .loading-line {
+    width: 0px;
+    height: 20px;
+    position: absolute;
+    background: #ffa726; }
 
 .login-page {
   display: none; }
