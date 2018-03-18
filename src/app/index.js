@@ -47,11 +47,7 @@ window.onload = function() {
           break;
         case "interactive":
           // The document has finished loading. We can now access the DOM elements.
-          shanli.shanAppear();
-          shanli.shanCatAppear();
-          shanli.shanExAppear();
-          shanli.chatModule();
-          shanli.shanToggle();
+         obj.get('.loading-bar')
 
           break;
         case "complete":
@@ -88,12 +84,9 @@ helper.updateLi.call(update);
     // robotMenu.handlePress();
     // robotMenu.handleRelease();
     // robotMenu.shootOut();
+fix.robotDead();
 
 
-window.onresize = function() {
-    fix.getFireballPos();
-    console.log('resize');
-}
           break;
       }
 
@@ -121,7 +114,10 @@ window.onresize = function() {
 
 
 };
-
+window.onresize = function() {
+    fix.getFireballPos();
+    console.log('resize');
+}
 fix.add('circle', 'div', 'circle', obj.get('.shan-btn'))
 fix.add('number', 'div', 'number', obj.getId('shan-li'));
 fix.add('robotNum','div','robot-number',obj.getId('robot'));

@@ -18,7 +18,7 @@ helper = {
                 break;
                 case '317':div.innerHTML = this.march17;
                 break;
-
+                case '318':div.innerHTML = this.march18;
             }}}})(),
 
         }

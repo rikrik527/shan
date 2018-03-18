@@ -98,6 +98,16 @@
     }
 }
 
+.crosshair {
+    animation: crosshair .5s linear infinite;
+    @keyframes crosshair {
+        50% {
+            transform: scale(2);
+            opacity: 0.4;
+        }
+    }
+}
+
 .maxpower {
     animation: maxpower .5s linear infinite;
     @keyframes maxpower {

@@ -2303,6 +2303,12 @@ iframe[seamless] {
 @keyframes robotoutlinefly {
   to {
     transform: translateX(60px) translateY(100px); } }
+.crosshair {
+  animation: crosshair .5s linear infinite; }
+@keyframes crosshair {
+  50% {
+    transform: scale(2);
+    opacity: 0.4; } }
 .maxpower {
   animation: maxpower .5s linear infinite; }
 @keyframes maxpower {
@@ -3931,6 +3937,31 @@ button {
   color: #90caf9;
   transition: all 1s linear;
   display: none; }
+
+.cross-hair {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background: radial-gradient(transparent, 58%, blue, 49%, blue);
+  position: absolute;
+  transition: all .2s linear;
+  z-index: 999999999; }
+  .cross-hair:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: blue;
+    left: 0%;
+    top: 46%; }
+  .cross-hair:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background: blue;
+    left: 46%;
+    top: 0%; }
 
 /*fashion set 1 smooth*/
 /*set2 sun*/
