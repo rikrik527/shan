@@ -10,6 +10,11 @@ var robotmove = require('../audio/robotmove.wav');
 var gameover = require('../audio/gameover.wav');
 var fire1 = require('../audio/fire1.wav');
 var charging = require('../audio/charging.wav');
+var electric = require('../audio/electric.mp3');
+var explosion = require('../audio/explosion.mp3');
+var explosion2 = require('../audio/explosion2.mp3');
+var arrow = require('../audio/arrow.mp3');
+var missle = require('../audio/missle.mp3');
 var helper = require('./helperFunction');
 var update = require('./update');
 var transform = require('./transform');
@@ -81,6 +86,8 @@ module.exports.robotMenu = function () {
 module.exports.topMenu = function () {
     var crossHair = obj.get('.cross-hair');
     crossHair.style.display = 'none';
+    var touchBc = obj.get('.touch-boxcontrol');
+
     var loveEnergyy = false;
     (function () {
         var excute = 0;
@@ -283,7 +290,14 @@ console.log('case2',loveEnergyy);
             var touches = e.targetTouches[0];
 
             crossHair.style.cssText = 'left:'+(touches.clientX-25)+'px;top:'+(touches.clientY-25)+'px';
+            var click  = 0;
             $('.cross-hair').on('click',function(e){
+                click++;
+                if(click == 3)click = 1;
+                switch(click){
+                    case 1:$('.touch-boxcontrol').css('display','block');
+                    case 2:$('.touch-boxcontrol').css('display','none');
+                }
                 if(e.id == 'shan-li'){
                     console.log('gotit');
                     getShan = true;
@@ -300,6 +314,7 @@ console.log('case2',loveEnergyy);
                    );
                    crossHair.style.top = window.getComputedStyle(shanli).getPropertyValue('top');
                 }
+
             })
 
             console.log(touches.clientX,touches.clientY);}
@@ -315,7 +330,20 @@ console.log('case2',loveEnergyy);
 
                 crossHair.style.cssText = 'left:'+(e.clientX-25)+'px;top:'+(e.clientY-25)+'px';
                 console.log(e.clientX,e.clientY,crossHair);
-                $('.cross-hair').on('click',function(e){
+
+               crossHair.onclick = (function(){
+                var click = 0;
+                return function(){
+                click++;
+
+
+                    if(click == 3)click = 1;
+                    console.log('corss clicked',click)
+                    switch(click){
+                        case 1:var touchBc = obj.get('.touch-boxcontrol');touchBc.style.display = 'block';
+                        console.log('what')
+                        case 2:$('.touch-boxcontrol').css('display','none');
+                    }}})();
                     if(e.id == 'shan-li'){
                         console.log('gotit');
                         getShan = true;
@@ -332,7 +360,7 @@ console.log('case2',loveEnergyy);
                        );
                        crossHair.style.top = window.getComputedStyle(shanli).getPropertyValue('top');
                     }
-                })
+
 
             }
             $('.cross-hair').on('mousedown',function(e){
@@ -378,7 +406,18 @@ console.log('case2',loveEnergyy);
 
             }, 1000);
         })
-
+$('.handle1').on('click',function(){
+    console.log('clicked handle1')
+    var power = 0;
+    return function(){
+      power++
+      console.log('power',power);
+      $('.power').val(power);
+      $('.handle4').on('click',function(){
+          console.log('handle4',power);
+      })
+    }
+})
 
 
         function shootOut() {
@@ -489,27 +528,29 @@ robot.classList.add('robot-shooting');
                     number.style.display = 'none';
                 }, 3000);
 
-                function playerLevel() {
-                    console.log('excuting playerlevel')
-                    var playerLv = obj.get('.player-level');
-                    var robotNum = obj.get('.robot-number');
-
-                    playerLv.innerHTML = lv;
-                    robotNum.innerHTML = '等級增加了' + lv;
-                    robotNum.style.top = value + 'px';
-                }
 
 
             }else{
                 hit = false;
             }
+            function playerLevel() {
+                console.log('excuting playerlevel')
+                var playerLv = obj.get('.player-level');
+                var robotNum = obj.get('.robot-number');
+
+                playerLv.innerHTML = lv;
+                robotNum.innerHTML = '等級增加了' + lv;
+                robotNum.style.top = value + 'px';
+            }
+
 
 console.log('end',hit)
         }
+        var hit2 = false;
         function crossHairDetection(){
             var crossHair = obj.get('.cross-hair');
             var shanLi = obj.getId('shan-li');
-            var hit = false;
+
             var cw,ch,cx,cy,sw,sh,sx,sy;
             cw = crossHair.offsetWidth;
             ch = crossHair.offsetHeight;
@@ -520,17 +561,17 @@ console.log('end',hit)
             sx = shanLi.offsetLeft;
             sy = shanLi.offsetTop;
             console.log('active',cw,ch,cx,cy,sw,sh,sx,sy);
-            return function(){
-                console.log('returned detection')
+
+
                 if ((cx + cw) > sx && cx < (sx + sw) && (cy + ch) > sy && cy < (sy + sh)) {
-                    hit = true;
+                    hit2 = true;
                     console.log('hit crosshair',hit);
                     crossHair.classList.add('crosshair');
                 }else{
-                    hit = false;
+                    hit2 = false;
                     crossHair.classList.remove('crosshair');
                 }
-            }
+
             console.log('hit test',hit);
         }
 
@@ -612,17 +653,24 @@ console.log('end',hit)
 
 }
 module.exports.robotDead = function () {
-    var audio = new Audio();
-    audio.src = gameover;
-    audio.play();
+
     var robot = obj.getId('robot');
     var iconEnergy = obj.get('icon-energy');
     var robotEnergy = obj.get('robot-energy');
     if($('.robot-energy-bar').css('width')=='0px'){
         console.log('robotdead');
+        var audio = new Audio()|| new webkitAudio();
+    audio.src = electric;
+    audio.play();
+    setTimeout(() => {
+        var audio2 = new Audio()|| new webkitAudio();
+        audio.src = explosion;
+        audio2.play();
+    }, 2000);
         $('.robot-energy-bar .robot-energy .icon-energy').css('display', 'none');
     robot.removeAttribute('class');
     robot.setAttribute('class', 'robot-dead');
+
     }
 
 }
@@ -630,31 +678,39 @@ module.exports.robotDead = function () {
 module.exports.arrows = function () {
     var right = obj.get('.right');
     var left = obj.get('.left');
+    var todoIconSlide = obj.get('.todo-icon-slide');
     var click = 0;
+    var sleft = 0;
+    var lastposition = null;
     left.onclick = function () {
-        var todoIconSlide = obj.get('.todo-icon-slide');
+
 
 
         console.log('arrows left clicked')
         click++;
+        sleft -= 50;
         if (click === 6) click = 0;
+        if(sleft === 250)
         switch (click) {
             case 1:
-                todoIconSlide.style.left += 50 + 'px';
-                console.log('case1')
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case1l',sleft)
                 break;
             case 2:
-                todoIconSlide.style.left += 50 + 'px';
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case2l',sleft)
                 break;
             case 3:
-                todoIconSlide.style.left += 50 + 'px';
+                todoIconSlide.style.left = sleft  + 'px';
+                console.log('case3l',sleft)
                 break;
             case 4:
-                todoIconSlide.style.left += 50 + 'px';
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case4l',sleft)
                 break;
             case 5:
-                todoIconSlide.style.left += 50 + 'px';
-                console.log('case2')
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case5l',sleft)
                 break;
 
         }
@@ -667,23 +723,28 @@ module.exports.arrows = function () {
 
         console.log('right clicked')
         click--;
+        sleft += 50
         if (click === 0) click = 5;
         switch (click) {
             case 5:
-                todoIconSlide.style.left -= 50 + 'px';
-                console.log('right case5')
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case1r',sleft)
                 break;
             case 2:
-                todoIconSlide.style.left -= 50 + 'px';
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case2r',sleft)
                 break;
             case 3:
-                todoIconSlide.style.left -= 50 + 'px';
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case3r',sleft)
                 break;
             case 4:
-                todoIconSlide.style.left -= 50 + 'px';
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case4r',sleft)
                 break;
             case 5:
-                todoIconSlide.style.left -= 50 + 'px';
+                todoIconSlide.style.left = sleft + 'px';
+                console.log('case5r',sleft)
                 console.log('right case1')
                 break;
 
@@ -767,14 +828,15 @@ module.exports.robot = function () {
 module.exports.selectMusic = function () {
     var AudioContext = window.AudioContext || window.webkitAudioContext;
     var context = new window.AudioContext;
-    var audio = new Audio();
-    var audio2 = new Audio();
+    var audio = new Audio() || new webkitAudio;
+    var audio2 = new Audio() || new webkitAudio;
     var songList = [epic, memories, wind, gameover, charging, fire1, robotmove];
 
     audio.src = songList[0];
 
     audio2.src = songList[2];
-
+    audio.play();
+    audio2.play();
 
     console.log(audio)
     audio.loop = true;
@@ -930,4 +992,43 @@ module.exports.getFireballPos=function() {
         console.log('left', window.getComputedStyle(fireball).getPropertyValue('left'), 'top', window.getComputedStyle(fireball).getPropertyValue('top'));
     })();
 
+}
+module.exports.snow = function(){
+
+
+    function initCanvas(){
+        console.log('shooting')
+        var ctx = obj.getId('shooting').getContext('2d');
+        var cw = ctx.canvas.width, ch = ctx.canvas.height;
+        var flakes = [];
+        function addFlake(){
+            var x = Math.floor(Math.random() * cw)+1;
+            var y = 0
+            var s = Math.floor(Math.random() * 8)+1;
+            flakes.push({"x":x,"y":y,"s":s});
+        }
+        function snow(){
+
+            addFlake();
+            for(var i = 0; i< flakes.length;i++){
+                ctx.fillStyle = 'rgba(255,255,255,.75)'
+                ctx.beginPath();
+                // arc(x,y,radius,startangle,endangle,aniticlockwise);
+                ctx.arc(flakes[i].x,flakes[i].y+= flakes[i].s*.5,flakes[i].s*.5,0,Math.PI*2,false);
+                ctx.fill();
+                if(flakes[i].y > ch){
+                    flakes.splice(i,1);
+                }
+                obj.get('.shan-talk').innerHTML = 'snowFlake count ='+flakes.length;
+            }
+        }
+        function animate(){
+
+            ctx.clearRect(0,0,cw,ch);
+
+            snow();
+        }
+        var animateInterval = setInterval(animate,30);
+    }
+    initCanvas();
 }

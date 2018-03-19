@@ -77,15 +77,16 @@ window.onload = function() {
     shan.talk.talkingDialog();
     robotMenu.fightList();
     fix.updates();
-    xsMenu.toggleXsmenu();
+
 helper.updateLi.call(update);
-    xsMenu.gameMenu();
+
     fix.repairTouch();
     // robotMenu.handlePress();
     // robotMenu.handleRelease();
     // robotMenu.shootOut();
 fix.robotDead();
 
+console.log('load end')
 
           break;
       }
@@ -118,6 +119,7 @@ window.onresize = function() {
     fix.getFireballPos();
     console.log('resize');
 }
+
 fix.add('circle', 'div', 'circle', obj.get('.shan-btn'))
 fix.add('number', 'div', 'number', obj.getId('shan-li'));
 fix.add('robotNum','div','robot-number',obj.getId('robot'));

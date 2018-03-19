@@ -1,14 +1,5 @@
 @import './color';
-.game-action {
-    width: 300px;
-    height: 200px;
-    outline: 2px solid blue;
-    position: absolute;
-    margin: -100px 0 0 -150px;
-    top: 50%;
-    left: 50%;
-    display: none;
-}
+.game-action {}
 
 #shooting {
     position: absolute;
@@ -520,8 +511,8 @@
 .hands9,
 {
     background-image: url('../images/icon2.svg');
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     float: left;
     cursor: pointer;
 }
@@ -608,7 +599,6 @@
     margin: -0px 0 0 -0px;
     top: 50%;
     left: 67%;
-    display: none;
     z-index: 9999999999;
 }
 
