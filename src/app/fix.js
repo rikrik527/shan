@@ -19,6 +19,7 @@ var helper = require('./helperFunction');
 var update = require('./update');
 var transform = require('./transform');
 var transition = require('./transform');
+var tocca = require('tocca');
 
 
 
@@ -676,12 +677,135 @@ module.exports.robotDead = function () {
 }
 
 module.exports.arrows = function () {
+    var hands = obj.getAll('.hands0,.hands1,.hands2,.hands3,.hands4,.hands5,.hands6,.hands7,.hands8,.hands9');
+    for(var k = 0; k < hands.length; k++){
+        hands[k].innerHTML = k;
+    }
     var right = obj.get('.right');
     var left = obj.get('.left');
-    var todoIconSlide = obj.get('.todo-icon-slide');
+
     var click = 0;
     var sleft = 0;
+    var position = 0;
+    var touchDown = false;
     var lastposition = null;
+    var todoIcon = false;
+    var mouseDown = false;
+    document.onmousedown = function(event){
+        mouseDown = true;
+
+        console.log(event)
+        if(event.target.className == 'hands0'||event.target.className == 'hands1'||event.target.className == 'hands2'||event.target.className == 'hands3'||event.target.className == 'hands4'||event.target.className == 'hands5'||event.target.className == 'hands6'||event.target.className == 'hands7'||event.target.className == 'hands8'||event.target.className == 'hands9'){
+            console.log('todo-slide');
+            todoIcon = true;
+        }
+    }
+
+    document.ontouchstart = function(event){
+        touchDown = true;
+        var touch = event.targetTouches;
+        console.log(touch)
+        if(event.target.className == 'hands0'||event.target.className == 'hands1'||event.target.className == 'hands2'||event.target.className == 'hands3'||event.target.className == 'hands4'||event.target.className == 'hands5'||event.target.className == 'hands6'||event.target.className == 'hands7'||event.target.className == 'hands8'||event.target.className == 'hands9'){
+            console.log('todo-slide');
+            todoIcon = true;
+        }
+    }
+    document.onmousemove = function(event){
+        if(!mouseDown){
+            return false;
+        }
+
+
+        if(todoIcon){
+            console.log('todo-icon-slide');
+            var todo = obj.getId('todo-icon-slide');
+            var change = 0;
+            if(lastposition){
+                console.log(lastposition);
+                change = (lastposition - event.clientX);
+
+            }
+            if(window.getComputedStyle(todo).getPropertyValue('left') <= '-250px'){
+               console.log('smaller')
+               var hands = obj.getAll('.hands0,.hands1,.hands2,.hands3,.hands4');
+               for(var i = 0; i < hands.length; i++){
+                   var hand = Object.assign(hands);
+                   console.log(hand);
+                   for(var j = 0; j < hands.length;j++){
+                       hands[j].parentNode.removeChild(hands[j]);
+                       console.log('removing',hands[j])
+                       obj.getId('todo-icon-slide').appendChild(hand[j]);
+                       console.log('repairing',hand[j])
+                   }
+
+               }
+           }
+           if(window.getComputedStyle(todo).getPropertyValue('left') >= '0px'){
+               console.log('bigger');
+              todo.style.left = '0px';
+           }
+            lastposition = event.clientX;
+            position -= change;
+            todo.style.left = (position-125) +'px';
+
+
+        }
+   }
+   document.onmouseup = function(event){
+       mouseDown = false;
+       todoIcon = false;
+       console.log('not up')
+   }
+    document.ontouchmove = function(event){
+         if(!touchDown){
+             return false;
+         }
+
+         var touched = event.changedTouches[0];
+         if(todoIcon){
+             console.log('todo-icon-slide');
+             var todo = obj.getId('todo-icon-slide');
+             var change = 0;
+             if(lastposition){
+                 console.log(lastposition);
+                 change = (lastposition - touched.clientX);
+
+             }
+             if(window.getComputedStyle(todo).getPropertyValue('left') <= '-250px'){
+                console.log('smaller')
+                var hands = obj.getAll('.hands4,.hands3,.hands2,.hands1,.hands0');
+                for(var i = 0; i < hands.length; i++){
+                    var hand = Object.assign(hands);
+                    console.log(hand);
+                    for(var j = 0; j < hands.length;j++){
+                        hands[j].parentNode.removeChild(hands[j]);
+                        console.log('removing',hands[j])
+                        obj.getId('todo-icon-slide').appendChild(hand[j]);
+                        console.log('repairing',hand[j])
+                    }
+
+                }
+            }else{
+                todo.style.left = (position-210)+'px';
+            }
+            if(window.getComputedStyle(todo).getPropertyValue('left') >= '0px'){
+                console.log('bigger');
+               todo.style.left = '0px';
+            }else{
+                todo.style.left = (position-250)+'px';
+            }
+             lastposition = touched.clientX;
+             position -= change;
+             todo.style.left = (position-210) +'px';
+
+
+         }
+    }
+    document.ontouchend = function(event){
+        touchDown = false;
+        todoIcon = false;
+        console.log('not touched')
+    }
     left.onclick = function () {
 
 
@@ -690,7 +814,7 @@ module.exports.arrows = function () {
         click++;
         sleft -= 50;
         if (click === 6) click = 0;
-        if(sleft === 250)
+
         switch (click) {
             case 1:
                 todoIconSlide.style.left = sleft + 'px';
@@ -786,6 +910,9 @@ module.exports.robot = function () {
 
 
         talk('變身', 2000);
+        var audio = new Audio || webkitAudio;
+        audio.src = electric;
+        audio.play();
     }, 13000);
     setTimeout(() => {
         robot.classList.remove('robot-fly-turn');

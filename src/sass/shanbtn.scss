@@ -689,6 +689,7 @@
     left: 50%;
     z-index: 99999999;
     position: absolute;
+    .todo-slide {}
     .icon-close-todo {
         width: 25px;
         height: 25px;
@@ -704,11 +705,14 @@
         display: block;
         float: left;
     }
-    .todo-icon-slide {
+    #todo-icon-slide {
         width: 500px;
         height: 50px;
         position: absolute;
         transition: all 1s linear;
+        z-index: 9999999999999;
+        top: 0px;
+        left: 0px;
     }
     .todo-title {
         width: 100%;

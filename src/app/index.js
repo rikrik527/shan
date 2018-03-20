@@ -3,6 +3,7 @@ import React from 'react';
 import { Component } from 'react';
 import ReactDom from 'react-dom';
 import SearchBar from '../component/search_bar';
+
 const API_KEY = 'AIzaSyBFSDdU03uRqcU7QWNXV966pf1HJVJqxLE';
 
 var update = require('./update');
@@ -30,6 +31,7 @@ var shanli = require('./shanLiAct');
 
 
 
+
 obj.get('.icon-personal').onclick = function() {
     obj.get('.awake-first-section').style.transform = 'rotatey(180deg)'
     console.log('personal clicked');
@@ -47,7 +49,9 @@ window.onload = function() {
           break;
         case "interactive":
           // The document has finished loading. We can now access the DOM elements.
-         obj.get('.loading-bar')
+         obj.get('.loading-bar').style.transition = 'all 1s linear';
+         obj.get('.loading-bar').style.width ='100px';
+         shanli.shanAppear();
 
           break;
         case "complete":
@@ -80,7 +84,7 @@ window.onload = function() {
 
 helper.updateLi.call(update);
 
-    fix.repairTouch();
+
     // robotMenu.handlePress();
     // robotMenu.handleRelease();
     // robotMenu.shootOut();
