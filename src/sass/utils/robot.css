@@ -1,0 +1,396 @@
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
+a {
+  outline: none;
+  color: #fff;
+  text-decoration: none; }
+
+body {
+  overscroll-behavior-y: contain; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
+figure {
+  position: absolute; }
+
+ul,
+li,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none !important; }
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type=button],
+input[type=submit],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+progress {
+  display: block;
+  /* default: inline-block */
+  margin: 2em auto;
+  padding: 4px;
+  border: 0 none;
+  background: currentColor;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  background-color: yellow;
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+.robot-outline {
+  position: absolute;
+  width: 100px;
+  height: 100px; }
+  .robot-outline .robot-saying {
+    min-width: 100%;
+    max-width: 50%;
+    max-height: 50%;
+    min-height: 100%;
+    background: steelblue;
+    position: absolute;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    font-size: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    top: -31%;
+    left: 91%; }
+    .robot-outline .robot-saying .robot-speak {
+      width: 100%;
+      height: auto;
+      color: white;
+      padding-left: 3px;
+      word-break: break-all;
+      display: block; }
+    .robot-outline .robot-saying .robot-triangle {
+      border-top: 35px solid steelblue;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      position: absolute;
+      left: 0%;
+      top: 84%;
+      transform-origin: top;
+      transform: rotateZ(52deg); }
+  .robot-outline #robot {
+    width: 100px;
+    height: 100px;
+    background-size: 4500%;
+    background-image: url("../../images/icon2.svg"); }
+    .robot-outline #robot .robot-number {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 35px;
+      left: 55px;
+      color: #90caf9;
+      transition: all 1s linear;
+      display: none; }
+  .robot-outline .robot-energy {
+    width: 100px;
+    background: white;
+    height: 10px;
+    border-radius: 10px;
+    position: absolute; }
+    .robot-outline .robot-energy .robot-energy-bar {
+      left: 0px;
+      height: 10px;
+      border-radius: 10px;
+      background: #388e3c;
+      position: absolute;
+      width: 100px; }
+    .robot-outline .robot-energy .icon-energy {
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      background-image: url("../../images/icon2.svg");
+      background-size: 7000%;
+      background-position: -2743px -431px; }
+    .robot-outline .robot-energy .energy-pos1 {
+      left: -14px;
+      top: -23px; }
+
+.robot-repair-instance {
+  background-position: -7px -9px; }
+
+.robot-normal-instance {
+  background-position: -7px -115px; }
+
+.robot-normal-to-repair {
+  -webkit-animation: robotnormaltorepair 1s steps(11) forwards;
+  -moz-animation: robotnormaltorepair 1s steps(11) forwards;
+  -ms-animation: robotnormaltorepair 1s steps(11) forwards;
+  animation: robotnormaltorepair 1s steps(11) forwards; }
+@keyframes robotnormaltorepair {
+  from {
+    background-position: -7px -115px; }
+  to {
+    background-position: -1127px -115px; } }
+.robot-fly-down {
+  background-position: -7px -340px; }
+
+.robot-landing-open-mask {
+  -webkit-animation: robotlandingopenmask 1s steps(8) forwards;
+  -moz-animation: robotlandingopenmask 1s steps(8) forwards;
+  -ms-animation: robotlandingopenmask 1s steps(8) forwards;
+  animation: robotlandingopenmask 1s steps(8) forwards; }
+@keyframes robotlandingopenmask {
+  from {
+    background-position: -7px -340px; }
+  to {
+    background-position: -903px -340px; } }
+.robot-nice-to-meet-you {
+  -webkit-animation: nicetomeetyou 1.5s steps(12) forwards;
+  -moz-animation: nicetomeetyou 1.5s steps(12) forwards;
+  -ms-animation: nicetomeetyou 1.5s steps(12) forwards;
+  animation: nicetomeetyou 1.5s steps(12) forwards; }
+@keyframes nicetomeetyou {
+  from {
+    background-position: -903px -340px; }
+  to {
+    background-position: -2256px -340px; } }
+.robot-fireworks {
+  -webkit-animation: robotfireworks 2s steps(8) forwards;
+  -moz-animation: robotfireworks 2s steps(8) forwards;
+  -ms-animation: robotfireworks 2s steps(8) forwards;
+  animation: robotfireworks 2s steps(8) forwards; }
+@keyframes robotfireworks {
+  from {
+    background-position: -2256px -340px; }
+  to {
+    background-position: -3151px -340px; } }
+.robot-1000 {
+  width: 100px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  -webkit-animation: robot1000 1s linear infinite;
+  -moz-animation: robot1000 1s linear infinite;
+  -ms-animation: robot1000 1s linear infinite;
+  animation: robot1000 1s linear infinite; }
+@keyframes robot1000 {
+  from {
+    color: white;
+    top: 65%;
+    opacity: 0;
+    font-size: 10px; }
+  to {
+    top: 35%;
+    opacity: 1;
+    color: yellow;
+    font-size: 30px; } }
+.robot-that-is-shan {
+  -webkit-animation: robotthatisshan 3s steps(26) forwards;
+  -moz-animation: robotthatisshan 3s steps(26) forwards;
+  -ms-animation: robotthatisshan 3s steps(26) forwards;
+  animation: robotthatisshan 3s steps(26) forwards; }
+@keyframes robotthatisshan {
+  from {
+    background-position: -1px -1356px; }
+  to {
+    background-position: -2924px -1356px; } }
+.robot-say-long-story1 {
+  -webkit-animation: robotsaylongstory1 3s steps(23) forwards;
+  -moz-animation: robotsaylongstory1 3s steps(23) forwards;
+  -ms-animation: robotsaylongstory1 3s steps(23) forwards;
+  animation: robotsaylongstory1 3s steps(23) forwards; }
+@keyframes robotsaylongstory1 {
+  from {
+    background-position: -4px -1580px; }
+  to {
+    background-position: -2587px -1580px; } }
+.robot-fly-turn {
+  -webkit-animation: robotflytrun 1s steps(6);
+  -moz-animation: robotflytrun 1s steps(6);
+  -ms-animation: robotflytrun 1s steps(6);
+  animation: robotflytrun 1s steps(6); }
+@keyframes robotflytrun {
+  from {
+    background-position: -4px -571px; }
+  to {
+    background-position: -671px -571px; } }
+.robot-cross-get {
+  animation: robotcrossget 3s steps(15) forwards; }
+@keyframes robotcrossget {
+  from {
+    background-position: -1px -1243px; }
+  to {
+    background-position: -1682px -1243px; } }
+.robot-cross-ready {
+  -webkit-animation: robotcrossready 1s steps(2) infinite;
+  -moz-animation: robotcrossready 1s steps(2) infinite;
+  -ms-animation: robotcrossready 1s steps(2) infinite;
+  animation: robotcrossready 1s steps(2) infinite; }
+@keyframes robotcrossready {
+  from {
+    background-position: -1458px -1243px; }
+  to {
+    background-position: -1682px -1243px; } }
+.robot-normal-to-fight-instance {
+  -webkit-animation: robotnormaltofightinstance 2s steps(14) forwards;
+  -moz-animation: robotnormaltofightinstance 2s steps(14) forwards;
+  -ms-animation: robotnormaltofightinstance 2s steps(14) forwards;
+  animation: robotnormaltofightinstance 2s steps(14) forwards; }
+@keyframes robotnormaltofightinstance {
+  from {
+    background-position: -5px -1464px; }
+  to {
+    background-position: -1581px -1464px; } }
+
+/*# sourceMappingURL=robot.css.map */

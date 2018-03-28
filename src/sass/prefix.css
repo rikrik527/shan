@@ -65,6 +65,9 @@ a {
   color: #fff;
   text-decoration: none; }
 
+body {
+  overscroll-behavior-y: contain; }
+
 img {
   max-width: 100%;
   height: auto; }

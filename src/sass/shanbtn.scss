@@ -50,14 +50,14 @@
     // left: 27%;
     display: none;
     background-image: url('../images/icon2.svg');
-    background-size: 3000%;
-    animation: fireball .5s steps(2) infinite;
+    background-size: 4500%;
+    animation: fireball .5s steps(3) infinite;
     @keyframes fireball {
         from {
-            background-position: -1266px -1165px;
+            background-position: -2024px -1280px;
         }
         to {
-            background-position: -1509px -1165px;
+            background-position: -2360px -1280px;
         }
     }
 }
@@ -81,78 +81,6 @@
     margin: 2%;
 }
 
-.robot-outline {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    /* outline: 1px solid white; */
-    .robot-saying {
-        width: 100px;
-        height: 50px;
-        background: steelblue;
-        position: absolute;
-        text-overflow: ellipsis;
-        word-break: break-all;
-        font-size: 10px;
-        border-radius: 10px;
-        left: 91%;
-        top: -31%;
-        .robot-speak {
-            width: 100%;
-            height: auto;
-            line-height: 20px;
-            /* background: lightblue; */
-            color: white;
-            padding-left: 3px;
-            word-break: break-all;
-            text-overflow: ellipsis;
-            /* vertical-align: middle; */
-            display: block;
-        }
-    }
-    .robot-triangle {
-        border-top: 35px solid steelblue;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        position: absolute;
-        left: 0%;
-        top: 84%;
-        transform-origin: top;
-        transform: rotateZ(52deg);
-    }
-    #robot {
-        width: 100px;
-        height: 100px;
-        background-size: 2500%;
-        transform: translateX(0px) translateY(0px);
-        background-image: url('../images/icon2.svg');
-    }
-    .robot-energy {
-        width: 100px;
-        background: white;
-        height: 10px;
-        border-radius: 10px;
-        position: absolute;
-        .robot-energy-bar {
-            left: 0px;
-            height: 10px;
-            border-radius: 10px;
-            background: $green8;
-            position: absolute;
-        }
-        .icon-energy {
-            background-image: url('../images/icon2.svg');
-            width: 2.5rem;
-            height: 2.5rem;
-            position: absolute;
-            background-size: 4000%;
-            left: -14px;
-            top: -23px;
-            background-position: -944px -1209px;
-        }
-    }
-}
-
 .background-outline {
     position: absolute;
     width: 100%;
@@ -166,7 +94,8 @@
         background-repeat: repeat-x;
         bottom: 0;
         margin: 0 auto;
-        width: 2000px;
+        width: 10000px;
+        left: -100%;
         z-index: -9999999;
         height: 200px;
         position: absolute;
@@ -194,61 +123,23 @@
         background: url('../images/b12.svg')repeat-x;
         background-size: contain;
         bottom: 25%;
-        width: 2000px;
+        width: 10000px;
+        left: -100%;
         margin: 0 auto;
         height: 200px;
-        z-index: -99999999999;
         position: fixed;
     }
-}
-
-.shanli-outline {
-    position: absolute;
-    width: 7rem;
-    height: 7rem;
-    top: 76%;
-    left: 70%;
-    #shan-li {
-        width: 7rem;
-        height: 7rem;
-        background-position: -5px -973px;
-        background-size: 1300%;
-        transition: all 1s linear;
-        transform: translateX(0px) translateY(0px);
-        background-image: url('../images/icon2.svg');
+    .background-4 {
+        background-image: url('../images/mars.png');
+        width: 300px;
+        height: 300px;
+        position: fixed;
+        right: 0px;
+        top: 150px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -9999999999999;
     }
-    .shanli-energy {
-        width: 100px;
-        background: $red6;
-        height: 10px;
-        border-radius: 10px;
-        animation: shanlienergy .5s linear infinite;
-        @keyframes shanlienergy {
-            40% {
-                background: $red8;
-            }
-            80% {
-                background: $red2;
-            }
-        }
-        .shanli-energy-bar {
-            width: 20px;
-            left: 0px;
-            height: 10px;
-            border-radius: 10px;
-            background: $green8;
-            position: absolute;
-        }
-        .energy-pos2 {
-            left: -18px;
-            top: 89px;
-        }
-    }
-}
-
-.energy-pos1 {
-    left: -14px;
-    top: 77px;
 }
 
 .aside-tips {
@@ -709,7 +600,6 @@
         width: 500px;
         height: 50px;
         position: absolute;
-        transition: all 1s linear;
         z-index: 9999999999999;
         top: 0px;
         left: 0px;
@@ -765,28 +655,6 @@
         float: left;
         clear: left;
     }
-}
-
-.number {
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 35px;
-    left: 55px;
-    color: white;
-    transition: all 1s linear;
-    display: none;
-}
-
-.robot-number {
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 35px;
-    left: 55px;
-    color: $blue3;
-    transition: all 1s linear;
-    display: none;
 }
 
 .cross-hair {

@@ -18,12 +18,12 @@ var fix = require('./fix');
 var object = require('./object');
 var shanLi = require('./shanStatus');
 var speech = require('./speech');
-var shan = require('./shanConversation');
+
 var say = require('./say');
 var sourceUrl = ["//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"];
 var location = require('./location');
 var awake = require('./spa');
-
+var shan = require('./shanConversation');
 var gametest = require('./gametest');
 var ctx = require('./context');
 var sprite = require('./context');
@@ -32,10 +32,7 @@ var shanli = require('./shanLiAct');
 
 
 
-obj.get('.icon-personal').onclick = function() {
-    obj.get('.awake-first-section').style.transform = 'rotatey(180deg)'
-    console.log('personal clicked');
-}
+
 
 
 
@@ -49,15 +46,24 @@ window.onload = function() {
           break;
         case "interactive":
           // The document has finished loading. We can now access the DOM elements.
-         obj.get('.loading-bar').style.transition = 'all 1s linear';
-         obj.get('.loading-bar').style.width ='100px';
-         shanli.shanAppear();
+         obj.get('.loading-progress').style.transition = 'all 1s linear';
+         obj.get('.loading-progress').style.width ='100px';
+
+
 
           break;
         case "complete":
           // The page is fully loaded.
-          document.querySelector('.loading').style.display = 'none';
+
+              document.querySelector('.loading').style.display = 'none';
+
           console.log('loaded');
+          (function(){
+              console.log('iffe')
+           var robotOutLine = obj.get('.robot-outline');
+           robotOutLine.id = 'robot-shake';
+          })();
+          robotMenu.addDiv('robot-1000','#robot');
           prologue.slides();
 
 
@@ -71,23 +77,25 @@ window.onload = function() {
 
     // awake.shanLiAwaken.story();
 
-    fix.robot();
-
-    fix.robotMenu();
-    fix.topMenu();
-    fix.arrows();
-    fix.selectMusic();
-    fix.talkToYuShan();
+    // fix.robot();
+robotMenu.robotFlyDown();
+    // fix.robotMenu();
+    // fix.topMenu();
+    // fix.arrows();
+    // fix.selectMusic();
+    // fix.talkToYuShan();
     shan.talk.talkingDialog();
     robotMenu.fightList();
     fix.updates();
-
+robotMenu.init();
+robotMenu.robotEStatus();
+robotMenu.iconRobotFix();
+robotMenu.iconRobotPersonal();
+robotMenu.topMenu();
+robotMenu.submit();
 helper.updateLi.call(update);
 
 
-    // robotMenu.handlePress();
-    // robotMenu.handleRelease();
-    // robotMenu.shootOut();
 fix.robotDead();
 
 console.log('load end')
@@ -158,9 +166,7 @@ function timerIncrease() {
     idleTime += 1;
     if (idleTime > 30) {
 
-        setTimeout(function() {
-            shan.talkBot.createLi();
-        }, shan.talkBot.random(5000));
+
 
     }
 }

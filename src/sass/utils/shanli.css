@@ -190,22 +190,62 @@ button {
   background: none;
   cursor: pointer; }
 
-.xs-player-status {
-  width: 100%;
-  height: 15vh;
-  background: hotpink;
-  position: fixed;
-  top: 0;
-  left: 0%; }
-
-.xs-player-stamina {
-  width: 100px;
-  height: 20px;
-  font-size: 10px;
-  outline: 1px solid;
+.shanli-outline {
   position: absolute;
-  left: 45%;
-  top: 24%;
-  line-height: 20px; }
+  width: 7em;
+  height: 7em;
+  top: 76%;
+  left: 70%; }
+  .shanli-outline #shan-li {
+    width: 7em;
+    height: 7em;
+    background-size: 2052%;
+    transition: all 1s linear;
+    background-image: url("../../images/icon2.svg");
+    background-position: -0px -2170px; }
+    .shanli-outline #shan-li .number {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 35px;
+      left: 55px;
+      color: white;
+      transition: all 1s linear;
+      display: none; }
+  .shanli-outline .shanli-energy {
+    width: 100px;
+    background: red;
+    height: 10px;
+    -webkit-animation: shanlienergy 0.5s linear infinite;
+    -moz-animation: shanlienergy 0.5s linear infinite;
+    -ms-animation: shanlienergy 0.5s linear infinite;
+    animation: shanlienergy 0.5s linear infinite; }
+@keyframes shanlienergy {
+  40% {
+    background: #d32f2f; }
+  80% {
+    background: #ffcdd2; } }
+    .shanli-outline .shanli-energy .shanli-energy-bar {
+      width: 20px;
+      left: 0px;
+      height: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      background: #388e3c;
+      position: absolute; }
+    .shanli-outline .shanli-energy .icon-energy {
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      background-image: url("../../images/icon2.svg");
+      background-size: 7000%;
+      background-position: -2743px -431px; }
+    .shanli-outline .shanli-energy .energy-pos2 {
+      left: -18px;
+      top: 89px; }
 
-/*# sourceMappingURL=xs-player-status.css.map */
+/*# sourceMappingURL=shanli.css.map */

@@ -39,6 +39,30 @@
     }
 }
 
+.robot-introduce {
+    @include animation(robotintroduce 1s steps(11) forwards);
+    @keyframes robotintroduce {
+        from {
+            background-position: -826px -318px;
+        }
+        to {
+            background-position: -1971px -318px;
+        }
+    }
+}
+
+.robot-heiyo {
+    @include animation(robotheiyo 3s steps(20) forwards);
+    @keyframes robotheiyo {
+        from {
+            background-position: -0px -1255px;
+        }
+        to {
+            background-position: -2083px -1255px;
+        }
+    }
+}
+
 .heart-explode {
     background-image: url('../images/icon2.svg');
     background-size: 1600%;
@@ -130,32 +154,80 @@
     }
 }
 
-.robot-shooting {
-    animation: robotshooting 1s steps(9) infinite;
-    @keyframes robotshooting {
+.robot-cross-ready {
+    animation: robotcrossready 1s steps(3) forwards;
+    @keyframes robotcrossready {
         from {
-            background-position: 0px -938px;
+            background-position: -622px -1148px;
         }
         to {
-            background-position: -938px -938px;
+            background-position: -935px -1148px;
         }
     }
 }
 
-.robot-power {
-    animation: robotpower .5s steps(3) infinite;
-    @keyframes robotpower {
+.robot-cross-charging {
+    animation: robotcharging .5s steps(3) infinite;
+    @keyframes robotcharging {
         from {
-            background-position: -0px -416px;
+            background-position: -935px -1148px;
         }
         to {
-            background-position: -311px -416px;
+            background-position: -1142px -1148px;
         }
     }
 }
 
-.robot-love-arrow {
-    background-position: -105px -418px;
+.robot-cross-fire {
+    animation: robotcrossfire .5s steps(2) forwards;
+    @keyframes robotcrossfire {
+        from {
+            background-position: -1142px -1148px;
+        }
+        to {
+            background-position: -1350px -1148px;
+        }
+    }
+}
+
+.robot-cross-set {
+    background-position: -622px -1148px;
+}
+
+#robot-shake {
+    animation: robotshake .5s linear infinite;
+    @keyframes robotshake {
+        40% {
+            transform: translateY(1px);
+        }
+        80% {
+            transform: translateY(-1px)
+        }
+    }
+}
+
+.robot-repair-to-fight-instance {
+    animation: robotrepairtofightinstance 2s steps(12) forwards;
+    @keyframes robotrepairtofightinstance {
+        from {
+            background-position: -0px -2600px;
+        }
+        to {
+            background-position: -1251px -2600px;
+        }
+    }
+}
+
+.robot-fight-instance {
+    animation: robotfightinstance .5s steps(2) infinite;
+    @keyframes robotfightinstance {
+        from {
+            background-position: -1040px -2600px;
+        }
+        to {
+            background-position: -1251px -2600px;
+        }
+    }
 }
 
 .robot-fly-down {

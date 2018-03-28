@@ -33,6 +33,7 @@ var robotEnergy = 100;
 robotE.style.width = robotEnergy + 'px';
 console.log('robotE is style 100px');
 
+
 module.exports.robotMenu = function () {
     var iconPersonal = obj.get('.icon-personal'),
         iconService = obj.get('.icon-service'),
@@ -56,7 +57,8 @@ module.exports.robotMenu = function () {
         pos1 = obj.get('.pos1'),
         pos2 = obj.get('.pos2'),
         pos3 = obj.get('.pos3'),
-        gameAction = obj.get('.game-action');
+        gameAction = obj.get('.game-action'),
+        awakeSecond = obj.get('.awake-second-section');
 
     iconFix.onclick = (function () {
         var click = 0;
@@ -79,11 +81,73 @@ module.exports.robotMenu = function () {
         }
 
     })();
+    $('.icon-personal').on('click',(function(){
+        var click = 0;
+        console.log('iconperosonal clicked')
+        return function(){
+            console.log('iconp clicked')
+            click++
+            if(click == 3) click = 1;
+            switch(click){
+              case 1: robot.removeAttribute('class');
+              robot.setAttribute('class','robot-repair-to-fight-instance');
+              talk('戰鬥模式已經啟動',3000);
+        setTimeout(() => {
+                  robot.classList.remove('robot-repair-to-fight-instance');
+                  robot.classList.add('robot-fight-instance');
+
+                  talk('幹你娘的!雨珊!你看!我把戰鬥力提高了二十倍!夠屌吧我的造型!媽呀!這個力量已經超過我本身能控制的程度了!',3000);
+                  console.log('paralax have been excuted');
+
+              }, 4000);
 
 
+              break;
+              case 2: robotOutLine.style.left = '11%';
+              awakeSecond.style.left = '100%';
+              awakeSecond.style.zIndex = '9';
+
+              break;
+            }
+        }
+    })());
+
+ function paralax(){
+     console.log('paralax actived');
+    var back4 = obj.get('.background-4');
+    var back = obj.get('.background');
+var back3  = obj.get('.background-3');
+    var robotOutLine = obj.get('.robot-outline');
+    var fly = 11;
+    var ba = 0;
+    return (function(){
+        console.log('returned');
+        var id = setInterval(function(){
+            console.log('setinterval',fly,ba);
+            fly ++;
+            ba --;
+            back4.style.right = fly/2+'%';
+            robotOutLine.style.left = fly +'%';
+            back.style.transform = 'translatex('+ba +'px)';
+            back3.style.transform = 'translatex('+fly/2+'px)';
+
+            if(fly >= 130){
+                clearInterval(id);
+                console.log('cleared');
+            }
+            console.log('runing')
+        },50);
+
+
+
+    })();
+ }
 
 
 }
+
+
+
 module.exports.topMenu = function () {
     var crossHair = obj.get('.cross-hair');
     crossHair.style.display = 'none';
@@ -203,13 +267,13 @@ console.log('case2',loveEnergyy);
         }, 3000);
 
         setTimeout(() => {
-            robot.classList.add('robot-power');
-            console.log('robot-power')
+            robot.classList.add('robot-cross');
+            console.log('robot-cross')
             talkBar('愛的弓箭啟動', 4000);
         }, 4000);
         setTimeout(function () {
-            robot.classList.remove('robot-power');
-            console.log('remove robot-power')
+            robot.classList.remove('robot-cross');
+            console.log('remove robot-cross')
 
 
         }, 7000);
@@ -239,45 +303,20 @@ console.log('case2',loveEnergyy);
         console.log('loveSparrow have been activeted')
         var robot = obj.getId('robot');
         var handle1 = obj.get('.handle1');
-        var handle2 = obj.get('.handle2');
-        var handle3 = obj.get('.handle3');
-        var handle4 = obj.get('.handle4');
-        var powerx = obj.get('.power-x');
-        var powery = obj.get('.power-y');
+
+
         robot.style.transition = 'all .5s linear';
-        var idleTime = 0;
-        var increase = [];
-        var increaseS = '';
-        var decrease = '';
-        var decreaseS = '';
-        var shoot = '';
-        var power = 0;
-        var powerX= 0;
-        var powerY = 0;
-        var fLeft = 0;
-        var fTop = 0;
-        var speed = 40;
-        var deg = 0;
-        var translateX = 0;
-        var translateY = 0;
-        var down = false;
+
+
         var fireball = obj.get('.fireball');
-        // var increase2 = '';
-        // var increase2S = '';
-        // var increase3S = '';
-        // var increase3 = '';
-        // var decrease2S = '';
-        // var decrease3S = '';
-        // var decrease2 = '';
-        // var decrease3 ='';
+
         var shanLiOutline = obj.get('.shanli-outline');
 
-        var angle;
-        var left = 0;
-        var top = 0;
+
         var isDown = false;
         var getShan = false;
         var lastposition = [null,null];
+        $('#robot').addClass('robot-cross-set')
         document.ontouchmove = function(e){
             if(!isDown){
                 return false;
@@ -297,7 +336,9 @@ console.log('case2',loveEnergyy);
                 if(click == 3)click = 1;
                 switch(click){
                     case 1:$('.touch-boxcontrol').css('display','block');
+                    console.log('what is touch')
                     case 2:$('.touch-boxcontrol').css('display','none');
+                    console.log('what is touch not')
                 }
                 if(e.id == 'shan-li'){
                     console.log('gotit');
@@ -332,7 +373,7 @@ console.log('case2',loveEnergyy);
                 crossHair.style.cssText = 'left:'+(e.clientX-25)+'px;top:'+(e.clientY-25)+'px';
                 console.log(e.clientX,e.clientY,crossHair);
 
-               crossHair.onclick = (function(){
+               crossHair.onclick = (function(e){
                 var click = 0;
                 return function(){
                 click++;
@@ -343,7 +384,9 @@ console.log('case2',loveEnergyy);
                     switch(click){
                         case 1:var touchBc = obj.get('.touch-boxcontrol');touchBc.style.display = 'block';
                         console.log('what')
-                        case 2:$('.touch-boxcontrol').css('display','none');
+                        case 2:var touchBc = obj.get('.touch-boxcontrol');
+                        touchBc.style.display = 'none';
+                        console.log('what what')
                     }}})();
                     if(e.id == 'shan-li'){
                         console.log('gotit');
@@ -378,7 +421,7 @@ console.log('case2',loveEnergyy);
                     console.log('got crosshair')
 
                 }
-          })
+          });
           $('.cross-hair').on('mouseup',function(e){
             isDown = false;
             console.log('mouse is up')
@@ -418,11 +461,11 @@ $('.handle1').on('click',function(){
           console.log('handle4',power);
       })
     }
-})
+});
 
 
         function shootOut() {
-robot.classList.add('robot-shooting');
+robot.classList.add('robot-cross-ready');
             var fireball = obj.get('.fireball');
             fireball.style.display = 'block';
             for (var i = 0; i < 10; i++) {
@@ -436,12 +479,11 @@ robot.classList.add('robot-shooting');
 
 
             setTimeout(() => {
-                robot.classList.remove('robot-shooting');
+                robot.classList.remove('robot-cross-ready');
 
             }, 1000);
 
-            var fleft = (fLeft += deltaX);
-            var ftop = (fTop += deltaY);
+
             shoot = setInterval(fireshoot, 50);
 
             function fireshoot() {
@@ -477,7 +519,7 @@ robot.classList.add('robot-shooting');
             console.log('fireballdetection have been activeted')
 
             var fireball = obj.get('.fireball');
-            var shanLi = obj.getId('shan-li');
+            var shanLi = obj.get('.shanli-outline');
             var value = 0;
 
             var fw, fh, fx, fy, sw, sh, sx, sy,cw,ch,cx,cy;
@@ -550,7 +592,7 @@ console.log('end',hit)
         var hit2 = false;
         function crossHairDetection(){
             var crossHair = obj.get('.cross-hair');
-            var shanLi = obj.getId('shan-li');
+            var shanLi = obj.get('.shanli-outline');
 
             var cw,ch,cx,cy,sw,sh,sx,sy;
             cw = crossHair.offsetWidth;
@@ -745,8 +787,8 @@ module.exports.arrows = function () {
               todo.style.left = '0px';
            }
             lastposition = event.clientX;
-            position -= change;
-            todo.style.left = (position-125) +'px';
+            position = change;
+            todo.style.left = (position-150) +'px';
 
 
         }
@@ -785,18 +827,14 @@ module.exports.arrows = function () {
                     }
 
                 }
-            }else{
-                todo.style.left = (position-210)+'px';
             }
             if(window.getComputedStyle(todo).getPropertyValue('left') >= '0px'){
                 console.log('bigger');
                todo.style.left = '0px';
-            }else{
-                todo.style.left = (position-250)+'px';
             }
              lastposition = touched.clientX;
-             position -= change;
-             todo.style.left = (position-210) +'px';
+             position = change;
+             todo.style.left = (position-150) +'px';
 
 
          }
@@ -922,52 +960,39 @@ module.exports.robot = function () {
     setTimeout(() => {
         talk('修理模式已經啟動', 3000);
     }, 18000);
-    var wholeContext = [];
 
-    function talk(word, time) {
-        var robotSaying = obj.get('.robot-saying');
-        robotSaying.style.display = 'block';
-        var txt = document.createTextNode(word);
-        var div = obj.create('div');
-        var robotSaying = obj.get('.robot-saying');
-        robotSaying.appendChild(div);
-        div.classList.add('robot-speak');
-        var local = localStorage.setItem('history', wholeContext.push(word));
-        var getLocal = localStorage.getItem('history');
-        speech(word);
-        div.innerHTML = word;
-        setTimeout(() => {
-            var robotSpeak = obj.get('.robot-speak');
-            div.innerHTML = '';
-            robotSaying.style.display = 'none';
-            robotSpeak.parentNode.removeChild(robotSpeak);
-            console.log('removed');
+}
+var wholeContext = [];
 
-        }, time);
+function talk(word, time) {
+    var robotSaying = obj.get('.robot-saying');
+    robotSaying.style.display = 'block';
+    var txt = document.createTextNode(word);
+    var div = obj.create('div');
+    var robotSaying = obj.get('.robot-saying');
+    robotSaying.appendChild(div);
+    div.classList.add('robot-speak');
+    var local = localStorage.setItem('history', wholeContext.push(word));
+    var getLocal = localStorage.getItem('history');
+    speech(word);
+    div.innerHTML = word;
+    setTimeout(() => {
+        var robotSpeak = obj.get('.robot-speak');
+        div.innerHTML = '';
+        robotSaying.style.display = 'none';
+        robotSpeak.parentNode.removeChild(robotSpeak);
+        console.log('removed');
 
-        var historyBtn = obj.get('.history-btn');
-        historyBtn.onclick = function () {
-            var historyBoard = obj.get('.history-board');
-            historyBoard.innerHTML = getLocal.toString();
-        }
+    }, time);
+
+    var historyBtn = obj.get('.history-btn');
+    historyBtn.onclick = function () {
+        var historyBoard = obj.get('.history-board');
+        historyBoard.innerHTML = getLocal.toString();
     }
 }
 module.exports.selectMusic = function () {
-    var AudioContext = window.AudioContext || window.webkitAudioContext;
-    var context = new window.AudioContext;
-    var audio = new Audio() || new webkitAudio;
-    var audio2 = new Audio() || new webkitAudio;
-    var songList = [epic, memories, wind, gameover, charging, fire1, robotmove];
 
-    audio.src = songList[0];
-
-    audio2.src = songList[2];
-    audio.play();
-    audio2.play();
-
-    console.log(audio)
-    audio.loop = true;
-    audio2.loop = true;
     document.onkeydown = function (e) {
         var key = e.which || e.keyCode;
         if (key == 81) {
@@ -1158,4 +1183,137 @@ module.exports.snow = function(){
         var animateInterval = setInterval(animate,30);
     }
     initCanvas();
+}
+module.exports.drawCanvas = function(){
+
+        var canvas = obj.getId('canvas');
+        var ctx = canvas.getContext('2d');
+        var w = canvas.width = window.innerWidth;
+        var h = canvas.height = window.innerHeight;
+
+
+
+    function resizing(){
+        w = window.innerWidth;
+        h = window.innerHeight;
+        console.log('resize canvas');
+
+    }
+    document.ontouchstart = function(e){
+
+        var touch = e.targetTouches[0];
+        console.log('touchstart')
+    }
+    window.addEventListener('resize',resizing,false);
+    document.ontouchmove = function(e){
+        console.log('touchmove')
+        var touched = e.changedTouches[0];
+        var mouse = {
+            x:touched.clientX,
+            y:touched.clientY
+        }
+        function draw(){
+            ctx.beginPath();
+            ctx.clearRect(0,0,w,h);
+            ctx.moveTo(obj.getId('robot').getBoundingClientRect().x,obj.getId('robot').getBoundingClientRect().y);
+            ctx.bezierCurveTo(mouse.x,mouse.y,mouse.x+mouse.y,Math.PI*2,Math.sin(mouse.x),Math.cos(mouse.y));
+            ctx.strokeStyle = 'white';
+            ctx.stroke();
+            ctx.closePath();
+            console.log('yes');
+        }
+        draw();
+    }
+    document.onmousemove = function(e){
+      console.log('move')
+        var mouse = {
+            x:e.clientX,
+            y:e.clientY
+        }
+        function draw(){
+            ctx.beginPath();
+            ctx.clearRect(0,0,w,h);
+            ctx.moveTo(obj.getId('robot').getBoundingClientRect().x,obj.getId('robot').getBoundingClientRect().y);
+            ctx.bezierCurveTo(mouse.x,mouse.y,mouse.x+mouse.y,Math.PI*2,Math.sin(mouse.x),Math.cos(mouse.y));
+            ctx.strokeStyle = 'white';
+            ctx.stroke();
+            ctx.closePath();
+            console.log('yes');
+        }
+        draw();
+    }
+}
+module.exports.circle = function(){
+    var canvas = document.getElementById('canvas');
+    var c = canvas.getContext('2d');
+    canvas.width = window.innerWidth/2;
+    canvas.height = window.innerHeight/2;
+    var mouse = {
+        x:innerWidth/2,
+        y:innerHeight/2
+    }
+    var colors = [
+        '#2185c5'
+    ]
+
+    addEventListener('mousemove',event =>{
+        mouse.x = event.clientX;
+        mouse.y = event.clientY;
+    });
+    addEventListener('resize',()=>{
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+    })
+    function randomIntFromRange(min,max){
+        return Math.floor(Math.random()*(max - min + 1)+ min);
+    }
+    function randomColor(colors){
+        return colors[Math.floor(Math.random()* colors.length)];
+    }
+    console.log('circle');
+    function particle(x,y,radius,color){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.radians = Math.random() * Math.PI * 2;
+        this.velocity = 0.05;
+        this.distanceFromCenter = {
+            x:randomIntFromRange(50,120),
+            y:randomIntFromRange(50,120)
+        };
+        this.update = function(){
+            this.radians += this.velocity;
+            this.x = x + Math.cos(this.radians)* this.distanceFromCenter.x;
+            this.y = y + Math.sin(this.radians)* 100;
+
+
+            this.draw();
+        };
+        this.draw = function(){
+            c.beginPath();
+            c.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
+            c.fillStyle = this.color;
+            c.fill();
+            c.closePath();
+        }
+    }
+    let particles;
+    function init(){
+        particles = [];
+        for(var i = 0; i < 50; i++){
+            particles.push(new particle(canvas.width,canvas.height/2,5,'blue'))
+        }
+        console.log(particles);
+    }
+    function animate(){
+        requestAnimationFrame(animate);
+        c.clearRect(0,0,canvas.width,canvas.height);
+        particles.forEach(particle =>{
+            particle.update();
+        })
+    }
+    init();
+    animate();
+
 }

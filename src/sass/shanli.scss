@@ -79,11 +79,11 @@
         .shan-li-eye {
             position: absolute;
             width: 13px;
-            height: 2px;
+            height: 7px;
             border: 0.5px solid;
             background: white;
             overflow: hidden;
-            top: 10px;
+            top: 9px;
             left: 1px;
             border-bottom-left-radius: 5px;
             border-top-right-radius: 10px;
@@ -105,10 +105,10 @@
         .shan-li-eye2 {
             position: absolute;
             width: 13px;
-            height: 2px;
+            height: 7px;
             border: 0.5px solid;
             background: white;
-            top: 10px;
+            top: 9px;
             left: 20px;
             -ms-transform: rotate(-15deg);
             border-top-left-radius: 10px;
@@ -129,12 +129,15 @@
                 @keyframes lieyeball {
                     30% {
                         background: $blue5;
+                        transform: translateX(-3px)
                     }
                     60% {
                         background: $red5;
+                        transform: translateX(3px)
                     }
                     90% {
-                        background: $blue5
+                        background: $blue5;
+                        transform: translateX(-3px)
                     }
                 }
             }
@@ -1976,6 +1979,154 @@
         }
         .shan-li-cat-mo6 {
             @include shancat(30px, 1px, 0px, 0px);
+        }
+    }
+}
+
+.shan-li-ship {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 300px;
+    height: 200px;
+    .shan-li-ship-head {
+        position: absolute;
+        top: -16%;
+        left: -11%;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px 0 0 30px;
+        background: deeppink;
+        transform: translateZ(67px);
+        .shan-li-ship-head2 {
+            position: absolute;
+            top: 0%;
+            left: 101%;
+            width: 50px;
+            height: 50px;
+            background: deeppink;
+            border-radius: 0 30px 30px 0;
+        }
+    }
+    .shan-li-ship-body {
+        position: absolute;
+        top: -26%;
+        left: -24%;
+        width: 170px;
+        height: 50px;
+        border-radius: 30px;
+        background: deeppink;
+        transform: translatez(0px);
+        z-index: -99;
+        .shan-li-ship-fly1 {
+            position: absolute;
+            top: 0%;
+            left: 87%;
+            width: 83px;
+            height: 15px;
+            background: deeppink;
+            .shan-li-ship-fly2 {
+                position: absolute;
+                top: 0%;
+                left: 100%;
+                border-left: 50px solid deeppink;
+                border-top: 1px solid transparent;
+                border-bottom: 14px solid transparent;
+                width: 50px;
+                height: 16px;
+                .shan-li-ship-bomb {
+                    position: absolute;
+                    top: 0%;
+                    left: -92px;
+                    width: 50px;
+                    height: 50px;
+                    background: deeppink;
+                    border-radius: 100px;
+                }
+            }
+        }
+        .shan-li-ship-fly3 {
+            position: absolute;
+            top: 0%;
+            left: -35%;
+            width: 83px;
+            height: 15px;
+            background: deeppink;
+            .shan-li-ship-fly4 {
+                position: absolute;
+                top: 0%;
+                left: -61%;
+                border-right: 50px solid deeppink;
+                width: 50px;
+                /* height: 50px; */
+                border-top: 0px solid transparent;
+                border-bottom: 15px solid transparent;
+                .shan-li-ship-bomb2 {
+                    position: absolute;
+                    top: 0%;
+                    left: 46px;
+                    width: 50px;
+                    height: 50px;
+                    background: deeppink;
+                    border-radius: 100px;
+                }
+            }
+        }
+        .shan-li-ship-foot {
+            z-index: 9;
+            position: absolute;
+            top: 105%;
+            left: 29%;
+            width: 40px;
+            height: 31px;
+            border-radius: 0 0 0px 30px;
+            background: hotpink;
+            .shan-li-ship-foot-leg {
+                position: absolute;
+                top: 79%;
+                left: 25%;
+                width: 10px;
+                height: 6px;
+                background: deeppink;
+                .shan-li-ship-tire {
+                    position: absolute;
+                    top: 88%;
+                    left: -56%;
+                    /* width: 50px; */
+                    /* height: 50px; */
+                    /* background: lightpink; */
+                    width: 23px;
+                    height: 26px;
+                    background: lightpink;
+                    border-radius: 30px;
+                }
+            }
+        }
+        .shan-li-ship-foot2 {
+            position: absolute;
+            top: 105%;
+            left: 52%;
+            width: 40px;
+            height: 31px;
+            border-radius: 0 0 30px 0;
+            background: hotpink;
+            .shan-li-ship-foot-leg2 {
+                position: absolute;
+                top: 80%;
+                left: 42%;
+                width: 10px;
+                height: 6px;
+                background: deeppink;
+                .shan-li-ship-tire2 {
+                    position: absolute;
+                    top: 103%;
+                    left: -54%;
+                    width: 23px;
+                    height: 26px;
+                    background: lightpink;
+                    border-radius: 30px;
+                }
+            }
         }
     }
 }

@@ -70,7 +70,7 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            ['es2015']
+                            ['es2015', 'react']
                         ]
                     }
                 }]
@@ -100,6 +100,9 @@ module.exports = {
             },
         ]
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     devServer: {
         contentBase: path.resolve(__dirname, './public/assets/html'),
         compress: true,
@@ -114,7 +117,7 @@ module.exports = {
                 minimize: true,
                 postcss: [
                     autoprefixer({
-                        browsers: ['last 2 version', 'Chrome >=49', 'iOS >= 8',
+                        browsers: ['last 2 version', '>5%', 'Chrome >=49', 'iOS >= 8',
                             'Safari >= 8', 'Firefox >=49', 'Edge >= 11', 'ie >= 9'
                         ]
                     }),
@@ -163,7 +166,7 @@ module.exports = {
             inject: true,
             template: './template/shan.html', //load custom template .ejs by default.
             filename: 'html/shan.html',
-            chunks: ['app']
+            chunks: ['app', 'react']
         }), new HtmlWebpackPlugin({
             title: 'sign-up-form',
             minify: {

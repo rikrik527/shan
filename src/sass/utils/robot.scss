@@ -1,0 +1,237 @@
+@import '../color';
+@import '../prefix';
+.robot-outline {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    .robot-saying {
+        min-width: 100%;
+        max-width: 50%;
+        max-height: 50%;
+        min-height: 100%;
+        background: steelblue;
+        position: absolute;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        font-size: 10px;
+        @include border-radius(10px);
+        top: -31%;
+        left: 91%;
+        .robot-speak {
+            width: 100%;
+            height: auto;
+            color: white;
+            padding-left: 3px;
+            word-break: break-all;
+            display: block;
+        }
+        .robot-triangle {
+            border-top: 35px solid steelblue;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            position: absolute;
+            left: 0%;
+            top: 84%;
+            transform-origin: top;
+            transform: rotateZ(52deg);
+        }
+    }
+    #robot {
+        width: 100px;
+        height: 100px;
+        background-size: 4500%;
+        background-image: url('../../images/icon2.svg');
+        .robot-number {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 35px;
+            left: 55px;
+            color: #90caf9;
+            transition: all 1s linear;
+            display: none;
+        }
+    }
+    .robot-energy {
+        width: 100px;
+        background: white;
+        height: 10px;
+        border-radius: 10px;
+        position: absolute;
+        .robot-energy-bar {
+            left: 0px;
+            height: 10px;
+            border-radius: 10px;
+            background: #388e3c;
+            position: absolute;
+            width: 100px;
+        }
+        .icon-energy {
+            width: 2.5rem;
+            height: 2.5rem;
+            position: absolute;
+            background-image: url('../../images/icon2.svg');
+            background-size: 7000%;
+            background-position: -2743px -431px;
+        }
+        .energy-pos1 {
+            left: -14px;
+            top: -23px;
+        }
+    }
+}
+
+.robot-repair-instance {
+    background-position: -7px -9px;
+}
+
+.robot-normal-instance {
+    background-position: -7px -115px;
+}
+
+.robot-normal-to-repair {
+    @include animation(robotnormaltorepair 1s steps(11) forwards);
+    @keyframes robotnormaltorepair {
+        from {
+            background-position: -7px -115px;
+        }
+        to {
+            background-position: -1127px -115px;
+        }
+    }
+}
+
+.robot-fly-down {
+    background-position: -7px -340px;
+}
+
+.robot-landing-open-mask {
+    @include animation(robotlandingopenmask 1s steps(8) forwards);
+    @keyframes robotlandingopenmask {
+        from {
+            background-position: -7px -340px;
+        }
+        to {
+            background-position: -903px -340px;
+        }
+    }
+}
+
+.robot-nice-to-meet-you {
+    @include animation(nicetomeetyou 1.5s steps(12) forwards);
+    @keyframes nicetomeetyou {
+        from {
+            background-position: -903px -340px;
+        }
+        to {
+            background-position: -2256px -340px;
+        }
+    }
+}
+
+.robot-fireworks {
+    @include animation(robotfireworks 2s steps(8) forwards);
+    @keyframes robotfireworks {
+        from {
+            background-position: -2256px -340px;
+        }
+        to {
+            background-position: -3151px -340px;
+        }
+    }
+}
+
+.robot-1000 {
+    width: 100px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    @include animation(robot1000 1s linear infinite);
+    @keyframes robot1000 {
+        from {
+            color: white;
+            top: 65%;
+            opacity: 0;
+            font-size: 10px;
+        }
+        to {
+            top: 35%;
+            opacity: 1;
+            color: yellow;
+            font-size: 30px;
+        }
+    }
+}
+
+.robot-that-is-shan {
+    @include animation(robotthatisshan 3s steps(26) forwards);
+    @keyframes robotthatisshan {
+        from {
+            background-position: -1px -1356px;
+        }
+        to {
+            background-position: -2924px -1356px;
+        }
+    }
+}
+
+.robot-say-long-story1 {
+    @include animation(robotsaylongstory1 3s steps(23) forwards);
+    @keyframes robotsaylongstory1 {
+        from {
+            background-position: -4px -1580px;
+        }
+        to {
+            background-position: -2587px -1580px;
+        }
+    }
+}
+
+.robot-fly-turn {
+    @include animation(robotflytrun 1s steps(6));
+    @keyframes robotflytrun {
+        from {
+            background-position: -4px -571px;
+        }
+        to {
+            background-position: -671px -571px;
+        }
+    }
+}
+
+// loveenergy
+.robot-cross-get {
+    animation: robotcrossget 3s steps(15) forwards;
+    @keyframes robotcrossget {
+        from {
+            background-position: -1px -1243px;
+        }
+        to {
+            background-position: -1682px -1243px;
+        }
+    }
+}
+
+.robot-cross-ready {
+    @include animation(robotcrossready 1s steps(2) infinite);
+    @keyframes robotcrossready {
+        from {
+            background-position: -1458px -1243px;
+        }
+        to {
+            background-position: -1682px -1243px;
+        }
+    }
+}
+
+.robot-normal-to-fight-instance {
+    @include animation(robotnormaltofightinstance 2s steps(14) forwards);
+    @keyframes robotnormaltofightinstance {
+        from {
+            background-position: -5px -1464px;
+        }
+        to {
+            background-position: -1581px -1464px
+        }
+    }
+}

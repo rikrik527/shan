@@ -2,7 +2,7 @@
 @import './prefix';
 .game-robots {
     width: 100vw;
-    height: 15vh;
+    margin: 1%;
     /* outline: 1px solid; */
     /* float: left; */
     z-index: 9999999999999999999;
@@ -24,7 +24,7 @@
     justify-content: space-between;
     align-items: flex-start;
     /* margin-left: 1rem; */
-    top: 16%;
+    top: 2%;
     left: 3%;
 }
 
