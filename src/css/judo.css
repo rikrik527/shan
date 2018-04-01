@@ -22,6 +22,94 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
+a {
+  outline: none;
+  color: #fff;
+  text-decoration: none; }
+
+body {
+  overscroll-behavior-y: contain; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
+figure {
+  position: absolute; }
+
+ul,
+li,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none !important; }
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
 .clearfix:after {
   display: block;
   visibility: hidden;
@@ -39,7 +127,9 @@
 .clearfix {
   display: flow-root; }
 
-input[type='button'], input[type='submit'], button {
+input[type=button],
+input[type=submit],
+button {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -59,15 +149,193 @@ iframe:focus {
 iframe[seamless] {
   display: block; }
 
+progress {
+  display: block;
+  /* default: inline-block */
+  margin: 2em auto;
+  padding: 4px;
+  border: 0 none;
+  background: currentColor;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  background-color: yellow;
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+.judo-btn {
+  width: 32%;
+  height: 400px;
+  margin: 10px;
+  transform-style: preserve-3d;
+  background: lavender;
+  animation: judo-btn 2s ease 1s;
+  display: block;
+  float: left; }
+  .judo-btn .judo-lowbox {
+    width: 38%;
+    height: 100%;
+    background: black;
+    color: #bbdefb;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: baseline;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-shadow: 0px 0px 3px #1565c0; }
+    .judo-btn .judo-lowbox .judo-name {
+      display: inline-block;
+      width: 100%;
+      height: 2em;
+      color: white;
+      text-align: center;
+      line-height: 25px;
+      font-size: 10px; }
+    .judo-btn .judo-lowbox .judo-photo {
+      width: 100px;
+      align-self: center; }
+    .judo-btn .judo-lowbox .judo-profile {
+      font-size: 10px; }
+    .judo-btn .judo-lowbox .judo-status {
+      display: block;
+      overflow: scroll;
+      padding: 2px;
+      width: 100%;
+      height: auto;
+      background: black; }
+      .judo-btn .judo-lowbox .judo-status .judo-info {
+        font-family: "Cutive Mono", monospace;
+        font-size: 10px;
+        margin: 0 0 0.5em;
+        white-space: pre-wrap;
+        word-break: break-all; }
+
+.enter-btn {
+  position: absolute;
+  width: 100px;
+  height: 22px;
+  margin: -11px 0 0 -50px;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer; }
+
+.btn-pos1 {
+  color: cyan;
+  left: 62%;
+  background: darkslateblue;
+  border: 2px solid darkblue;
+  top: 88%; }
+
 .judo-boxcontrol {
   position: absolute;
-  top: 39%;
-  left: 48%;
+  top: 65%;
+  left: 80%;
+  margin: -50px 0 0 -50px;
   z-index: 9999;
   width: 100px;
   transform-style: preserve-3d;
   perspective: 1300px;
   outline: 1px solid;
+  transform: rotateX();
+  transform: rotatey();
+  transform: rotatez();
+  transform: translateX();
+  transform: translatey();
+  transform: translatez(10px);
+  -webkit-transform: rotatex();
+  -o-transform: rotateX();
+  -webkit-transform: rotatey();
+  -o-transform: rotatey();
+  -webkit-transform: rotatez();
+  -o-transform: rotatez();
+  -webkit-transform: translatex();
+  -o-transform: translateX();
+  -webkit-transform: translatey();
+  -o-transform: translatey();
+  -webkit-transform: translatez(10px);
+  -o-transform: translatez(10px);
   height: 100px;
   cursor: pointer;
   transition: all 1s linear;
@@ -1054,7 +1322,7 @@ iframe[seamless] {
     background-size: contain;
     background-repeat: no-repeat;
     transform-origin: left center;
-    background-image: url("../images/flag.png");
+    background-image: url("/images/flag.png");
     background-blend-mode: multiply;
     transform-origin: left center;
     animation: judoeffect2 3s linear infinite; }

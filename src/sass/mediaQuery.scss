@@ -44,12 +44,22 @@
 
 /* ipad mini */
 
-@media (max-device-width:768px)and(max-device-height:1024px) {}
+@media (max-device-width:768px)and(max-device-height:1024px) {
+    .main-boxcontrol {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        grid-auto-rows: 23rem;
+    }
+}
 
 
 /* xpreia */
 
-@media (max-device-width:360px)and(max-device-height:640px) {}
+@media (max-device-width:360px)and(max-device-height:640px) {
+    .main-boxcontrol {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        grid-auto-rows: 23rem;
+    }
+}
 
 
 /* iphone 6 plus */

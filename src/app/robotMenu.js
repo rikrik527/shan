@@ -20,7 +20,7 @@ robotMenu = {
     iconClose: obj.get('.icon-close-todo'),
     right: obj.get('.right'),
     left: obj.get('.left'),
-    todoIconSlide: obj.get('todo-icon-slide'),
+    todoIconSlide: obj.getId('todo-icon-slide'),
 
     hands: obj.getAll('.hands0,.hands1, .hands2, .hands3, .hands4, .hands5, .hands6, .hands7, .hands8, .hands9'),
 
@@ -56,17 +56,145 @@ robotMenu = {
     background:obj.get('.background'),
     background3:obj.get('.background-3'),
     crossHair:obj.get('.cross-hair'),
+    asideBc:obj.get('.aside-boxcontrol'),
     robotE: 100,
     // init
     init:function(){
         this.bigWords.style.display = 'none';
         this.robotSaying.style.display = 'none';
         this.crossHair.style.display ='none';
-        this.robot.classList.add('robot-normal-instance')
+        this.touchBc.style.display ='none';
+        this.fireball.style.display = 'none';
+        this.robot.classList.add('robot-normal-instance');
+        this.todoIconSlide.style.left = 0+'px';
     },
     robotEStatus: function() {
         this.robotEnergyBar.style.width = this.robotE + 'px';
     },
+    todoIconSlider:function(){
+        // this is todolist icon slider
+         console.log('todoiconslider')
+        var hands = obj.getAll('.hands0,.hands1,.hands2,.hands3,.hands4,.hands5,.hands6,.hands7,.hands8,.hands9');
+        var todoiconslide = obj.getId('todo-icon-slide');
+
+    for(var k = 0; k < hands.length; k++){
+        hands[k].innerHTML = k;
+    }
+        var mouseDown = false;
+        var todoIcon = false;
+        var lastposition = null;
+        var position = 0;
+        var mouseLeft = 0;
+        var touchDown = false;
+        var max = -250;
+        var min = 0;
+        todoiconslide.style.left = mouseLeft +'px';
+      this.todoIconSlide.onmousedown = function(event){
+          console.log('todoiconslide on mousedown')
+          mouseDown = true;
+          if(event.target.className == 'hands0'||event.target.className == 'hands1'||event.target.className == 'hands2'||event.target.className == 'hands3'||event.target.className == 'hands4'||event.target.className == 'hands5'||event.target.className == 'hands6'||event.target.className == 'hands7'||event.target.className == 'hands8'||event.target.className == 'hands9'){
+            console.log('todo-slide');
+            todoIcon = true;
+        }
+      }
+      this.todoIconSlide.onmouseup = function(event){
+         console.log('onmouseup')
+        mouseDown = false;
+          todoIcon = false;
+      }
+      this.todoIconSlide.onmousemove = function(event){
+          if(!mouseDown){
+              return false;
+              console.log('not mousedown');
+          }
+          if(todoIcon){
+            console.log('todo-icon-slide');
+            var todo = obj.getId('todo-icon-slide');
+            var change = 0;
+            if(lastposition){
+                console.log(lastposition);
+                change = (lastposition - event.clientX);
+                console.log('change',change);
+              if(Math.abs(change) > 20){
+                  console.log('change > 20')
+                  change = 0;
+              }
+            }
+            lastposition = event.clientX;
+            mouseLeft -= change;
+            todo.style.left =( mouseLeft - 150)+'px';
+            if((mouseLeft - 150) <= max){
+                console.log('max');
+                todo.style.left = max +'px';
+
+
+            }else if((mouseLeft - 150) >= min){
+                console.log('min');
+                todo.style.left = min+'px';
+            }
+            else{
+                todo.style.left = (mouseLeft - 150)+'px';
+            }
+
+      }
+    }
+    //touch event
+    this.todoIconSlide.ontouchstart = function(event){
+        var touch = event.targetTouches;
+        if(event.target.className == 'hands0'||event.target.className == 'hands1'||event.target.className == 'hands2'||event.target.className == 'hands3'||event.target.className == 'hands4'||event.target.className == 'hands5'||event.target.className == 'hands6'||event.target.className == 'hands7'||event.target.className == 'hands8'||event.target.className == 'hands9'){
+            console.log('todo-slide');
+            todoIcon = true;
+        }
+        touchDown = true;
+        todoIcon = true;
+        console.log('touchstart');
+    }
+    this.todoIconSlide.ontouchend = function(event){
+        touchDown = false;
+        todoIcon = false;
+        console.log('not touched')
+    }
+    this.todoIconSlide.ontouchmove = function(event){
+        if(!touchDown){
+            return false;
+        }
+        var touched = event.changedTouches[0];
+        if(todoIcon){
+            console.log('todo-icon-slide');
+            var todo = obj.getId('todo-icon-slide');
+            var change = 0;
+            if(lastposition){
+                console.log(lastposition);
+                change = (lastposition - touched.clientX);
+
+              if(Math.abs(change) > 20){
+                  console.log('change > 20')
+                  change = 0;
+              }
+            }
+            lastposition = touched.clientX;
+            mouseLeft -= change;
+            todo.style.left =( mouseLeft - 150)+'px';
+            console.log('change',change);
+            if((mouseLeft - 150) <= max){
+                console.log('max');
+                todo.style.left = max +'px';
+
+
+            }else if((mouseLeft - 150) >= min){
+                console.log('min');
+                todo.style.left = min+'px';
+            }
+            else{
+                todo.style.left = (mouseLeft - 150)+'px';
+            }
+
+
+        };
+    }
+
+    },
+
     // iconrobotfix is the fix button click it todolist for fixing shan will pop up , inside todolist there are small functions each function is a robot skill set
     iconRobotFix: function() {
         this.iconFix.onclick = (function() {
@@ -109,8 +237,7 @@ robotMenu = {
                         robot.setAttribute('class','robot-normal-to-fight-instance');
                         robotMenu.talk('戰鬥模式已經啟動',3000);
 
-                            robotMenu.paralax();
-                            console.log('paralax');
+
 
                     }
 
@@ -162,10 +289,19 @@ robotMenu = {
         })();
 
     },
+    // a function to let speak dialog always show beside robot
+    robotTalkPos:function(){
+        var robotOutLine = obj.get('.robot-outline');
+        var robotSaying = obj.get('.robot-saying');
+        robotSaying.style.cssText = 'left:'+(robotOutLine.offsetLeft+90)+'px;top:'+(robotOutLine.offsetTop-30)+'px';
+    },
     talk:function(word,time){
         //talk function use to speech words
-        var robotSaying = obj.get('.robot-saying');
+    var robotSaying = obj.get('.robot-saying');
      robotSaying.style.display = 'block';
+
+     robotMenu.robotTalkPos();
+
      var txt = document.createTextNode(word);
      var div = document.createElement('div');
      robotSaying.appendChild(div);
@@ -190,7 +326,7 @@ robotMenu = {
     topMenu: function() {
         // menu for icon fix there are 10
         this.hands[0].onclick = (function() {
-var cross = 0;
+var cross = 1;
             return function(){
                 if (cross == 3) cross = 1;
                 console.log('love return',cross);
@@ -254,7 +390,9 @@ var cross = 0;
     getReady:false,
     fired:false,
 
+
     loveEnergy:function(){
+
         this.submit = true;
         this.skillSet1 = true;
         var li = document.createElement('li');
@@ -263,10 +401,12 @@ var cross = 0;
         li.innerHTML = this.love[0];
         var outside = obj.get('.outside');
         outside.insertAdjacentHTML('afterbegin','<span class="love"></span>');
+
         console.log('loveenergy been excuted',this.skillSet1,this.submit)
 
     },
     removeLoveEnergy: function() {
+
         this.submit = false;
         this.skillSet1 = false;
         var li = obj.get('.outside');
@@ -280,6 +420,7 @@ var cross = 0;
                 return false;
                 console.log('not gonna happen');
             }
+            robotMenu.asideBc.style.cssText = 'display:none';
             robotMenu.todoList.style.display = 'none';
             robotMenu.robot.classList.remove('robot-change');
             robotMenu.iconFix.style.transform = 'scale(1)';
@@ -287,20 +428,29 @@ var cross = 0;
             robotMenu.iconService.style.transform = 'scale(1)';
             robotMenu.iconTalkToYuShan.style.transform = 'scale(1)';
             if(robotMenu.skillSet1){
+            console.log('skillset1 to crossFire in fixset')
+                setTimeout(()=>{
+                    fixSet.crossFire();
+                },3000);
+                // fixSet is in fixSet js add comment tommrow if i remember
+
                 robotMenu.skillSet1 = false;
                 robotMenu.getReady = true;
                 // make skillset1 back to false so we can count it again next round
-                console.log('skillset1');
-                robotMenu.showTime(0,'robot-cross-get');//this function has a class added to robot which will let robot get cross action and will be removed in 7seconds
-                if(robotMenu.getReady == true){
-                   robotMenu.removeLoveEnergy();
-                   console.log('removed loveenergy')
-                }
-                fixSet.crossFire();
+                console.log('skillset1',robotMenu.getReady,this.skillSet1);
+                robotMenu.removeLoveEnergy();
+                //if skillset1 which is loveenergy than we excute removeenergy function
+                robotMenu.showTime(0,'robot-cross-get');//first arguments is var love array this function has a class added to robot which will let robot get cross action and will be removed in 7seconds
 
-            }
+
+
+
+
+            };
+
         }
     },
+
     // decorate function use to make effect in background its purpose is to control classes and robotmenu.love[num],there are multi settimeout the parameters are set
         showTime:function(num,cls){
             // first call var love array number and than call class
@@ -348,7 +498,7 @@ setTimeout(()=>{
 
     //robot first fly down the openning scene begins from here
     robotFlyDown:function(){
-
+this.asideBc.style.display = 'none';
         this.robotOutLine.style.cssText ='transition:all 3s linear;top:-27%;left:35%';
         this.robotSaying.style.display = 'none';
         this.robot.classList.add('robot-fly-down');
@@ -388,6 +538,9 @@ this.robot.classList.remove('robot-fireworks')
     this.talk('咿,呦,那是雨珊,那是雨珊,那是雨珊',4000);
 
 },13000);
+setTimeout(() => {
+    this.asideBc.style.display = 'block';
+}, 18000);
 // setTimeout(()=>{
 //     this.robot.classList.remove('robot-that-is-shan');
 //     this.robot.classList.add('robot-say-long-story1')
@@ -421,3 +574,44 @@ setTimeout(()=>{
 
 }
 module.exports = robotMenu;
+
+
+    // experiment functions
+    function stack(){
+        var items = [];
+        // first come in last go out
+        this.push = function(element){
+            items.push(element);
+            robotMenu.submit = true;
+            robotMenu.skillSet1 = true;
+
+        }
+        this.pop = function(){
+            return items.pop();//return first element
+        };
+        this.peek = function(){
+            return items[items.length - 1];//just to look who is first element not removing or adding
+        };
+        this.isEmpty = function(){
+            return items.length == 0;// check if there is no element
+        }
+        this.size = function(){
+            return items.length;// check how many element
+        }
+        this.clear = function(){
+            return items = [];// empty the elements
+        }
+        this.print = function(){
+            console.log(items.toString());//print the detail to console
+        }
+        this.appendLi = function(){
+            var li = document.createElement('li');
+            li.className = 'outside';
+            robotMenu.todoTitle.appendChild(li);
+            li.innerHTML = items.pop();//need change
+            var outside = obj.get('.outside');
+            outside.insertAdjacentHTML('afterbegin','<span class="love"></span>');
+            console.log('loveenergy been excuted',robotMenu.skillSet1,robotMenu.submit) ;
+        }
+        }
+

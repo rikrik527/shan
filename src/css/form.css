@@ -1,0 +1,500 @@
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+@import url(../css/normalize.css);
+@media screen and (min-width: 901px) and (max-width: 5000px) {
+  .l-display-none {
+    display: none; } }
+@media screen and (min-width: 505px) and (max-width: 900px) {
+  .m-display-none {
+    display: none; } }
+@media screen and (min-width: 320px) and (max-width: 504px) {
+  .xs-display-none {
+    display: none; } }
+@media (max-device-width: 360px) and (max-device-height: 640px) {
+  .todo-list {
+    transform: scale(0.7); } }
+/* iphone 6 6s 7 8 */
+@media (max-device-width: 414px) and (max-device-height: 736px) {
+  .todo-list {
+    transform: scale(0.7); } }
+/* samsung */
+@media (max-device-width: 360px) and (max-device-height: 740px) {
+  .todo-list {
+    transform: scale(0.7); } }
+/* ipad mini */
+/* xpreia */
+/* iphone 6 plus */
+@media (max-device-width: 414px) and (max-device-height: 736px) {
+  .todo-list {
+    transform: scale(0.7); } }
+/* iphone 6*/
+/* iphone5 */
+/* laptop */
+/* laptop 2 */
+/* laptop 3*/
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
+a {
+  outline: none;
+  color: #fff;
+  text-decoration: none; }
+
+body {
+  overscroll-behavior-y: contain; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
+figure {
+  position: absolute; }
+
+ul,
+li,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none !important; }
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type=button],
+input[type=submit],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+progress {
+  display: block;
+  /* default: inline-block */
+  margin: 2em auto;
+  padding: 4px;
+  border: 0 none;
+  background: currentColor;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  background-color: yellow;
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+input::-webkit-input-placeholder {
+  font-size: 12px; }
+
+input[type="textPath"] {
+  width: 100%; }
+
+.label-name,
+.label-password {
+  margin: -21px; }
+  .label-name:focus,
+  .label-password:focus {
+    border: 2px solid #64b5f6; }
+
+#name,
+#email,
+#passowrd,
+#conf-password,
+#birthday {
+  border-radius: 4px; }
+
+#email,
+#password,
+#conf-password,
+#birthday {
+  display: block;
+  margin-left: 72px;
+  margin-top: -4px;
+  width: 279px; }
+
+#name,
+#password {
+  width: 279px;
+  margin-top: 2px;
+  margin-left: 19px; }
+
+.label-email,
+.label-conf-password,
+.label-birthday {
+  margin-left: 11px;
+  display: block;
+  float: left; }
+
+.label-name,
+.label-password {
+  display: block;
+  float: left;
+  margin: 8px; }
+
+.title-shan {
+  width: 37%;
+  height: 4%;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 3px -3px 1px #ad1457;
+  color: #f8bbd0;
+  font-size: 60px;
+  text-decoration: underline;
+  line-height: 18px;
+  top: 0%;
+  left: 4%; }
+  .title-shan .title-author {
+    font-size: 12px;
+    color: lightblue;
+    position: absolute;
+    top: 39px;
+    left: 1px; }
+
+.sign-up-form {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #c2185b, #f8bbd0);
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center; }
+  .sign-up-form .sign-up-title {
+    font-size: 20px;
+    color: #f8bbd0;
+    text-shadow: 1px -1px 3px #ad1457;
+    align-self: center;
+    text-align: center; }
+  .sign-up-form .form-boxcontrol {
+    width: 400px;
+    height: auto;
+    display: block;
+    color: pink;
+    font-size: 16px;
+    border: 1px solid #f8bbd0;
+    border-radius: 4px;
+    font-size: 12px; }
+    .sign-up-form .form-boxcontrol .sign-up-name {
+      display: block;
+      height: 43px;
+      background: darkred;
+      /* vertical-align: middle; */
+      padding-top: 15px;
+      width: 93%;
+      float: left;
+      border-radius: 10px;
+      margin: 3%; }
+    .sign-up-form .form-boxcontrol .sign-up-email {
+      display: block;
+      height: 43px;
+      background: darkred;
+      /* vertical-align: middle; */
+      padding-top: 15px;
+      width: 93%;
+      float: left;
+      border-radius: 10px;
+      margin: 3%; }
+    .sign-up-form .form-boxcontrol .sign-up-password {
+      display: block;
+      height: 43px;
+      background: darkred;
+      /* vertical-align: middle; */
+      padding-top: 15px;
+      width: 93%;
+      float: left;
+      border-radius: 10px;
+      margin: 3%; }
+    .sign-up-form .form-boxcontrol .sign-up-confirm-password {
+      display: block;
+      height: 43px;
+      background: darkred;
+      /* vertical-align: middle; */
+      padding-top: 15px;
+      width: 93%;
+      float: left;
+      border-radius: 10px;
+      margin: 3%; }
+    .sign-up-form .form-boxcontrol .sign-up-birthday {
+      display: block;
+      height: 43px;
+      background: darkred;
+      /* vertical-align: middle; */
+      padding-top: 15px;
+      width: 93%;
+      float: left;
+      border-radius: 10px;
+      margin: 3%;
+      perspective: 1000px;
+      transform-style: preserve-3d; }
+      .sign-up-form .form-boxcontrol .sign-up-birthday #consent-container {
+        display: none;
+        height: 37px;
+        background: red;
+        padding: 9px 8px;
+        width: 78%;
+        border-radius: 10px;
+        margin: -4px 125px;
+        color: azure;
+        z-index: 12;
+        transform: translateZ(2px); }
+        .sign-up-form .form-boxcontrol .sign-up-birthday #consent-container #parent-consent {
+          margin-left: 255px; }
+    .sign-up-form .form-boxcontrol .bio {
+      display: block;
+      height: 30px;
+      background: #f8bbd0;
+      border: 1px solid #c2185b;
+      padding: 10px 16px;
+      width: 93%;
+      float: left;
+      border-radius: 10px;
+      margin: 6px 10px;
+      color: white;
+      text-shadow: 1px 1px 1px #c2185b; }
+      .sign-up-form .form-boxcontrol .bio .label-bio {
+        margin: 59px; }
+      .sign-up-form .form-boxcontrol .bio .form-textarea {
+        margin: 15px 68px; }
+      .sign-up-form .form-boxcontrol .bio #bio-count {
+        float: right;
+        color: black;
+        text-shadow: none;
+        margin: -28px 46px; }
+    .sign-up-form .form-boxcontrol .submit {
+      width: 300px;
+      height: 50px;
+      background: mediumvioletred;
+      float: left;
+      display: block;
+      border-radius: 16px;
+      margin: 26% 12%; }
+    .sign-up-form .form-boxcontrol .submit-page {
+      background: azure;
+      float: left;
+      margin: 3%; }
+    .sign-up-form .form-boxcontrol .login-page {
+      background: azure;
+      float: right;
+      margin: 3%; }
+
+.btn {
+  width: 100px;
+  height: 30px;
+  color: #ad1457;
+  border-radius: 13px;
+  border: 1px solid #ad1457;
+  text-shadow: 1px 1px 3px white; }
+  .btn:hover .login-page {
+    background: #f48fb1; }
+  .btn:hover .submit-page {
+    background: #f48fb1; }
+
+.hide {
+  display: "none"; }
+
+.animation-wrong {
+  animation: animationwrong .5s linear forwards; }
+@keyframes animationwrong {
+  20%,
+        40%,
+        60%,
+        80% {
+    transform: translateX(-2px); }
+  10%,
+        30%,
+        50%,
+        70%,
+        90% {
+    transform: translateX(2px); } }
+
+/*# sourceMappingURL=form.css.map */

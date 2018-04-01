@@ -44,7 +44,15 @@
   .todo-list {
     transform: scale(0.7); } }
 /* ipad mini */
+@media (max-device-width: 768px) and (max-device-height: 1024px) {
+  .main-boxcontrol {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-auto-rows: 23rem; } }
 /* xpreia */
+@media (max-device-width: 360px) and (max-device-height: 640px) {
+  .main-boxcontrol {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-auto-rows: 23rem; } }
 /* iphone 6 plus */
 @media (max-device-width: 414px) and (max-device-height: 736px) {
   .todo-list {
@@ -234,6 +242,45 @@ button {
   background: none;
   cursor: pointer; }
 
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
 /*fashion set 1 smooth*/
 /*set2 sun*/
 /*set3 grass*/
@@ -426,45 +473,267 @@ button {
   background: none;
   cursor: pointer; }
 
-.shan-li-boxcontrol {
-  width: 43px;
-  height: 115px;
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+.shanli-outline {
   position: absolute;
-  margin: calc(-115px/2) 0 0 calc(-43px/2);
-  top: 55%;
-  left: 51%;
+  width: 7em;
+  height: 7em;
+  top: 76%;
+  left: 70%; }
+  .shanli-outline #shan-li {
+    width: 7em;
+    height: 7em;
+    background-size: 2052%;
+    transition: all 1s linear;
+    background-image: url("../../images/icon2.svg");
+    background-position: -0px -2170px; }
+    .shanli-outline #shan-li .number {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 35px;
+      left: 55px;
+      color: white;
+      transition: all 1s linear;
+      display: none; }
+  .shanli-outline .shanli-energy {
+    width: 100px;
+    background: red;
+    height: 10px;
+    -webkit-animation: shanlienergy 0.5s linear infinite;
+    -moz-animation: shanlienergy 0.5s linear infinite;
+    -ms-animation: shanlienergy 0.5s linear infinite;
+    animation: shanlienergy 0.5s linear infinite; }
+@keyframes shanlienergy {
+  40% {
+    background: #d32f2f; }
+  80% {
+    background: #ffcdd2; } }
+    .shanli-outline .shanli-energy .shanli-energy-bar {
+      width: 20px;
+      left: 0px;
+      height: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      background: #388e3c;
+      position: absolute; }
+    .shanli-outline .shanli-energy .icon-energy {
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      background-image: url("../../images/icon2.svg");
+      background-size: 7000%;
+      background-position: -2743px -431px; }
+    .shanli-outline .shanli-energy .energy-pos2 {
+      left: -18px;
+      top: 89px; }
+
+.shan-btn .shan-lowbox {
+  width: 38%;
+  height: 100%;
+  color: #bbdefb;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-shadow: 0px 0px 3px #1565c0; }
+  .shan-btn .shan-lowbox .shan-name {
+    display: inline-block;
+    width: 100%;
+    height: 2em;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-size: 10px; }
+  .shan-btn .shan-lowbox .shan-photo {
+    width: 100%;
+    max-width: 100px;
+    align-self: center; }
+  .shan-btn .shan-lowbox .shan-profile {
+    font-size: 10px; }
+  .shan-btn .shan-lowbox .shan-status {
+    display: block;
+    overflow: scroll;
+    padding: 2px;
+    width: 100%;
+    height: auto; }
+    .shan-btn .shan-lowbox .shan-status .shan-info {
+      font-family: "Cutive Mono", monospace;
+      font-size: 10px;
+      margin: 0 0 0.5em;
+      white-space: pre-wrap;
+      word-break: break-all; }
+
+.shan-bg {
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  position: absolute;
+  top: 24%;
+  left: 57%; }
+  .shan-bg .shan-bg2 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: linear-gradient(to top, #f48fb1 40%, #c2185b 60%);
+    background-image: url("../../images/earth.png");
+    -webkit-animation: shanbg2 90s linear infinite;
+    -moz-animation: shanbg2 90s linear infinite;
+    -ms-animation: shanbg2 90s linear infinite;
+    animation: shanbg2 90s linear infinite;
+    background-blend-mode: overlay; }
+@keyframes shanbg2 {
+  0% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 900%;
+    box-shadow: 0px 0px 4px 4px #e91e63; }
+  20% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 1800%;
+    box-shadow: -2px -2px 2px 2px #e91e63; }
+  40% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 2700%;
+    box-shadow: 0px 0px 4px 4px #e91e63; }
+  60% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 3600%;
+    box-shadow: 2px 2px 2px 2px #e91e63; }
+  80% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 4500%;
+    box-shadow: 0px 0px 4px 4px #e91e63; }
+  100% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 5400%;
+    box-shadow: 2px 2px 2px 2px #e91e63; } }
+.enter-btn {
+  position: absolute;
+  width: 100px;
+  height: 22px;
+  margin: -11px 0 0 -50px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 8999999999999999999;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer; }
+
+.btn-pos2 {
+  color: pink;
+  top: 30%;
+  left: 57%;
+  line-height: 22px;
+  font-size: 10px;
+  background: hotpink; }
+
+.shan-li-boxcontrol {
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  position: absolute;
+  top: 20%;
+  left: 61%;
+  cursor: pointer;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  transform-origin: center bottom;
-  -webkit-transform-origin: center bottom;
-  -o-transform-origin: center bottom; }
+  perspective: 1000px;
+  z-index: 99999999999999; }
   .shan-li-boxcontrol .shan-li-hair1 {
     width: 45px;
-    height: 18px;
-    background: linear-gradient(to left, #c62828, #f44336, #c62828);
+    height: 7px;
+    border-bottom: 25px solid #6d4c41;
     border-top-left-radius: 22px;
     border-top-right-radius: 22px;
     position: absolute;
     top: -22px;
-    left: -5px; }
+    left: -5px;
+    animation: lihead 1s linear infinite; }
   .shan-li-boxcontrol .shan-li-hair2 {
     width: 10px;
     height: 35px;
-    background: linear-gradient(to bottom, #c62828, #f44336);
+    background: #6d4c41;
     border-top-left-radius: 11px;
     border-bottom-left-radius: 12px;
     position: absolute;
     top: -14px;
-    left: -5px; }
+    left: -4px;
+    animation: lihead 1s linear infinite; }
   .shan-li-boxcontrol .shan-li-hair3 {
     width: 10px;
     height: 33px;
-    background: linear-gradient(to bottom, #c62828, #f44336);
+    background: #6d4c41;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     position: absolute;
     top: -10px;
-    left: 31px; }
+    left: 30px;
+    animation: lihead 1s linear infinite; }
   .shan-li-boxcontrol .shan-li-head {
     width: 34px;
     height: 33px;
@@ -474,15 +743,12 @@ button {
     position: absolute;
     top: -4px;
     left: 1px;
-    -webkit-border-bottom-right-radius: 17px;
-    -webkit-border-bottom-left-radius: 17px;
-    -moz-border-radius-bottomright: 17px;
-    -moz-border-radius-bottomleft: 17px;
-    border-bottom-right-radius: 17px;
-    border-bottom-left-radius: 17px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box; }
+    animation: lihead 1s linear infinite; }
+@keyframes lihead {
+  30% {
+    transform: translateY(1px); }
+  60% {
+    transform: translateY(-1px); } }
     .shan-li-boxcontrol .shan-li-head .shan-li-eyebrow {
       position: absolute;
       width: 11px;
@@ -491,9 +757,7 @@ button {
       top: 4px;
       left: 3px;
       -ms-transform: rotate(15deg);
-      transform: rotatez(15deg);
-      -webkit-transform: rotateZ(15deg);
-      -o-transform: rotateZ(15deg); }
+      transform: rotatez(15deg); }
     .shan-li-boxcontrol .shan-li-head .shan-li-eyebrow2 {
       position: absolute;
       width: 11px;
@@ -502,24 +766,7 @@ button {
       top: 4px;
       left: 21px;
       -ms-transform: rotate(-15deg);
-      transform: rotateX();
-      transform: rotatey();
-      transform: rotatez(-15deg);
-      transform: translateX();
-      transform: translatey();
-      transform: translatez();
-      -webkit-transform: rotatex();
-      -o-transform: rotateX();
-      -webkit-transform: rotatey();
-      -o-transform: rotatey();
-      -webkit-transform: rotatez(-15deg);
-      -o-transform: rotatez(-15deg);
-      -webkit-transform: translatex();
-      -o-transform: translateX();
-      -webkit-transform: translatey();
-      -o-transform: translatey();
-      -webkit-transform: translatez();
-      -o-transform: translatez(); }
+      transform: rotateZ(-15deg); }
     .shan-li-boxcontrol .shan-li-head .shan-li-eye {
       position: absolute;
       width: 13px;
@@ -527,29 +774,12 @@ button {
       border: 0.5px solid;
       background: white;
       overflow: hidden;
-      top: 9px;
+      top: 7px;
       left: 1px;
       border-bottom-left-radius: 5px;
       border-top-right-radius: 10px;
       -ms-transform: rotate(15deg);
-      transform: rotateX(5deg);
-      transform: rotatey();
-      transform: rotatez();
-      transform: translateX();
-      transform: translatey();
-      transform: translatez();
-      -webkit-transform: rotatex(5deg);
-      -o-transform: rotateX(5deg);
-      -webkit-transform: rotatey();
-      -o-transform: rotatey();
-      -webkit-transform: rotatez();
-      -o-transform: rotatez();
-      -webkit-transform: translatex();
-      -o-transform: translateX();
-      -webkit-transform: translatey();
-      -o-transform: translatey();
-      -webkit-transform: translatez();
-      -o-transform: translatez(); }
+      transform: rotateZ(5deg); }
       .shan-li-boxcontrol .shan-li-head .shan-li-eye .shan-li-eyeball {
         position: absolute;
         width: 8px;
@@ -558,39 +788,20 @@ button {
         top: -1px;
         left: 3px;
         border-radius: 10px;
-        animation: lieyeball 5s ease-in-out backwards infinite;
-        -webkit-animation: lieyeball 5s ease-in-out backwards infinite;
-        -moz-animation: lieyeball 5s ease-in-out backwards infinite; }
+        animation: lieyeball 5s ease-in-out backwards infinite; }
     .shan-li-boxcontrol .shan-li-head .shan-li-eye2 {
       position: absolute;
       width: 13px;
       height: 7px;
       border: 0.5px solid;
       background: white;
-      top: 9px;
+      top: 7px;
       left: 20px;
       -ms-transform: rotate(-15deg);
+      transform: rotateZ(-8deg);
       border-top-left-radius: 10px;
       border-bottom-right-radius: 5px;
-      overflow: hidden;
-      transform: rotateX();
-      transform: rotatey();
-      transform: rotatez(-8deg);
-      transform: translateX();
-      transform: translatey();
-      transform: translatez();
-      -webkit-transform: rotatex();
-      -o-transform: rotateX();
-      -webkit-transform: rotatey();
-      -o-transform: rotatey();
-      -webkit-transform: rotatez(-8deg);
-      -o-transform: rotatez(-8deg);
-      -webkit-transform: translatex();
-      -o-transform: translateX();
-      -webkit-transform: translatey();
-      -o-transform: translatey();
-      -webkit-transform: translatez();
-      -o-transform: translatez(); }
+      overflow: hidden; }
       .shan-li-boxcontrol .shan-li-head .shan-li-eye2 .shan-li-eyeball2 {
         position: absolute;
         width: 8px;
@@ -599,19 +810,14 @@ button {
         top: 0px;
         left: 0px;
         border-radius: 10px;
-        animation: lieyeball 5s ease-in-out infinite;
-        -webkit-animation: lieyeball 5s ease-in-out infinite;
-        -moz-animation: lieyeball 5s ease-in-out infinite; }
+        animation: lieyeball 5s ease-in-out infinite; }
 @keyframes lieyeball {
   30% {
-    background: #42a5f5;
-    transform: translateX(-3px); }
+    transform: translateX(-4px); }
   60% {
-    background: #ef5350;
-    transform: translateX(3px); }
+    transform: translateX(4px); }
   90% {
-    background: #42a5f5;
-    transform: translateX(-3px); } }
+    transform: translateX(0px); } }
     .shan-li-boxcontrol .shan-li-head .shan-li-nose {
       position: absolute;
       width: 8px;
@@ -673,7 +879,13 @@ button {
     background: #f06292;
     top: 27px;
     left: 3px;
-    z-index: -9999; }
+    z-index: -9999;
+    animation: libody 1s linear infinite; }
+@keyframes libody {
+  30% {
+    transform: translateY(1px); }
+  60% {
+    transform: translatey(-2px); } }
     .shan-li-boxcontrol .shan-li-body .shan-li-mimi {
       position: absolute;
       width: 14px;
@@ -681,12 +893,13 @@ button {
       background: #f48fb1;
       top: 9px;
       left: -2px;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
       border-radius: 50px;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box; }
+      animation: mimi 1s linear infinite; }
+@keyframes mimi {
+  30% {
+    transform: translatey(1px); }
+  60% {
+    transform: translateY(-1px); } }
     .shan-li-boxcontrol .shan-li-body .shan-li-mimi2 {
       position: absolute;
       width: 14px;
@@ -694,12 +907,8 @@ button {
       background: #f48fb1;
       top: 9px;
       left: 18px;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
       border-radius: 50px;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box; }
+      animation: mimi 1s linear infinite; }
   .shan-li-boxcontrol .shan-li-arm {
     position: absolute;
     width: 10px;
@@ -709,7 +918,11 @@ button {
     left: -4px;
     z-index: -999999;
     transform: rotateX(10deg) rotatez(10deg);
-    transform-origin: center top; }
+    transform-origin: center top;
+    animation: liarm 1s linear infinite; }
+@keyframes liarm {
+  50% {
+    transform: rotatex(15deg) rotatez(15deg); } }
   .shan-li-boxcontrol .shan-li-arm2 {
     position: absolute;
     width: 10px;
@@ -719,7 +932,11 @@ button {
     left: 30px;
     z-index: -999999;
     transform-origin: center top;
-    transform: rotatex(10deg) rotatez(-10deg); }
+    transform: rotatex(10deg) rotatez(-10deg);
+    animation: liarm2 1s linear infinite; }
+@keyframes liarm2 {
+  50% {
+    transform: rotateX(15deg) rotateZ(-15deg); } }
   .shan-li-boxcontrol .shan-li-lowarm {
     position: absolute;
     width: 10px;
@@ -728,7 +945,11 @@ button {
     top: 38px;
     left: -10px;
     transform-origin: center top;
-    transform: rotatex(10deg) rotatez(17deg); }
+    transform: rotatex(10deg) rotatez(-10deg);
+    animation: lowarm 1s linear infinite; }
+@keyframes lowarm {
+  50% {
+    transform: rotateX(15deg) rotateZ(-15deg); } }
     .shan-li-boxcontrol .shan-li-lowarm .shan-li-hand {
       position: absolute;
       width: 15px;
@@ -746,7 +967,11 @@ button {
     top: 39px;
     left: 36px;
     transform-origin: center top;
-    transform: rotatex(10deg) rotatez(-11deg); }
+    transform: rotatex(10deg) rotatez(10deg);
+    animation: lowarm2 1s linear infinite; }
+@keyframes lowarm2 {
+  50% {
+    transform: rotateX(15deg) rotatez(15deg); } }
     .shan-li-boxcontrol .shan-li-lowarm2 .shan-li-hand2 {
       position: absolute;
       width: 15px;
@@ -766,14 +991,13 @@ button {
     /* border-bottom-left-radius: 5px; */
     top: 52px;
     left: -1px;
-    z-index: -999999; }
-  .shan-li-boxcontrol .shan-li-stomache {
-    width: 37px;
-    height: 10px;
-    position: absolute;
-    top: 40%;
-    background: hotpink;
-    z-index: -999999999; }
+    z-index: -999999;
+    animation: shanlipeegu 1s linear infinite; }
+@keyframes shanlipeegu {
+  30% {
+    transform: translatey(1px); }
+  60% {
+    transform: translateX(-1px); } }
   .shan-li-boxcontrol .shan-li-leg {
     position: absolute;
     width: 14px;
@@ -782,10 +1006,14 @@ button {
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     top: 60px;
-    left: 1px;
+    left: -5px;
     -ms-transform-origin: center top;
     transform-origin: center top;
-    transform: rotatex(42deg) rotatez(4deg); }
+    transform: rotatex(56deg) rotatez(-3deg);
+    animation: lileg 1s linear infinite; }
+@keyframes lileg {
+  50% {
+    transform: rotatex(39deg) rotateZ(16deg); } }
   .shan-li-boxcontrol .shan-li-leg2 {
     position: absolute;
     width: 14px;
@@ -794,22 +1022,32 @@ button {
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     top: 60px;
-    left: 19px;
+    left: 26px;
     -ms-transform-origin: center top;
     transform-origin: center top;
-    transform: rotatex(39deg) rotatez(-10deg); }
+    transform: rotatex(56deg) rotatez(-11deg);
+    animation: lileg2 1s linear infinite; }
+@keyframes lileg2 {
+  50% {
+    transform: rotatex(38deg) rotateZ(-32deg); } }
   .shan-li-boxcontrol .shan-li-lowleg {
     position: absolute;
     width: 15px;
     height: 10px;
+    /* background: #ec407a; */
     border-bottom: 10px solid deeppink;
     top: 70px;
-    left: -1px;
+    left: -9px;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     -ms-transform-origin: center top;
     transform-origin: center top;
-    transform: rotatez(5deg); }
+    transform: rotatez(5deg);
+    animation: lowleg 1s linear infinite; }
+@keyframes lowleg {
+  50% {
+    left: -13px;
+    transform: rotatez(13deg); } }
     .shan-li-boxcontrol .shan-li-lowleg .shan-li-feet {
       position: absolute;
       width: 15px;
@@ -829,12 +1067,17 @@ button {
     height: 10px;
     border-bottom: 10px solid deeppink;
     top: 70px;
-    left: 21px;
+    left: 28px;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     -ms-transform-origin: center top;
     transform-origin: center top;
-    transform: rotatez(-9deg); }
+    transform: rotatez(-9deg);
+    animation: lowleg2 1s linear infinite; }
+@keyframes lowleg2 {
+  50% {
+    left: 32px;
+    transform: rotatez(-23deg); } }
     .shan-li-boxcontrol .shan-li-lowleg2 .shan-li-feet2 {
       position: absolute;
       width: 15px;
@@ -1066,7 +1309,13 @@ button {
     border-top: 10px solid #d84315;
     border-left: 2px solid transparent;
     border-right: 1px solid transparent;
-    transform-origin: center top; }
+    transform-origin: center top;
+    animation: frontleg 1s ease-in infinite; }
+@keyframes frontleg {
+  40% {
+    transform: rotateX(20deg); }
+  80% {
+    transform: rotateX(40deg); } }
   .shan-li-boxcontrol .shan-li-horse-frontlowleg {
     position: absolute;
     top: 98px;
@@ -1081,12 +1330,12 @@ button {
 @keyframes frontlowleg {
   40% {
     transform: rotateX(0px);
-    top: 92px;
+    top: 94px;
     width: 16px;
     left: -2px; }
   80% {
     transform: rotatex(-30deg);
-    top: 101px;
+    top: 102px;
     border-bottom: 18px solid #e64a19; } }
     .shan-li-boxcontrol .shan-li-horse-frontlowleg .shan-li-horse-feet {
       position: absolute;
@@ -1131,12 +1380,12 @@ button {
 @keyframes frontlowleg2 {
   80% {
     transform: rotateX(0px);
-    top: 90px;
+    top: 94px;
     width: 15px;
     left: 22px; }
   40% {
     transform: rotatex(-30deg);
-    top: 101px;
+    top: 102px;
     border-bottom: 18px solid #e64a19; } }
     .shan-li-boxcontrol .shan-li-horse-frontlowleg2 .shan-li-horse-feet2 {
       position: absolute;
@@ -1259,70 +1508,69 @@ button {
   outline: 1px solid;
   position: absolute;
   top: 150px;
-  left: 16%;
+  left: 37%;
   z-index: 999999999; }
 
 .shan-li-hair1-ex {
-  width: 65px;
-  height: 18px;
-  background: #ec407a;
+  width: 45px;
+  height: 7px;
+  border-bottom: 25px solid #6d4c41;
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
   position: absolute;
-  top: -8px;
-  left: -4px;
-  animation: lihead-ex .5s linear infinite; }
+  top: -9px;
+  left: -5px;
+  animation: lihair-ex .5s linear infinite; }
 
 .shan-li-hair2-ex {
-  width: 15px;
+  width: 10px;
   height: 35px;
-  background: #ec407a;
+  background: #6d4c41;
   border-top-left-radius: 11px;
-  border-bottom-left-radius: 18px;
+  border-bottom-left-radius: 12px;
   position: absolute;
-  top: -2px;
-  left: -5px;
-  z-index: 999;
-  animation: lihead-ex .5s linear infinite; }
+  top: -1px;
+  left: -4px;
+  animation: lihair2-ex .5s linear infinite; }
 
 .shan-li-hair3-ex {
-  width: 15px;
+  width: 10px;
   height: 33px;
-  background: #ec407a;
+  background: #6d4c41;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   position: absolute;
-  top: -2px;
-  left: 47px;
-  animation: lihead-ex .5s linear infinite; }
+  top: 0px;
+  left: 30px;
+  animation: lihair3-ex .5s linear infinite; }
 
 .shan-li-neck-ex {
   position: absolute;
-  width: 20px;
-  height: 5px;
+  width: 10px;
+  height: 6px;
   background: #ffcc80;
-  top: 36px;
-  left: 16px;
+  top: 37px;
+  left: 13px;
   z-index: -999; }
   .shan-li-neck-ex:before {
     content: '';
     position: absolute;
-    width: 21px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
     background: #ffb74d;
     top: 2px;
     left: 0px;
     border-radius: 10px; }
 
 .shan-li-head-ex {
-  width: 41px;
+  width: 34px;
   height: 33px;
   background: #ffcc80;
-  border-bottom-left-radius: 19px;
+  border-bottom-left-radius: 17px;
   border-bottom-right-radius: 17px;
   position: absolute;
   top: 10px;
-  left: 9px;
+  left: 1px;
   animation: lihead-ex .5s linear infinite;
   /*.shan-li-lips2 {
       position: absolute;
@@ -1342,16 +1590,16 @@ button {
   }*/ }
 @keyframes lihead-ex {
   30% {
-    transform: rotate(30deg); }
+    transform: translateY(2px); }
   60% {
-    transform: rotate(-30deg); } }
+    transform: translateY(-1px); } }
   .shan-li-head-ex .shan-li-eyebrow-ex {
     position: absolute;
     width: 11px;
     height: 3px;
     background: #795548;
-    top: 5px;
-    left: 7px;
+    top: 4px;
+    left: 3px;
     -ms-transform: rotate(15deg);
     transform: rotatez(15deg); }
   .shan-li-head-ex .shan-li-eyebrow2-ex {
@@ -1360,13 +1608,13 @@ button {
     height: 3px;
     background: #795548;
     top: 4px;
-    left: 25px;
+    left: 21px;
     -ms-transform: rotate(-15deg);
     transform: rotateZ(-15deg);
     animation: lieyebrow2-ex .5s linear infinite; }
 @keyframes lieyebrow2-ex {
   50% {
-    transform: translateY(1px) rotateZ(-15deg); } }
+    transform: translateY(1px) rotatez(-30deg); } }
   .shan-li-head-ex .shan-li-eye-ex {
     position: absolute;
     width: 13px;
@@ -1374,56 +1622,52 @@ button {
     border: 0.5px solid;
     background: white;
     overflow: hidden;
-    top: 9px;
-    left: 6px;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 7px;
+    top: 7px;
+    left: 1px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 10px;
     -ms-transform: rotate(15deg);
     transform: rotateZ(5deg); }
     .shan-li-head-ex .shan-li-eye-ex .shan-li-eyeball-ex {
       position: absolute;
       width: 8px;
       height: 8px;
-      background: #ef5350;
+      background: #ef9a9a;
       top: -1px;
-      left: 4px;
-      border-radius: 10px;
-      animation: shanlieyeballex 1s linear infinite; }
-@keyframes shanlieyeballex {
-  50% {
-    left: -2px; } }
+      left: 3px;
+      border-radius: 10px; }
   .shan-li-head-ex .shan-li-eye2-ex {
     position: absolute;
-    width: 12px;
+    width: 13px;
     height: 7px;
     border: 0.5px solid;
     background: white;
-    top: 9px;
-    left: 24px;
+    top: 7px;
+    left: 20px;
     -ms-transform: rotate(-15deg);
     transform: rotateZ(-8deg);
-    border-top-left-radius: 9px;
+    border-top-left-radius: 10px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
     animation: lieye2-ex .5s linear infinite; }
+@keyframes lieye2-ex {
+  50% {
+    height: 3px;
+    top: 9px; } }
     .shan-li-head-ex .shan-li-eye2-ex .shan-li-eyeball2-ex {
       position: absolute;
-      width: 5px;
-      height: 8px;
-      background: #ef5350;
-      top: -2px;
-      left: 2px;
-      border-radius: 10px;
-      animation: shanlieyeball2ex 1s linear infinite; }
-@keyframes shanlieyeball2ex {
-  50% {
-    left: -2px; } }
+      width: 8px;
+      height: 7px;
+      background: #ef9a9a;
+      top: 0px;
+      left: 0px;
+      border-radius: 10px; }
   .shan-li-head-ex .shan-li-nose-ex {
     position: absolute;
     width: 8px;
     height: 6px;
     top: 13px;
-    left: 19px;
+    left: 14px;
     border-bottom: 8px solid #ffa726;
     border-left: 3px solid transparent;
     border-right: 5px solid transparent;
@@ -1434,54 +1678,62 @@ button {
     width: 10px;
     height: 2px;
     background: #d32f2f;
-    top: 24px;
-    left: 16px;
+    top: 23px;
+    left: 13px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     animation: lilips-ex .5s linear infinite; }
+@keyframes lilips-ex {
+  50% {
+    width: 12px;
+    left: 12px;
+    top: 20px; } }
   .shan-li-head-ex .shan-li-mouth-ex {
     position: absolute;
-    width: 15px;
-    height: 5px;
+    width: 10px;
+    height: 7px;
     overflow: hidden;
-    background: red;
-    top: 25px;
-    left: 16px;
+    background: linear-gradient(to top, #d32f2f, #ffcdd2);
+    top: 24px;
+    left: 13px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    animation: limouth-ex 2s linear infinite; }
+    animation: limouth-ex .5s linear infinite; }
 @keyframes limouth-ex {
   50% {
-    height: 1px; } }
+    height: 8px;
+    width: 11px;
+    left: 12px;
+    top: 23px; } }
     .shan-li-head-ex .shan-li-mouth-ex .shan-li-teeth-ex {
       position: absolute;
       width: 10px;
-      height: 3px;
+      height: 1px;
       background: white;
-      top: -2px;
-      left: 3px; }
+      top: 0px;
+      left: 0px; }
 
 .shan-li-body-ex {
   position: absolute;
-  width: 53px;
+  width: 30px;
   height: 20px;
   background: #f06292;
-  top: 40px;
+  top: 36px;
   left: 3px;
   z-index: -9999;
   animation: libody-ex .5s linear infinite; }
 @keyframes libody-ex {
   30% {
-    transform: rotate(-20deg); }
+    transform: translateY(2px); }
   60% {
-    transform: rotate(20deg); } }
+    transform: translatey(-2px); } }
   .shan-li-body-ex .shan-li-mimi-ex {
     position: absolute;
-    width: 23px;
-    height: 23px;
+    width: 14px;
+    height: 14px;
     background: #f48fb1;
-    top: 3px;
-    left: 0px;
+    top: 9px;
+    left: -2px;
     border-radius: 50px;
     animation: mimi-ex .5s linear infinite; }
 @keyframes mimi-ex {
@@ -1491,66 +1743,63 @@ button {
     transform: translateY(-1px); } }
   .shan-li-body-ex .shan-li-mimi2-ex {
     position: absolute;
-    width: 23px;
-    height: 23px;
+    width: 14px;
+    height: 14px;
     background: #f48fb1;
-    top: 3px;
-    left: 26px;
+    top: 9px;
+    left: 18px;
     border-radius: 50px;
     animation: mimi-ex .5s linear infinite; }
 
 .shan-li-arm-ex {
   position: absolute;
-  width: 20px;
-  height: 29px;
+  width: 10px;
+  height: 15px;
   background: linear-gradient(to top, #e91e63, #f06292);
-  top: 40px;
-  left: -8px;
+  top: 37px;
+  left: -3px;
   z-index: -999999;
-  /* transform: rotateX(-40deg) rotatez(6deg); */
+  transform: rotateX(-40deg) rotatez(47deg);
   -ms-transform-origin: center top;
   transform-origin: center top;
-  animation: liarm-ex .5s linear infinite;
-  border-radius: 50px; }
+  animation: liarm-ex .5s linear infinite; }
 @keyframes liarm-ex {
   50% {
-    transform: rotatez(10deg); } }
+    transform: rotatex(30deg) rotatez(10deg); } }
 .shan-li-arm2-ex {
   position: absolute;
-  width: 20px;
-  height: 29px;
+  width: 10px;
+  height: 15px;
   background: linear-gradient(to top, #e91e63, #f06292);
-  top: 40px;
-  left: 49px;
+  top: 36px;
+  left: 29px;
   z-index: -999999;
   -ms-transform-origin: center top;
   transform-origin: center top;
-  /* transform: rotatex(-40deg) rotatez(-10deg); */
-  animation: liarm2-ex .5s linear infinite;
-  border-radius: 50px; }
+  transform: rotatex(-40deg) rotatez(-47deg);
+  animation: liarm2-ex .5s linear infinite; }
 @keyframes liarm2-ex {
   50% {
-    transform: rotateZ(10deg); } }
+    transform: rotateX(30deg) rotateZ(-10deg); } }
 .shan-li-lowarm-ex {
   position: absolute;
-  width: 16px;
-  height: 19px;
+  width: 10px;
+  height: 15px;
   background: #ffb74d;
-  top: 59px;
+  top: 47px;
   left: -9px;
   -ms-transform-origin: center top;
   transform-origin: center top;
   -ms-transform: rotatex(60deg) rotate(-20deg);
-  transform: rotatez(66deg);
-  animation: lowarm-ex .5s linear infinite;
-  border-radius: 50px; }
+  transform: rotatex(79deg) rotatez(-20deg) rotatey(-30deg);
+  animation: lowarm-ex .5s linear infinite; }
 @keyframes lowarm-ex {
   50% {
-    transform: rotate(-30deg); } }
+    transform: rotateX(50deg) rotateZ(-10deg); } }
   .shan-li-lowarm-ex .shan-li-hand-ex {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background: wheat;
     border: .5px solid;
     top: 11px;
@@ -1559,117 +1808,104 @@ button {
 
 .shan-li-lowarm2-ex {
   position: absolute;
-  width: 24px;
-  height: 20px;
+  width: 10px;
+  height: 15px;
   background: #ffb74d;
-  top: 65px;
-  left: 39px;
+  top: 47px;
+  left: 35px;
   -ms-transform-origin: center top;
   transform-origin: center top;
   -ms-transform: rotatex(60deg) rotate(20deg);
-  transform: rotatez(-102deg);
-  z-index: 999999;
-  animation: lowarm2-ex .5s linear infinite;
-  border-radius: 50px; }
+  transform: rotatex(79deg) rotatez(20deg) rotatey(30deg);
+  animation: lowarm2-ex .5s linear infinite; }
 @keyframes lowarm2-ex {
   50% {
-    transform: rotate(30deg); } }
+    transform: rotateX(50deg) rotatez(10deg); } }
   .shan-li-lowarm2-ex .shan-li-hand2-ex {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background: wheat;
-    top: 3px;
+    top: 11px;
     left: -2px;
     border-radius: 50px;
     border: .5px solid; }
 
-.shan-li-stomache-ex {
-  width: 61px;
-  height: 20px;
-  background: deeppink;
-  position: absolute;
-  top: 58px;
-  left: -3px;
-  z-index: -162;
-  border-radius: 50px; }
-
 .shan-li-peegu-ex {
   position: absolute;
-  width: 57px;
-  height: 11px;
-  border-bottom: 10px solid hotpink;
+  width: 36px;
+  height: 10px;
+  border-bottom: 10px solid #ec407a;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  top: 74px;
+  /* border-bottom-left-radius: 5px; */
+  top: 50px;
   left: -1px;
+  z-index: -999999;
   animation: shanlipeegu-ex .5s linear infinite; }
 @keyframes shanlipeegu-ex {
   30% {
-    transform: rotate(-10deg); }
+    transform: translatey(1px); }
   60% {
-    transform: rotate(10deg); } }
+    transform: translateX(-1px); } }
 .shan-li-leg-ex {
   position: absolute;
-  width: 20px;
-  /* height: 23px; */
-  border-top: 12px solid hotpink;
+  width: 14px;
+  height: 20px;
+  border-top: 20px solid #e91e63;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  top: 81px;
-  left: 6px;
+  top: 60px;
+  left: -5px;
   -ms-transform-origin: center top;
   transform-origin: center top;
   -ms-transform: rotatex(56deg) rotate(26deg);
-  transform: rotatez(0deg);
+  transform: rotatex(56deg) rotatez(26deg);
   animation: lileg-ex .5s linear infinite; }
 @keyframes lileg-ex {
-  30% {
-    transform: rotateZ(45deg); }
-  60% {
-    transform: rotateZ(3deg); } }
+  50% {
+    transform: rotatex(70deg) rotateZ(10deg); } }
 .shan-li-leg2-ex {
   position: absolute;
-  width: 20px;
+  width: 14px;
   height: 20px;
-  border-top: 12px solid hotpink;
+  border-top: 20px solid deeppink;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  top: 82px;
-  left: 32px;
+  top: 60px;
+  left: 26px;
   -ms-transform-origin: center top;
   transform-origin: center top;
   -ms-transform: rotatex(56deg) rotate(-26deg);
-  transform: rotatez(-26deg);
+  transform: rotatex(56deg) rotatez(-26deg);
   animation: lileg2-ex .5s linear infinite; }
 @keyframes lileg2-ex {
-  30% {
-    transform: rotateZ(-44deg); }
-  60% {
-    transform: rotateZ(40deg); } }
+  50% {
+    transform: rotatex(70deg) rotateZ(-10deg); } }
 .shan-li-lowleg-ex {
   position: absolute;
-  width: 13px;
-  border-top: 7px solid orange;
-  top: 92px;
-  left: 9px;
+  width: 15px;
+  /* background: #ec407a; */
+  border-bottom: 10px solid deeppink;
+  top: 70px;
+  left: -13px;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   -ms-transform-origin: center top;
   transform-origin: center top;
   -ms-transform: rotatex(40deg);
-  transform: rotatez(-1deg);
+  transform: rotatex(40deg);
   animation: lowleg-ex .5s linear infinite; }
 @keyframes lowleg-ex {
-  40% {
-    transform: rotateZ(-48deg); }
-  80% {
-    transform: rotateZ(19deg); } }
+  50% {
+    transform: rotatez(-30deg) translateY(-7px) translatex(2px) scalex(0.8); } }
   .shan-li-lowleg-ex .shan-li-feet-ex {
     position: absolute;
     width: 15px;
     height: 10px;
-    top: -1px;
+    /* background: darkred; */
+    /* border: 0.5px solid; */
+    top: 9px;
     left: -3px;
     border-bottom: 10px solid darkred;
     border-left: 3px solid transparent;
@@ -1678,29 +1914,29 @@ button {
     border-bottom-right-radius: 5px; }
 .shan-li-lowleg2-ex {
   position: absolute;
-  width: 12px;
+  width: 15px;
   height: 10px;
   /* background: #ec407a; */
-  border-top: 12px solid orange;
-  top: 90px;
-  left: 35px;
+  border-bottom: 10px solid deeppink;
+  top: 70px;
+  left: 34px;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   -ms-transform-origin: center top;
   transform-origin: center top;
   -ms-transform: rotatex(40deg);
-  transform: rotatez(-4deg);
+  transform: rotatex(40deg);
   animation: lowleg2-ex .5s linear infinite; }
 @keyframes lowleg2-ex {
-  80% {
-    transform: rotateZ(36deg); }
-  40% {
-    transform: rotateZ(-13deg); } }
+  50% {
+    transform: rotatez(30deg) translateY(-7px) translatex(-2px) scalex(0.8); } }
   .shan-li-lowleg2-ex .shan-li-feet2-ex {
     position: absolute;
     width: 15px;
     height: 10px;
-    top: -3px;
+    /* background: darkred; */
+    /* border: 0.5px solid; */
+    top: 9px;
     left: -3px;
     border-bottom: 10px solid darkred;
     border-left: 3px solid transparent;
@@ -2107,791 +2343,6 @@ button {
 @keyframes horsesword2-ex {
   40% {
     top: -28px; } }
-.shan-li-cat-boxcontrol {
-  width: 43px;
-  height: 115px;
-  outline: 1px solid;
-  position: absolute;
-  top: 4%;
-  left: 29%;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transform: translateZ(10px);
-  transform-origin: center bottom;
-  z-index: 99999999999999; }
-
-.shan-li-cat {
-  transform-style: preserve-3d;
-  width: 30px;
-  height: 30px;
-  outline: 1px solid;
-  position: absolute;
-  top: 0px;
-  left: 0px; }
-  .shan-li-cat .shan-li-cat-head {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    outline: 1px solid blue; }
-    .shan-li-cat .shan-li-cat-head .shan-li-cat-ear1 {
-      width: 30px;
-      height: 30px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      outline: 1px solid blue; }
-    .shan-li-cat .shan-li-cat-head .shan-li-cat-ear2 {
-      width: 30px;
-      height: 30px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      outline: 1px solid blue; }
-    .shan-li-cat .shan-li-cat-head .shan-li-cat-mo1 {
-      width: 30px;
-      height: 1px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      outline: 1px solid blue; }
-    .shan-li-cat .shan-li-cat-head .shan-li-cat-mo2 {
-      width: 30px;
-      height: 1px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      outline: 1px solid blue; }
-    .shan-li-cat .shan-li-cat-head .shan-li-cat-mo3 {
-      width: 30px;
-      height: 1px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      outline: 1px solid blue; }
-    .shan-li-cat .shan-li-cat-head .shan-li-cat-mo4 {
-      width: 30px;
-      height: 1px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      outline: 1px solid blue; }
-    .shan-li-cat .shan-li-cat-head .shan-li-cat-mo5 {
-      width: 30px;
-      height: 1px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      outline: 1px solid blue; }
-    .shan-li-cat .shan-li-cat-head .shan-li-cat-mo6 {
-      width: 30px;
-      height: 1px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      outline: 1px solid blue; }
-
-.shan-li-ship {
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  width: 300px;
-  height: 200px; }
-  .shan-li-ship .shan-li-ship-head {
-    position: absolute;
-    top: -16%;
-    left: -11%;
-    width: 50px;
-    height: 50px;
-    border-radius: 30px 0 0 30px;
-    background: deeppink;
-    transform: translateZ(67px); }
-    .shan-li-ship .shan-li-ship-head .shan-li-ship-head2 {
-      position: absolute;
-      top: 0%;
-      left: 101%;
-      width: 50px;
-      height: 50px;
-      background: deeppink;
-      border-radius: 0 30px 30px 0; }
-  .shan-li-ship .shan-li-ship-body {
-    position: absolute;
-    top: -26%;
-    left: -24%;
-    width: 170px;
-    height: 50px;
-    border-radius: 30px;
-    background: deeppink;
-    transform: translatez(0px);
-    z-index: -99; }
-    .shan-li-ship .shan-li-ship-body .shan-li-ship-fly1 {
-      position: absolute;
-      top: 0%;
-      left: 87%;
-      width: 83px;
-      height: 15px;
-      background: deeppink; }
-      .shan-li-ship .shan-li-ship-body .shan-li-ship-fly1 .shan-li-ship-fly2 {
-        position: absolute;
-        top: 0%;
-        left: 100%;
-        border-left: 50px solid deeppink;
-        border-top: 1px solid transparent;
-        border-bottom: 14px solid transparent;
-        width: 50px;
-        height: 16px; }
-        .shan-li-ship .shan-li-ship-body .shan-li-ship-fly1 .shan-li-ship-fly2 .shan-li-ship-bomb {
-          position: absolute;
-          top: 0%;
-          left: -92px;
-          width: 50px;
-          height: 50px;
-          background: deeppink;
-          border-radius: 100px; }
-    .shan-li-ship .shan-li-ship-body .shan-li-ship-fly3 {
-      position: absolute;
-      top: 0%;
-      left: -35%;
-      width: 83px;
-      height: 15px;
-      background: deeppink; }
-      .shan-li-ship .shan-li-ship-body .shan-li-ship-fly3 .shan-li-ship-fly4 {
-        position: absolute;
-        top: 0%;
-        left: -61%;
-        border-right: 50px solid deeppink;
-        width: 50px;
-        /* height: 50px; */
-        border-top: 0px solid transparent;
-        border-bottom: 15px solid transparent; }
-        .shan-li-ship .shan-li-ship-body .shan-li-ship-fly3 .shan-li-ship-fly4 .shan-li-ship-bomb2 {
-          position: absolute;
-          top: 0%;
-          left: 46px;
-          width: 50px;
-          height: 50px;
-          background: deeppink;
-          border-radius: 100px; }
-    .shan-li-ship .shan-li-ship-body .shan-li-ship-foot {
-      z-index: 9;
-      position: absolute;
-      top: 105%;
-      left: 29%;
-      width: 40px;
-      height: 31px;
-      border-radius: 0 0 0px 30px;
-      background: hotpink; }
-      .shan-li-ship .shan-li-ship-body .shan-li-ship-foot .shan-li-ship-foot-leg {
-        position: absolute;
-        top: 79%;
-        left: 25%;
-        width: 10px;
-        height: 6px;
-        background: deeppink; }
-        .shan-li-ship .shan-li-ship-body .shan-li-ship-foot .shan-li-ship-foot-leg .shan-li-ship-tire {
-          position: absolute;
-          top: 88%;
-          left: -56%;
-          /* width: 50px; */
-          /* height: 50px; */
-          /* background: lightpink; */
-          width: 23px;
-          height: 26px;
-          background: lightpink;
-          border-radius: 30px; }
-    .shan-li-ship .shan-li-ship-body .shan-li-ship-foot2 {
-      position: absolute;
-      top: 105%;
-      left: 52%;
-      width: 40px;
-      height: 31px;
-      border-radius: 0 0 30px 0;
-      background: hotpink; }
-      .shan-li-ship .shan-li-ship-body .shan-li-ship-foot2 .shan-li-ship-foot-leg2 {
-        position: absolute;
-        top: 80%;
-        left: 42%;
-        width: 10px;
-        height: 6px;
-        background: deeppink; }
-        .shan-li-ship .shan-li-ship-body .shan-li-ship-foot2 .shan-li-ship-foot-leg2 .shan-li-ship-tire2 {
-          position: absolute;
-          top: 103%;
-          left: -54%;
-          width: 23px;
-          height: 26px;
-          background: lightpink;
-          border-radius: 30px; }
-
-/*fashion set 1 smooth*/
-/*set2 sun*/
-/*set3 grass*/
-/* sunday light*/
-/* dark storm*/
-/* rainbow */
-/* pineapple */
-/* deep ocean cloud*/
-/* color-link */
-/* colors in order */
-/* in text */
-/*fashion set 1 smooth*/
-/*fashion set 1 smooth*/
-/*set2 sun*/
-/*set3 grass*/
-/* sunday light*/
-/* dark storm*/
-/* rainbow */
-/* pineapple */
-/* deep ocean cloud*/
-/* color-link */
-/* colors in order */
-/* in text */
-/*fashion set 1 smooth*/
-.clearfix:after {
-  display: block;
-  visibility: hidden;
-  clear: both;
-  height: 0;
-  content: "";
-  font-size: 0; }
-
-.clearfix {
-  display: inline-block; }
-
-.clearfix {
-  height: 1%; }
-
-.clearfix {
-  display: flow-root; }
-
-input[type='button'],
-input[type='submit'],
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer; }
-
-button {
-  outline: none; }
-
-iframe:focus {
-  outline: none; }
-
-iframe[seamless] {
-  display: block; }
-
-/* awake page animation */
-.gamemenu {
-  animation: gamemenu 1s steps(10) forwards; }
-@keyframes gamemenu {
-  from {
-    background-position: -8px -258px; }
-  to {
-    background-position: -786px -258px; } }
-.gamemenu-reverse {
-  animation: gamemenureverse 1s steps(10) forwards; }
-@keyframes gamemenureverse {
-  from {
-    background-position: -8px -183px; }
-  to {
-    background-position: -790px -183px; } }
-.robot-fly {
-  animation: robotfly 0.5s steps(2) infinite; }
-@keyframes robotfly {
-  from {
-    background-position: -14px -282px; }
-  to {
-    background-position: -283px -282px; } }
-.robot-introduce {
-  -webkit-animation: robotintroduce 1s steps(11) forwards;
-  -moz-animation: robotintroduce 1s steps(11) forwards;
-  -ms-animation: robotintroduce 1s steps(11) forwards;
-  animation: robotintroduce 1s steps(11) forwards; }
-@keyframes robotintroduce {
-  from {
-    background-position: -826px -318px; }
-  to {
-    background-position: -1971px -318px; } }
-.robot-heiyo {
-  -webkit-animation: robotheiyo 3s steps(20) forwards;
-  -moz-animation: robotheiyo 3s steps(20) forwards;
-  -ms-animation: robotheiyo 3s steps(20) forwards;
-  animation: robotheiyo 3s steps(20) forwards; }
-@keyframes robotheiyo {
-  from {
-    background-position: -0px -1255px; }
-  to {
-    background-position: -2083px -1255px; } }
-.heart-explode {
-  background-image: url("../images/icon2.svg");
-  background-size: 1600%;
-  animation: heartexplode 0.5s steps(2) infinite; }
-@keyframes heartexplode {
-  from {
-    background-position: -412px -295px; }
-  to {
-    background-position: -672px -295px; } }
-.robot-fix-1 {
-  animation: robotfixlevel1 1s steps(10) infinite; }
-@keyframes robotfixlevel1 {
-  from {
-    background-position: -11px -13px; }
-  to {
-    background-position: -1354px -13px; } }
-.robot-dead {
-  animation: robotdead 0.5s steps(6) forwards; }
-@keyframes robotdead {
-  from {
-    background-position: 0px -1048px; }
-  to {
-    background-position: -721px -1048px; } }
-.shanliget {
-  animation: shanliget 0.5s steps(4) infinite; }
-@keyframes shanliget {
-  from {
-    background-position: -250px -973px; }
-  to {
-    background-position: -730px -973px; } }
-.robot-outline-fly {
-  animation: robotoutlinefly 3s ease-in-out forwards; }
-@keyframes robotoutlinefly {
-  to {
-    transform: translateX(60px) translateY(100px); } }
-.crosshair {
-  animation: crosshair .5s linear infinite; }
-@keyframes crosshair {
-  50% {
-    transform: scale(2);
-    opacity: 0.4; } }
-.maxpower {
-  animation: maxpower .5s linear infinite; }
-@keyframes maxpower {
-  50% {
-    transform: scale(2) rotatez(30deg);
-    background-color: yellow; } }
-.robot-fly-turn {
-  animation: robotflyturn 1s steps(3) forwards; }
-@keyframes robotflyturn {
-  from {
-    background-position: -311px -526px; }
-  to {
-    background-position: -620px -526px; } }
-.robot-cross-ready {
-  animation: robotcrossready 1s steps(3) forwards; }
-@keyframes robotcrossready {
-  from {
-    background-position: -622px -1148px; }
-  to {
-    background-position: -935px -1148px; } }
-.robot-cross-charging {
-  animation: robotcharging 0.5s steps(3) infinite; }
-@keyframes robotcharging {
-  from {
-    background-position: -935px -1148px; }
-  to {
-    background-position: -1142px -1148px; } }
-.robot-cross-fire {
-  animation: robotcrossfire 0.5s steps(2) forwards; }
-@keyframes robotcrossfire {
-  from {
-    background-position: -1142px -1148px; }
-  to {
-    background-position: -1350px -1148px; } }
-.robot-cross-set {
-  background-position: -622px -1148px; }
-
-#robot-shake {
-  animation: robotshake .5s linear infinite; }
-@keyframes robotshake {
-  40% {
-    transform: translateY(1px); }
-  80% {
-    transform: translateY(-1px); } }
-.robot-repair-to-fight-instance {
-  animation: robotrepairtofightinstance 2s steps(12) forwards; }
-@keyframes robotrepairtofightinstance {
-  from {
-    background-position: -0px -2600px; }
-  to {
-    background-position: -1251px -2600px; } }
-.robot-fight-instance {
-  animation: robotfightinstance 0.5s steps(2) infinite; }
-@keyframes robotfightinstance {
-  from {
-    background-position: -1040px -2600px; }
-  to {
-    background-position: -1251px -2600px; } }
-.robot-fly-down {
-  background-position: -6px -308px; }
-
-.robot-fly {
-  animation: robotfly 0.5s steps(2) infinite; }
-@keyframes robotfly {
-  from {
-    background-position: 0px -213px; }
-  to {
-    background-position: -205px -213px; } }
-.robot-talk {
-  animation: robottalk 0.5s steps(8) forwards; }
-@keyframes robottalk {
-  from {
-    background-position: -6px -308px; }
-  to {
-    background-position: -829px -308px; } }
-.robotlove {
-  animation: robotlove 1s steps(10) infinite; }
-@keyframes robotlove {
-  from {
-    background-position: 0px -10px; }
-  to {
-    background-position: -1042px -10px; } }
-.love {
-  animation: love 0.5s steps(4) infinite;
-  transition: all .5s linear; }
-@keyframes love {
-  from {
-    background-position: -1386px -25px;
-    transform: scale(2); }
-  to {
-    background-position: -1864px -25px; } }
-.leftright {
-  display: block;
-  animation: leftright 1s linear forwards; }
-@keyframes leftright {
-  0% {
-    left: -100%; }
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    left: 50%; }
-  100% {
-    left: 200%; } }
-.robot-change {
-  animation: robotchange 1.5s steps(10) forwards; }
-@keyframes robotchange {
-  from {
-    background-position: 0px -110px; }
-  to {
-    background-position: -1038px -110px; } }
-.robot-right {
-  background-position: -312px -514px; }
-
-.robot-origin {
-  background-position: -7px -106px; }
-
-.todolistshow {
-  animation: todolistshow 1s linear forwards; }
-@keyframes todolistshow {
-  10% {
-    opacity: 0.2; }
-  30% {
-    opacity: 0.5; }
-  50% {
-    opacity: 0.2; }
-  70% {
-    opacity: 0.7; }
-  90% {
-    opacity: 0.2; } }
-.robot-outline-fly-back {
-  animation: robotoutlineflyback 3s ease-in-out forwards; }
-@keyframes robotoutlineflyback {
-  from {
-    transform: translateX(60px) translateY(100px); }
-  to {
-    transform: translateX(0px) translateY(0px); } }
-.icontodo {
-  animation: icontodo 0.5s steps(5) forwards; }
-@keyframes icontodo {
-  from {
-    background-position: -761px -1036px; }
-  to {
-    background-position: -1032px -1036px; } }
-.iconpersonal {
-  animation: iconpersonal 0.5s steps(1) forwards; }
-@keyframes iconpersonal {
-  from {
-    background-position: -704px -654px; }
-  to {
-    background-position: -754px -654px; } }
-.iconservice {
-  animation: iconservice 0.5s steps(1) forwards; }
-@keyframes iconservice {
-  from {
-    background-position: -704px -607px; }
-  to {
-    background-position: -754px -607px; } }
-.iconfix {
-  animation: iconfix 0.5s steps(1) forwards; }
-@keyframes iconfix {
-  from {
-    background-position: -705px -706px; }
-  to {
-    background-position: -754px -706px; } }
-.backgroundxperia {
-  animation: backgroundxperia steps(4) infinite; }
-@keyframes backgroundxperia {
-  from {
-    background-position: 2% -12%; }
-  to {
-    background-position: 97.7% -12%; } }
-.todoset {
-  animation: todoset 2s linear; }
-@keyframes todoset {
-  from {
-    width: 0vw;
-    opacity: 0; }
-  to {
-    width: 100vw;
-    opacity: 1; } }
-.rotateyback {
-  animation: rotateyback 5s linear forwards; }
-@keyframes rotateyback {
-  to {
-    transform: rotateY(0deg); } }
-/* animation hand set */
-.handboxcontrol1 {
-  animation: handboxcontrol 1s linear 2s infinite; }
-@keyframes handboxcontrol {
-  30% {
-    transform: scale(0.7) rotatez(40deg); }
-  60% {
-    transform: scale(0.7) rotatez(-50deg); } }
-.handmiddlefinger1 {
-  animation: handmiddlefinger 10s linear 10s infinite; }
-@keyframes handmiddlefinger {
-  14%,
-        20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    transform: rotatez(104deg); }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(-6deg); } }
-.handmiddlefinger2 {
-  animation: handmiddlefinger2 10s linear 10s infinite; }
-@keyframes handmiddlefinger2 {
-  19%,
-        20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    transform: rotatez(81deg); }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(0deg); } }
-.handmiddlefinger3 {
-  animation: handmiddlefinger3 10s linear 10s infinite; }
-@keyframes handmiddlefinger3 {
-  25%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    transform: rotatez(64deg);
-    top: -7px; }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(0deg); } }
-.handfourfinger1 {
-  animation: handfourfinger 10s linear 10s infinite; }
-@keyframes handfourfinger {
-  12%,
-        20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    transform: rotatez(103deg); }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(-10deg); } }
-.handfourfinger2 {
-  animation: handfourfinger2 10s linear 10s infinite; }
-@keyframes handfourfinger2 {
-  17%,
-        20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    transform: rotatez(84deg); }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(0deg); } }
-.handfourfinger3 {
-  animation: handfourfinger3 10s linear 10s infinite; }
-@keyframes handfourfinger3 {
-  22%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    transform: rotatez(95deg); }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(0deg); } }
-.handsmallthumb1 {
-  animation: handsmallthumb 10s linear 10s infinite; }
-@keyframes handsmallthumb {
-  10%,
-        20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    z-index: 999;
-    transform: rotatez(57deg); }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(-20deg); } }
-.handsmallthumb2 {
-  animation: handsmallthumb2 10s linear 10s infinite; }
-@keyframes handsmallthumb2 {
-  15%,
-        20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    transform: rotatez(84deg); }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(0deg); } }
-.handsmallthumb3 {
-  animation: handsmallthumb3 10s linear 10s infinite; }
-@keyframes handsmallthumb3 {
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70% {
-    transform: rotatez(100deg); }
-  80%,
-        90%,
-        100% {
-    transform: rotatez(0deg); } }
-.handthumb2-s {
-  animation: handthumb2-s 10s linear 10s infinite; }
-@keyframes handthumb2-s {
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70%,
-        80%,
-        90%,
-        100% {
-    transform: rotatez(-110deg); } }
-.handmiddlefinger1-s {
-  animation: handmiddlefinger1-s 10s linear 10s infinite; }
-@keyframes handmiddlefinger1-s {
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70%,
-        80%,
-        90%,
-        100% {
-    transform: rotatez(70deg); } }
-.handmiddlefinger2-s {
-  animation: handmiddlefinger2-s 10s linear 10s infinite; }
-@keyframes handmiddlefinger2-s {
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70%,
-        80%,
-        90%,
-        100% {
-    transform: rotatez(106deg); } }
-.handmiddlefinger3-s {
-  animation: handmiddlefinger3-s 10s linear 10s infinite; }
-@keyframes handmiddlefinger3-s {
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70%,
-        80%,
-        90%,
-        100% {
-    transform: rotatez(42deg); } }
-.handfourfinger1-s {
-  animation: handfourfinger1-s 10s linear 10s infinite; }
-@keyframes handfourfinger1-s {
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70%,
-        80%,
-        90%,
-        100% {
-    transform: rotatez(85deg); } }
-.handfourfinger2-s {
-  animation: handfourfinger2-s 10s linear 10s infinite; }
-@keyframes handfourfinger2-s {
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70%,
-        80%,
-        90%,
-        100% {
-    transform: rotatez(94deg); } }
-.handfourfinger3-s {
-  animation: handfourfinger3-s 10s linear 10s infinite; }
-@keyframes handfourfinger3-s {
-  20%,
-        30%,
-        40%,
-        50%,
-        60%,
-        70%,
-        80%,
-        90%,
-        100% {
-    transform: rotatez(48deg); } }
-/* animation crazy set*/
 /* shan-li animation */
 .shanlihair1 {
   animation: lihead 1s linear infinite; }
@@ -2909,15 +2360,18 @@ iframe[seamless] {
     transform: translateY(1px); }
   60% {
     transform: translateY(-1px); } }
-.shanlieye {
-  animation: shanlieye2 1s linear forwards; }
+.shanlieyeball {
+  animation: lieyeball 5s ease-in-out backwards infinite; }
 
-.shanlieye2 {
-  animation: shanlieye2 1s linear forwards; }
-@keyframes shanlieye2 {
-  100% {
-    height: 7px;
-    top: 7px; } }
+.shanlieyeball2 {
+  animation: lieyeball 5s ease-in-out infinite; }
+@keyframes lieyeball {
+  30% {
+    transform: translateX(-4px); }
+  60% {
+    transform: translateX(4px); }
+  90% {
+    transform: translateX(0px); } }
 .shanlibody {
   animation: libody 1s linear infinite; }
 @keyframes libody {
@@ -2984,6 +2438,75 @@ iframe[seamless] {
   50% {
     left: 32px;
     transform: rotatez(-23deg); } }
+.shanlihorsehair {
+  animation: horsehair 1s linear infinite; }
+@keyframes horsehair {
+  50% {
+    border-bottom: 14px solid #c62828;
+    top: 31px; } }
+.shanlihorsehead {
+  animation: horsehead 1s linear infinite; }
+@keyframes horsehead {
+  30% {
+    transform: translateY(-1px);
+    border-top: 29px solid #5d4037; }
+  60% {
+    transform: translateY(1px);
+    border-top: 30px solid #5d4037; } }
+.shanlihorseeyeball {
+  animation: horseeyeball .5s linear infinite; }
+@keyframes horseeyeball {
+  50% {
+    transform: translateX(-1px); } }
+.shanlihorseeyeball2 {
+  animation: horseeyeball2 .5s linear infinite; }
+@keyframes horseeyeball2 {
+  50% {
+    transform: translateX(1px); } }
+.shanlihorsenose {
+  animation: horsenose 1s linear infinite; }
+@keyframes horsenose {
+  50% {
+    border-top: 9px solid gold; } }
+.shanlihorseneck {
+  animation: horseneck 2s linear infinite; }
+@keyframes horseneck {
+  50% {
+    border-bottom: 25px solid #bf360c;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent; } }
+.shanlihorsebody {
+  animation: horsebody 1s linear infinite; }
+@keyframes horsebody {
+  50% {
+    transform: scale(1.1); } }
+.shanlihorsesit {
+  animation: horsesit 1s linear infinite; }
+@keyframes horsesit {
+  40% {
+    transform: rotatex(10deg) translateY(-2px); } }
+.shanlihorsemask {
+  animation: horsemask 1s linear infinite; }
+@keyframes horsemask {
+  50% {
+    transform: translateY(3px); } }
+.shanlihorseline3 {
+  animation: line3 1s linear infinite; }
+@keyframes line3 {
+  50% {
+    transform: rotateZ(-20deg) rotateX(70deg); } }
+.shanlihorseline4 {
+  animation: line4 1s linear infinite; }
+@keyframes line4 {
+  50% {
+    transform: rotateZ(20deg) rotateX(70deg); } }
+.shanlihorseline5 {
+  animation: line5 1s linear infinite; }
+@keyframes line5 {
+  40% {
+    transform: translateY(1px) rotatez(-90deg); }
+  80% {
+    transform: translateY(-1px) rotatez(-90deg); } }
 .shanlihorsefrontleg {
   animation: frontleg 1s ease-in infinite; }
 @keyframes frontleg {
@@ -2991,105 +2514,245 @@ iframe[seamless] {
     transform: rotateX(20deg); }
   80% {
     transform: rotateX(40deg); } }
-.judoboxcontrol {
-  animation: judoboxcontrol 1s linear infinite; }
-@keyframes judoboxcontrol {
-  10% {
-    transform: translatey(-1px) translateZ(10px); }
-  30% {
-    transform: translatey(0px) translateZ(10px); }
-  60% {
-    transform: translatey(-1px) translateZ(10px); }
-  90% {
-    transform: translatey(0px) translateZ(10px); } }
-.judoarm {
-  animation: judoarm 1s linear forwards; }
-@keyframes judoarm {
-  to {
-    transform: rotatez(45deg); } }
-.judobicep {
-  animation: judobicep 1s linear forwards; }
-@keyframes judobicep {
-  to {
-    transform: rotateZ(22deg); } }
-.judolowarm {
-  animation: judolowarm 1s linear forwards; }
-@keyframes judolowarm {
-  to {
-    transform: rotatez(-4deg) rotatex(180deg); } }
-.judoarm2 {
-  animation: judoarm2 1s linear forwards; }
-@keyframes judoarm2 {
-  to {
-    transform: rotatez(0deg); } }
-.judobicep2 {
-  animation: judobicep2 1s linear forwards; }
-@keyframes judobicep2 {
-  to {
-    transform: rotateZ(96deg); } }
-.judolowarm2 {
-  animation: judolowarm2 1s linear forwards; }
-@keyframes judolowarm2 {
-  to {
-    transform: rotatez(2deg);
-    border-top: 14px solid #455a64; } }
-.judoupleg {
-  animation: judoupleg 1s linear forwards; }
-@keyframes judoupleg {
-  to {
-    left: 0px;
-    width: 15px;
-    background: #455a64; } }
-.judolowleg {
-  animation: judolowleg 1s linear forwards; }
-@keyframes judolowleg {
-  to {
-    top: 11px;
-    left: 0px;
-    width: 15px;
-    border-top: 6px solid #546e7a; } }
-.judofoot {
-  animation: judofoot 1s linear forwards; }
-@keyframes judofoot {
-  to {
-    top: 0px;
-    left: 1px;
-    width: 11px;
-    border-bottom: 7px solid #78909c; } }
-.judoshoe {
-  animation: judoshoe 1s linear forwards; }
-@keyframes judoshoe {
-  to {
-    width: 17px;
-    top: 4px;
-    left: -7px; } }
-.judoupleg2 {
-  animation: judoupleg2 1s linear forwards; }
-@keyframes judoupleg2 {
-  to {
-    transform: rotatez(-28deg) translatez(38px);
-    width: 20px;
-    height: 14px;
-    background: #607d8b; } }
-.judolowleg2 {
-  animation: judolowleg2 1s linear forwards; }
-@keyframes judolowleg2 {
-  to {
-    top: 13px;
-    transform: rotatez(18deg);
-    border-top: 17px solid #78909c; } }
-.judoshoe2 {
-  animation: judoshoe2 1s linear forwards; }
-@keyframes judoshoe2 {
-  to {
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+.shanlihorsefrontlowleg {
+  animation: frontlowleg 1s ease-in infinite; }
+@keyframes frontlowleg {
+  40% {
+    transform: rotateX(0px);
+    top: 94px;
+    width: 16px;
+    left: -2px; }
+  80% {
+    transform: rotatex(-30deg);
+    top: 102px;
+    border-bottom: 18px solid #e64a19; } }
+.shanlihorsefeet {
+  animation: horsefeet 1s ease-in infinite; }
+@keyframes horsefeet {
+  40% {
+    width: 12px;
     left: -2px; } }
-.judofoot2 {
-  animation: judofoot2 1s linear forwards; }
+.shanlihorsefrontleg2 {
+  animation: frontleg2 1s ease-in backwards infinite; }
+@keyframes frontleg2 {
+  40% {
+    transform: rotateX(40deg); }
+  80% {
+    transform: rotateX(20deg); } }
+.shanlihorsefrontlowleg2 {
+  animation: frontlowleg2 1s ease-in infinite; }
+@keyframes frontlowleg2 {
+  80% {
+    transform: rotateX(0px);
+    top: 94px;
+    width: 15px;
+    left: 22px; }
+  40% {
+    transform: rotatex(-30deg);
+    top: 102px;
+    border-bottom: 18px solid #e64a19; } }
+.shanlihorsefeet2 {
+  animation: horsefeet2 1s ease-in infinite; }
+@keyframes horsefeet2 {
+  80% {
+    width: 12px;
+    left: 0px; } }
+.shanlihorsetail {
+  animation: horsetail 1s linear infinite; }
+@keyframes horsetail {
+  20% {
+    transform: rotateZ(60deg); }
+  80% {
+    transform: rotateZ(-60deg); } }
+.shanlihorseflag {
+  animation: horseflag 1s linear infinite; }
+@keyframes horseflag {
+  50% {
+    color: #ad1457;
+    text-shadow: 2px 2px 4px inset rgba(250, 150, 0, 0.5);
+    transform: rotateY(50deg); } }
+.shanlihorseflag2 {
+  animation: horseflag2 1s linear infinite; }
+@keyframes horseflag2 {
+  50% {
+    color: #ffcc80;
+    text-shadow: 2px 2px 4px 3px rgba(250, 150, 0, 0.5);
+    transform: rotatey(50deg); } }
+.aside-tips {
+  width: 100%;
+  position: absolute;
+  /* width: auto; */
+  word-break: keep-all;
+  padding: 1%;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  height: auto;
+  background: rgba(37, 138, 236, 0.3);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 238, 236, 0.6);
+  z-index: 99;
+  top: 72%; }
 
-.judopeegu {
-  animation: judopeegu 1s linear infinite; }
+.aside-boxcontrol {
+  z-index: 999999999;
+  position: absolute;
+  /* flex-direction: row; */
+  /* float: left; */
+  font-size: 10px;
+  display: block;
+  /* margin-top: 8px; */
+  /* margin-left: 38px; */
+  /* grid-row: 3; */
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  left: 6%;
+  top: 45%;
+  /* align-items: flex-start; */
+  /* flex-flow: row nowrap; */
+  /* align-content: center; */
+  /* justify-content: flex-start; */
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  /* grid-auto-rows: minmax(34px,auto); */
+  /* justify-items: start; */ }
+  .aside-boxcontrol .icon-personal {
+    background-image: url("../images/icon2.svg");
+    width: 2.5rem;
+    height: 2.5rem;
+    background-position: -704px -654px;
+    background-size: 3000%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    transition: all 1s linear;
+    cursor: pointer;
+    z-index: 99999999; }
+  .aside-boxcontrol .icon-service {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto;
+    background-image: url("../images/icon2.svg");
+    cursor: pointer;
+    background-position: -704px -607px;
+    background-size: 3000%;
+    position: absolute;
+    top: 50px;
+    left: -10px;
+    transition: all 1s linear;
+    cursor: pointer;
+    z-index: 99999999; }
+  .aside-boxcontrol .icon-fix {
+    background-image: url("../images/icon2.svg");
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto;
+    background-position: -705px -706px;
+    background-size: 3000%;
+    position: absolute;
+    top: 100px;
+    left: -10px;
+    transition: all 1s linear;
+    cursor: pointer;
+    z-index: 99999999; }
+  .aside-boxcontrol .icon-talk-to-yushan {
+    background-image: url("../images/icon2.svg");
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto;
+    background-position: -705px -706px;
+    background-size: 3000%;
+    position: absolute;
+    top: 150px;
+    left: -10px;
+    transition: all 1s linear;
+    cursor: pointer;
+    z-index: 99999999; }
+  .aside-boxcontrol .icon-submit {
+    width: 4rem;
+    height: 4rem;
+    background: black;
+    position: absolute;
+    left: 95%;
+    top: 123%; }
+
+.icon-calendar {
+  top: 33%;
+  left: 0%;
+  width: 100%;
+  height: 50px;
+  background: url("../images/icon2.svg"), lightyellow no-repeat;
+  text-align: center;
+  border: 3px solid pink;
+  line-height: 10px;
+  background-position: 0px -5px;
+  background-size: 400%;
+  cursor: pointer; }
+
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+.todo-list {
+  width: 250px;
+  height: 300px;
+  /* float: left; */
+  background-image: url("../images/fix.svg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: none;
+  margin: -150px 0 0 -125px;
+  top: 50%;
+  left: 50%;
+  z-index: 99999999;
+  position: absolute; }
+  .todo-list .icon-close-todo {
+    width: 25px;
+    height: 25px;
+    outline: 1px solid;
+    float: right;
+    margin: 1%; }
+  .todo-list .todo-icon {
+    position: sticky;
+    width: 230px;
+    height: 50px;
+    background: green;
+    display: block;
+    float: left; }
+  .todo-list #todo-icon-slide {
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    z-index: 9999999999999;
+    top: 0px; }
+  .todo-list .todo-title {
+    width: 100%;
+    height: 200px;
+    background: blue;
+    float: left; }
+  .todo-list .reset-btn,
+  .todo-list .submit-btn {
+    font-size: 10px;
+    border-radius: 10px;
+    width: 50px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+    color: white; }
+  .todo-list .reset-btn {
+    border: 1px solid lightsalmon;
+    background: #e53935; }
+  .todo-list .submit-btn {
+    border: 1px solid lightcoral;
+    background: darksalmon; }
 
 /*fashion set 1 smooth*/
 /*set2 sun*/
@@ -3413,6 +3076,45 @@ button {
   background: none;
   cursor: pointer; }
 
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
 .xs-player-status {
   width: 100%;
   height: 15vh;
@@ -3485,15 +3187,14 @@ button {
   position: absolute;
   transform: rotateZ(30deg);
   transition: all .5s ease-in-out;
-  display: none;
   background-image: url("../images/icon2.svg");
   background-size: 4500%;
   animation: fireball 0.5s steps(3) infinite; }
 @keyframes fireball {
   from {
-    background-position: -2024px -1280px; }
+    background-position: -2799px -1280px; }
   to {
-    background-position: -2360px -1280px; } }
+    background-position: -3371px -1280px; } }
 .ball0,
 .ball1,
 .ball2,
@@ -3564,117 +3265,6 @@ button {
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -9999999999999; }
-
-.aside-tips {
-  width: 100%;
-  position: absolute;
-  /* width: auto; */
-  word-break: keep-all;
-  padding: 1%;
-  font-size: 12px;
-  color: white;
-  text-align: center;
-  height: auto;
-  background: rgba(37, 138, 236, 0.3);
-  border-radius: 10px;
-  border: 2px solid rgba(255, 238, 236, 0.6);
-  z-index: 99;
-  top: 72%; }
-
-.aside-boxcontrol {
-  z-index: 999999999;
-  position: absolute;
-  /* flex-direction: row; */
-  /* float: left; */
-  font-size: 10px;
-  display: block;
-  /* margin-top: 8px; */
-  /* margin-left: 38px; */
-  /* grid-row: 3; */
-  /* justify-content: flex-start; */
-  /* align-items: center; */
-  left: 6%;
-  top: 45%;
-  /* align-items: flex-start; */
-  /* flex-flow: row nowrap; */
-  /* align-content: center; */
-  /* justify-content: flex-start; */
-  /* grid-template-rows: 1fr 1fr 1fr; */
-  /* grid-auto-rows: minmax(34px,auto); */
-  /* justify-items: start; */ }
-  .aside-boxcontrol .icon-personal {
-    background-image: url("../images/icon2.svg");
-    width: 2.5rem;
-    height: 2.5rem;
-    background-position: -704px -654px;
-    background-size: 3000%;
-    margin: auto;
-    position: absolute;
-    top: 0px;
-    left: -10px;
-    transition: all 1s linear;
-    cursor: pointer;
-    z-index: 99999999; }
-  .aside-boxcontrol .icon-service {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: auto;
-    background-image: url("../images/icon2.svg");
-    cursor: pointer;
-    background-position: -704px -607px;
-    background-size: 3000%;
-    position: absolute;
-    top: 50px;
-    left: -10px;
-    transition: all 1s linear;
-    cursor: pointer;
-    z-index: 99999999; }
-  .aside-boxcontrol .icon-fix {
-    background-image: url("../images/icon2.svg");
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: auto;
-    background-position: -705px -706px;
-    background-size: 3000%;
-    position: absolute;
-    top: 100px;
-    left: -10px;
-    transition: all 1s linear;
-    cursor: pointer;
-    z-index: 99999999; }
-  .aside-boxcontrol .icon-talk-to-yushan {
-    background-image: url("../images/icon2.svg");
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: auto;
-    background-position: -705px -706px;
-    background-size: 3000%;
-    position: absolute;
-    top: 150px;
-    left: -10px;
-    transition: all 1s linear;
-    cursor: pointer;
-    z-index: 99999999; }
-  .aside-boxcontrol .icon-submit {
-    width: 4rem;
-    height: 4rem;
-    background: black;
-    position: absolute;
-    left: 95%;
-    top: 123%; }
-
-.icon-calendar {
-  top: 33%;
-  left: 0%;
-  width: 100%;
-  height: 50px;
-  background: url("../images/icon2.svg"), lightyellow no-repeat;
-  text-align: center;
-  border: 3px solid pink;
-  line-height: 10px;
-  background-position: 0px -5px;
-  background-size: 400%;
-  cursor: pointer; }
 
 .yushan-tips {
   width: auto;
@@ -3930,60 +3520,6 @@ button {
 .handle1 {
   left: 0px; }
 
-.todo-list {
-  width: 250px;
-  height: 300px;
-  /* float: left; */
-  background-image: url("../images/fix.svg");
-  background-repeat: no-repeat;
-  overflow: visible;
-  display: none;
-  margin: -150px 0 0 -125px;
-  top: 50%;
-  left: 50%;
-  z-index: 99999999;
-  position: absolute; }
-  .todo-list .icon-close-todo {
-    width: 25px;
-    height: 25px;
-    outline: 1px solid;
-    float: right;
-    margin: 1%; }
-  .todo-list .todo-icon {
-    position: sticky;
-    width: 230px;
-    height: 50px;
-    background: green;
-    display: block;
-    float: left; }
-  .todo-list #todo-icon-slide {
-    width: 500px;
-    height: 50px;
-    position: absolute;
-    z-index: 9999999999999;
-    top: 0px;
-    left: 0px; }
-  .todo-list .todo-title {
-    width: 100%;
-    height: 200px;
-    background: blue;
-    float: left; }
-  .todo-list .reset-btn,
-  .todo-list .submit-btn {
-    font-size: 10px;
-    border-radius: 10px;
-    width: 50px;
-    height: 20px;
-    float: right;
-    cursor: pointer;
-    color: white; }
-  .todo-list .reset-btn {
-    border: 1px solid lightsalmon;
-    background: #e53935; }
-  .todo-list .submit-btn {
-    border: 1px solid lightcoral;
-    background: darksalmon; }
-
 #mp3file {
   display: none; }
 
@@ -4225,209 +3761,6 @@ button {
   background: none;
   cursor: pointer; }
 
-.game-robots {
-  width: 100vw;
-  margin: 1%;
-  /* outline: 1px solid; */
-  /* float: left; */
-  z-index: 9999999999999999999;
-  position: fixed;
-  /* margin: calc(-15vh/2) 0 0 calc(-100vw/2); */
-  top: 0%;
-  /* left: 50%; */ }
-
-.game-status {
-  width: 25em;
-  height: 2.5rem;
-  position: absolute;
-  /* float: left; */
-  font-size: 10px;
-  display: flex;
-  /* margin-top: 1rem; */
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  /* margin-left: 1rem; */
-  top: 2%;
-  left: 3%; }
-
-.xs-player-experience {
-  flex: 50px 2;
-  height: 2.5rem;
-  line-height: 31px;
-  background-color: rgba(200, 0, 100, 0.5);
-  text-align: center;
-  border: 2px solid hotpink;
-  border-radius: 33px; }
-
-.player-experience {
-  color: white;
-  position: absolute;
-  top: 5px; }
-
-.xs-player-level {
-  flex: 50px;
-  height: 2.5rem;
-  line-height: 31px;
-  background-color: rgba(200, 0, 100, 0.5);
-  text-align: center;
-  border: 2px solid hotpink;
-  border-radius: 100px; }
-
-.player-level {
-  position: absolute;
-  left: 91%;
-  top: 5px;
-  color: white; }
-
-.player-money {
-  position: absolute;
-  top: 5px;
-  color: white; }
-
-.xs-player-experience-icon,
-.xs-player-money-icon,
-.xs-player-level-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  float: left;
-  /* margin-right: -8px; */
-  /* position: absolute; */
-  background-size: 3500%;
-  border-radius: 19px;
-  margin: -2px;
-  background-image: url("../images/icon2.svg"); }
-
-.xs-player-level-icon {
-  background-position: -825px -941px; }
-
-.xs-player-experience-icon {
-  background-position: -825px -998px; }
-
-.xs-player-money-icon {
-  background-position: -825px -882px; }
-
-.xs-player-money {
-  flex: 50px 2;
-  height: 2.5rem;
-  line-height: 31px;
-  background-color: rgba(200, 0, 100, 0.5);
-  text-align: center;
-  border: 2px solid hotpink;
-  border-radius: 100px; }
-
-/*fashion set 1 smooth*/
-/*set2 sun*/
-/*set3 grass*/
-/* sunday light*/
-/* dark storm*/
-/* rainbow */
-/* pineapple */
-/* deep ocean cloud*/
-/* color-link */
-/* colors in order */
-/* in text */
-/*fashion set 1 smooth*/
-/*fashion set 1 smooth*/
-/*set2 sun*/
-/*set3 grass*/
-/* sunday light*/
-/* dark storm*/
-/* rainbow */
-/* pineapple */
-/* deep ocean cloud*/
-/* color-link */
-/* colors in order */
-/* in text */
-/*fashion set 1 smooth*/
-.ball0 {
-  top: 0px;
-  left: 0px;
-  transition: all 0s linear; }
-
-.ball1 {
-  top: 5px;
-  left: 5px;
-  transition: all 1s linear; }
-
-.ball2 {
-  top: 10px;
-  left: 10px;
-  transition: all 2s linear; }
-
-.ball3 {
-  top: 15px;
-  left: 15px;
-  transition: all 3s linear; }
-
-.ball4 {
-  top: 20px;
-  left: 20px;
-  transition: all 4s linear; }
-
-.ball5 {
-  top: 25px;
-  left: 25px;
-  transition: all 5s linear; }
-
-.ball6 {
-  top: 30px;
-  left: 30px;
-  transition: all 6s linear; }
-
-.ball7 {
-  top: 35px;
-  left: 35px;
-  transition: all 7s linear; }
-
-.ball8 {
-  top: 40px;
-  left: 40px;
-  transition: all 8s linear; }
-
-.ball9 {
-  top: 45px;
-  left: 45px;
-  transition: all 9s linear; }
-
-a {
-  outline: none;
-  color: #fff;
-  text-decoration: none; }
-
-body {
-  overscroll-behavior-y: contain; }
-
-img {
-  max-width: 100%;
-  height: auto; }
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box; }
-
-figure {
-  position: absolute; }
-
-ul,
-li,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none !important; }
-
-body {
-  position: relative;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none; }
-
 .clearfix:after {
   display: block;
   visibility: hidden;
@@ -4445,8 +3778,8 @@ body {
 .clearfix {
   display: flow-root; }
 
-input[type=button],
-input[type=submit],
+input[type='button'],
+input[type='submit'],
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4467,85 +3800,42 @@ iframe:focus {
 iframe[seamless] {
   display: block; }
 
-progress {
-  display: block;
-  /* default: inline-block */
-  margin: 2em auto;
-  padding: 4px;
-  border: 0 none;
-  background: currentColor;
-  border-radius: 14px;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
-
-progress::-moz-progress-bar {
-  border-radius: 12px;
-  background: currentColor;
-  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
-
-progress::-webkit-progress-bar {
-  border-radius: 12px;
-  background: currentColor;
-  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
-
-progress::-webkit-progress-bar {
-  background: transparent; }
-
-progress::-webkit-progress-value {
-  background-color: yellow;
-  border-radius: 12px;
-  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
-
-input[type='button'],
-input[type='submit'],
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer; }
+.robot-saying {
+  width: 24%;
+  max-width: 50%;
+  max-height: 50%;
+  height: 10%;
+  position: absolute;
+  background: aquamarine;
+  border-radius: 30px;
+  text-align: center; }
+  .robot-saying .robot-speak {
+    display: inline-block;
+    /* background: black; */
+    z-index: 8899999;
+    font-size: 10px;
+    width: 100%;
+    height: auto;
+    line-break: strict;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: scroll;
+    color: black; }
+  .robot-saying .robot-triangle {
+    position: absolute;
+    border-right: 23px solid aquamarine;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    top: 77%;
+    left: -9%;
+    transform: rotatez(-30deg);
+    transition: all 1s linear; }
 
 .robot-outline {
   position: absolute;
   width: 100px;
   height: 100px; }
-  .robot-outline .robot-saying {
-    min-width: 100%;
-    max-width: 50%;
-    max-height: 50%;
-    min-height: 100%;
-    background: steelblue;
-    position: absolute;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    font-size: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    top: -31%;
-    left: 91%; }
-    .robot-outline .robot-saying .robot-speak {
-      width: 100%;
-      height: auto;
-      color: white;
-      padding-left: 3px;
-      word-break: break-all;
-      display: block; }
-    .robot-outline .robot-saying .robot-triangle {
-      border-top: 35px solid steelblue;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      position: absolute;
-      left: 0%;
-      top: 84%;
-      transform-origin: top;
-      transform: rotateZ(52deg); }
   .robot-outline #robot {
     width: 100px;
     height: 100px;
@@ -4584,6 +3874,16 @@ button {
       left: -14px;
       top: -23px; }
 
+#robot-shake {
+  -webkit-animation: robotshake 1s linear infinite;
+  -moz-animation: robotshake 1s linear infinite;
+  -ms-animation: robotshake 1s linear infinite;
+  animation: robotshake 1s linear infinite; }
+@keyframes robotshake {
+  40% {
+    transform: translateY(-1px); }
+  80% {
+    transform: translateY(1px); } }
 .robot-repair-instance {
   background-position: -7px -9px; }
 
@@ -4613,16 +3913,6 @@ button {
     background-position: -7px -340px; }
   to {
     background-position: -903px -340px; } }
-.robot-nice-to-meet-you {
-  -webkit-animation: nicetomeetyou 1.5s steps(12) forwards;
-  -moz-animation: nicetomeetyou 1.5s steps(12) forwards;
-  -ms-animation: nicetomeetyou 1.5s steps(12) forwards;
-  animation: nicetomeetyou 1.5s steps(12) forwards; }
-@keyframes nicetomeetyou {
-  from {
-    background-position: -903px -340px; }
-  to {
-    background-position: -2256px -340px; } }
 .robot-fireworks {
   -webkit-animation: robotfireworks 2s steps(8) forwards;
   -moz-animation: robotfireworks 2s steps(8) forwards;
@@ -4684,22 +3974,22 @@ button {
   to {
     background-position: -671px -571px; } }
 .robot-cross-get {
-  animation: robotcrossget 3s steps(15) forwards; }
+  animation: robotcrossget 3s steps(21) forwards; }
 @keyframes robotcrossget {
   from {
-    background-position: -1px -1243px; }
+    background-position: -0px -1240px; }
   to {
-    background-position: -1682px -1243px; } }
-.robot-cross-ready {
-  -webkit-animation: robotcrossready 1s steps(2) infinite;
-  -moz-animation: robotcrossready 1s steps(2) infinite;
-  -ms-animation: robotcrossready 1s steps(2) infinite;
-  animation: robotcrossready 1s steps(2) infinite; }
-@keyframes robotcrossready {
+    background-position: -2364px -1240px; } }
+.robot-cross-charging {
+  -webkit-animation: robotcrosscharging 0.3s steps(2) infinite;
+  -moz-animation: robotcrosscharging 0.3s steps(2) infinite;
+  -ms-animation: robotcrosscharging 0.3s steps(2) infinite;
+  animation: robotcrosscharging 0.3s steps(2) infinite; }
+@keyframes robotcrosscharging {
   from {
-    background-position: -1458px -1243px; }
+    background-position: -2138px -1240px; }
   to {
-    background-position: -1682px -1243px; } }
+    background-position: -2364px -1240px; } }
 .robot-normal-to-fight-instance {
   -webkit-animation: robotnormaltofightinstance 2s steps(14) forwards;
   -moz-animation: robotnormaltofightinstance 2s steps(14) forwards;
@@ -4902,63 +4192,374 @@ button {
   background: none;
   cursor: pointer; }
 
-.shanli-outline {
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+.header {
+  width: 100vw;
+  height: 100px;
+  display: block;
+  float: left; }
+  .header .header-boxcontrol {
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px; }
+    .header .header-boxcontrol .mrjudo {
+      margin-left: 4%; }
+
+.awake-section {
+  width: 100%;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25px; }
+
+.awake {
+  background: rgba(255, 155, 225, 0.5);
+  line-height: 55px;
+  text-align: center;
+  font-size: 13px;
+  transition: all .1s linear; }
+  .awake:hover {
+    background: rgba(27, 194, 185, 0.5); }
+    .awake:hover .awake-up {
+      top: -10px;
+      opacity: 0; }
+    .awake:hover .awake-down {
+      top: 3px;
+      opacity: 1;
+      transition: all .1s linear; }
+    .awake:hover .awake-border-up {
+      width: 0px; }
+    .awake:hover .awake-border-down {
+      width: 0px; }
+  .awake .awake-up {
+    opacity: 1;
+    color: white;
+    position: absolute;
+    z-index: 9099999;
+    transition: all 0.1s linear;
+    cursor: pointer; }
+  .awake .awake-border-up {
+    position: absolute;
+    border-top: 1px solid white;
+    width: calc(120px/2);
+    top: -1px;
+    left: 0%;
+    transition: all 1s linear .5s; }
+  .awake .awake-border-down {
+    position: absolute;
+    border-top: 1px solid white;
+    width: calc(120px/2);
+    top: 95%;
+    left: 100%;
+    transform-origin: left bottom;
+    transition: all 1s linear .5s;
+    transform: rotateY(-180deg); }
+  .awake .awake-down {
+    display: block;
+    opacity: 0;
+    color: maroon;
+    text-shadow: -1px 1px 5px white;
+    position: absolute;
+    top: 25px;
+    transition: all 0.1s linear; }
+
+.prologue {
+  background: rgba(255, 155, 225, 0.5);
+  /* width: 60px; */
+  /* height: 28px; */
+  /* position: absolute; */
+  /* top: 100%; */
+  line-height: 28px;
+  font-size: 13px;
+  /* left: 67%; */
+  transition: all .1s linear; }
+  .prologue:hover {
+    background: rgba(27, 194, 185, 0.5); }
+    .prologue:hover .prologue-up {
+      top: -10px;
+      opacity: 0; }
+    .prologue:hover .prologue-down {
+      top: 3px;
+      opacity: 1;
+      transition: all .1s linear; }
+    .prologue:hover .prologue-border-up {
+      width: 0px; }
+    .prologue:hover .prologue-border-down {
+      width: 0px; }
+  .prologue .prologue-up {
+    opacity: 1;
+    color: white;
+    position: absolute;
+    z-index: 9099999;
+    transition: all 0.1s linear;
+    cursor: pointer; }
+  .prologue .prologue-border-up {
+    position: absolute;
+    border-top: 1px solid white;
+    width: calc(120px/2);
+    top: -1px;
+    left: 0%;
+    transition: all 1s linear .5s; }
+  .prologue .prologue-border-down {
+    position: absolute;
+    border-top: 1px solid white;
+    width: calc(120px/2);
+    top: 95%;
+    left: 100%;
+    transform-origin: left bottom;
+    transition: all 1s linear .5s;
+    transform: rotateY(-180deg); }
+  .prologue .prologue-down {
+    display: block;
+    opacity: 0;
+    color: maroon;
+    text-shadow: -1px 1px 5px white;
+    position: absolute;
+    top: 25px;
+    transition: all 0.1s linear; }
+
+.location {
+  background: rgba(255, 155, 225, 0.5);
+  /* width: 60px; */
+  /* height: 28px; */
+  /* position: absolute; */
+  /* top: 100%; */
+  line-height: 28px;
+  text-align: center;
+  font-size: 13px;
+  /* left: 67%; */
+  transition: all .1s linear; }
+  .location:hover {
+    background: rgba(27, 194, 185, 0.5); }
+    .location:hover .location-up {
+      top: -10px;
+      opacity: 0; }
+    .location:hover .location-down {
+      top: 3px;
+      opacity: 1;
+      transition: all .1s linear; }
+    .location:hover .location-border-up {
+      width: 0px; }
+    .location:hover .location-border-down {
+      width: 0px; }
+  .location .location-up {
+    opacity: 1;
+    color: white;
+    position: absolute;
+    z-index: 9099999;
+    transition: all 0.1s linear;
+    cursor: pointer; }
+  .location .location-border-up {
+    position: absolute;
+    border-top: 1px solid white;
+    width: calc(120px/2);
+    top: -1px;
+    left: 0%;
+    transition: all 1s linear .5s; }
+  .location .location-border-down {
+    position: absolute;
+    border-top: 1px solid white;
+    width: calc(120px/2);
+    top: 95%;
+    left: 100%;
+    transform-origin: left bottom;
+    transition: all 1s linear .5s;
+    transform: rotateY(-180deg); }
+  .location .location-down {
+    display: block;
+    opacity: 0;
+    color: maroon;
+    text-shadow: -1px 1px 5px white;
+    position: absolute;
+    top: 25px;
+    transition: all 0.1s linear; }
+
+.epilogue {
+  background: rgba(255, 155, 225, 0.5);
+  /* width: 60px; */
+  /* height: 28px; */
+  /* position: absolute; */
+  /* top: 100%; */
+  line-height: 28px;
+  text-align: center;
+  font-size: 13px;
+  /* left: 67%; */
+  transition: all .1s linear; }
+  .epilogue:hover {
+    background: rgba(27, 194, 185, 0.5); }
+    .epilogue:hover .epilogue-up {
+      top: -10px;
+      opacity: 0; }
+    .epilogue:hover .epilogue-down {
+      top: 3px;
+      opacity: 1; }
+    .epilogue:hover .epilogue-border-up {
+      width: 0px; }
+    .epilogue:hover .epilogue-border-down {
+      width: 0px; }
+  .epilogue .epilogue-up {
+    opacity: 1;
+    color: white;
+    position: absolute;
+    z-index: 9099999;
+    transition: all 0.1s linear;
+    cursor: pointer; }
+  .epilogue .epilogue-border-up {
+    position: absolute;
+    border-top: 1px solid white;
+    width: calc(120px/2);
+    top: -1px;
+    left: 0%;
+    transition: all 1s linear .5s; }
+  .epilogue .epilogue-border-down {
+    position: absolute;
+    border-top: 1px solid white;
+    width: calc(120px/2);
+    top: 95%;
+    left: 100%;
+    transform-origin: left bottom;
+    transition: all 1s linear .5s;
+    transform: rotateY(-180deg); }
+  .epilogue .epilogue-down {
+    display: block;
+    opacity: 0;
+    color: maroon;
+    text-shadow: -1px 1px 5px white;
+    position: absolute;
+    top: 25px;
+    transition: all 0.1s linear; }
+
+.game-robots {
+  width: 100vw;
+  margin: 1%;
+  /* outline: 1px solid; */
+  /* float: left; */
+  z-index: 9999999999999999999;
+  position: fixed;
+  /* margin: calc(-15vh/2) 0 0 calc(-100vw/2); */
+  top: 0%;
+  /* left: 50%; */ }
+
+.game-status {
+  width: 25em;
+  height: 2.5rem;
   position: absolute;
-  width: 7em;
-  height: 7em;
-  top: 76%;
-  left: 70%; }
-  .shanli-outline #shan-li {
-    width: 7em;
-    height: 7em;
-    background-size: 2052%;
-    transition: all 1s linear;
-    background-image: url("../../images/icon2.svg");
-    background-position: -0px -2170px; }
-    .shanli-outline #shan-li .number {
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      top: 35px;
-      left: 55px;
-      color: white;
-      transition: all 1s linear;
-      display: none; }
-  .shanli-outline .shanli-energy {
-    width: 100px;
-    background: red;
-    height: 10px;
-    -webkit-animation: shanlienergy 0.5s linear infinite;
-    -moz-animation: shanlienergy 0.5s linear infinite;
-    -ms-animation: shanlienergy 0.5s linear infinite;
-    animation: shanlienergy 0.5s linear infinite; }
-@keyframes shanlienergy {
-  40% {
-    background: #d32f2f; }
-  80% {
-    background: #ffcdd2; } }
-    .shanli-outline .shanli-energy .shanli-energy-bar {
-      width: 20px;
-      left: 0px;
-      height: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-      -moz-background-clip: padding;
-      -webkit-background-clip: padding-box;
-      background-clip: padding-box;
-      background: #388e3c;
-      position: absolute; }
-    .shanli-outline .shanli-energy .icon-energy {
-      width: 2.5rem;
-      height: 2.5rem;
-      position: absolute;
-      background-image: url("../../images/icon2.svg");
-      background-size: 7000%;
-      background-position: -2743px -431px; }
-    .shanli-outline .shanli-energy .energy-pos2 {
-      left: -18px;
-      top: 89px; }
+  /* float: left; */
+  font-size: 10px;
+  display: flex;
+  /* margin-top: 1rem; */
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* margin-left: 1rem; */
+  top: 2%;
+  left: 3%; }
+
+.xs-player-experience {
+  flex: 50px 2;
+  height: 2.5rem;
+  line-height: 31px;
+  background-color: rgba(200, 0, 100, 0.5);
+  text-align: center;
+  border: 2px solid hotpink;
+  border-radius: 33px; }
+
+.player-experience {
+  color: white;
+  position: absolute;
+  top: 5px; }
+
+.xs-player-level {
+  flex: 50px;
+  height: 2.5rem;
+  line-height: 31px;
+  background-color: rgba(200, 0, 100, 0.5);
+  text-align: center;
+  border: 2px solid hotpink;
+  border-radius: 100px; }
+
+.player-level {
+  position: absolute;
+  left: 91%;
+  top: 5px;
+  color: white; }
+
+.player-money {
+  position: absolute;
+  top: 5px;
+  color: white; }
+
+.xs-player-experience-icon,
+.xs-player-money-icon,
+.xs-player-level-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  float: left;
+  /* margin-right: -8px; */
+  /* position: absolute; */
+  background-size: 3500%;
+  border-radius: 19px;
+  margin: -2px;
+  background-image: url("../images/icon2.svg"); }
+
+.xs-player-level-icon {
+  background-position: -825px -941px; }
+
+.xs-player-experience-icon {
+  background-position: -825px -998px; }
+
+.xs-player-money-icon {
+  background-position: -825px -882px; }
+
+.xs-player-money {
+  flex: 50px 2;
+  height: 2.5rem;
+  line-height: 31px;
+  background-color: rgba(200, 0, 100, 0.5);
+  text-align: center;
+  border: 2px solid hotpink;
+  border-radius: 100px; }
 
 body,
 html {
@@ -5036,100 +4637,107 @@ svg {
 
 .awake-second-section {
   position: fixed;
-  top: 0;
-  left: 100%;
+  top: 50%;
+  left: -100%;
   z-index: 4;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  width: 1400px;
+  height: 800px;
+  margin: -400px 0 0 -700px;
   backface-visibility: hidden;
   transform-origin: center left;
   transform-style: preserve-3d;
+  background: black;
   transform: translateZ(0px); }
 
 .awake-third-section {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  top: 50%;
+  left: -100%;
+  z-index: 3;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  width: 1400px;
+  height: 800px;
+  margin: -400px 0 0 -700px;
   backface-visibility: hidden;
   transform-origin: center left;
   transform-style: preserve-3d;
+  background: black;
   transform: translateZ(0px); }
 
 .awake-fourth-section {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  top: 50%;
+  left: 100%;
+  z-index: 2;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  width: 1400px;
+  height: 800px;
+  margin: -400px 0 0 -700px;
   backface-visibility: hidden;
   transform-origin: center left;
   transform-style: preserve-3d;
+  background: black;
   transform: translateZ(0px); }
 
 .awake-fifth-section {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  top: 50%;
+  left: -100%;
+  z-index: 1;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  width: 1400px;
+  height: 800px;
+  margin: -400px 0 0 -700px;
   backface-visibility: hidden;
   transform-origin: center left;
   transform-style: preserve-3d;
+  background: black;
   transform: translateZ(0px); }
 
 .prologue-first-section {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
+  top: 50%;
+  left: -100%;
+  z-index: 0;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  width: 1400px;
+  height: 800px;
+  margin: -400px 0 0 -700px;
   backface-visibility: hidden;
   transform-origin: center left;
   transform-style: preserve-3d;
+  background: black;
   transform: translateZ(0px); }
 
 .location-first-section {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
+  top: 50%;
+  left: -100%;
+  z-index: -1;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  width: 1400px;
+  height: 800px;
+  margin: -400px 0 0 -700px;
   backface-visibility: hidden;
   transform-origin: center left;
   transform-style: preserve-3d;
+  background: black;
   transform: translateZ(0px); }
 
 .epilogue-first-section {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  top: 50%;
+  left: 100%;
+  z-index: -2;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom, #f8bbd0, #c2185b);
+  width: 1400px;
+  height: 800px;
+  margin: -400px 0 0 -700px;
   backface-visibility: hidden;
   transform-origin: center left;
   transform-style: preserve-3d;
+  background: black;
   transform: translateZ(0px); }
 
 .shan-btn {

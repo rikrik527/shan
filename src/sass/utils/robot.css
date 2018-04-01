@@ -190,44 +190,81 @@ button {
   background: none;
   cursor: pointer; }
 
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+.robot-saying {
+  width: 24%;
+  max-width: 50%;
+  max-height: 50%;
+  height: 10%;
+  position: absolute;
+  background: aquamarine;
+  border-radius: 30px;
+  text-align: center; }
+  .robot-saying .robot-speak {
+    display: inline-block;
+    /* background: black; */
+    z-index: 8899999;
+    font-size: 10px;
+    width: 100%;
+    height: auto;
+    line-break: strict;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: scroll;
+    color: black; }
+  .robot-saying .robot-triangle {
+    position: absolute;
+    border-right: 23px solid aquamarine;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    top: 77%;
+    left: -9%;
+    transform: rotatez(-30deg);
+    transition: all 1s linear; }
+
 .robot-outline {
   position: absolute;
   width: 100px;
   height: 100px; }
-  .robot-outline .robot-saying {
-    min-width: 100%;
-    max-width: 50%;
-    max-height: 50%;
-    min-height: 100%;
-    background: steelblue;
-    position: absolute;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    font-size: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    top: -31%;
-    left: 91%; }
-    .robot-outline .robot-saying .robot-speak {
-      width: 100%;
-      height: auto;
-      color: white;
-      padding-left: 3px;
-      word-break: break-all;
-      display: block; }
-    .robot-outline .robot-saying .robot-triangle {
-      border-top: 35px solid steelblue;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      position: absolute;
-      left: 0%;
-      top: 84%;
-      transform-origin: top;
-      transform: rotateZ(52deg); }
   .robot-outline #robot {
     width: 100px;
     height: 100px;
@@ -266,6 +303,16 @@ button {
       left: -14px;
       top: -23px; }
 
+#robot-shake {
+  -webkit-animation: robotshake 1s linear infinite;
+  -moz-animation: robotshake 1s linear infinite;
+  -ms-animation: robotshake 1s linear infinite;
+  animation: robotshake 1s linear infinite; }
+@keyframes robotshake {
+  40% {
+    transform: translateY(-1px); }
+  80% {
+    transform: translateY(1px); } }
 .robot-repair-instance {
   background-position: -7px -9px; }
 
@@ -295,16 +342,6 @@ button {
     background-position: -7px -340px; }
   to {
     background-position: -903px -340px; } }
-.robot-nice-to-meet-you {
-  -webkit-animation: nicetomeetyou 1.5s steps(12) forwards;
-  -moz-animation: nicetomeetyou 1.5s steps(12) forwards;
-  -ms-animation: nicetomeetyou 1.5s steps(12) forwards;
-  animation: nicetomeetyou 1.5s steps(12) forwards; }
-@keyframes nicetomeetyou {
-  from {
-    background-position: -903px -340px; }
-  to {
-    background-position: -2256px -340px; } }
 .robot-fireworks {
   -webkit-animation: robotfireworks 2s steps(8) forwards;
   -moz-animation: robotfireworks 2s steps(8) forwards;
@@ -366,22 +403,22 @@ button {
   to {
     background-position: -671px -571px; } }
 .robot-cross-get {
-  animation: robotcrossget 3s steps(15) forwards; }
+  animation: robotcrossget 3s steps(21) forwards; }
 @keyframes robotcrossget {
   from {
-    background-position: -1px -1243px; }
+    background-position: -0px -1240px; }
   to {
-    background-position: -1682px -1243px; } }
-.robot-cross-ready {
-  -webkit-animation: robotcrossready 1s steps(2) infinite;
-  -moz-animation: robotcrossready 1s steps(2) infinite;
-  -ms-animation: robotcrossready 1s steps(2) infinite;
-  animation: robotcrossready 1s steps(2) infinite; }
-@keyframes robotcrossready {
+    background-position: -2364px -1240px; } }
+.robot-cross-charging {
+  -webkit-animation: robotcrosscharging 0.3s steps(2) infinite;
+  -moz-animation: robotcrosscharging 0.3s steps(2) infinite;
+  -ms-animation: robotcrosscharging 0.3s steps(2) infinite;
+  animation: robotcrosscharging 0.3s steps(2) infinite; }
+@keyframes robotcrosscharging {
   from {
-    background-position: -1458px -1243px; }
+    background-position: -2138px -1240px; }
   to {
-    background-position: -1682px -1243px; } }
+    background-position: -2364px -1240px; } }
 .robot-normal-to-fight-instance {
   -webkit-animation: robotnormaltofightinstance 2s steps(14) forwards;
   -moz-animation: robotnormaltofightinstance 2s steps(14) forwards;

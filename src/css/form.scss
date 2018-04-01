@@ -1,0 +1,272 @@
+@import './color';
+@import './mediaQuery';
+@import './prefix';
+@import '../css/normalize.css';
+input::-webkit-input-placeholder {
+    font-size: 12px;
+}
+
+input[type="textPath"] {
+    width: 100%;
+}
+
+.label-name,
+.label-password {
+    margin: -21px;
+    &:focus {
+        border: 2px solid $blue4;
+    }
+}
+
+#name,
+#email,
+#passowrd,
+#conf-password,
+#birthday {
+    border-radius: 4px;
+}
+
+#email,
+#password,
+#conf-password,
+#birthday {
+    display: block;
+    margin-left: 72px;
+    margin-top: -4px;
+    width: 279px;
+}
+
+#name,
+#password {
+    width: 279px;
+    margin-top: 2px;
+    margin-left: 19px;
+}
+
+.label-email,
+.label-conf-password,
+.label-birthday {
+    margin-left: 11px;
+    display: block;
+    float: left;
+}
+
+.label-name,
+.label-password {
+    display: block;
+    float: left;
+    margin: 8px;
+}
+
+.title-shan {
+    width: 37%;
+    height: 4%;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 3px -3px 1px #ad1457;
+    color: #f8bbd0;
+    font-size: 60px;
+    text-decoration: underline;
+    line-height: 18px;
+    top: 0%;
+    left: 4%;
+    .title-author {
+        font-size: 12px;
+        color: lightblue;
+        position: absolute;
+        top: 39px;
+        left: 1px;
+    }
+}
+
+.sign-up-form {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, $pink8, $pink2);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    .sign-up-title {
+        font-size: 20px;
+        color: $pink2;
+        text-shadow: 1px -1px 3px $pink9;
+        align-self: center;
+        text-align: center;
+    }
+    .form-boxcontrol {
+        width: 400px;
+        height: auto;
+        display: block;
+        color: pink;
+        font-size: 16px;
+        border: 1px solid $pink2;
+        border-radius: 4px;
+        font-size: 12px;
+        .sign-up-name {
+            display: block;
+            height: 43px;
+            background: darkred;
+            /* vertical-align: middle; */
+            padding-top: 15px;
+            width: 93%;
+            float: left;
+            border-radius: 10px;
+            margin: 3%;
+            #name {}
+        }
+        .sign-up-email {
+            display: block;
+            height: 43px;
+            background: darkred;
+            /* vertical-align: middle; */
+            padding-top: 15px;
+            width: 93%;
+            float: left;
+            border-radius: 10px;
+            margin: 3%;
+            #email {}
+        }
+        .sign-up-password {
+            display: block;
+            height: 43px;
+            background: darkred;
+            /* vertical-align: middle; */
+            padding-top: 15px;
+            width: 93%;
+            float: left;
+            border-radius: 10px;
+            margin: 3%;
+            #password {}
+        }
+        .sign-up-confirm-password {
+            display: block;
+            height: 43px;
+            background: darkred;
+            /* vertical-align: middle; */
+            padding-top: 15px;
+            width: 93%;
+            float: left;
+            border-radius: 10px;
+            margin: 3%;
+            #conf-password {}
+        }
+        .sign-up-birthday {
+            display: block;
+            height: 43px;
+            background: darkred;
+            /* vertical-align: middle; */
+            padding-top: 15px;
+            width: 93%;
+            float: left;
+            border-radius: 10px;
+            margin: 3%;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            #birthday {}
+            #consent-container {
+                display: none;
+                height: 37px;
+                background: red;
+                padding: 9px 8px;
+                width: 78%;
+                border-radius: 10px;
+                margin: -4px 125px;
+                color: azure;
+                z-index: 12;
+                transform: translateZ(2px);
+                #parent-consent {
+                    margin-left: 255px;
+                }
+            }
+        }
+        .bio {
+            display: block;
+            height: 30px;
+            background: $pink2;
+            border: 1px solid $pink8;
+            padding: 10px 16px;
+            width: 93%;
+            float: left;
+            border-radius: 10px;
+            margin: 6px 10px;
+            color: white;
+            text-shadow: 1px 1px 1px $pink8;
+            .label-bio {
+                margin: 59px;
+            }
+            .form-textarea {
+                margin: 15px 68px;
+            }
+            #bio {}
+            #bio-count {
+                float: right;
+                color: black;
+                text-shadow: none;
+                margin: -28px 46px;
+            }
+        }
+        .submit {
+            width: 300px;
+            height: 50px;
+            background: mediumvioletred;
+            float: left;
+            display: block;
+            border-radius: 16px;
+            margin: 26% 12%;
+        }
+        .submit-page {
+            background: azure;
+            float: left;
+            margin: 3%;
+        }
+        .login-page {
+            background: azure;
+            float: right;
+            margin: 3%;
+        }
+    }
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    color: #ad1457;
+    border-radius: 13px;
+    border: 1px solid #ad1457;
+    text-shadow: 1px 1px 3px white;
+    &:hover {
+        .login-page {
+            background: $pink3;
+        }
+        .submit-page {
+            background: $pink3;
+        }
+    }
+}
+
+.required {}
+
+.hide {
+    display: 'none'
+}
+
+.animation-wrong {
+    animation: animationwrong .5s linear forwards;
+    @keyframes animationwrong {
+        20%,
+        40%,
+        60%,
+        80% {
+            transform: translateX(-2px);
+        }
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+            transform: translateX(2px);
+        }
+    }
+}

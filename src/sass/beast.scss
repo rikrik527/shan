@@ -1,17 +1,143 @@
-@import './judoVariable';
-@import './color';
-
 /* beast */
+
+@import './color';
+@import './prefix';
+.beast-btn {
+    background: brown;
+    .beast-lowbox {
+        width: 38%;
+        height: 100%;
+        color: #bbdefb;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: baseline;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        text-shadow: 0px 0px 3px #1565c0;
+        .beast-name {
+            display: inline-block;
+            width: 100%;
+            height: 2em;
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            font-size: 10px;
+        }
+        .beast-photo {
+            width: 100%;
+            max-width: 100px;
+            align-self: center;
+        }
+        .beast-profile {
+            font-size: 10px;
+        }
+        .beast-status {
+            display: block;
+            overflow: scroll;
+            padding: 2px;
+            width: 100%;
+            height: auto;
+            .beast-info {
+                font-family: "Cutive Mono", monospace;
+                font-size: 10px;
+                margin: 0 0 0.5em;
+                white-space: pre-wrap;
+                word-break: break-all;
+            }
+        }
+    }
+    .beast-bg {
+        width: 100px;
+        height: 100px;
+        margin: -50px 0 0 -50px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        .beast-bg2 {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100px;
+            height: 100px;
+            @include border-radius(100px);
+            background-color: linear-gradient(to top, $pink3 40%, $pink8 60%);
+            background-image: url('../images/earth.png');
+            @include animation(beastbg2 90s linear infinite);
+            background-blend-mode: overlay;
+            @keyframes crazybg2 {
+                0% {
+                    border: 1px solid $pink2;
+                    background-position-y: 900%;
+                    box-shadow: 0px 0px 4px 4px $pink6;
+                }
+                20% {
+                    border: 1px solid $pink2;
+                    background-position-y: 1800%;
+                    box-shadow: -2px -2px 2px 2px $pink6;
+                }
+                40% {
+                    border: 1px solid $pink2;
+                    background-position-y: 2700%;
+                    box-shadow: 0px 0px 4px 4px $pink6;
+                }
+                60% {
+                    border: 1px solid $pink2;
+                    background-position-y: 3600%;
+                    box-shadow: 2px 2px 2px 2px $pink6;
+                }
+                80% {
+                    border: 1px solid $pink2;
+                    background-position-y: 4500%;
+                    box-shadow: 0px 0px 4px 4px $pink6;
+                }
+                100% {
+                    border: 1px solid $pink2;
+                    background-position-y: 5400%;
+                    box-shadow: 2px 2px 2px 2px $pink6;
+                }
+            }
+        }
+    }
+}
+
+.btn-pos4 {
+    background: indianred;
+    font-size: 10px;
+    line-height: 22px;
+    color: red;
+    left: 21.5%;
+    top: 63%;
+}
 
 .beast-boxcontrol {
     position: absolute;
-    top: 327px;
-    left: 14%;
+    top: 50%;
+    left: 22%;
+    margin: -15px 0 0 -15px;
     z-index: 99999;
     width: 30px;
     height: 30px;
     transform-style: preserve-3d;
     perspective: 1000px;
+    @include animation(beastboxcontrol .5s linear infinite);
+    @keyframes beastboxcontrol {
+        10%,
+        50%,
+        90% {
+            transform: translateY(-3px);
+        }
+    }
     .beast-sensor-top {}
     .beast-sensor-left {}
     .beast-sensor-right {}
@@ -24,6 +150,34 @@
         border-radius: 0 0 5px 5px;
         background: $orange5;
         transform-origin: center bottom;
+        transition: all 1s linear;
+        @include animation(beasthead 1s linear infinite);
+        @keyframes beasthead {
+            40% {
+                transform: rotateZ(10deg)translateX(1px);
+                background: linear-gradient(to bottom, red, 10%, orange);
+            }
+            50% {
+                transform: rotateZ(10deg)translateX(-1px);
+                background: linear-gradient(to bottom, red, 20%, orange);
+            }
+            60% {
+                transform: rotateZ(10deg)translateX(1px);
+                background: linear-gradient(to bottom, red, 30%, orange);
+            }
+            70% {
+                transform: rotateZ(10deg)translateX(-1px);
+                background: linear-gradient(to bottom, red, 40%, orange);
+            }
+            80% {
+                transform: rotateZ(10deg)translateX(-1px);
+                background: linear-gradient(to bottom, red, 30%, orange);
+            }
+            90% {
+                transform: rotateZ(10deg)translateX(-1px);
+                background: linear-gradient(to bottom, red, 20%, orange);
+            }
+        }
         .beast-hair {
             position: absolute;
             top: -9px;
@@ -44,18 +198,26 @@
             transform-origin: right center;
             .beast-eye {
                 position: absolute;
-                top: 3px;
+                top: 1px;
                 left: 2px;
                 overflow: hidden;
                 width: 13px;
-                height: 2px;
-                border-radius: 20px;
+                height: 7px;
+                border-radius: 0px 5px 0 5px;
                 background: white;
                 -ms-transform: rotate(-29deg);
+                -webkit-transform: rotatez(-29deg);
                 transform: rotatez(-29deg);
+                @include animation(beasteye 1s linear infinite);
+                @keyframes beasteye {
+                    40% {
+                        top: 3px;
+                        height: 4px;
+                    }
+                }
                 .beast-eyeball {
                     position: absolute;
-                    top: -1px;
+                    top: 1px;
                     left: 5px;
                     width: 4px;
                     height: 4px;
@@ -76,7 +238,7 @@
             transform-origin: left center;
             .beast-eye2 {
                 position: absolute;
-                top: 3px;
+                top: 4px;
                 left: 0px;
                 overflow: hidden;
                 width: 12px;
@@ -84,6 +246,14 @@
                 border-radius: 20px;
                 background: white;
                 transform: rotatez(30deg);
+                @include animation(beasteye2 1s linear infinite);
+                @keyframes beasteye2 {
+                    60% {
+                        top: 1px;
+                        left: -1px;
+                        height: 7px;
+                    }
+                }
                 .beast-eyeball2 {
                     position: absolute;
                     top: -1px;
@@ -92,6 +262,12 @@
                     height: 4px;
                     border-radius: 10px;
                     background: brown;
+                    @include animation(beasteyeball2 1s linear infinite);
+                    @keyframes beasteyeball2 {
+                        60% {
+                            top: 1px;
+                        }
+                    }
                 }
             }
         }
@@ -105,6 +281,14 @@
             border-bottom: 2px solid orange;
             border-left: 2px solid orange;
             background: $orange2;
+            @include animation(beastnose 1s linear infinite);
+            @keyframes beastnose {
+                60% {
+                    border-right: 1px solid orange;
+                    border-left: 1px solid orange;
+                    top: 13px;
+                }
+            }
         }
         .beast-lips {
             position: absolute;
@@ -112,13 +296,20 @@
             left: 9px;
             .beast-mouth {
                 position: absolute;
-                top: 2px;
+                top: 1px;
                 left: 1px;
                 z-index: 999;
                 width: 16px;
                 height: 6px;
                 border-radius: 0 0 5px 5px;
-                background: $red8;
+                background: #d32f2f;
+                @include animation(beastmouth 1s linear infinite);
+                @keyframes beastmouth {
+                    80% {
+                        height: 18px;
+                        top: -1px;
+                    }
+                }
                 .beast-teeth {
                     position: absolute;
                     top: 0px;
@@ -129,13 +320,21 @@
                 }
                 .beast-tougn {
                     position: absolute;
-                    top: 7px;
+                    top: 4px;
                     left: 3px;
                     width: 10px;
-                    height: 10px;
+                    height: 2px;
                     border-radius: 0 0 5px 5px;
                     background: red;
+                    -webkit-transform-origin: center top;
+                    -ms-transform-origin: center top;
                     transform-origin: center top;
+                    @include animation(beasttougn 1s linear infinite);
+                    @keyframes beasttougn {
+                        70% {
+                            height: 14px;
+                        }
+                    }
                 }
             }
         }
@@ -188,11 +387,11 @@
     }
     .beast-neck {
         position: absolute;
-        top: 32px;
+        top: 30px;
         left: 7px;
         z-index: -1;
         width: 27px;
-        height: 10px;
+        height: 13px;
         background: $orange6;
     }
     .beast-body {
@@ -203,6 +402,21 @@
         border-top: 33px solid $orange6;
         border-right: 6px solid transparent;
         border-left: 6px solid transparent;
+        @include animation(beastbody 1s linear infinite);
+        @keyframes beastbody {
+            20% {
+                transform: translateY(-1px)
+            }
+            40% {
+                transform: translateY(1px)
+            }
+            60% {
+                transform: translateY(-1px)
+            }
+            80% {
+                transform: translateY(1px)
+            }
+        }
     }
     .beast-triangle {
         position: absolute;
@@ -212,6 +426,13 @@
         height: 16px;
         border-radius: 5px 5px 0 0;
         background: #ff9800;
+        @include animation(beasttriangle 1s linear infinite);
+        @keyframes beasttriangle {
+            40% {
+                top: -42px;
+                height: 18px;
+            }
+        }
     }
     .beast-triangle2 {
         position: absolute;
@@ -221,6 +442,13 @@
         height: 16px;
         border-radius: 5px 5px 0 0;
         background: #ff9800;
+        @include animation(beasttriangle2 1s linear infinite);
+        @keyframes beasttriangle2 {
+            80% {
+                top: -42px;
+                height: 18px;
+            }
+        }
     }
     .beast-tatoo {
         position: absolute;
@@ -237,6 +465,15 @@
         height: 10px;
         border-radius: 0 0 0 10px;
         background: #ffb74d;
+        transition: all 1s linear;
+        @include animation(beastchest 1s linear infinite);
+        @keyframes beastchest {
+            40% {
+                top: -36px;
+                height: 16px;
+                background: white;
+            }
+        }
     }
     .beast-chest2 {
         position: absolute;
@@ -246,6 +483,15 @@
         height: 10px;
         border-radius: 0 0 10px 0;
         background: #ffb74d;
+        transition: all 1s linear;
+        @include animation(beastchest2 1s linear infinite);
+        @keyframes beastchest2 {
+            80% {
+                top: -36px;
+                height: 17px;
+                background: white;
+            }
+        }
     }
     .beast-arm {
         position: absolute;
@@ -274,6 +520,7 @@
                 height: 18px;
                 background: #ff9800;
                 transform-origin: center top;
+                transform: rotatez(-198deg)translatez(77px);
                 .beast-hand {
                     position: absolute;
                     top: 14px;
@@ -297,6 +544,7 @@
         background: #ff9800;
         -ms-transform-origin: left center;
         transform-origin: left center;
+        transform: rotateZ(57deg);
         .beast-bicep2 {
             position: absolute;
             top: 10px;
@@ -314,6 +562,7 @@
                 background: #ff9800;
                 transform: rotatez(0deg)rotateX(0deg);
                 transform-origin: center top;
+                transform: rotateZ(106deg);
                 .beast-hand2 {
                     position: absolute;
                     top: 13px;
@@ -356,6 +605,13 @@
                 font-size: 20px;
                 font-family: impact;
                 line-height: 40px;
+                transition: all 1s linear;
+                @include animation(beastchamp 1s linear infinite);
+                @keyframes beastchamp {
+                    40% {
+                        background: white;
+                    }
+                }
             }
         }
         .beast-leg {
@@ -366,61 +622,69 @@
             height: 13px;
             background: #ff9800;
             transform-origin: center top;
-            .beast-short {
-                position: absolute;
-                top: 0px;
-                left: -5px;
-                z-index: 999;
-                width: 26px;
-                height: 9px;
-                background: red;
+            transform: rotateZ(43deg);
+            @include animation(beastleg 1s linear infinite);
+            @keyframes beastleg {
+                60% {
+                    transform: rotateZ(67deg)
+                }
             }
-            .beast-legguto {
+        }
+        .beast-short {
+            position: absolute;
+            top: 0px;
+            left: -5px;
+            z-index: 999;
+            width: 26px;
+            height: 9px;
+            background: red;
+        }
+        .beast-legguto {
+            position: absolute;
+            top: 13px;
+            left: 0px;
+            width: 15px;
+            height: 7px;
+            border-radius: 0 0 5px 5px;
+            background: red;
+            transform-origin: center top;
+            transform: rotateZ(-52deg)
+        }
+        .beast-lowleg {
+            position: absolute;
+            top: 5px;
+            left: 2px;
+            width: 10px;
+            height: 6px;
+            background: #ff9800;
+            transform-origin: center top;
+            .beast-shoe {
                 position: absolute;
-                top: 13px;
-                left: 0px;
-                width: 15px;
+                top: 6px;
+                left: -1px;
+                width: 11px;
                 height: 7px;
-                border-radius: 0 0 5px 5px;
                 background: red;
+                -ms-transform-origin: center top;
                 transform-origin: center top;
-                .beast-lowleg {
+                .beast-shoefoot {
                     position: absolute;
-                    top: 5px;
-                    left: 2px;
-                    width: 10px;
-                    height: 6px;
-                    background: #ff9800;
-                    transform-origin: center top;
-                    .beast-shoe {
+                    top: 7px;
+                    left: 0px;
+                    width: 11px;
+                    height: 11px;
+                    background: red;
+                    .beast-shoefootfront {
                         position: absolute;
-                        top: 6px;
-                        left: -1px;
-                        width: 11px;
-                        height: 7px;
+                        top: 0px;
+                        left: 2px;
+                        z-index: -9999;
+                        width: 10px;
+                        height: 15px;
+                        border-radius: 15px 0;
                         background: red;
-                        -ms-transform-origin: center top;
+                        transform: rotatez(29deg);
                         transform-origin: center top;
-                        .beast-shoefoot {
-                            position: absolute;
-                            top: 7px;
-                            left: 0px;
-                            width: 11px;
-                            height: 11px;
-                            background: red;
-                            .beast-shoefootfront {
-                                position: absolute;
-                                top: 0px;
-                                left: 2px;
-                                z-index: -9999;
-                                width: 10px;
-                                height: 15px;
-                                border-radius: 15px 0;
-                                background: red;
-                                transform: rotatez(29deg);
-                                transform-origin: center top;
-                            }
-                        }
                     }
                 }
             }
@@ -434,6 +698,13 @@
             height: 12px;
             background: #ff9800;
             transform-origin: center top;
+            transform: rotateZ(-29deg);
+            @include animation(beastleg2 1s linear infinite);
+            @keyframes beastleg2 {
+                30% {
+                    transform: rotateZ(-52deg)
+                }
+            }
             .beast-short2 {
                 position: absolute;
                 top: -3px;
@@ -450,6 +721,7 @@
                 height: 5px;
                 border-radius: 0 0 5px 5px;
                 background: red;
+                transform: rotateZ(30deg);
                 .beast-lowleg2 {
                     position: absolute;
                     top: 4px;
@@ -506,11 +778,14 @@
     .beast-effect11 {}
     .beast-weapon {
         position: absolute;
-        left: 21px;
-        z-index: 999999;
+        left: -3px;
+        top: -45px;
+        z-index: 999999999999999;
         width: 6px;
         height: 98px;
         background: #5d4037;
+        transform-origin: bottom;
+        transform: rotateZ(69deg)translateZ(80px);
         .beast-weapon-head {
             position: absolute;
             top: -4px;

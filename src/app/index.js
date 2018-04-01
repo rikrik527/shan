@@ -93,6 +93,7 @@ robotMenu.iconRobotFix();
 robotMenu.iconRobotPersonal();
 robotMenu.topMenu();
 robotMenu.submit();
+robotMenu.todoIconSlider();
 helper.updateLi.call(update);
 
 
@@ -128,8 +129,7 @@ console.log('load end')
 
 };
 window.onresize = function() {
-    fix.getFireballPos();
-    console.log('resize');
+
 }
 
 fix.add('circle', 'div', 'circle', obj.get('.shan-btn'))

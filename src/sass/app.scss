@@ -2,15 +2,15 @@
 @import './color.scss';
 @import './mediaQuery';
 @import './prefix';
-@import './shanli';
-@import './animation';
+@import './utils/shanli-ex';
+@import './aside';
+@import './todo';
 @import './prologue';
 @import './xs-menu-trigger';
 @import './xs-player-status';
-@import './shanbtn';
-@import './header';
+@import './shanbtn-ex';
 @import './utils/robot';
-@import './utils/shanli';
+@import './header.scss';
 body,
 html {
     width: 100%;
@@ -104,107 +104,114 @@ svg {
 
 .awake-second-section {
     position: fixed;
-    top: 0;
-    left: 100%;
+    top: 50%;
+    left: -100%;
     z-index: 4;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, $pink2, $pink8);
+    width: 1400px;
+    height: 800px;
+    margin: -400px 0 0 -700px;
     backface-visibility: hidden;
     transform-origin: center left;
     transform-style: preserve-3d;
-    transform: translateZ(0px);
+    background: black;
+    transform: translateZ(0px)
 }
 
 .awake-third-section {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
+    top: 50%;
+    left: -100%;
+    z-index: 3;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, $pink2, $pink8);
+    width: 1400px;
+    height: 800px;
+    margin: -400px 0 0 -700px;
     backface-visibility: hidden;
     transform-origin: center left;
     transform-style: preserve-3d;
-    transform: translateZ(0px);
+    background: black;
+    transform: translateZ(0px)
 }
 
 .awake-fourth-section {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
+    top: 50%;
+    left: 100%;
+    z-index: 2;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, $pink2, $pink8);
+    width: 1400px;
+    height: 800px;
+    margin: -400px 0 0 -700px;
     backface-visibility: hidden;
     transform-origin: center left;
     transform-style: preserve-3d;
-    transform: translateZ(0px);
+    background: black;
+    transform: translateZ(0px)
 }
 
 .awake-fifth-section {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
+    top: 50%;
+    left: -100%;
+    z-index: 1;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, $pink2, $pink8);
+    width: 1400px;
+    height: 800px;
+    margin: -400px 0 0 -700px;
     backface-visibility: hidden;
     transform-origin: center left;
     transform-style: preserve-3d;
-    transform: translateZ(0px);
+    background: black;
+    transform: translateZ(0px)
 }
 
 .prologue-first-section {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
+    top: 50%;
+    left: -100%;
+    z-index: 0;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, $pink2, $pink8);
+    width: 1400px;
+    height: 800px;
+    margin: -400px 0 0 -700px;
     backface-visibility: hidden;
     transform-origin: center left;
     transform-style: preserve-3d;
-    transform: translateZ(0px);
+    background: black;
+    transform: translateZ(0px)
 }
 
 .location-first-section {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
+    top: 50%;
+    left: -100%;
+    z-index: -1;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, $pink2, $pink8);
+    width: 1400px;
+    height: 800px;
+    margin: -400px 0 0 -700px;
     backface-visibility: hidden;
     transform-origin: center left;
     transform-style: preserve-3d;
-    transform: translateZ(0px);
+    background: black;
+    transform: translateZ(0px)
 }
 
 .epilogue-first-section {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    top: 50%;
+    left: 100%;
+    z-index: -2;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, $pink2, $pink8);
+    width: 1400px;
+    height: 800px;
+    margin: -400px 0 0 -700px;
     backface-visibility: hidden;
     transform-origin: center left;
     transform-style: preserve-3d;
-    transform: translateZ(0px);
+    background: black;
+    transform: translateZ(0px)
 }
 
 .shan-btn {

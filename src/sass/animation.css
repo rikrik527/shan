@@ -1,76 +1,936 @@
-/*
-Error: Undefined mixin 'animation'.
-        on line 43 of ./src/sass/animation.scss, in `animation'
-        from line 43 of ./src/sass/animation.scss
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
 
-38:         }
-39:     }
-40: }
-41: 
-42: .robot-introduce {
-43:     @include animation(robotintroduce 1s steps(11) forwards);
-44:     @keyframes robotintroduce {
-45:         from {
-46:             background-position: -826px -318px;
-47:         }
-48:         to {
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
 
-Backtrace:
-./src/sass/animation.scss:43:in `animation'
-./src/sass/animation.scss:43
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `block in with_mixin'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `with_mixin'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Users/rikrik527/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'animation'.\A         on line 43 of ./src/sass/animation.scss, in `animation'\A         from line 43 of ./src/sass/animation.scss\A \A 38:         }\A 39:     }\A 40: }\A 41: \A 42: .robot-introduce {\A 43:     @include animation(robotintroduce 1s steps(11) forwards);\A 44:     @keyframes robotintroduce {\A 45:         from {\A 46:             background-position: -826px -318px;\A 47:         }\A 48:         to {"; }
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
+a {
+  outline: none;
+  color: #fff;
+  text-decoration: none; }
+
+body {
+  overscroll-behavior-y: contain; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
+figure {
+  position: absolute; }
+
+ul,
+li,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none !important; }
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type=button],
+input[type=submit],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+progress {
+  display: block;
+  /* default: inline-block */
+  margin: 2em auto;
+  padding: 4px;
+  border: 0 none;
+  background: currentColor;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  background-color: yellow;
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+/* awake page animation */
+.gamemenu {
+  animation: gamemenu 1s steps(10) forwards; }
+@keyframes gamemenu {
+  from {
+    background-position: -8px -258px; }
+  to {
+    background-position: -786px -258px; } }
+.gamemenu-reverse {
+  animation: gamemenureverse 1s steps(10) forwards; }
+@keyframes gamemenureverse {
+  from {
+    background-position: -8px -183px; }
+  to {
+    background-position: -790px -183px; } }
+.robot-fly {
+  animation: robotfly 0.5s steps(2) infinite; }
+@keyframes robotfly {
+  from {
+    background-position: -14px -282px; }
+  to {
+    background-position: -283px -282px; } }
+.robot-introduce {
+  -webkit-animation: robotintroduce 1s steps(11) forwards;
+  -moz-animation: robotintroduce 1s steps(11) forwards;
+  -ms-animation: robotintroduce 1s steps(11) forwards;
+  animation: robotintroduce 1s steps(11) forwards; }
+@keyframes robotintroduce {
+  from {
+    background-position: -826px -318px; }
+  to {
+    background-position: -1971px -318px; } }
+.robot-heiyo {
+  -webkit-animation: robotheiyo 3s steps(20) forwards;
+  -moz-animation: robotheiyo 3s steps(20) forwards;
+  -ms-animation: robotheiyo 3s steps(20) forwards;
+  animation: robotheiyo 3s steps(20) forwards; }
+@keyframes robotheiyo {
+  from {
+    background-position: -0px -1255px; }
+  to {
+    background-position: -2083px -1255px; } }
+.heart-explode {
+  background-image: url("../images/icon2.svg");
+  background-size: 1600%;
+  animation: heartexplode 0.5s steps(2) infinite; }
+@keyframes heartexplode {
+  from {
+    background-position: -412px -295px; }
+  to {
+    background-position: -672px -295px; } }
+.robot-fix-1 {
+  animation: robotfixlevel1 1s steps(10) infinite; }
+@keyframes robotfixlevel1 {
+  from {
+    background-position: -11px -13px; }
+  to {
+    background-position: -1354px -13px; } }
+.robot-dead {
+  animation: robotdead 0.5s steps(6) forwards; }
+@keyframes robotdead {
+  from {
+    background-position: 0px -1048px; }
+  to {
+    background-position: -721px -1048px; } }
+.shanliget {
+  animation: shanliget 0.5s steps(4) infinite; }
+@keyframes shanliget {
+  from {
+    background-position: -250px -973px; }
+  to {
+    background-position: -730px -973px; } }
+.robot-outline-fly {
+  animation: robotoutlinefly 3s ease-in-out forwards; }
+@keyframes robotoutlinefly {
+  to {
+    transform: translateX(60px) translateY(100px); } }
+.crosshair {
+  animation: crosshair .5s linear infinite; }
+@keyframes crosshair {
+  50% {
+    transform: scale(2);
+    opacity: 0.4; } }
+.maxpower {
+  animation: maxpower .5s linear infinite; }
+@keyframes maxpower {
+  50% {
+    transform: scale(2) rotatez(30deg);
+    background-color: yellow; } }
+.robot-fly-turn {
+  animation: robotflyturn 1s steps(3) forwards; }
+@keyframes robotflyturn {
+  from {
+    background-position: -311px -526px; }
+  to {
+    background-position: -620px -526px; } }
+.robot-cross-ready {
+  animation: robotcrossready 1s steps(3) forwards; }
+@keyframes robotcrossready {
+  from {
+    background-position: -622px -1148px; }
+  to {
+    background-position: -935px -1148px; } }
+.robot-cross-charging {
+  animation: robotcharging 0.5s steps(3) infinite; }
+@keyframes robotcharging {
+  from {
+    background-position: -935px -1148px; }
+  to {
+    background-position: -1142px -1148px; } }
+.robot-cross-fire {
+  animation: robotcrossfire 0.5s steps(2) forwards; }
+@keyframes robotcrossfire {
+  from {
+    background-position: -1142px -1148px; }
+  to {
+    background-position: -1350px -1148px; } }
+.robot-cross-set {
+  background-position: -622px -1148px; }
+
+#robot-shake {
+  animation: robotshake .5s linear infinite; }
+@keyframes robotshake {
+  40% {
+    transform: translateY(1px); }
+  80% {
+    transform: translateY(-1px); } }
+.robot-repair-to-fight-instance {
+  animation: robotrepairtofightinstance 2s steps(12) forwards; }
+@keyframes robotrepairtofightinstance {
+  from {
+    background-position: -0px -2600px; }
+  to {
+    background-position: -1251px -2600px; } }
+.robot-fight-instance {
+  animation: robotfightinstance 0.5s steps(2) infinite; }
+@keyframes robotfightinstance {
+  from {
+    background-position: -1040px -2600px; }
+  to {
+    background-position: -1251px -2600px; } }
+.robot-fly-down {
+  background-position: -6px -308px; }
+
+.robot-fly {
+  animation: robotfly 0.5s steps(2) infinite; }
+@keyframes robotfly {
+  from {
+    background-position: 0px -213px; }
+  to {
+    background-position: -205px -213px; } }
+.robot-talk {
+  animation: robottalk 0.5s steps(8) forwards; }
+@keyframes robottalk {
+  from {
+    background-position: -6px -308px; }
+  to {
+    background-position: -829px -308px; } }
+.robotlove {
+  animation: robotlove 1s steps(10) infinite; }
+@keyframes robotlove {
+  from {
+    background-position: 0px -10px; }
+  to {
+    background-position: -1042px -10px; } }
+.love {
+  animation: love 0.5s steps(4) infinite;
+  transition: all .5s linear; }
+@keyframes love {
+  from {
+    background-position: -1386px -25px;
+    transform: scale(2); }
+  to {
+    background-position: -1864px -25px; } }
+.leftright {
+  display: block;
+  animation: leftright 1s linear forwards; }
+@keyframes leftright {
+  0% {
+    left: -100%; }
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    left: 50%; }
+  100% {
+    left: 200%; } }
+.robot-change {
+  animation: robotchange 1.5s steps(10) forwards; }
+@keyframes robotchange {
+  from {
+    background-position: 0px -110px; }
+  to {
+    background-position: -1038px -110px; } }
+.robot-right {
+  background-position: -312px -514px; }
+
+.robot-origin {
+  background-position: -7px -106px; }
+
+.todolistshow {
+  animation: todolistshow 1s linear forwards; }
+@keyframes todolistshow {
+  10% {
+    opacity: 0.2; }
+  30% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.2; }
+  70% {
+    opacity: 0.7; }
+  90% {
+    opacity: 0.2; } }
+.robot-outline-fly-back {
+  animation: robotoutlineflyback 3s ease-in-out forwards; }
+@keyframes robotoutlineflyback {
+  from {
+    transform: translateX(60px) translateY(100px); }
+  to {
+    transform: translateX(0px) translateY(0px); } }
+.icontodo {
+  animation: icontodo 0.5s steps(5) forwards; }
+@keyframes icontodo {
+  from {
+    background-position: -761px -1036px; }
+  to {
+    background-position: -1032px -1036px; } }
+.iconpersonal {
+  animation: iconpersonal 0.5s steps(1) forwards; }
+@keyframes iconpersonal {
+  from {
+    background-position: -704px -654px; }
+  to {
+    background-position: -754px -654px; } }
+.iconservice {
+  animation: iconservice 0.5s steps(1) forwards; }
+@keyframes iconservice {
+  from {
+    background-position: -704px -607px; }
+  to {
+    background-position: -754px -607px; } }
+.iconfix {
+  animation: iconfix 0.5s steps(1) forwards; }
+@keyframes iconfix {
+  from {
+    background-position: -705px -706px; }
+  to {
+    background-position: -754px -706px; } }
+.backgroundxperia {
+  animation: backgroundxperia steps(4) infinite; }
+@keyframes backgroundxperia {
+  from {
+    background-position: 2% -12%; }
+  to {
+    background-position: 97.7% -12%; } }
+.todoset {
+  animation: todoset 2s linear; }
+@keyframes todoset {
+  from {
+    width: 0vw;
+    opacity: 0; }
+  to {
+    width: 100vw;
+    opacity: 1; } }
+.rotateyback {
+  animation: rotateyback 5s linear forwards; }
+@keyframes rotateyback {
+  to {
+    transform: rotateY(0deg); } }
+/* animation hand set */
+.handboxcontrol1 {
+  animation: handboxcontrol 1s linear 2s infinite; }
+@keyframes handboxcontrol {
+  30% {
+    transform: scale(0.7) rotatez(40deg); }
+  60% {
+    transform: scale(0.7) rotatez(-50deg); } }
+.handmiddlefinger1 {
+  animation: handmiddlefinger 10s linear 10s infinite; }
+@keyframes handmiddlefinger {
+  14%,
+        20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    transform: rotatez(104deg); }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(-6deg); } }
+.handmiddlefinger2 {
+  animation: handmiddlefinger2 10s linear 10s infinite; }
+@keyframes handmiddlefinger2 {
+  19%,
+        20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    transform: rotatez(81deg); }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(0deg); } }
+.handmiddlefinger3 {
+  animation: handmiddlefinger3 10s linear 10s infinite; }
+@keyframes handmiddlefinger3 {
+  25%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    transform: rotatez(64deg);
+    top: -7px; }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(0deg); } }
+.handfourfinger1 {
+  animation: handfourfinger 10s linear 10s infinite; }
+@keyframes handfourfinger {
+  12%,
+        20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    transform: rotatez(103deg); }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(-10deg); } }
+.handfourfinger2 {
+  animation: handfourfinger2 10s linear 10s infinite; }
+@keyframes handfourfinger2 {
+  17%,
+        20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    transform: rotatez(84deg); }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(0deg); } }
+.handfourfinger3 {
+  animation: handfourfinger3 10s linear 10s infinite; }
+@keyframes handfourfinger3 {
+  22%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    transform: rotatez(95deg); }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(0deg); } }
+.handsmallthumb1 {
+  animation: handsmallthumb 10s linear 10s infinite; }
+@keyframes handsmallthumb {
+  10%,
+        20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    z-index: 999;
+    transform: rotatez(57deg); }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(-20deg); } }
+.handsmallthumb2 {
+  animation: handsmallthumb2 10s linear 10s infinite; }
+@keyframes handsmallthumb2 {
+  15%,
+        20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    transform: rotatez(84deg); }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(0deg); } }
+.handsmallthumb3 {
+  animation: handsmallthumb3 10s linear 10s infinite; }
+@keyframes handsmallthumb3 {
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70% {
+    transform: rotatez(100deg); }
+  80%,
+        90%,
+        100% {
+    transform: rotatez(0deg); } }
+.handthumb2-s {
+  animation: handthumb2-s 10s linear 10s infinite; }
+@keyframes handthumb2-s {
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70%,
+        80%,
+        90%,
+        100% {
+    transform: rotatez(-110deg); } }
+.handmiddlefinger1-s {
+  animation: handmiddlefinger1-s 10s linear 10s infinite; }
+@keyframes handmiddlefinger1-s {
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70%,
+        80%,
+        90%,
+        100% {
+    transform: rotatez(70deg); } }
+.handmiddlefinger2-s {
+  animation: handmiddlefinger2-s 10s linear 10s infinite; }
+@keyframes handmiddlefinger2-s {
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70%,
+        80%,
+        90%,
+        100% {
+    transform: rotatez(106deg); } }
+.handmiddlefinger3-s {
+  animation: handmiddlefinger3-s 10s linear 10s infinite; }
+@keyframes handmiddlefinger3-s {
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70%,
+        80%,
+        90%,
+        100% {
+    transform: rotatez(42deg); } }
+.handfourfinger1-s {
+  animation: handfourfinger1-s 10s linear 10s infinite; }
+@keyframes handfourfinger1-s {
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70%,
+        80%,
+        90%,
+        100% {
+    transform: rotatez(85deg); } }
+.handfourfinger2-s {
+  animation: handfourfinger2-s 10s linear 10s infinite; }
+@keyframes handfourfinger2-s {
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70%,
+        80%,
+        90%,
+        100% {
+    transform: rotatez(94deg); } }
+.handfourfinger3-s {
+  animation: handfourfinger3-s 10s linear 10s infinite; }
+@keyframes handfourfinger3-s {
+  20%,
+        30%,
+        40%,
+        50%,
+        60%,
+        70%,
+        80%,
+        90%,
+        100% {
+    transform: rotatez(48deg); } }
+/* animation crazy set*/
+/* shan-li animation */
+.shanlihair1 {
+  animation: lihead 1s linear infinite; }
+
+.shanlihair2 {
+  animation: lihead 1s linear infinite; }
+
+.shanlihair3 {
+  animation: lihead 1s linear infinite; }
+
+.shanlihead {
+  animation: lihead 1s linear infinite; }
+@keyframes lihead {
+  30% {
+    transform: translateY(1px); }
+  60% {
+    transform: translateY(-1px); } }
+.shanlieye {
+  animation: shanlieye2 1s linear forwards; }
+
+.shanlieye2 {
+  animation: shanlieye2 1s linear forwards; }
+@keyframes shanlieye2 {
+  100% {
+    height: 7px;
+    top: 7px; } }
+.shanlibody {
+  animation: libody 1s linear infinite; }
+@keyframes libody {
+  30% {
+    transform: translateY(1px); }
+  60% {
+    transform: translatey(-2px); } }
+.shanlimimi {
+  animation: mimi 1s linear infinite; }
+@keyframes mimi {
+  30% {
+    transform: translatey(1px); }
+  60% {
+    transform: translateY(-1px); } }
+.shanlimimi2 {
+  animation: mimi 1s linear infinite; }
+
+.shanliarm {
+  animation: liarm 1s linear infinite; }
+@keyframes liarm {
+  50% {
+    transform: rotatex(15deg) rotatez(15deg); } }
+.shanliarm2 {
+  animation: liarm2 1s linear infinite; }
+@keyframes liarm2 {
+  50% {
+    transform: rotateX(15deg) rotateZ(-15deg); } }
+.shanlilowarm {
+  animation: lowarm 1s linear infinite; }
+@keyframes lowarm {
+  50% {
+    transform: rotateX(15deg) rotateZ(-15deg); } }
+.shanlilowarm2 {
+  animation: lowarm2 1s linear infinite; }
+@keyframes lowarm2 {
+  50% {
+    transform: rotateX(15deg) rotatez(15deg); } }
+.shanlipeegu {
+  animation: shanlipeegu 1s linear infinite; }
+@keyframes shanlipeegu {
+  30% {
+    transform: translatey(1px); }
+  60% {
+    transform: translateX(-1px); } }
+.shanlileg {
+  animation: lileg 1s linear infinite; }
+@keyframes lileg {
+  50% {
+    transform: rotatex(39deg) rotateZ(16deg); } }
+.shanlileg2 {
+  animation: lileg2 1s linear infinite; }
+@keyframes lileg2 {
+  50% {
+    transform: rotatex(38deg) rotateZ(-32deg); } }
+.shanlilowleg {
+  animation: lowleg 1s linear infinite; }
+@keyframes lowleg {
+  50% {
+    left: -13px;
+    transform: rotatez(13deg); } }
+.shanlilowleg2 {
+  animation: lowleg2 1s linear infinite; }
+@keyframes lowleg2 {
+  50% {
+    left: 32px;
+    transform: rotatez(-23deg); } }
+.shanlihorsefrontleg {
+  animation: frontleg 1s ease-in infinite; }
+@keyframes frontleg {
+  40% {
+    transform: rotateX(20deg); }
+  80% {
+    transform: rotateX(40deg); } }
+.judoboxcontrol {
+  animation: judoboxcontrol 1s linear infinite; }
+@keyframes judoboxcontrol {
+  10% {
+    transform: translatey(-1px) translateZ(10px); }
+  30% {
+    transform: translatey(0px) translateZ(10px); }
+  60% {
+    transform: translatey(-1px) translateZ(10px); }
+  90% {
+    transform: translatey(0px) translateZ(10px); } }
+.judoarm {
+  animation: judoarm 1s linear forwards; }
+@keyframes judoarm {
+  to {
+    transform: rotatez(45deg); } }
+.judobicep {
+  animation: judobicep 1s linear forwards; }
+@keyframes judobicep {
+  to {
+    transform: rotateZ(22deg); } }
+.judolowarm {
+  animation: judolowarm 1s linear forwards; }
+@keyframes judolowarm {
+  to {
+    transform: rotatez(-4deg) rotatex(180deg); } }
+.judoarm2 {
+  animation: judoarm2 1s linear forwards; }
+@keyframes judoarm2 {
+  to {
+    transform: rotatez(0deg); } }
+.judobicep2 {
+  animation: judobicep2 1s linear forwards; }
+@keyframes judobicep2 {
+  to {
+    transform: rotateZ(96deg); } }
+.judolowarm2 {
+  animation: judolowarm2 1s linear forwards; }
+@keyframes judolowarm2 {
+  to {
+    transform: rotatez(2deg);
+    border-top: 14px solid #455a64; } }
+.judoupleg {
+  animation: judoupleg 1s linear forwards; }
+@keyframes judoupleg {
+  to {
+    left: 0px;
+    width: 15px;
+    background: #455a64; } }
+.judolowleg {
+  animation: judolowleg 1s linear forwards; }
+@keyframes judolowleg {
+  to {
+    top: 11px;
+    left: 0px;
+    width: 15px;
+    border-top: 6px solid #546e7a; } }
+.judofoot {
+  animation: judofoot 1s linear forwards; }
+@keyframes judofoot {
+  to {
+    top: 0px;
+    left: 1px;
+    width: 11px;
+    border-bottom: 7px solid #78909c; } }
+.judoshoe {
+  animation: judoshoe 1s linear forwards; }
+@keyframes judoshoe {
+  to {
+    width: 17px;
+    top: 4px;
+    left: -7px; } }
+.judoupleg2 {
+  animation: judoupleg2 1s linear forwards; }
+@keyframes judoupleg2 {
+  to {
+    transform: rotatez(-28deg) translatez(38px);
+    width: 20px;
+    height: 14px;
+    background: #607d8b; } }
+.judolowleg2 {
+  animation: judolowleg2 1s linear forwards; }
+@keyframes judolowleg2 {
+  to {
+    top: 13px;
+    transform: rotatez(18deg);
+    border-top: 17px solid #78909c; } }
+.judoshoe2 {
+  animation: judoshoe2 1s linear forwards; }
+@keyframes judoshoe2 {
+  to {
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    left: -2px; } }
+.judofoot2 {
+  animation: judofoot2 1s linear forwards; }
+
+.judopeegu {
+  animation: judopeegu 1s linear infinite; }
+
+/*# sourceMappingURL=animation.css.map */

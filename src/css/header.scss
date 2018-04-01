@@ -1,0 +1,296 @@
+@import './color';
+@import './prefix';
+.header {
+    width: 100vw;
+    height: 100px;
+    display: block;
+    float: left;
+    .header-boxcontrol {
+        width: 100%;
+        height: 100px;
+        color: white;
+        .mrjudo {
+            margin-left: 4%;
+        }
+    }
+}
+
+.awake-section {
+    width: 100%;
+    height: 100px;
+}
+
+.awake {
+    background: rgba(255, 155, 225, 0.5);
+    width: 60px;
+    height: 28px;
+    position: absolute;
+    top: 100%;
+    line-height: 22px;
+    text-align: center;
+    font-size: 13px;
+    left: 47%;
+    transition: all .1s linear;
+    &:hover {
+        background: rgba(27, 194, 185, 0.5);
+        .awake-up {
+            top: -10px;
+            opacity: 0;
+        }
+        .awake-down {
+            top: 3px;
+            opacity: 1;
+            transition: all .1s linear;
+        }
+        .awake-border-up {
+            width: 0px;
+        }
+        .awake-border-down {
+            width: 0px;
+        }
+    }
+    .awake-up {
+        opacity: 1;
+        color: white;
+        position: absolute;
+        top: 4px;
+        left: 25%;
+        z-index: 9099999;
+        transition: all 0.1s linear;
+        cursor: pointer;
+    }
+    .awake-border-up {
+        position: absolute;
+        border-top: 1px solid white;
+        width: calc(120px/2);
+        top: -1px;
+        left: 0%;
+        transition: all 1s linear .5s;
+    }
+    .awake-border-down {
+        position: absolute;
+        border-top: 1px solid white;
+        width: calc(120px/2);
+        top: 95%;
+        left: 100%;
+        transform-origin: left bottom;
+        transition: all 1s linear .5s;
+        transform: rotateY(-180deg);
+    }
+    .awake-down {
+        display: block;
+        opacity: 0;
+        color: maroon;
+        text-shadow: -1px 1px 5px white;
+        position: absolute;
+        top: 25px;
+        left: 25%;
+        transition: all 0.1s linear;
+    }
+}
+
+.prologue {
+    background: rgba(255, 155, 225, 0.5);
+    width: 60px;
+    height: 28px;
+    position: absolute;
+    top: 100%;
+    line-height: 22px;
+    text-align: center;
+    font-size: 13px;
+    left: 67%;
+    transition: all .1s linear;
+    &:hover {
+        background: rgba(27, 194, 185, 0.5);
+        .prologue-up {
+            top: -10px;
+            opacity: 0;
+        }
+        .prologue-down {
+            top: 3px;
+            opacity: 1;
+            transition: all .1s linear;
+        }
+        .prologue-border-up {
+            width: 0px;
+        }
+        .prologue-border-down {
+            width: 0px;
+        }
+    }
+    .prologue-up {
+        opacity: 1;
+        color: white;
+        position: absolute;
+        top: 4px;
+        left: 25%;
+        z-index: 9099999;
+        transition: all 0.1s linear;
+        cursor: pointer;
+    }
+    .prologue-border-up {
+        position: absolute;
+        border-top: 1px solid white;
+        width: calc(120px/2);
+        top: -1px;
+        left: 0%;
+        transition: all 1s linear .5s;
+    }
+    .prologue-border-down {
+        position: absolute;
+        border-top: 1px solid white;
+        width: calc(120px/2);
+        top: 95%;
+        left: 100%;
+        transform-origin: left bottom;
+        transition: all 1s linear .5s;
+        transform: rotateY(-180deg);
+    }
+    .prologue-down {
+        display: block;
+        opacity: 0;
+        color: maroon;
+        text-shadow: -1px 1px 5px white;
+        position: absolute;
+        top: 25px;
+        left: 25%;
+        transition: all 0.1s linear;
+    }
+}
+
+.location {
+    background: rgba(255, 155, 225, 0.5);
+    width: 60px;
+    height: 28px;
+    position: absolute;
+    top: 100%;
+    line-height: 22px;
+    text-align: center;
+    font-size: 13px;
+    left: 87%;
+    transition: all .1s linear;
+    &:hover {
+        background: rgba(27, 194, 185, 0.5);
+        .location-up {
+            top: -10px;
+            opacity: 0;
+        }
+        .location-down {
+            top: 3px;
+            opacity: 1;
+            transition: all .1s linear;
+        }
+        .location-border-up {
+            width: 0px;
+        }
+        .location-border-down {
+            width: 0px;
+        }
+    }
+    .location-up {
+        opacity: 1;
+        color: white;
+        position: absolute;
+        top: 4px;
+        left: 25%;
+        z-index: 9099999;
+        transition: all 0.1s linear;
+        cursor: pointer;
+    }
+    .location-border-up {
+        position: absolute;
+        border-top: 1px solid white;
+        width: calc(120px/2);
+        top: -1px;
+        left: 0%;
+        transition: all 1s linear .5s;
+    }
+    .location-border-down {
+        position: absolute;
+        border-top: 1px solid white;
+        width: calc(120px/2);
+        top: 95%;
+        left: 100%;
+        transform-origin: left bottom;
+        transition: all 1s linear .5s;
+        transform: rotateY(-180deg);
+    }
+    .location-down {
+        display: block;
+        opacity: 0;
+        color: maroon;
+        text-shadow: -1px 1px 5px white;
+        position: absolute;
+        top: 25px;
+        left: 25%;
+        transition: all 0.1s linear;
+    }
+}
+
+.epilogue {
+    background: rgba(255, 155, 225, 0.5);
+    width: 60px;
+    height: 28px;
+    position: absolute;
+    top: 100%;
+    line-height: 22px;
+    text-align: center;
+    font-size: 13px;
+    left: 107%;
+    transition: all .1s linear;
+    &:hover {
+        background: rgba(27, 194, 185, 0.5);
+        .epilogue-up {
+            top: -10px;
+            opacity: 0;
+        }
+        .epilogue-down {
+            top: 3px;
+            opacity: 1;
+        }
+        .epilogue-border-up {
+            width: 0px;
+        }
+        .epilogue-border-down {
+            width: 0px;
+        }
+    }
+    .epilogue-up {
+        opacity: 1;
+        color: white;
+        position: absolute;
+        top: 4px;
+        left: 25%;
+        z-index: 9099999;
+        transition: all 0.1s linear;
+        cursor: pointer;
+    }
+    .epilogue-border-up {
+        position: absolute;
+        border-top: 1px solid white;
+        width: calc(120px/2);
+        top: -1px;
+        left: 0%;
+        transition: all 1s linear .5s;
+    }
+    .epilogue-border-down {
+        position: absolute;
+        border-top: 1px solid white;
+        width: calc(120px/2);
+        top: 95%;
+        left: 100%;
+        transform-origin: left bottom;
+        transition: all 1s linear .5s;
+        transform: rotateY(-180deg);
+    }
+    .epilogue-down {
+        display: block;
+        opacity: 0;
+        color: maroon;
+        text-shadow: -1px 1px 5px white;
+        position: absolute;
+        top: 25px;
+        left: 25%;
+        transition: all 0.1s linear;
+    }
+}

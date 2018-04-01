@@ -9,29 +9,94 @@ var robotMenu = require('../robotMenu');
 var robot = obj.get('#robot');
 var crossHair = obj.get('.cross-hair');
 var fireball = obj.get('.fireball');
-
+var fire = false;
+var ready = false;
 
 module.exports.crossFire = function(){
-setCrossFireballPos();
-infinityLoopAnimation.call(robotMenu,'robot-cross-get','robot-cross-ready');
+
+infinityLoopAnimation('robot-cross-get','robot-cross-charging',3000);
+console.log('crossfire ready',ready);
+if(ready){
+    console.log('ready');
+    shootLove();
 }
+
+console.log('infiniteloopanimation');
+}
+
 //infiniteloopanimation is a decorate class function
-function infinityLoopAnimation(cls,cls2){
-    //first class is robot charging stance second paremeter is fired stance and after 2 seconds fired stance will be removed ,this.fire is a boolean on everyskill robot have ,it return to false when skill is fired, its default is false,
+function infinityLoopAnimation(cls,cls2,time){
+    //first class is robot charging stance second paremeter is charging stance infinite loop , it stops depands on user action ,this.fire is a boolean on everyskill robot have ,it return to false when skill is fired, its default is false,
     console.log('infiniteloopanimation is fired')
     robot.removeAttribute('class');
     robot.classList.add(cls);
-    console.log('infiniteloopanimation add',cls,'robot-getreaady',this.getReady);
-    if(this.getReady == true){
-        console.log('fired',this.getReady);
-        robot.classList.remove(cls);
-        robot.classList.add(cls2);
-        setTimeout(()=>{ //removing class after 2 seconds
-            robot.classList.remove(cls2);
-        },2000)
-    }
+setTimeout(()=>{
+    ready = true;
+    robot.classList.remove(cls);
+    robot.classList.add(cls2);
+    console.log('readysetimeout',ready)
+},time);
+setTimeout(()=>{
+    console.log('ready',ready)
+},10000);
+// if(fire){
+//     console.log('fired');
+//     robot.classList.remove(cls);
+//         robot.classList.add(cls2);
+
+// }
+
+
+
+
+
 }
+var mouseDown = false;
+var touchDown = false;
+var lastpostion = [null,null];
+var position = [0,0];
 // set the crossfire fireball position
+function shootLove(){
+    fire = true;//fire set to true
+
+    var fireball = obj.get('.fireball');
+    var crossHair = obj.get('.cross-hair');
+    $('.cross-hair').css('display','block');
+    $('.fireball').css('display','block');
+    $('.cross-hair').on('mousedown touchstart',function(e){   touchDown = true;
+        var touch = targetTouches;
+    });
+    $('.cross-hair').on('mouseup touchend',function(e){
+        touchDown = false;
+    });
+    $('.cross-hair').on('mousemove touchmove',function(e){
+       if(!touchDown){
+           return false;
+       }
+       var touched = e.changedTouches[0];
+       var changeX = 0;
+       var changeY = 0;
+       if(lastpostion[0]){
+         console.log(lastpostion[0]);
+         changeX = (lastpostion[0] - e.clientX);
+         if(Math.abs(changeX)>20){
+             changeX = 0;
+         }
+       }
+       if(lastpostion[1]){
+        console.log(lastpostion[1]);
+        changeX = (lastpostion[1] - e.clientX);
+        if(Math.abs(changeX)>20){
+            changeX = 0;
+        }
+      }
+       lastpostion = e.clientX;
+       position[0] -= changeX;
+       crossHair.style.cssText = 'left'+(position[0]-25)+'px;top:'+(position[1]-25)+'px';
+
+    });
+
+}
 function setCrossFireballPos(){
     console.log('setcrossfireballpos')
     var robot = obj.getId('robot');

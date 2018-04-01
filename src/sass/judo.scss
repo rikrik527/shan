@@ -1,16 +1,93 @@
 @import './color';
-@import './judoVariable.scss';
+@import './prefix';
+.judo-btn {
+    transform-style: preserve-3d;
+    background: chocolate;
+    .judo-lowbox {
+        width: 38%;
+        height: 100%;
+        color: #bbdefb;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: baseline;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        text-shadow: 0px 0px 3px #1565c0;
+        .judo-name {
+            display: inline-block;
+            width: 100%;
+            height: 2em;
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            font-size: 10px;
+        }
+        .judo-photo {
+            width: 100%;
+            max-width: 100px;
+            align-self: center;
+        }
+        .judo-profile {
+            font-size: 10px;
+        }
+        .judo-status {
+            display: block;
+            overflow: scroll;
+            padding: 2px;
+            width: 100%;
+            height: auto;
+            .judo-info {
+                font-family: "Cutive Mono", monospace;
+                font-size: 10px;
+                margin: 0 0 0.5em;
+                white-space: pre-wrap;
+                word-break: break-all;
+            }
+        }
+    }
+}
+
+.enter-btn {
+    position: absolute;
+    width: 100px;
+    height: 22px;
+    margin: -11px 0 0 -50px;
+    text-align: center;
+    @include border-radius(10px);
+    cursor: pointer;
+}
+
+.btn-pos1 {
+    color: red;
+    left: 66%;
+    background: cadetblue;
+    top: 91%;
+    line-height: 22px;
+    font-size: 10px;
+}
+
 .judo-boxcontrol {
     position: absolute;
-    top: 39%;
-    left: 48%;
+    top: 65%;
+    left: 80%;
+    margin: -50px 0 0 -50px;
     z-index: 9999;
     width: 100px;
     transform-style: preserve-3d;
     perspective: 1300px;
-    outline: 1px solid;
+    @include transform(null, null, null, null, null, 10px);
     height: 100px;
-
     cursor: pointer;
     transition: all 1s linear;
     transform-origin: center bottom;
@@ -20,7 +97,6 @@
         left: 0px;
         width: 50px;
         height: 100px;
-
     }
     .judo-head {
         position: absolute;
@@ -91,7 +167,6 @@
                     transform: rotateZ(28deg)
                 }
             }
-
         }
         .judo-hair2 {
             position: absolute;
@@ -117,9 +192,7 @@
                     transform: rotateZ(60deg)
                 }
             }
-
         }
-
         .judo-hair3 {
             position: absolute;
             top: -17px;
@@ -144,9 +217,7 @@
                     transform: rotateZ(-5deg)
                 }
             }
-
         }
-
         .judo-hair-white {
             position: absolute;
             top: -10px;
@@ -171,11 +242,8 @@
                 60% {
                     transform: rotateZ(109deg)
                 }
-
             }
-
             .judo-hair-white2 {
-
                 position: absolute;
                 top: 2px;
                 left: -27px;
@@ -200,8 +268,6 @@
                         transform: rotatez(-80deg);
                     }
                 }
-
-
             }
             .judo-hair-white3 {
                 position: absolute;
@@ -228,7 +294,6 @@
                         transform: translatey(45deg);
                     }
                 }
-
             }
         }
         .judo-eyebrow {
@@ -272,7 +337,6 @@
                     transform: rotateZ(5deg)
                 }
             }
-
             .judo-eyeball {
                 position: absolute;
                 top: 0px;
@@ -282,7 +346,6 @@
                 transition: all 1s linear;
                 border-radius: 10px;
                 background: black;
-
             }
         }
         .judo-eye2 {
@@ -305,10 +368,7 @@
                     height: 5px;
                     transform: rotatez(-5deg)
                 }
-
-
             }
-
             .judo-eyeball2 {
                 position: absolute;
                 top: -1px;
@@ -318,7 +378,6 @@
                 height: 2px;
                 border-radius: 10px;
                 background: black;
-
             }
         }
         .judo-nose {
@@ -344,12 +403,7 @@
                 60% {
                     transform: translateY(-1px)
                 }
-
             }
-
-
-
-
         }
         .judo-lips {
             position: absolute;
@@ -379,10 +433,8 @@
                         left: -1px;
                         width: 13px;
                         height: 4px;
-
                     }
                 }
-
                 .judo-teeth {
                     width: 16px;
                     height: 1px;
@@ -415,7 +467,6 @@
             transform: rotatez(-10deg)
         }
     }
-
     .judo-neck-line1 {
         width: 0.1rem;
         height: 1rem;
@@ -424,7 +475,6 @@
         left: 0%;
         background: black;
         transform-origin: top center;
-
         transform: translateZ(3px)rotateZ(-10deg);
     }
     .judo-neck-line2 {
@@ -475,7 +525,6 @@
             }
         }
     }
-
 }
 
 .judo-body {
@@ -551,7 +600,6 @@
             width: 15px;
             height: 15px;
             background: $bluegrey7;
-
             z-index: 99999999;
             transition: all 1s linear;
             position: absolute;
@@ -598,11 +646,9 @@
                     transform: rotatex(0deg)
                 }
             }
-
         }
     }
     .judo-chest {
-
         .judo-stamache {}
         .judo-stamache2 {}
     }
@@ -620,7 +666,6 @@
         transition: all 1s linear;
         -ms-transform-origin: right top;
         transform-origin: right center;
-
         .judo-bicep {
             position: absolute;
             top: -2px;
@@ -632,7 +677,6 @@
             -ms-transform-origin: center top;
             transition: all 1s linear;
             transform-origin: center top;
-
             .judo-lowarm {
                 position: absolute;
                 top: 7px;
@@ -646,7 +690,6 @@
                 -ms-transform-origin: center top;
                 transform-origin: center top;
                 transform: rotateZ(101deg);
-
                 .judo-hand {
                     position: absolute;
                     top: -1px;
@@ -658,7 +701,6 @@
                     border-radius: 100px;
                     background: $bluegrey10;
                     transform: rotateZ(-201deg);
-
                     animation: judohand 1s linear infinite;
                     @keyframes judohand {}
                 }
@@ -671,7 +713,6 @@
         left: 17px;
         width: 15px;
         transition: all 1s linear;
-
         border-right: 4px solid transparent;
         border-top: 10px solid $bluegrey9;
         border-left: 0px solid transparent;
@@ -688,7 +729,6 @@
                 transform: rotatey(30deg)translateZ(3px)
             }
         }
-
         .judo-clothes2-top {
             width: 24px;
             border-top: 10px solid $bluegrey8;
@@ -715,7 +755,6 @@
                     transform: rotatey(21deg)rotatez(0deg)translateZ(3px)
                 }
             }
-
         }
         .judo-clothes2-chest {
             width: 15px;
@@ -740,7 +779,6 @@
                     transform: rotatey(20deg)rotatez(12deg)translateZ(3px)
                 }
             }
-
         }
         .judo-clothes2-bottom {
             width: 18px;
@@ -767,12 +805,9 @@
                     transform: rotatez(0deg)rotatex(0deg)translateZ(3px);
                 }
             }
-
         }
-
     }
     .judo-chest2 {
-
         .judo-stamache3 {}
         .judo-stamache4 {}
     }
@@ -791,8 +826,6 @@
         transform: rotatez(0deg);
         -ms-transform-origin: right top;
         transform-origin: left center;
-
-
         .judo-bicep2 {
             position: absolute;
             top: -2px;
@@ -804,7 +837,6 @@
             background: $bluegrey7;
             -ms-transform-origin: center top;
             transform-origin: center top;
-
             .judo-lowarm2 {
                 position: absolute;
                 top: 8px;
@@ -818,7 +850,6 @@
                 -ms-transform-origin: center top;
                 transform: rotateZ(-73deg);
                 transform-origin: center top;
-
                 .judo-hand2 {
                     position: absolute;
                     top: -2px;
@@ -848,8 +879,7 @@
     background: $bluegrey7;
     transform-origin: preserve-3d;
     transform-origin: center top;
-
-    .judo-belt1 {
+    .judo-belt {
         position: absolute;
         top: 0px;
         left: 0px;
@@ -857,7 +887,7 @@
         height: 6px;
         transition: all 1s linear;
         background: $cyan8;
-        .judo-belt2 {
+        .judo-belt1 {
             position: absolute;
             top: -8px;
             left: 19px;
@@ -867,10 +897,9 @@
             transform-origin: top left;
             transform: rotateZ(-44deg) translatex(-17px) translatez(58px) rotatex(29deg);
             background: $cyan4;
-
             z-index: 9999;
-            animation: judobelt2 2s linear infinite;
-            @keyframes judobelt2 {
+            animation: judobelt1 2s linear infinite;
+            @keyframes judobelt1 {
                 10%,
                 30%,
                 50%,
@@ -886,23 +915,20 @@
                     transform: rotatez(-21deg)translatex(-17px)translatez(58px)rotateX(19deg);
                 }
             }
-
         }
-        .judo-belt3 {
+        .judo-belt2 {
             position: absolute;
             top: -6px;
             left: 15px;
             width: 5px;
             transition: all 1s linear;
             height: 33px;
-
             transform-origin: top left;
             transform: rotateZ(-19deg)translatex(-9px)translatey(7px)translatez(58px)rotatex(33deg);
             background: $cyan5;
-
             z-index: 9999;
-            animation: judobelt3 2s linear infinite;
-            @keyframes judobelt3 {
+            animation: judobelt2 2s linear infinite;
+            @keyframes judobelt2 {
                 20%,
                 40%,
                 60%,
@@ -918,7 +944,6 @@
                     transform: rotateZ(-19deg)translatex(-9px)translatey(7px)translatez(51px)rotatex(33deg);
                 }
             }
-
         }
     }
     .judo-upleg {
@@ -934,8 +959,6 @@
         transform: rotatez(18deg);
         -ms-transform-origin: center top;
         transform-origin: center top;
-
-
         .judo-lowleg {
             position: absolute;
             top: 11px;
@@ -948,7 +971,6 @@
             transform: rotatez(-10deg);
             -ms-transform-origin: center top;
             transform-origin: center top;
-
             .judo-foot {
                 position: absolute;
                 top: 0px;
@@ -960,7 +982,6 @@
                 border-left: 0px solid transparent;
                 transform: rotatez(-8deg);
                 transform-origin: center top;
-
                 .judo-shoe {
                     width: 20px;
                     position: absolute;
@@ -969,7 +990,6 @@
                     transition: all 1s linear;
                     border-bottom: 8px solid $bluegrey10;
                     border-left: 9px solid transparent;
-
                 }
             }
         }
@@ -983,11 +1003,9 @@
         transition: all 1s linear;
         height: 12px;
         background: $bluegrey7;
-
         transform: rotatez(-18deg)translateZ(0px);
         -ms-transform-origin: center top;
         transform-origin: center top;
-
         .judo-lowleg2 {
             position: absolute;
             top: 10px;
@@ -1001,7 +1019,6 @@
             transform: rotate(4deg);
             -ms-transform-origin: center top;
             transform-origin: center top;
-
             .judo-foot2 {
                 position: absolute;
                 top: -7px;
@@ -1013,7 +1030,6 @@
                 border-left: 0px solid transparent;
                 transform: rotatez(13deg);
                 transform-origin: center top;
-
                 .judo-shoe2 {
                     width: 20px;
                     position: absolute;
@@ -1022,14 +1038,11 @@
                     transition: all 1s linear;
                     border-bottom: 8px solid $bluegrey10;
                     border-right: 9px solid transparent;
-
                 }
             }
         }
     }
 }
-
-
 
 .judo-sword-tail {
     width: 8px;
@@ -1059,7 +1072,6 @@
             background: linear-gradient(to top, transparent, $blue9, transparent);
             transition: all 1s linear;
             position: absolute;
-
             top: 0px;
             left: 0px;
             animation: judoswordeffect 10s linear infinite;
@@ -1067,22 +1079,15 @@
                 0%,
                 30% {
                     top: -78px;
-
                 }
                 60% {
                     top: 156px;
-
-
                 }
                 100% {
                     top: -78px;
-
                 }
-
-
             }
         }
-
     }
     .judo-sword-triangle {
         width: 10px;
@@ -1093,9 +1098,6 @@
         transition: all 1s linear;
         top: 97px;
         left: -7px;
-
-
-
         .judo-sword-effect2 {
             width: 10px;
             height: 30px;
@@ -1113,16 +1115,11 @@
                 60% {
                     top: -30px;
                     height: 65px;
-
                 }
                 100% {
                     top: -97px;
                 }
-
-
             }
-
-
         }
     }
     .judo-sword-sqaure2 {
@@ -1141,7 +1138,6 @@
             height: 60px;
             background: linear-gradient(to top, transparent, $blue2, transparent);
             position: absolute;
-
             top: -40px;
             left: 0px;
             transition: all 1s linear;
@@ -1150,21 +1146,15 @@
                 0%,
                 30% {
                     top: 56px;
-
                 }
                 60% {
                     top: -42px;
-
                 }
                 100% {
                     top: 56px;
-
                 }
-
             }
-
         }
-
     }
     .judo-sword-triangle2 {
         width: 10px;
@@ -1175,8 +1165,6 @@
         position: absolute;
         top: 87px;
         left: 4px;
-
-
         .judo-sword-effect4 {
             width: 10px;
             height: 30px;
@@ -1194,18 +1182,13 @@
                 }
                 60% {
                     top: -90px;
-
                 }
                 100% {
                     top: -37px;
                     height: 60px;
                 }
-
-
             }
-
         }
-
     }
     .judo-sword-handle {
         width: 5px;
@@ -1252,7 +1235,6 @@
         top: 0%;
         left: 100%;
         background: $blue3;
-
         background-position: center;
         background-blend-mode: multiply;
         background-size: contain;
@@ -1285,9 +1267,7 @@
         .judo-flag1 {
             position: absolute;
             width: 1rem;
-
             top: 0%;
-
             left: 100%;
             border-left: 1rem solid $red3;
             border-bottom: .5rem solid transparent;
@@ -1295,9 +1275,7 @@
         .judo-flag2 {
             position: absolute;
             width: 1rem;
-
             top: 5%;
-
             left: 100%;
             border-left: 1rem solid $red3;
             border-bottom: .5rem solid transparent;
@@ -1305,9 +1283,7 @@
         .judo-flag3 {
             position: absolute;
             width: 1rem;
-
             top: 10%;
-
             left: 100%;
             border-left: 1rem solid $red3;
             border-bottom: .5rem solid transparent;
@@ -1315,9 +1291,7 @@
         .judo-flag4 {
             position: absolute;
             width: 1rem;
-
             top: 15%;
-
             left: 100%;
             border-left: 1rem solid $red3;
             border-bottom: .5rem solid transparent;
@@ -1325,17 +1299,12 @@
         .judo-flag5 {
             position: absolute;
             width: 1rem;
-
             top: 20%;
-
             left: 100%;
             border-left: 1rem solid $red3;
             border-bottom: .5rem solid transparent;
         }
     }
-
-
-
 }
 
 .judo-boat {
@@ -1356,7 +1325,6 @@
     .judo-boat-left {
         width: 10rem;
         height: 2rem;
-
         background: green;
         transform: rotateY(90deg);
         top: 56%;
@@ -1369,7 +1337,6 @@
         transform: rotateY(-90deg)translatez(72px);
         top: 56%;
         left: -4%;
-
     }
     .judo-boat-back {
         width: 5rem;
@@ -1378,7 +1345,6 @@
         top: 56%;
         left: 0%;
         transform: translatez(-80px);
-
     }
     .judo-boat-bottom {
         width: 5rem;
@@ -1387,20 +1353,8 @@
         top: 27%;
         left: 0%;
         transform: rotateX(90deg);
-
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 //judo-2
 .judo-boxcontrol1 {
@@ -1429,7 +1383,6 @@
         left: 0px;
         width: 50px;
         height: 100px;
-
     }
     .judo-head1 {
         position: absolute;
@@ -1457,7 +1410,6 @@
                 transform: rotateZ(-5deg);
             }
         }
-
         .judo-ear1 {
             position: absolute;
             width: 15%;
@@ -1502,7 +1454,6 @@
                     transform: rotateZ(28deg)
                 }
             }
-
         }
         .judo-hair21 {
             position: absolute;
@@ -1529,7 +1480,6 @@
                 }
             }
         }
-
         .judo-hair31 {
             position: absolute;
             top: -17px;
@@ -1554,9 +1504,7 @@
                     transform: rotateZ(-5deg)
                 }
             }
-
         }
-
         .judo-hair-white1 {
             position: absolute;
             top: -10px;
@@ -1581,11 +1529,8 @@
                 60% {
                     transform: rotateZ(109deg)
                 }
-
             }
-
             .judo-hair-white21 {
-
                 position: absolute;
                 top: 2px;
                 left: -27px;
@@ -1610,7 +1555,6 @@
                         transform: rotatez(-80deg);
                     }
                 }
-
             }
             .judo-hair-white31 {
                 position: absolute;
@@ -1637,7 +1581,6 @@
                         transform: translatey(45deg);
                     }
                 }
-
             }
         }
         .judo-eyebrow1 {
@@ -1690,7 +1633,6 @@
                 transition: all 1s linear;
                 border-radius: 10px;
                 background: black;
-
             }
         }
         .judo-eye21 {
@@ -1713,8 +1655,6 @@
                     height: 5px;
                     transform: rotatez(-5deg)
                 }
-
-
             }
             .judo-eyeball21 {
                 position: absolute;
@@ -1725,7 +1665,6 @@
                 height: 2px;
                 border-radius: 10px;
                 background: black;
-
             }
         }
         .judo-nose1 {
@@ -1751,10 +1690,7 @@
                 60% {
                     transform: translateY(-1px)
                 }
-
             }
-
-
         }
         .judo-lips1 {
             position: absolute;
@@ -1784,10 +1720,8 @@
                         left: -1px;
                         width: 13px;
                         height: 4px;
-
                     }
                 }
-
                 .judo-teeth1 {
                     width: 16px;
                     height: 1px;
@@ -1828,7 +1762,6 @@
         left: 0%;
         background: black;
         transform-origin: top center;
-
         transform: translatez(30px) rotateZ(-10deg);
     }
     .judo-neck1-line21 {
@@ -1852,7 +1785,6 @@
         cursor: pointer;
         transform: translateZ(30px);
         transform-origin: center top;
-
         &:before {
             content: '';
             position: absolute;
@@ -1873,7 +1805,6 @@
             }
         }
     }
-
 }
 
 .judo-body1 {
@@ -1893,13 +1824,11 @@
     @keyframes judobody1 {
         30% {
             transform: translateY(-1px);
-
         }
         60% {
             transform: translateY(1px);
         }
     }
-
     .judo-clothes1 {
         width: 15px;
         border-top: 10px solid $bluegrey9;
@@ -1919,7 +1848,6 @@
                 transform: rotateY(0deg) translateZ(7px);
             }
         }
-
         .judo-clothes-top1 {
             width: 20px;
             border-top: 10px solid $bluegrey8;
@@ -1940,13 +1868,11 @@
                     transform: rotateY(-10deg)rotateX(-10deg)
                 }
             }
-
         }
         .judo-clothes-chest1 {
             width: 15px;
             height: 15px;
             background: $bluegrey7;
-
             z-index: 99999999;
             transition: all 1s linear;
             position: absolute;
@@ -1962,7 +1888,6 @@
                     transform: rotateY(-10deg)rotateX(5deg)
                 }
             }
-
         }
         .judo-clothes-bottom1 {
             width: 15px;
@@ -1984,12 +1909,9 @@
                     transform: rotateY(0deg)rotateX(-10deg)
                 }
             }
-
-
         }
     }
     .judo-chest1 {
-
         .judo-stamache1 {}
         .judo-stamache21 {}
     }
@@ -2003,11 +1925,9 @@
         border-right: 3px solid transparent;
         border-left: 3px solid transparent;
         border-radius: 10px 0 0 0;
-
         transition: all 1s linear;
         -ms-transform-origin: right top;
         transform-origin: right top;
-
         animation: judoarm1 1s linear infinite;
         @keyframes judoarm1 {
             30% {
@@ -2017,7 +1937,6 @@
                 transform: rotateZ(10deg)
             }
         }
-
         .judo-bicep1 {
             position: absolute;
             top: -2px;
@@ -2029,8 +1948,6 @@
             -ms-transform-origin: center top;
             transition: all 1s linear;
             transform-origin: center top;
-
-
             .judo-lowarm1 {
                 position: absolute;
                 top: 7px;
@@ -2054,9 +1971,6 @@
                     z-index: 99999999999;
                     border-radius: 100px;
                     background: $orange3;
-
-
-
                 }
             }
         }
@@ -2067,11 +1981,9 @@
         left: 17px;
         width: 15px;
         transition: all 1s linear;
-
         border-right: 4px solid transparent;
         border-top: 10px solid $bluegrey9;
         border-left: 0px solid transparent;
-
         .judo-clothes2-top1 {
             width: 20px;
             border-top: 10px solid $bluegrey8;
@@ -2083,7 +1995,6 @@
             top: 0px;
             left: 0px;
             transform-origin: center top;
-
         }
         .judo-clothes2-chest1 {
             width: 15px;
@@ -2095,7 +2006,6 @@
             top: 9px;
             left: 0px;
             transform-origin: center top;
-
         }
         .judo-clothes2-bottom1 {
             width: 18px;
@@ -2108,12 +2018,9 @@
             transition: all 1s linear;
             left: 1px;
             transform-origin: center top;
-
         }
-
     }
     .judo-chest21 {
-
         .judo-stamache31 {}
         .judo-stamache41 {}
     }
@@ -2128,7 +2035,6 @@
         border-right: 4px solid transparent;
         border-left: 3px solid transparent;
         border-radius: 0px 5px 5px 0px;
-
         -ms-transform-origin: right top;
         z-index: 999999999999;
         transform-origin: left center;
@@ -2141,7 +2047,6 @@
                 transform: rotatez(-18deg)
             }
         }
-
         .judo-bicep21 {
             position: absolute;
             top: -2px;
@@ -2153,8 +2058,6 @@
             background: $bluegrey7;
             -ms-transform-origin: center top;
             transform-origin: center top;
-
-
             .judo-lowarm21 {
                 position: absolute;
                 top: 8px;
@@ -2166,9 +2069,7 @@
                 border-left: 4px solid transparent;
                 border-radius: 8px 9px 0 0;
                 -ms-transform-origin: center top;
-
                 transform-origin: center top;
-
                 .judo-hand21 {
                     position: absolute;
                     top: -2px;
@@ -2207,7 +2108,6 @@
             transform: translateY(-2px)
         }
     }
-
     .judo-belt11 {
         position: absolute;
         top: 0px;
@@ -2225,9 +2125,7 @@
             height: 33px;
             transition: all 1s linear;
             transform-origin: top center;
-
             background: $cyan4;
-
             z-index: 9999;
             animation: judobelt21 3s linear infinite;
             @keyframes judobelt21 {
@@ -2238,7 +2136,6 @@
                     transform: rotateZ(-10deg)
                 }
             }
-
         }
         .judo-belt31 {
             position: absolute;
@@ -2247,11 +2144,8 @@
             width: 5px;
             transition: all 1s linear;
             height: 33px;
-
             transform-origin: top center;
-
             background: $cyan5;
-
             z-index: 9999;
             animation: judobelt31 3s linear infinite;
             @keyframes judobelt31 {
@@ -2262,7 +2156,6 @@
                     transform: rotateZ(10deg)
                 }
             }
-
         }
     }
     .judo-upleg1 {
@@ -2274,7 +2167,6 @@
         width: 18px;
         height: 12px;
         background: $bluegrey7;
-
         -ms-transform-origin: center top;
         transform-origin: center top;
         animation: judoupleg1 1s linear infinite;
@@ -2286,7 +2178,6 @@
                 transform: rotateZ(-24deg)
             }
         }
-
         .judo-lowleg1 {
             position: absolute;
             top: 11px;
@@ -2296,7 +2187,6 @@
             border-right: 3px solid transparent;
             border-top: 9px solid $bluegrey6;
             border-left: 3px solid transparent;
-
             -ms-transform-origin: center top;
             transform-origin: center top;
             animation: judolowleg1 1s linear infinite;
@@ -2308,7 +2198,6 @@
                     transform: rotateZ(0deg)scale(0.8)
                 }
             }
-
             .judo-foot1 {
                 position: absolute;
                 top: 0px;
@@ -2320,7 +2209,6 @@
                 border-left: 0px solid transparent;
                 transform: rotatez(-8deg);
                 transform-origin: center top;
-
                 .judo-shoe1 {
                     width: 20px;
                     position: absolute;
@@ -2343,7 +2231,6 @@
                         left: 0%;
                         background: rgba(0, 0, 0, 0.7);
                     }
-
                 }
             }
         }
@@ -2357,8 +2244,6 @@
         transition: all 1s linear;
         height: 12px;
         background: $bluegrey7;
-
-
         -ms-transform-origin: center top;
         transform-origin: center top;
         animation: judoupleg21 1s linear infinite;
@@ -2370,7 +2255,6 @@
                 transform: rotateZ(28deg)
             }
         }
-
         .judo-lowleg21 {
             position: absolute;
             top: 10px;
@@ -2381,7 +2265,6 @@
             border-top: 17px solid $bluegrey6;
             border-left: 3px solid transparent;
             -ms-transform: rotate(0deg);
-
             -ms-transform-origin: center top;
             transform-origin: center top;
             animation: judolowleg21 1s linear infinite;
@@ -2404,7 +2287,6 @@
                 border-left: 0px solid transparent;
                 transform: rotatez(13deg);
                 transform-origin: center top;
-
                 .judo-shoe21 {
                     width: 20px;
                     position: absolute;
@@ -2483,11 +2365,9 @@
             background: linear-gradient(to top, transparent, $blue9, transparent);
             transition: all 1s linear;
             position: absolute;
-
             top: 0px;
             left: 0px;
         }
-
     }
     .judo-sword-triangle1 {
         width: 10px;
@@ -2498,9 +2378,6 @@
         transition: all 1s linear;
         top: 97px;
         left: -7px;
-
-
-
         .judo-sword-effect21 {
             width: 10px;
             height: 30px;
@@ -2509,8 +2386,6 @@
             position: absolute;
             top: 0px;
             left: -11px;
-
-
         }
     }
     .judo-sword-sqaure21 {
@@ -2529,13 +2404,10 @@
             height: 60px;
             background: linear-gradient(to top, transparent, $blue2, transparent);
             position: absolute;
-
             top: -40px;
             left: 0px;
             transition: all 1s linear;
-
         }
-
     }
     .judo-sword-triangle21 {
         width: 10px;
@@ -2546,8 +2418,6 @@
         position: absolute;
         top: 87px;
         left: 4px;
-
-
         .judo-sword-effect41 {
             width: 10px;
             height: 30px;
@@ -2556,9 +2426,7 @@
             position: absolute;
             top: 0px;
             left: 0px;
-
         }
-
     }
     .judo-sword-handle1 {
         width: 5px;

@@ -1,3 +1,4 @@
+/* beast */
 /*fashion set 1 smooth*/
 /*set2 sun*/
 /*set3 grass*/
@@ -10,6 +11,186 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
+/*fashion set 1 smooth*/
+/*set2 sun*/
+/*set3 grass*/
+/* sunday light*/
+/* dark storm*/
+/* rainbow */
+/* pineapple */
+/* deep ocean cloud*/
+/* color-link */
+/* colors in order */
+/* in text */
+/*fashion set 1 smooth*/
+.ball0 {
+  top: 0px;
+  left: 0px;
+  transition: all 0s linear; }
+
+.ball1 {
+  top: 5px;
+  left: 5px;
+  transition: all 1s linear; }
+
+.ball2 {
+  top: 10px;
+  left: 10px;
+  transition: all 2s linear; }
+
+.ball3 {
+  top: 15px;
+  left: 15px;
+  transition: all 3s linear; }
+
+.ball4 {
+  top: 20px;
+  left: 20px;
+  transition: all 4s linear; }
+
+.ball5 {
+  top: 25px;
+  left: 25px;
+  transition: all 5s linear; }
+
+.ball6 {
+  top: 30px;
+  left: 30px;
+  transition: all 6s linear; }
+
+.ball7 {
+  top: 35px;
+  left: 35px;
+  transition: all 7s linear; }
+
+.ball8 {
+  top: 40px;
+  left: 40px;
+  transition: all 8s linear; }
+
+.ball9 {
+  top: 45px;
+  left: 45px;
+  transition: all 9s linear; }
+
+a {
+  outline: none;
+  color: #fff;
+  text-decoration: none; }
+
+body {
+  overscroll-behavior-y: contain; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
+figure {
+  position: absolute; }
+
+ul,
+li,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none !important; }
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+  font-size: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+.clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: flow-root; }
+
+input[type=button],
+input[type=submit],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+button {
+  outline: none; }
+
+iframe:focus {
+  outline: none; }
+
+iframe[seamless] {
+  display: block; }
+
+progress {
+  display: block;
+  /* default: inline-block */
+  margin: 2em auto;
+  padding: 4px;
+  border: 0 none;
+  background: currentColor;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  border-radius: 12px;
+  background: currentColor;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  background-color: yellow;
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3); }
+
+input[type='button'],
+input[type='submit'],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
 .clearfix:after {
   display: block;
   visibility: hidden;
@@ -49,29 +230,134 @@ iframe:focus {
 iframe[seamless] {
   display: block; }
 
-/*fashion set 1 smooth*/
-/*set2 sun*/
-/*set3 grass*/
-/* sunday light*/
-/* dark storm*/
-/* rainbow */
-/* pineapple */
-/* deep ocean cloud*/
-/* color-link */
-/* colors in order */
-/* in text */
-/*fashion set 1 smooth*/
-/* beast */
+.beast-btn {
+  background: brown; }
+  .beast-btn .beast-lowbox {
+    width: 38%;
+    height: 100%;
+    color: #bbdefb;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: baseline;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-shadow: 0px 0px 3px #1565c0; }
+    .beast-btn .beast-lowbox .beast-name {
+      display: inline-block;
+      width: 100%;
+      height: 2em;
+      color: white;
+      text-align: center;
+      line-height: 25px;
+      font-size: 10px; }
+    .beast-btn .beast-lowbox .beast-photo {
+      width: 100%;
+      max-width: 100px;
+      align-self: center; }
+    .beast-btn .beast-lowbox .beast-profile {
+      font-size: 10px; }
+    .beast-btn .beast-lowbox .beast-status {
+      display: block;
+      overflow: scroll;
+      padding: 2px;
+      width: 100%;
+      height: auto; }
+      .beast-btn .beast-lowbox .beast-status .beast-info {
+        font-family: "Cutive Mono", monospace;
+        font-size: 10px;
+        margin: 0 0 0.5em;
+        white-space: pre-wrap;
+        word-break: break-all; }
+  .beast-btn .beast-bg {
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    position: absolute;
+    top: 70%;
+    left: 50%; }
+    .beast-btn .beast-bg .beast-bg2 {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100px;
+      height: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      background-color: linear-gradient(to top, #f48fb1 40%, #c2185b 60%);
+      background-image: url("../images/earth.png");
+      -webkit-animation: beastbg2 90s linear infinite;
+      -moz-animation: beastbg2 90s linear infinite;
+      -ms-animation: beastbg2 90s linear infinite;
+      animation: beastbg2 90s linear infinite;
+      background-blend-mode: overlay; }
+@keyframes crazybg2 {
+  0% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 900%;
+    box-shadow: 0px 0px 4px 4px #e91e63; }
+  20% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 1800%;
+    box-shadow: -2px -2px 2px 2px #e91e63; }
+  40% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 2700%;
+    box-shadow: 0px 0px 4px 4px #e91e63; }
+  60% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 3600%;
+    box-shadow: 2px 2px 2px 2px #e91e63; }
+  80% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 4500%;
+    box-shadow: 0px 0px 4px 4px #e91e63; }
+  100% {
+    border: 1px solid #f8bbd0;
+    background-position-y: 5400%;
+    box-shadow: 2px 2px 2px 2px #e91e63; } }
+.btn-pos4 {
+  background: indianred;
+  font-size: 10px;
+  line-height: 22px;
+  color: red;
+  left: 21.5%;
+  top: 63%; }
+
 .beast-boxcontrol {
   position: absolute;
-  top: 327px;
-  left: 14%;
+  top: 50%;
+  left: 22%;
+  margin: -15px 0 0 -15px;
   z-index: 99999;
   width: 30px;
   height: 30px;
   transform-style: preserve-3d;
   perspective: 1000px;
+  -webkit-animation: beastboxcontrol 0.5s linear infinite;
+  -moz-animation: beastboxcontrol 0.5s linear infinite;
+  -ms-animation: beastboxcontrol 0.5s linear infinite;
+  animation: beastboxcontrol 0.5s linear infinite;
   /*beast arm2*/ }
+@keyframes beastboxcontrol {
+  10%,
+        50%,
+        90% {
+    transform: translateY(-3px); } }
   .beast-boxcontrol .beast-head {
     position: absolute;
     top: -5px;
@@ -80,7 +366,31 @@ iframe[seamless] {
     height: 37px;
     border-radius: 0 0 5px 5px;
     background: #ffa726;
-    transform-origin: center bottom; }
+    transform-origin: center bottom;
+    transition: all 1s linear;
+    -webkit-animation: beasthead 1s linear infinite;
+    -moz-animation: beasthead 1s linear infinite;
+    -ms-animation: beasthead 1s linear infinite;
+    animation: beasthead 1s linear infinite; }
+@keyframes beasthead {
+  40% {
+    transform: rotateZ(10deg) translateX(1px);
+    background: linear-gradient(to bottom, red, 10%, orange); }
+  50% {
+    transform: rotateZ(10deg) translateX(-1px);
+    background: linear-gradient(to bottom, red, 20%, orange); }
+  60% {
+    transform: rotateZ(10deg) translateX(1px);
+    background: linear-gradient(to bottom, red, 30%, orange); }
+  70% {
+    transform: rotateZ(10deg) translateX(-1px);
+    background: linear-gradient(to bottom, red, 40%, orange); }
+  80% {
+    transform: rotateZ(10deg) translateX(-1px);
+    background: linear-gradient(to bottom, red, 30%, orange); }
+  90% {
+    transform: rotateZ(10deg) translateX(-1px);
+    background: linear-gradient(to bottom, red, 20%, orange); } }
     .beast-boxcontrol .beast-head .beast-hair {
       position: absolute;
       top: -9px;
@@ -100,18 +410,27 @@ iframe[seamless] {
       transform-origin: right center; }
       .beast-boxcontrol .beast-head .beast-eyebrow .beast-eye {
         position: absolute;
-        top: 3px;
+        top: 1px;
         left: 2px;
         overflow: hidden;
         width: 13px;
-        height: 2px;
-        border-radius: 20px;
+        height: 7px;
+        border-radius: 0px 5px 0 5px;
         background: white;
         -ms-transform: rotate(-29deg);
-        transform: rotatez(-29deg); }
+        -webkit-transform: rotatez(-29deg);
+        transform: rotatez(-29deg);
+        -webkit-animation: beasteye 1s linear infinite;
+        -moz-animation: beasteye 1s linear infinite;
+        -ms-animation: beasteye 1s linear infinite;
+        animation: beasteye 1s linear infinite; }
+@keyframes beasteye {
+  40% {
+    top: 3px;
+    height: 4px; } }
         .beast-boxcontrol .beast-head .beast-eyebrow .beast-eye .beast-eyeball {
           position: absolute;
-          top: -1px;
+          top: 1px;
           left: 5px;
           width: 4px;
           height: 4px;
@@ -129,14 +448,23 @@ iframe[seamless] {
       transform-origin: left center; }
       .beast-boxcontrol .beast-head .beast-eyebrow2 .beast-eye2 {
         position: absolute;
-        top: 3px;
+        top: 4px;
         left: 0px;
         overflow: hidden;
         width: 12px;
         height: 2px;
         border-radius: 20px;
         background: white;
-        transform: rotatez(30deg); }
+        transform: rotatez(30deg);
+        -webkit-animation: beasteye2 1s linear infinite;
+        -moz-animation: beasteye2 1s linear infinite;
+        -ms-animation: beasteye2 1s linear infinite;
+        animation: beasteye2 1s linear infinite; }
+@keyframes beasteye2 {
+  60% {
+    top: 1px;
+    left: -1px;
+    height: 7px; } }
         .beast-boxcontrol .beast-head .beast-eyebrow2 .beast-eye2 .beast-eyeball2 {
           position: absolute;
           top: -1px;
@@ -144,7 +472,14 @@ iframe[seamless] {
           width: 4px;
           height: 4px;
           border-radius: 10px;
-          background: brown; }
+          background: brown;
+          -webkit-animation: beasteyeball2 1s linear infinite;
+          -moz-animation: beasteyeball2 1s linear infinite;
+          -ms-animation: beasteyeball2 1s linear infinite;
+          animation: beasteyeball2 1s linear infinite; }
+@keyframes beasteyeball2 {
+  60% {
+    top: 1px; } }
     .beast-boxcontrol .beast-head .beast-nose {
       position: absolute;
       top: 15px;
@@ -154,20 +489,37 @@ iframe[seamless] {
       border-right: 2px solid orange;
       border-bottom: 2px solid orange;
       border-left: 2px solid orange;
-      background: #ffe0b2; }
+      background: #ffe0b2;
+      -webkit-animation: beastnose 1s linear infinite;
+      -moz-animation: beastnose 1s linear infinite;
+      -ms-animation: beastnose 1s linear infinite;
+      animation: beastnose 1s linear infinite; }
+@keyframes beastnose {
+  60% {
+    border-right: 1px solid orange;
+    border-left: 1px solid orange;
+    top: 13px; } }
     .beast-boxcontrol .beast-head .beast-lips {
       position: absolute;
       top: 24px;
       left: 9px; }
       .beast-boxcontrol .beast-head .beast-lips .beast-mouth {
         position: absolute;
-        top: 2px;
+        top: 1px;
         left: 1px;
         z-index: 999;
         width: 16px;
         height: 6px;
         border-radius: 0 0 5px 5px;
-        background: #d32f2f; }
+        background: #d32f2f;
+        -webkit-animation: beastmouth 1s linear infinite;
+        -moz-animation: beastmouth 1s linear infinite;
+        -ms-animation: beastmouth 1s linear infinite;
+        animation: beastmouth 1s linear infinite; }
+@keyframes beastmouth {
+  80% {
+    height: 18px;
+    top: -1px; } }
         .beast-boxcontrol .beast-head .beast-lips .beast-mouth .beast-teeth {
           position: absolute;
           top: 0px;
@@ -177,13 +529,22 @@ iframe[seamless] {
           background: white; }
         .beast-boxcontrol .beast-head .beast-lips .beast-mouth .beast-tougn {
           position: absolute;
-          top: 7px;
+          top: 4px;
           left: 3px;
           width: 10px;
-          height: 10px;
+          height: 2px;
           border-radius: 0 0 5px 5px;
           background: red;
-          transform-origin: center top; }
+          -webkit-transform-origin: center top;
+          -ms-transform-origin: center top;
+          transform-origin: center top;
+          -webkit-animation: beasttougn 1s linear infinite;
+          -moz-animation: beasttougn 1s linear infinite;
+          -ms-animation: beasttougn 1s linear infinite;
+          animation: beasttougn 1s linear infinite; }
+@keyframes beasttougn {
+  70% {
+    height: 14px; } }
     .beast-boxcontrol .beast-head .beast-ear {
       position: absolute;
       top: 9px;
@@ -227,11 +588,11 @@ iframe[seamless] {
       background: #ffb74d; }
   .beast-boxcontrol .beast-neck {
     position: absolute;
-    top: 32px;
+    top: 30px;
     left: 7px;
     z-index: -1;
     width: 27px;
-    height: 10px;
+    height: 13px;
     background: #ff9800; }
   .beast-boxcontrol .beast-body {
     position: absolute;
@@ -240,7 +601,20 @@ iframe[seamless] {
     width: 58px;
     border-top: 33px solid #ff9800;
     border-right: 6px solid transparent;
-    border-left: 6px solid transparent; }
+    border-left: 6px solid transparent;
+    -webkit-animation: beastbody 1s linear infinite;
+    -moz-animation: beastbody 1s linear infinite;
+    -ms-animation: beastbody 1s linear infinite;
+    animation: beastbody 1s linear infinite; }
+@keyframes beastbody {
+  20% {
+    transform: translateY(-1px); }
+  40% {
+    transform: translateY(1px); }
+  60% {
+    transform: translateY(-1px); }
+  80% {
+    transform: translateY(1px); } }
   .beast-boxcontrol .beast-triangle {
     position: absolute;
     top: -39px;
@@ -248,7 +622,15 @@ iframe[seamless] {
     width: 18px;
     height: 16px;
     border-radius: 5px 5px 0 0;
-    background: #ff9800; }
+    background: #ff9800;
+    -webkit-animation: beasttriangle 1s linear infinite;
+    -moz-animation: beasttriangle 1s linear infinite;
+    -ms-animation: beasttriangle 1s linear infinite;
+    animation: beasttriangle 1s linear infinite; }
+@keyframes beasttriangle {
+  40% {
+    top: -42px;
+    height: 18px; } }
   .beast-boxcontrol .beast-triangle2 {
     position: absolute;
     top: -40px;
@@ -256,7 +638,15 @@ iframe[seamless] {
     width: 16px;
     height: 16px;
     border-radius: 5px 5px 0 0;
-    background: #ff9800; }
+    background: #ff9800;
+    -webkit-animation: beasttriangle2 1s linear infinite;
+    -moz-animation: beasttriangle2 1s linear infinite;
+    -ms-animation: beasttriangle2 1s linear infinite;
+    animation: beasttriangle2 1s linear infinite; }
+@keyframes beasttriangle2 {
+  80% {
+    top: -42px;
+    height: 18px; } }
   .beast-boxcontrol .beast-tatoo {
     position: absolute;
     top: -37px;
@@ -270,7 +660,17 @@ iframe[seamless] {
     width: 20px;
     height: 10px;
     border-radius: 0 0 0 10px;
-    background: #ffb74d; }
+    background: #ffb74d;
+    transition: all 1s linear;
+    -webkit-animation: beastchest 1s linear infinite;
+    -moz-animation: beastchest 1s linear infinite;
+    -ms-animation: beastchest 1s linear infinite;
+    animation: beastchest 1s linear infinite; }
+@keyframes beastchest {
+  40% {
+    top: -36px;
+    height: 16px;
+    background: white; } }
   .beast-boxcontrol .beast-chest2 {
     position: absolute;
     top: -28px;
@@ -278,7 +678,17 @@ iframe[seamless] {
     width: 19px;
     height: 10px;
     border-radius: 0 0 10px 0;
-    background: #ffb74d; }
+    background: #ffb74d;
+    transition: all 1s linear;
+    -webkit-animation: beastchest2 1s linear infinite;
+    -moz-animation: beastchest2 1s linear infinite;
+    -ms-animation: beastchest2 1s linear infinite;
+    animation: beastchest2 1s linear infinite; }
+@keyframes beastchest2 {
+  80% {
+    top: -36px;
+    height: 17px;
+    background: white; } }
   .beast-boxcontrol .beast-arm {
     position: absolute;
     top: -33px;
@@ -305,7 +715,8 @@ iframe[seamless] {
         width: 12px;
         height: 18px;
         background: #ff9800;
-        transform-origin: center top; }
+        transform-origin: center top;
+        transform: rotatez(-198deg) translatez(77px); }
         .beast-boxcontrol .beast-arm .beast-bicep .beast-lowarm .beast-hand {
           position: absolute;
           top: 14px;
@@ -324,7 +735,8 @@ iframe[seamless] {
     border-radius: 0 5px 0 0;
     background: #ff9800;
     -ms-transform-origin: left center;
-    transform-origin: left center; }
+    transform-origin: left center;
+    transform: rotateZ(57deg); }
     .beast-boxcontrol .beast-arm2 .beast-bicep2 {
       position: absolute;
       top: 10px;
@@ -341,7 +753,8 @@ iframe[seamless] {
         height: 17px;
         background: #ff9800;
         transform: rotatez(0deg) rotateX(0deg);
-        transform-origin: center top; }
+        transform-origin: center top;
+        transform: rotateZ(106deg); }
         .beast-boxcontrol .beast-arm2 .beast-bicep2 .beast-lowarm2 .beast-hand2 {
           position: absolute;
           top: 13px;
@@ -379,7 +792,15 @@ iframe[seamless] {
         text-align: center;
         font-size: 20px;
         font-family: impact;
-        line-height: 40px; }
+        line-height: 40px;
+        transition: all 1s linear;
+        -webkit-animation: beastchamp 1s linear infinite;
+        -moz-animation: beastchamp 1s linear infinite;
+        -ms-animation: beastchamp 1s linear infinite;
+        animation: beastchamp 1s linear infinite; }
+@keyframes beastchamp {
+  40% {
+    background: white; } }
     .beast-boxcontrol .beast-peegu .beast-leg {
       position: absolute;
       top: 19px;
@@ -387,59 +808,68 @@ iframe[seamless] {
       width: 15px;
       height: 13px;
       background: #ff9800;
+      transform-origin: center top;
+      transform: rotateZ(43deg);
+      -webkit-animation: beastleg 1s linear infinite;
+      -moz-animation: beastleg 1s linear infinite;
+      -ms-animation: beastleg 1s linear infinite;
+      animation: beastleg 1s linear infinite; }
+@keyframes beastleg {
+  60% {
+    transform: rotateZ(67deg); } }
+    .beast-boxcontrol .beast-peegu .beast-short {
+      position: absolute;
+      top: 0px;
+      left: -5px;
+      z-index: 999;
+      width: 26px;
+      height: 9px;
+      background: red; }
+    .beast-boxcontrol .beast-peegu .beast-legguto {
+      position: absolute;
+      top: 13px;
+      left: 0px;
+      width: 15px;
+      height: 7px;
+      border-radius: 0 0 5px 5px;
+      background: red;
+      transform-origin: center top;
+      transform: rotateZ(-52deg); }
+    .beast-boxcontrol .beast-peegu .beast-lowleg {
+      position: absolute;
+      top: 5px;
+      left: 2px;
+      width: 10px;
+      height: 6px;
+      background: #ff9800;
       transform-origin: center top; }
-      .beast-boxcontrol .beast-peegu .beast-leg .beast-short {
+      .beast-boxcontrol .beast-peegu .beast-lowleg .beast-shoe {
         position: absolute;
-        top: 0px;
-        left: -5px;
-        z-index: 999;
-        width: 26px;
-        height: 9px;
-        background: red; }
-      .beast-boxcontrol .beast-peegu .beast-leg .beast-legguto {
-        position: absolute;
-        top: 13px;
-        left: 0px;
-        width: 15px;
+        top: 6px;
+        left: -1px;
+        width: 11px;
         height: 7px;
-        border-radius: 0 0 5px 5px;
         background: red;
+        -ms-transform-origin: center top;
         transform-origin: center top; }
-        .beast-boxcontrol .beast-peegu .beast-leg .beast-legguto .beast-lowleg {
+        .beast-boxcontrol .beast-peegu .beast-lowleg .beast-shoe .beast-shoefoot {
           position: absolute;
-          top: 5px;
-          left: 2px;
-          width: 10px;
-          height: 6px;
-          background: #ff9800;
-          transform-origin: center top; }
-          .beast-boxcontrol .beast-peegu .beast-leg .beast-legguto .beast-lowleg .beast-shoe {
+          top: 7px;
+          left: 0px;
+          width: 11px;
+          height: 11px;
+          background: red; }
+          .beast-boxcontrol .beast-peegu .beast-lowleg .beast-shoe .beast-shoefoot .beast-shoefootfront {
             position: absolute;
-            top: 6px;
-            left: -1px;
-            width: 11px;
-            height: 7px;
+            top: 0px;
+            left: 2px;
+            z-index: -9999;
+            width: 10px;
+            height: 15px;
+            border-radius: 15px 0;
             background: red;
-            -ms-transform-origin: center top;
+            transform: rotatez(29deg);
             transform-origin: center top; }
-            .beast-boxcontrol .beast-peegu .beast-leg .beast-legguto .beast-lowleg .beast-shoe .beast-shoefoot {
-              position: absolute;
-              top: 7px;
-              left: 0px;
-              width: 11px;
-              height: 11px;
-              background: red; }
-              .beast-boxcontrol .beast-peegu .beast-leg .beast-legguto .beast-lowleg .beast-shoe .beast-shoefoot .beast-shoefootfront {
-                position: absolute;
-                top: 0px;
-                left: 2px;
-                z-index: -9999;
-                width: 10px;
-                height: 15px;
-                border-radius: 15px 0;
-                background: red;
-                transform: rotatez(29deg);
-                transform-origin: center top; }
     .beast-boxcontrol .beast-peegu .beast-leg2 {
       position: absolute;
       top: 22px;
@@ -447,7 +877,15 @@ iframe[seamless] {
       width: 15px;
       height: 12px;
       background: #ff9800;
-      transform-origin: center top; }
+      transform-origin: center top;
+      transform: rotateZ(-29deg);
+      -webkit-animation: beastleg2 1s linear infinite;
+      -moz-animation: beastleg2 1s linear infinite;
+      -ms-animation: beastleg2 1s linear infinite;
+      animation: beastleg2 1s linear infinite; }
+@keyframes beastleg2 {
+  30% {
+    transform: rotateZ(-52deg); } }
       .beast-boxcontrol .beast-peegu .beast-leg2 .beast-short2 {
         position: absolute;
         top: -3px;
@@ -462,7 +900,8 @@ iframe[seamless] {
         width: 15px;
         height: 5px;
         border-radius: 0 0 5px 5px;
-        background: red; }
+        background: red;
+        transform: rotateZ(30deg); }
         .beast-boxcontrol .beast-peegu .beast-leg2 .beast-legguto2 .beast-lowleg2 {
           position: absolute;
           top: 4px;
@@ -501,11 +940,14 @@ iframe[seamless] {
                 transform-origin: center top; }
   .beast-boxcontrol .beast-weapon {
     position: absolute;
-    left: 21px;
-    z-index: 999999;
+    left: -3px;
+    top: -45px;
+    z-index: 999999999999999;
     width: 6px;
     height: 98px;
-    background: #5d4037; }
+    background: #5d4037;
+    transform-origin: bottom;
+    transform: rotateZ(69deg) translateZ(80px); }
     .beast-boxcontrol .beast-weapon .beast-weapon-head {
       position: absolute;
       top: -4px;
