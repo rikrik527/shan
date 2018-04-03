@@ -3,37 +3,100 @@ var obj = require('../getall');
 var transform = require('../transform');
 var transition = require('../transform');
 var requestAnimationFrame = require('../requestAnimationFrame');
-module.exports.shanAppear = function () {
-    var shan = "<div class='shan-li-hair1'></div><div class='shan-li-hair2'></div><div class='shan-li-hair3'></div><div class='shan-li-head'><div class='shan-li-eyebrow'></div><div class='shan-li-eyebrow2'></div><div class='shan-li-eye'><div class='shan-li-eyeball'></div></div><div class='shan-li-eye2'><div class='shan-li-eyeball2'></div></div><div class='shan-li-nose'></div><div class='shan-li-lips'></div><div class='shan-li-mouth'><div class='shan-li-teeth'></div></div><div class='shan-li-lips2'></div></div><div class='shan-li-neck'></div><div class='shan-li-body'><div class='shan-li-mimi'></div><div class='shan-li-mimi2'></div></div><div class='shan-li-arm'></div><div class='shan-li-arm2'></div><div class='shan-li-lowarm'><div class='shan-li-hand'></div></div><div class='shan-li-lowarm2'><div class='shan-li-hand2'></div></div><div class='shan-li-stomache'></div><div class='shan-li-peegu'></div><div class='shan-li-leg'></div><div class='shan-li-leg2'></div><div class='shan-li-lowleg'><div class='shan-li-feet'></div></div><div class='shan-li-lowleg2'><div class='shan-li-feet2'></div></div><div class='shan-li-horse-hair'></div><div class='shan-li-horse-hair2'></div><div class='shan-li-horse-head'><div class='shan-li-horse-eye'><div class='shan-li-horse-eyeball'></div></div><div class='shan-li-horse-eye2'><div class='shan-li-horse-eyeball2'></div></div><div class='shan-li-horse-nose'></div><div class='shan-li-horse-lips'></div><div class='shan-li-horse-mouth'><div class='shan-li-horse-teeth'></div></div><div class='shan-li-horse-lips2'></div></div><div class='shan-li-horse-neck'></div><div class='shan-li-horse-neck2'></div><div class='shan-li-horse-body'></div><div class='shan-li-horse-sit'>愛</div><div class='shan-li-horse-sitside'></div><div class='shan-li-horse-sitside2'></div><div class='shan-li-horse-mask'></div><div class='shan-li-horse-circle'></div><div class='shan-li-horse-line'></div><div class='shan-li-horse-line2'></div><div class='shan-li-horse-line3'></div><div class='shan-li-horse-line4'></div><div class='shan-li-horse-line5'></div><div class='shan-li-horse-line6'></div><div class='shan-li-horse-frontleg'></div><div class='shan-li-horse-frontlowleg'><div class='shan-li-horse-feet'></div></div><div class='shan-li-horse-frontleg2'></div><div class='shan-li-horse-frontlowleg2'><div class='shan-li-horse-feet2'></div></div><div class='shan-li-horse-backleg'></div><div class='shan-li-horse-backleg2'></div><div class='shan-li-horse-backlowleg'><div class='shan-li-horse-backfeet'></div></div><div class='shan-li-horse-backlowleg2'><div class='shan-li-horse-backfeet2'></div></div><div class='shan-li-horse-tail'></div><div class='shan-li-horse-tail2'></div><div class='shan-li-horse-weapon'><div class='shan-li-horse-flag'>戒</div></div><div class='shan-li-horse-sword'></div><div class='shan-li-horse-weapon2'><div class='shan-li-horse-flag2'>律</div></div><div class='shan-li-horse-sword2'></div><div class='shan-li-horse-deco1'></div><div class='shan-li-horse-deco2'></div><div class='shan-li-horse-deco3'></div><div class='shan-li-horse-deco4'></div><div class='shan-li-horse-deco5'></div><div class='shan-li-horse-deco6'></div><div class='shan-li-horse-deco7'></div><div class='shan-li-horse-deco8'></div><div class='shan-li-horse-effect1'></div><div class='shan-li-horse-effect2'></div><div class='shan-li-horse-effect3'></div><div class='shan-li-horse-effect4'></div><div class='shan-li-horse-effect5'></div><div class='shan-li-horse-effect6'></div><div class='shan-li-horse-effect7'></div><div class='shan-li-horse-effect8'></div><div class='shan-li-horse-effect9'></div><div class='shan-li-horse-effect10'></div><div class='shan-li-horse-effect11'></div><div class='shan-li-horse-effect12'></div>";
+var shanAppear = (function() {
+    console.log('excuted shanapeer')
 
-    var shanBtn = obj.get('.shan-btn');
-    shanBtn.insertAdjacentHTML('afterbegin', '<article class="shan-li-boxcontrol"></article>');
-    var shanLiBc = obj.get('.shan-li-boxcontrol');
-    shanLiBc.innerHTML = shan;
+    var excute = false;
+    return function(){
+        console.log('return')
+        if(!excute){
+            excute= true;
+            var shan = "<div class='shan-li-hair1'></div><div class='shan-li-hair2'></div><div class='shan-li-hair3'></div><div class='shan-li-head'><div class='shan-li-eyebrow'></div><div class='shan-li-eyebrow2'></div><div class='shan-li-eye'><div class='shan-li-eyeball'></div></div><div class='shan-li-eye2'><div class='shan-li-eyeball2'></div></div><div class='shan-li-nose'></div><div class='shan-li-lips'></div><div class='shan-li-mouth'><div class='shan-li-teeth'></div></div><div class='shan-li-lips2'></div></div><div class='shan-li-neck'></div><div class='shan-li-body'><div class='shan-li-mimi'></div><div class='shan-li-mimi2'></div></div><div class='shan-li-arm'></div><div class='shan-li-arm2'></div><div class='shan-li-lowarm'><div class='shan-li-hand'></div></div><div class='shan-li-lowarm2'><div class='shan-li-hand2'></div></div><div class='shan-li-stomache'></div><div class='shan-li-peegu'></div><div class='shan-li-leg'></div><div class='shan-li-leg2'></div><div class='shan-li-lowleg'><div class='shan-li-feet'></div></div><div class='shan-li-lowleg2'><div class='shan-li-feet2'></div></div><div class='shan-li-horse-hair'></div><div class='shan-li-horse-hair2'></div><div class='shan-li-horse-head'><div class='shan-li-horse-eye'><div class='shan-li-horse-eyeball'></div></div><div class='shan-li-horse-eye2'><div class='shan-li-horse-eyeball2'></div></div><div class='shan-li-horse-nose'></div><div class='shan-li-horse-lips'></div><div class='shan-li-horse-mouth'><div class='shan-li-horse-teeth'></div></div><div class='shan-li-horse-lips2'></div></div><div class='shan-li-horse-neck'></div><div class='shan-li-horse-neck2'></div><div class='shan-li-horse-body'></div><div class='shan-li-horse-sit'>愛</div><div class='shan-li-horse-sitside'></div><div class='shan-li-horse-sitside2'></div><div class='shan-li-horse-mask'></div><div class='shan-li-horse-circle'></div><div class='shan-li-horse-line'></div><div class='shan-li-horse-line2'></div><div class='shan-li-horse-line3'></div><div class='shan-li-horse-line4'></div><div class='shan-li-horse-line5'></div><div class='shan-li-horse-line6'></div><div class='shan-li-horse-frontleg'></div><div class='shan-li-horse-frontlowleg'><div class='shan-li-horse-feet'></div></div><div class='shan-li-horse-frontleg2'></div><div class='shan-li-horse-frontlowleg2'><div class='shan-li-horse-feet2'></div></div><div class='shan-li-horse-backleg'></div><div class='shan-li-horse-backleg2'></div><div class='shan-li-horse-backlowleg'><div class='shan-li-horse-backfeet'></div></div><div class='shan-li-horse-backlowleg2'><div class='shan-li-horse-backfeet2'></div></div><div class='shan-li-horse-tail'></div><div class='shan-li-horse-tail2'></div><div class='shan-li-horse-weapon'><div class='shan-li-horse-flag'>戒</div></div><div class='shan-li-horse-sword'></div><div class='shan-li-horse-weapon2'><div class='shan-li-horse-flag2'>律</div></div><div class='shan-li-horse-sword2'></div><div class='shan-li-horse-deco1'></div><div class='shan-li-horse-deco2'></div><div class='shan-li-horse-deco3'></div><div class='shan-li-horse-deco4'></div><div class='shan-li-horse-deco5'></div><div class='shan-li-horse-deco6'></div><div class='shan-li-horse-deco7'></div><div class='shan-li-horse-deco8'></div><div class='shan-li-horse-effect1'></div><div class='shan-li-horse-effect2'></div><div class='shan-li-horse-effect3'></div><div class='shan-li-horse-effect4'></div><div class='shan-li-horse-effect5'></div><div class='shan-li-horse-effect6'></div><div class='shan-li-horse-effect7'></div><div class='shan-li-horse-effect8'></div><div class='shan-li-horse-effect9'></div><div class='shan-li-horse-effect10'></div><div class='shan-li-horse-effect11'></div><div class='shan-li-horse-effect12'></div>";
 
-}
-module.exports.shanProfile = function(){
-    var img = require('../../images/shanli.png');
-    var shanBtn = obj.get('.shan-btn');
-    shanBtn.insertAdjacentHTML('afterbegin', "<div class='shan-lowbox'><div class='shan-name'>雨珊</div><div class='shan-photo'><img id='shan-image' alt='shan-profile-photo'></div><div class='shan-profile'>Height:165cm<br>Weight:70kg<br>Country:Taiwan</div><ul class='shan-status'><li class='shan-info'></li></ul></div>");
-    var shanImg = obj.getId('shan-image');
-    shanImg.src = img;
-    var shanStatus = obj.get('.shan-status');
-    var shanInfo = obj.get('.shan-info');
-    var shanBioCount = 0;
-    function shanText(){
-        var bio = '姓名:雨珊<br>英文:Shan-Li<br>出生於一九九一.....';
-        if(shanBioCount <= bio.length){
-            shanInfo.innerHTML = bio.substring(0,shanBioCount);
-            shanBioCount++;
-        } else{
-            window.clearInterval(shanId);
+            var box = obj.get('.box');
+            box.insertAdjacentHTML('afterbegin', '<article class="shan-li-boxcontrol"></article>');
+            var shanLiBc = obj.get('.shan-li-boxcontrol');
+            shanLiBc.innerHTML = shan;
         }
     }
-    var shanId = window.setInterval(shanText,100);
-    shanText();
-}
 
+
+})();
+var shanProfile = (function(){
+    console.log('excuted pro')
+
+
+    var excute = false;
+    return function(){
+        console.log('no')
+        if(!excute){
+            excute = true;
+            var img = require('../../images/shanli.png');
+            var box = obj.get('.box');
+            box.insertAdjacentHTML('afterbegin', "<div class='shan-lowbox'><div class='shan-name'>雨珊</div><div class='shan-photo'><img id='shan-image' alt='shan-profile-photo'></div><div class='shan-profile'>Height:165cm<br>Weight:70kg<br>Country:Taiwan</div><ul class='shan-status'><li class='shan-info'></li></ul></div>");
+            var shanImg = obj.getId('shan-image');
+            shanImg.src = img;
+            var shanStatus = obj.get('.shan-status');
+            var shanInfo = obj.get('.shan-info');
+            var shanBioCount = 0;
+            function shanText(){
+                var bio = '姓名:雨珊<br>英文:Shan-Li<br>出生於一九九一.....';
+                if(shanBioCount <= bio.length){
+                    shanInfo.innerHTML = bio.substring(0,shanBioCount);
+                    shanBioCount++;
+                } else{
+                    window.clearInterval(shanId);
+                }
+            }
+            var shanId = window.setInterval(shanText,100);
+            shanText();
+
+        }
+    }
+
+})()
+module.exports.shanBox = function(){
+    var box = obj.get('.box'),box2 = obj.get('.box2'),
+    shanBg = obj.get('.shan-bg'),shanBtn = obj.get('.shan-btn');
+    shanBtn.onmouseover = function(){
+
+        box2.style.transform = 'rotatex(-180deg)';
+        box.style.transform = 'rotatex(1deg)';
+        shanProfile();
+        shanAppear();
+        var shanBc = obj.get('.shan-li-boxcontrol')
+        shanBg.style.display = 'block';
+        shanBc.style.display = 'block';
+
+    }
+    shanBtn.onmouseout = function(){
+        box2.style.transform = 'rotatex(1deg)';
+        box.style.transform = 'rotatex(180deg)';
+        var shanBc = obj.get('.shan-li-boxcontrol')
+        shanBg.style.display = 'none';
+        shanBc.style.display = 'none';
+    }
+
+    shanBtn.ontouchstart = function(e){
+        var touch = e.targetTouches;
+        box2.style.transform = 'rotatex(-180deg)';
+        box.style.transform = 'rotatex(1deg)';
+        shanProfile();
+        shanAppear();
+        var shanBc = obj.get('.shan-li-boxcontrol')
+        shanBg.style.display = 'none';
+        shanBc.style.display = 'none';
+    }
+
+    shanBtn.ontouchend = function(e){
+        var touched = e.changedTouch[0];
+        box2.style.transform = 'rotatex(1deg)';
+        box.style.transform = 'rotatex(180deg)';
+        var shanBc = obj.get('.shan-li-boxcontrol')
+        shanBg.style.display = 'none';
+        shanBc.style.display = 'none';
+    }
+}
 module.exports.shanToggle = function () {
 
     var shanLiBc = obj.get('.shan-li-boxcontrol');

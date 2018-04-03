@@ -10,31 +10,118 @@
 /* colors in order */
 /* in text */
 /*fashion set 1 smooth*/
-@media screen and (min-width: 901px) and (max-width: 5000px) {
+@media screen and (min-width: 831px) and (max-width: 5000px) {
   .l-display-none {
     display: none; } }
-@media screen and (min-width: 505px) and (max-width: 900px) {
+@media screen and (min-width: 505px) and (max-width: 830px) {
   .m-display-none {
-    display: none; } }
+    display: none; }
+
+  .main-boxcontrol {
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: 24rem !important; } }
 @media screen and (min-width: 320px) and (max-width: 504px) {
   .xs-display-none {
-    display: none; } }
+    display: none; }
+
+  .main-boxcontrol {
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)) !important;
+    grid-auto-rows: 24rem !important; } }
 @media (max-device-width: 360px) and (max-device-height: 640px) {
-  .todo-list {
-    transform: scale(0.7); } }
+  .main-boxcontrol {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)) !important;
+    grid-auto-rows: 23rem !important; }
+
+  .box {
+    grid-column: none !important;
+    grid-auto-rows: none !important;
+    height: 23rem !important; }
+
+  .box2 {
+    grid-column: none !important;
+    height: 23rem !important; }
+
+  .judo-box {
+    grid-column: none !important;
+    grid-auto-rows: none !important;
+    height: 23rem !important; }
+
+  .judo-box2 {
+    grid-column: none !important;
+    height: 23rem !important; }
+
+  .craz-box {
+    grid-column: none !important;
+    grid-auto-rows: none !important;
+    height: 23rem !important; }
+
+  .crazy-box2 {
+    grid-column: none !important;
+    height: 23rem !important; }
+
+  .beast-box {
+    grid-column: none !important;
+    grid-auto-rows: none !important;
+    height: 23rem !important; }
+
+  .beast-box2 {
+    grid-column: none !important;
+    height: 23rem !important; }
+
+  .crazy-boxcontrol {
+    top: 37% !important;
+    left: 72.5% !important; }
+
+  .btn-pos3 {
+    left: 69% !important;
+    top: 41.5% !important; }
+
+  .btn-pos4 {
+    left: 64.5% !important;
+    top: 55.5% !important; }
+
+  .beast-boxcontrol {
+    top: 50% !important;
+    left: 67% !important; }
+
+  .samurai-boxcontrol {
+    top: 63% !important;
+    left: 59% !important; }
+
+  .btn-pos5 {
+    left: 68% !important;
+    top: 69.5% !important; }
+
+  .magic-boxcontrol {
+    left: 72% !important;
+    top: 80% !important; }
+
+  .btn-pos6 {
+    left: 65% !important;
+    top: 84% !important; } }
+@media (max-device-width: 640px) and (max-device-height: 360px) and (orientation: landscape) {
+  .main-boxcontrol {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)) !important;
+    grid-auto-rows: 23rem !important; } }
 /* iphone 6 6s 7 8 */
 @media (max-device-width: 414px) and (max-device-height: 736px) {
-  .todo-list {
-    transform: scale(0.7); } }
+  .main-boxcontrol {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)) !important;
+    grid-auto-rows: 23rem !important; } }
 /* samsung */
 @media (max-device-width: 360px) and (max-device-height: 740px) {
-  .todo-list {
-    transform: scale(0.7); } }
+  .main-boxcontrol {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)) !important;
+    grid-auto-rows: 23rem !important; } }
 /* ipad mini */
 @media (max-device-width: 768px) and (max-device-height: 1024px) {
   .main-boxcontrol {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     grid-auto-rows: 23rem; } }
+@media (max-device-width: 1024px) and (max-device-height: 768px) and (orientation: landscape) {
+  .main-boxcontrol {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)) !important;
+    grid-auto-rows: 23rem !important; } }
 /* xpreia */
 @media (max-device-width: 360px) and (max-device-height: 640px) {
   .main-boxcontrol {

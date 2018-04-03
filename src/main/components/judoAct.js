@@ -4,43 +4,102 @@ var transform = require('../transform');
 var transition = require('../transform');
 var requestAnimationFrame = require('../requestAnimationFrame');
 
-module.exports.judoAppear = function() {
-    var judo = "<div class='judo-sensor-top'></div><div class='judo-sensor-left'></div><div class='judo-sensor-right'></div><div class='judo-head'><div class='judo-ear'></div><div class='judo-ear2'></div><div class='judo-hair1'></div><div class='judo-hair2'></div><div class='judo-hair3'></div><div class='judo-hair-white'><div class='judo-hair-white2'></div><div class='judo-hair-white3'></div></div><div class='judo-eyebrow'></div><div class='judo-eyebrow2'></div><div class='judo-eye'><div class='judo-eyeball'></div></div><div class='judo-eye2'><div class='judo-eyeball2'></div></div><div class='judo-nose'></div><div class='judo-lips'><div class='judo-mouth'><div class='judo-teeth'></div></div></div><div class='judo-lips2'></div></div><div class='judo-neck'></div><div class='judo-body'><div class='judo-clothes'><div class='judo-clothes-top'></div><div class='judo-clothes-chest'></div><div class='judo-clothes-bottom'></div></div><div class='judo-chest'><div class='judo-stamache'></div><div class='judo-stamache2'></div></div><div class='judo-arm'><div class='judo-bicep'><div class='judo-lowarm'><div class='judo-hand'><div class='judo-sword-tail'><div class='judo-sword-sqaure'><div class='judo-sword-effect'></div></div><div class='judo-sword-triangle'><div class='judo-sword-effect2'></div></div><div class='judo-sword-sqaure2'><div class='judo-sword-effect3'></div></div><div class='judo-sword-triangle2'><div class='judo-sword-effect4'></div></div><div class='judo-sword-handle'><div class='judo-sword-bar1'></div><div class='judo-sword-bar2'></div></div></div></div></div></div></div><div class='judo-clothes2'><div class='judo-clothes2-top'></div><div class='judo-clothes2-chest'></div><div class='judo-clothes2-bottom'></div></div><div class='judo-chest2'><div class='judo-stamache3'></div><div class='judo-stamache4'></div></div><div class='judo-arm2'><div class='judo-bicep2'><div class='judo-lowarm2'><div class='judo-hand2'></div></div></div></div></div><div class='judo-peegu'><div class='judo-belt'><div class='judo-belt1'></div><div class='judo-belt2'></div></div><div class='judo-upleg'><div class='judo-lowleg'><div class='judo-foot'><div class='judo-shoe'></div></div></div></div><div class='judo-upleg2'><div class='judo-lowleg2'><div class='judo-foot2'><div class='judo-shoe2'></div></div></div></div></div><div class='judo-effect1'></div><div class='judo-effect2'></div><div class='judo-effect3'></div><div class='judo-effect4'></div><div class='judo-effect5'></div><div class='judo-effect6'></div><div class='judo-effect7'></div><div class='judo-effect8'></div><div class='judo-effect9'></div><div class='judo-effect10'></div>";
+var judoAppear = (function() {
+  var excute = false;
+  return function(){
+    if(!excute){
+      excute = true;
+      var judo = "<div class='judo-sensor-top'></div><div class='judo-sensor-left'></div><div class='judo-sensor-right'></div><div class='judo-head'><div class='judo-ear'></div><div class='judo-ear2'></div><div class='judo-hair1'></div><div class='judo-hair2'></div><div class='judo-hair3'></div><div class='judo-hair-white'><div class='judo-hair-white2'></div><div class='judo-hair-white3'></div></div><div class='judo-eyebrow'></div><div class='judo-eyebrow2'></div><div class='judo-eye'><div class='judo-eyeball'></div></div><div class='judo-eye2'><div class='judo-eyeball2'></div></div><div class='judo-nose'></div><div class='judo-lips'><div class='judo-mouth'><div class='judo-teeth'></div></div></div><div class='judo-lips2'></div></div><div class='judo-neck'></div><div class='judo-body'><div class='judo-clothes'><div class='judo-clothes-top'></div><div class='judo-clothes-chest'></div><div class='judo-clothes-bottom'></div></div><div class='judo-chest'><div class='judo-stamache'></div><div class='judo-stamache2'></div></div><div class='judo-arm'><div class='judo-bicep'><div class='judo-lowarm'><div class='judo-hand'><div class='judo-sword-tail'><div class='judo-sword-sqaure'><div class='judo-sword-effect'></div></div><div class='judo-sword-triangle'><div class='judo-sword-effect2'></div></div><div class='judo-sword-sqaure2'><div class='judo-sword-effect3'></div></div><div class='judo-sword-triangle2'><div class='judo-sword-effect4'></div></div><div class='judo-sword-handle'><div class='judo-sword-bar1'></div><div class='judo-sword-bar2'></div></div></div></div></div></div></div><div class='judo-clothes2'><div class='judo-clothes2-top'></div><div class='judo-clothes2-chest'></div><div class='judo-clothes2-bottom'></div></div><div class='judo-chest2'><div class='judo-stamache3'></div><div class='judo-stamache4'></div></div><div class='judo-arm2'><div class='judo-bicep2'><div class='judo-lowarm2'><div class='judo-hand2'></div></div></div></div></div><div class='judo-peegu'><div class='judo-belt'><div class='judo-belt1'></div><div class='judo-belt2'></div></div><div class='judo-upleg'><div class='judo-lowleg'><div class='judo-foot'><div class='judo-shoe'></div></div></div></div><div class='judo-upleg2'><div class='judo-lowleg2'><div class='judo-foot2'><div class='judo-shoe2'></div></div></div></div></div><div class='judo-effect1'></div><div class='judo-effect2'></div><div class='judo-effect3'></div><div class='judo-effect4'></div><div class='judo-effect5'></div><div class='judo-effect6'></div><div class='judo-effect7'></div><div class='judo-effect8'></div><div class='judo-effect9'></div><div class='judo-effect10'></div>";
 
-    var judoBtn = obj.get('.judo-btn');
-    judoBtn.insertAdjacentHTML('afterbegin', '<article class="judo-boxcontrol"></article>');
-    var judoBC = obj.get('.judo-boxcontrol');
-    judoBC.innerHTML = judo;
-    judoBtn.insertAdjacentHTML('afterbegin', "<div class='judo-lowbox'><div class='judo-name'>Mr.JUDO</div><div class='judo-photo'><img id='judo-image' alt='profile-photo'></div><div class='judo-profile'>Height:170cm<br>Weight:75kg<br>Country:Taiwan</div><ul class='judo-status'><li class='judo-info'></li></ul></div>");
-    var judoImg = obj.getId('judo-image');
-    judoImg.src = img;
-};
-
-module.exports.judoBio = function(){
-    var judoStatus = obj.get('.judo-status');
-    var judoInfo = obj.get('.judo-info');
-    var judoBioCount = 0;
-    function judoText(){
-        var bio ='姓名:柔盜<br>英文:Mr.Judo<br>出生於西元一九七九....';
-
-        if(judoBioCount <= bio.length){
-            judoInfo.innerHTML = bio.substring(0,judoBioCount);
-            judoBioCount ++ ;
-
-
-
-
-        } else{
-            window.clearInterval(judoId);
-
-        }
+      var judobox = obj.get('.judo-box');
+      judobox.insertAdjacentHTML('afterbegin', '<article class="judo-boxcontrol"></article>');
+      var judoBC = obj.get('.judo-boxcontrol');
+      judoBC.innerHTML = judo;
 
     }
-    // judoInfo.scrollHeight = judoStatus.scrollHeight;
-    var judoId = window.setInterval(judoText,100);
-    console.log('active')
-    judoText();
+  }
+})();
 
+
+var judoProfile = (function(){
+  var excute = false;
+  return function(){
+    if(!excute){
+      excute = true;
+      var judobox = obj.get('.judo-box');
+      judobox.insertAdjacentHTML('afterbegin', "<div class='judo-lowbox'><div class='judo-name'>Mr.JUDO</div><div class='judo-photo'><img id='judo-image' alt='profile-photo'></div><div class='judo-profile'>Height:170cm<br>Weight:75kg<br>Country:Taiwan</div><ul class='judo-status'><li class='judo-info'></li></ul></div>");
+      var judoImg = obj.getId('judo-image');
+      judoImg.src = img;
+      var judoStatus = obj.get('.judo-status');
+      var judoInfo = obj.get('.judo-info');
+      var judoBioCount = 0;
+      function judoText(){
+          var bio ='姓名:柔盜<br>英文:Mr.Judo<br>出生於西元一九七九....';
+
+          if(judoBioCount <= bio.length){
+              judoInfo.innerHTML = bio.substring(0,judoBioCount);
+              judoBioCount ++ ;
+
+
+
+
+          } else{
+              window.clearInterval(judoId);
+
+          }
+
+      }
+      // judoInfo.scrollHeight = judoStatus.scrollHeight;
+      var judoId = window.setInterval(judoText,100);
+      console.log('active')
+      judoText();
+
+    }
+  }
+})();
+
+
+module.exports.judoBox = function(){
+  var judobox = obj.get('.judo-box'),judobox2 = obj.get('.judo-box2'),
+  judoBg = obj.get('.judo-bg'),judoBtn = obj.get('.judo-btn');
+  judoBtn.onmouseover = function(){
+
+    judobox2.style.transform = 'rotatex(-180deg)';
+    judobox.style.transform = 'rotatex(1deg)';
+    judoProfile();
+    judoAppear();
+      var judoBc = obj.get('.judo-boxcontrol')
+      judoBg.style.display = 'block';
+      judoBc.style.display = 'block';
+
+  }
+  judoBtn.onmouseout = function(){
+    judobox2.style.transform = 'rotatex(1deg)';
+    judobox.style.transform = 'rotatex(180deg)';
+      var judoBc = obj.get('.judo-boxcontrol')
+      judoBg.style.display = 'none';
+      judoBc.style.display = 'none';
+  }
+
+  judoBtn.ontouchstart = function(e){
+      var touch = e.targetTouches;
+      judobox2.style.transform = 'rotatex(-180deg)';
+      judobox.style.transform = 'rotatex(1deg)';
+      judoProfile();
+      judoAppear();
+      var judoBc = obj.get('.judo-boxcontrol')
+      judoBg.style.display = 'none';
+      judoBc.style.display = 'none';
+  }
+
+  judoBtn.ontouchend = function(e){
+      var touched = e.changedTouch[0];
+      judobox2.style.transform = 'rotatex(1deg)';
+      judobox.style.transform = 'rotatex(180deg)';
+      var judoBc = obj.get('.judo-boxcontrol')
+      judoBg.style.display = 'none';
+      judoBc.style.display = 'none';
+  }
 }
 
 

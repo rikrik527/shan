@@ -211,10 +211,14 @@ module.exports.crazyToggle = function(){
     cyDogFeet2.classList.remove('crazydogfeet2');
 }
 }
-module.exports.crazyProfile = function(){
-    var img = require('../../images/crazy-test.png');
-    var crazyBtn = obj.get('.crazy-btn');
-    crazyBtn.insertAdjacentHTML('afterbegin', "<div class='crazy-lowbox'><div class='crazy-name'>宮本綠</div><div class='crazy-photo'><img id='crazy-image' alt='crazy-profile-photo'></div><div class='crazy-profile'>Height:187cm<br>Weight:100kg<br>Country:Japan</div><ul class='crazy-status'><li class='crazy-info'></li></ul></div>");
+var crazyProfile = (function(){
+    var excute = false;
+    return function(){
+        if(!excute){
+            excute = true;
+            var img = require('../../images/crazy-test.png');
+    var crazybox = obj.get('.crazy-box');
+    crazybox.insertAdjacentHTML('afterbegin', "<div class='crazy-lowbox'><div class='crazy-name'>宮本綠</div><div class='crazy-photo'><img id='crazy-image' alt='crazy-profile-photo'></div><div class='crazy-profile'>Height:187cm<br>Weight:100kg<br>Country:Japan</div><ul class='crazy-status'><li class='crazy-info'></li></ul></div>");
     var crazyImg = obj.getId('crazy-image');
     crazyImg.src = img;
     var crazyStatus = obj.get('.crazy-status');
@@ -231,16 +235,28 @@ module.exports.crazyProfile = function(){
     }
     var crazyId = window.setInterval(crazyText,100);
     crazyText();
+        }
+    }
+    
+    
+})();
+
+var crazyAppear = (function() {
+var excute = false;
+return function(){
+    
+    if(!excute){
+        excute = true;
+        
+        var crazy = "<div class='crazy-hook'><div class='crazy-hooker'></div></div><div class='crazy-sensor-top'></div><div class='crazy-sensor-left'></div><div class='crazy-sensor-right'></div><div class='crazy-head'><div class='crazy-ear'></div><div class='crazy-ear2'></div><div class='crazy-hair1'></div><div class='crazy-hair2'></div><div class='crazy-hair3'></div><div class='crazy-eyebrow'></div><div class='crazy-eyebrow2'></div><div class='crazy-eye'><div class='crazy-eyeball'></div></div><div class='crazy-eye2'><div class='crazy-eyeball2'></div></div><div class='crazy-nose'></div><div class='crazy-lips'></div><div class='crazy-mouth'><div class='crazy-teeth'></div></div><div class='crazy-lips2'></div></div><div class='crazy-neck'></div><div class='crazy-body'><div class='crazy-flag'><p class='crazy-text'>化学<br>兵器</p><div class='crazy-circle'><div class='crazy-powpow1'></div><div class='crazy-powpow2'></div><span class='crazy-oil'><span class='crazy-oil-before'><span class='crazy-oil-after'></span></span><div class='crazy-powpow3'></div><div class='crazy-powpow4'></div></span></div></div></div><div class='crazy-stomach'></div><div class='crazy-peegu'></div><div class='crazy-arm'><div class='crazy-deco1'></div><div class='crazy-deco2'></div></div><div class='crazy-arm2'><div class='crazy-deco3'></div><div class='crazy-deco4'></div></div><div class='crazy-lowarm'><div class='crazy-weapon'><div class='crazy-shadow1'></div><div class='crazy-weapon-middle'><div class='crazy-shadow2'></div><div class='crazy-weapon-finger'><div class='crazy-shadow3'><div      class='crazy-shadow3-before'></div><div class='crazy-shadow3-after'></div></div></div></div><div class='crazy-weapon-handbar'><div class='crazy-shadow4'></div><div class='crazy-weapon-handbar2'><div class='crazy-shadow5'></div></div></div><div class='crazy-weapon-front-deco'><div class='crazy-shadow6'></div><div class='crazy-weapon-front-deco2'><div class='crazy-shadow7'></div></div></div><div class='crazy-weapon-gun'><div class='crazy-shadow8'></div><div class='crazy-weapon-knife'><div class='crazy-shadow9'></div></div></div></div><div class='crazy-deco5'></div><div class='crazy-hand'></div></div><div class='crazy-lowarm2'><div class='crazy-deco6'></div><div class='crazy-hand2'></div></div><div class='crazy-leg'><div class='crazy-lowleg'><div class='crazy-feet'></div></div></div><div class='crazy-leg2'><div class='crazy-lowleg2'><div class='crazy-feet2'></div></div></div><div class='crazy-dog-line1'></div><div class='crazy-dog-line2'></div><div class='crazy-dog-line3'></div><div class='crazy-dog-head'><div class='crazy-dog-white'><div class='crazy-dog-smallwhite'></div><div class='crazy-dog-smallwhite2'></div></div><div class='crazy-dog-eye'><div class='crazy-dog-eyeball'></div></div><div class='crazy-dog-eye2'><div class='crazy-dog-eyeball2'></div></div><div class='crazy-dog-ear'></div><div class='crazy-dog-ear2'></div><div class='crazy-dog-nose'></div><div class='crazy-dog-nose2'></div><div class='crazy-dog-mouth'><div class='crazy-dog-teeth'></div><div class='crazy-dog-teeth2'></div><div class='crazy-dog-downmouth'></div></div></div><div class='crazy-dog-neck'></div><div class='crazy-dog-body'><div class='crazy-dog-front-leg'><div class='crazy-dog-front-low-leg'><div class='crazy-dog-feet'></div></div></div><div class='crazy-dog-front-leg2'><div class='crazy-dog-front-low-leg2'><div class='crazy-dog-feet2'></div></div></div><div class='crazy-dog-back-leg'><div class='crazy-dog-back-low-leg'><div class='crazy-dog-back-feet'></div></div></div><div class='crazy-dog-back-leg2'><div class='crazy-dog-back-low-leg2'><div class='crazy-dog-back-feet2'></div></div></div></div><div class='crazy-dog-tail'><div class='crazy-dog-tail2'></div></div>";
+        var crazybox = obj.get('.crazy-box');
+        crazybox.insertAdjacentHTML('afterbegin', '<article class="crazy-boxcontrol"></article>');
+        var crazyBc = obj.get('.crazy-boxcontrol');
+        crazyBc.innerHTML = crazy;
+    }
 }
-
-module.exports.crazyAppear = function() {
-
-
-    var crazyBtn = obj.get('.crazy-btn');
-    crazyBtn.insertAdjacentHTML('afterbegin', '<article class="crazy-boxcontrol"></article>');
-    var crazyBc = obj.get('.crazy-boxcontrol');
-    var crazy = "<div class='crazy-hook'><div class='crazy-hooker'></div></div><div class='crazy-sensor-top'></div><div class='crazy-sensor-left'></div><div class='crazy-sensor-right'></div><div class='crazy-head'><div class='crazy-ear'></div><div class='crazy-ear2'></div><div class='crazy-hair1'></div><div class='crazy-hair2'></div><div class='crazy-hair3'></div><div class='crazy-eyebrow'></div><div class='crazy-eyebrow2'></div><div class='crazy-eye'><div class='crazy-eyeball'></div></div><div class='crazy-eye2'><div class='crazy-eyeball2'></div></div><div class='crazy-nose'></div><div class='crazy-lips'></div><div class='crazy-mouth'><div class='crazy-teeth'></div></div><div class='crazy-lips2'></div></div><div class='crazy-neck'></div><div class='crazy-body'><div class='crazy-flag'><p class='crazy-text'>化学<br>兵器</p><div class='crazy-circle'><div class='crazy-powpow1'></div><div class='crazy-powpow2'></div><span class='crazy-oil'><span class='crazy-oil-before'><span class='crazy-oil-after'></span></span><div class='crazy-powpow3'></div><div class='crazy-powpow4'></div></span></div></div></div><div class='crazy-stomach'></div><div class='crazy-peegu'></div><div class='crazy-arm'><div class='crazy-deco1'></div><div class='crazy-deco2'></div></div><div class='crazy-arm2'><div class='crazy-deco3'></div><div class='crazy-deco4'></div></div><div class='crazy-lowarm'><div class='crazy-weapon'><div class='crazy-shadow1'></div><div class='crazy-weapon-middle'><div class='crazy-shadow2'></div><div class='crazy-weapon-finger'><div class='crazy-shadow3'><div      class='crazy-shadow3-before'></div><div class='crazy-shadow3-after'></div></div></div></div><div class='crazy-weapon-handbar'><div class='crazy-shadow4'></div><div class='crazy-weapon-handbar2'><div class='crazy-shadow5'></div></div></div><div class='crazy-weapon-front-deco'><div class='crazy-shadow6'></div><div class='crazy-weapon-front-deco2'><div class='crazy-shadow7'></div></div></div><div class='crazy-weapon-gun'><div class='crazy-shadow8'></div><div class='crazy-weapon-knife'><div class='crazy-shadow9'></div></div></div></div><div class='crazy-deco5'></div><div class='crazy-hand'></div></div><div class='crazy-lowarm2'><div class='crazy-deco6'></div><div class='crazy-hand2'></div></div><div class='crazy-leg'><div class='crazy-lowleg'><div class='crazy-feet'></div></div></div><div class='crazy-leg2'><div class='crazy-lowleg2'><div class='crazy-feet2'></div></div></div><div class='crazy-dog-line1'></div><div class='crazy-dog-line2'></div><div class='crazy-dog-line3'></div><div class='crazy-dog-head'><div class='crazy-dog-white'><div class='crazy-dog-smallwhite'></div><div class='crazy-dog-smallwhite2'></div></div><div class='crazy-dog-eye'><div class='crazy-dog-eyeball'></div></div><div class='crazy-dog-eye2'><div class='crazy-dog-eyeball2'></div></div><div class='crazy-dog-ear'></div><div class='crazy-dog-ear2'></div><div class='crazy-dog-nose'></div><div class='crazy-dog-nose2'></div><div class='crazy-dog-mouth'><div class='crazy-dog-teeth'></div><div class='crazy-dog-teeth2'></div><div class='crazy-dog-downmouth'></div></div></div><div class='crazy-dog-neck'></div><div class='crazy-dog-body'><div class='crazy-dog-front-leg'><div class='crazy-dog-front-low-leg'><div class='crazy-dog-feet'></div></div></div><div class='crazy-dog-front-leg2'><div class='crazy-dog-front-low-leg2'><div class='crazy-dog-feet2'></div></div></div><div class='crazy-dog-back-leg'><div class='crazy-dog-back-low-leg'><div class='crazy-dog-back-feet'></div></div></div><div class='crazy-dog-back-leg2'><div class='crazy-dog-back-low-leg2'><div class='crazy-dog-back-feet2'></div></div></div></div><div class='crazy-dog-tail'><div class='crazy-dog-tail2'></div></div>";
-    crazyBc.innerHTML = crazy;
+})();
+   
 
 
 
@@ -248,4 +264,46 @@ module.exports.crazyAppear = function() {
 
 
 
+
+module.exports.crazyBox = function(){
+    var crazybox = obj.get('.crazy-box'),crazybox2 = obj.get('.crazy-box2'),
+    crazyBg = obj.get('.crazy-bg'),crazyBtn = obj.get('.crazy-btn');
+    crazyBtn.onmouseover = function(){
+
+        crazybox2.style.transform = 'rotatex(-180deg)';
+        crazybox.style.transform = 'rotatex(1deg)';
+        crazyProfile();
+        crazyAppear();
+        var crazyBc = obj.get('.crazy-boxcontrol')
+        crazyBg.style.display = 'block';
+        crazyBc.style.display = 'block';
+
+    }
+    crazyBtn.onmouseout = function(){
+        crazybox2.style.transform = 'rotatex(1deg)';
+        crazybox.style.transform = 'rotatex(180deg)';
+        var crazyBc = obj.get('.crazy-boxcontrol')
+        crazyBg.style.display = 'none';
+        crazyBc.style.display = 'none';
+    }
+
+    crazyBtn.ontouchstart = function(e){
+        var touch = e.targetTouches;
+        crazybox2.style.transform = 'rotatex(-180deg)';
+        crazybox.style.transform = 'rotatex(1deg)';
+        crazyProfile();
+        crazyAppear();
+        var crazyBc = obj.get('.crazy-boxcontrol')
+        crazyBg.style.display = 'none';
+        crazyBc.style.display = 'none';
+    }
+
+    crazyBtn.ontouchend = function(e){
+        var touched = e.changedTouch[0];
+        crazybox2.style.transform = 'rotatex(1deg)';
+        crazybox.style.transform = 'rotatex(180deg)';
+        var crazyBc = obj.get('.crazy-boxcontrol')
+        crazyBg.style.display = 'none';
+        crazyBc.style.display = 'none';
+    }
 }

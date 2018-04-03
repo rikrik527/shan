@@ -231,10 +231,7 @@ iframe[seamless] {
 
 .nopo-btn {
   /*background: $gra-skin;*/
-  width: 32%;
-  height: 400px;
-  background: #f48fb1;
-  float: left; }
+  background: #feceab; }
   .nopo-btn .nopo-bg {
     width: 100px;
     height: 100px;
