@@ -63,45 +63,12 @@
 //main
 .shan-btn {
     /*background: $gra-skin;*/
+    transform-style: preserve-3d;
     background: $pink3;
-    .box {
-        grid-column: 2/3;
-        background: pink;
-        grid-row: 1/2;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        transform-style: preserve-3d;
-        perspective: 1000px;
-        transform-origin: center;
-        transform: rotatex(180deg);
-        backface-visibility: hidden;
-        transition: all 1s linear;
-    }
-    .box2 {
-        transition: all 1s linear;
-        grid-column: 2/3;
-        background: pink;
-        background-size: contain;
-        grid-row: 1/2;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-perspective: 1000px;
-        perspective: 1000px;
-        -webkit-transform-origin: center;
-        -ms-transform-origin: center;
-        transform-origin: center;
-        -webkit-transform: rotatex(1deg);
-        -ms-transform: rotatex(1deg);
-        transform: rotatex(1deg);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
+    overflow: hidden;
+    perspective: 1000px;
+    .box {}
+    .box2 {}
     .shan-lowbox {
         width: 38%;
         height: 100%;
@@ -162,9 +129,9 @@
     height: 100px;
     margin: -50px 0 0 -50px;
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 65%;
-    transform: rotateX(80deg)translate(-27px);
+    transform: rotateX(79deg) translate(-27px)translateZ(8px);
     .shan-bg2 {
         position: absolute;
         top: 0%;
@@ -226,8 +193,8 @@
 
 .btn-pos2 {
     color: pink;
-    top: 92%;
-    left: 69%;
+    top: 12%;
+    left: 70%;
     line-height: 22px;
     font-size: 10px;
     background: hotpink;
@@ -245,6 +212,7 @@
     transform-style: preserve-3d;
     perspective: 1000px;
     z-index: 99999999999999;
+    transform: translatez(10px);
     .shan-li {
         &-hair1 {
             width: 45px;

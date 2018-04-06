@@ -32,42 +32,6 @@
     grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)) !important;
     grid-auto-rows: 23rem !important; }
 
-  .box {
-    grid-column: none !important;
-    grid-auto-rows: none !important;
-    height: 23rem !important; }
-
-  .box2 {
-    grid-column: none !important;
-    height: 23rem !important; }
-
-  .judo-box {
-    grid-column: none !important;
-    grid-auto-rows: none !important;
-    height: 23rem !important; }
-
-  .judo-box2 {
-    grid-column: none !important;
-    height: 23rem !important; }
-
-  .craz-box {
-    grid-column: none !important;
-    grid-auto-rows: none !important;
-    height: 23rem !important; }
-
-  .crazy-box2 {
-    grid-column: none !important;
-    height: 23rem !important; }
-
-  .beast-box {
-    grid-column: none !important;
-    grid-auto-rows: none !important;
-    height: 23rem !important; }
-
-  .beast-box2 {
-    grid-column: none !important;
-    height: 23rem !important; }
-
   .crazy-boxcontrol {
     top: 37% !important;
     left: 72.5% !important; }
@@ -107,12 +71,18 @@
 @media (max-device-width: 414px) and (max-device-height: 736px) {
   .main-boxcontrol {
     grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)) !important;
-    grid-auto-rows: 23rem !important; } }
+    grid-auto-rows: 23rem !important; }
+
+  .beast-weapon {
+    left: -29% !important; } }
 /* samsung */
 @media (max-device-width: 360px) and (max-device-height: 740px) {
   .main-boxcontrol {
     grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)) !important;
-    grid-auto-rows: 23rem !important; } }
+    grid-auto-rows: 23rem !important; }
+
+  .beast-weapon {
+    left: -29% !important; } }
 /* ipad mini */
 @media (max-device-width: 768px) and (max-device-height: 1024px) {
   .main-boxcontrol {

@@ -32,42 +32,6 @@
         grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr))!important;
         grid-auto-rows: 23rem!important;
     }
-    .box {
-        grid-column: none!important;
-        grid-auto-rows: none!important;
-        height: 23rem!important;
-    }
-    .box2 {
-        grid-column: none !important;
-        height: 23rem!important;
-    }
-    .judo-box {
-        grid-column: none!important;
-        grid-auto-rows: none!important;
-        height: 23rem!important;
-    }
-    .judo-box2 {
-        grid-column: none !important;
-        height: 23rem!important;
-    }
-    .craz-box {
-        grid-column: none!important;
-        grid-auto-rows: none!important;
-        height: 23rem!important;
-    }
-    .crazy-box2 {
-        grid-column: none !important;
-        height: 23rem!important;
-    }
-    .beast-box {
-        grid-column: none!important;
-        grid-auto-rows: none!important;
-        height: 23rem!important;
-    }
-    .beast-box2 {
-        grid-column: none !important;
-        height: 23rem!important;
-    }
     .crazy-boxcontrol {
         top: 37%!important;
         left: 72.5%!important;
@@ -118,6 +82,9 @@
         grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr))!important;
         grid-auto-rows: 23rem!important;
     }
+    .beast-weapon {
+        left: -29%!important;
+    }
 }
 
 
@@ -128,6 +95,9 @@
     .main-boxcontrol {
         grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr))!important;
         grid-auto-rows: 23rem!important;
+    }
+    .beast-weapon {
+        left: -29%!important;
     }
 }
 

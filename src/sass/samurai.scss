@@ -2,6 +2,9 @@
 @import './prefix';
 .samurai-btn {
     background: black;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    perspective: 1000px;
     .samurai-lowbox {
         width: 38%;
         height: 100%;
@@ -64,47 +67,19 @@
         left: 50%;
         .samurai-bg2 {
             position: absolute;
-            top: 0%;
-            left: 0%;
+            top: -62%;
+            left: -30%;
             width: 100px;
+            /* background-color: red; */
             height: 100px;
-            @include border-radius(100px);
-            background-color: linear-gradient(to top, $pink3 40%, $pink8 60%);
-            background-image: url('../images/earth.png');
-            @include animation(samuraibg2 90s linear infinite);
-            background-blend-mode: overlay;
-            @keyframes samuraibg2 {
-                0% {
-                    border: 1px solid $pink2;
-                    background-position-y: 900%;
-                    box-shadow: 0px 0px 4px 4px $pink6;
-                }
-                20% {
-                    border: 1px solid $pink2;
-                    background-position-y: 1800%;
-                    box-shadow: -2px -2px 2px 2px $pink6;
-                }
-                40% {
-                    border: 1px solid $pink2;
-                    background-position-y: 2700%;
-                    box-shadow: 0px 0px 4px 4px $pink6;
-                }
-                60% {
-                    border: 1px solid $pink2;
-                    background-position-y: 3600%;
-                    box-shadow: 2px 2px 2px 2px $pink6;
-                }
-                80% {
-                    border: 1px solid $pink2;
-                    background-position-y: 4500%;
-                    box-shadow: 0px 0px 4px 4px $pink6;
-                }
-                100% {
-                    border: 1px solid $pink2;
-                    background-position-y: 5400%;
-                    box-shadow: 2px 2px 2px 2px $pink6;
-                }
-            }
+            vertical-align: center;
+            /* border-radius: 100px; */
+            /* background-clip: padding-box; */
+            background-size: contain;
+            background-origin: content-box;
+            background-repeat: no-repeat;
+            filter: contrast(108)brightness(46);
+            background-image: url('../images/sword.png');
         }
     }
     .samurai-box {}
@@ -115,14 +90,14 @@
     background: ghostwhite;
     font-size: 10px;
     color: red;
-    left: 56%;
-    top: 63%;
+    left: 67%;
+    top: 11%;
 }
 
 .samurai-boxcontrol {
     width: 30px;
     height: 30px;
-    top: 49%;
+    top: 41%;
     left: 54%;
     margin: -15px 0 0 -15px;
     cursor: pointer;
@@ -130,6 +105,23 @@
     perspective: 1000px;
     z-index: 9999;
     transform-style: preserve-3d;
+    @include animation(samuraiboxcontrol 3s linear infinite);
+    @keyframes samuraiboxcontrol {
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+            transform: translateY(-3px)
+        }
+        20%,
+        40%,
+        60%,
+        80%,
+        100% {
+            transform: translateY(1px)
+        }
+    }
 }
 
 .samurai-sensor-bottom {
@@ -161,6 +153,15 @@
         transform-origin: center bottom;
         transform: rotateZ(-6deg)translateZ(0px);
         z-index: -999;
+        @include animation(samuraihair 1s linear infinite);
+        @keyframes samuraihair {
+            40% {
+                transform: rotateZ(-35deg);
+            }
+            80% {
+                transform: rotateZ(22deg)
+            }
+        }
     }
     .samurai-hair2 {
         width: 8px;
@@ -251,19 +252,39 @@
             width: 10px;
             height: 4px;
             background: red;
-            top: 5px;
+            top: 11px;
             left: 3px;
+            transition: all 1s linear;
             position: absolute;
             border-radius: 0 5px;
+            @include animation(samuraieye 1s linear infinite);
+            @keyframes samuraieye {
+                40% {
+                    background: red
+                }
+                80% {
+                    background: black
+                }
+            }
         }
         .samurai-eye2 {
             width: 10px;
             height: 4px;
             background: red;
-            top: 5px;
+            top: 11px;
             left: 18px;
+            transition: all 1s linear;
             position: absolute;
             border-radius: 5px 0;
+            @include animation(samuraieye2 1s linear infinite);
+            @keyframes samuraieye2 {
+                40% {
+                    background: red
+                }
+                80% {
+                    background: black
+                }
+            }
         }
         .samurai-mouth {
             .samurai-teeth {}
@@ -306,7 +327,15 @@
         border-bottom: 13px solid transparent;
         border-top: 3px solid transparent;
         transform-origin: right center;
-        transform: rotatez(34deg);
+        @include animation(samuraiwing 1s linear infinite);
+        @keyframes samuraiwing {
+            40% {
+                transform: rotateZ(34deg)
+            }
+            80% {
+                transform: rotateZ(11deg)
+            }
+        }
         .samurai-wing2 {
             width: 30px;
             /* height: 30px; */
@@ -319,6 +348,15 @@
             border-top: 11px solid transparent;
             transform: rotatez(0deg);
             transform-origin: right center;
+            @include animation(samuraiwing2 1s linear infinite);
+            @keyframes samuraiwing2 {
+                40% {
+                    transform: rotateZ(-9deg)
+                }
+                80% {
+                    transform: rotateZ(-22deg)
+                }
+            }
             .samurai-wing22 {
                 width: 30px;
                 /* height: 30px; */
@@ -329,8 +367,16 @@
                 border-right: 67px solid darkred;
                 border-bottom: 0px solid transparent;
                 border-top: 11px solid transparent;
-                transform: rotatez(-24deg);
                 transform-origin: right center;
+                @include animation(samuraiwing22 1s linear infinite);
+                @keyframes samuraiwing22 {
+                    40% {
+                        transform: rotateZ(-29deg);
+                    }
+                    80% {
+                        transform: rotateZ(-48deg);
+                    }
+                }
             }
         }
     }
@@ -345,7 +391,15 @@
         border-bottom: 3px solid transparent;
         border-top: 13px solid transparent;
         transform-origin: left center;
-        transform: rotatez(-49deg);
+        @include animation(samuraiwing3 1s linear infinite);
+        @keyframes samuraiwing3 {
+            40% {
+                transform: rotateZ(-46deg)
+            }
+            80% {
+                transform: rotateZ(-16deg)
+            }
+        }
         .samurai-wing4 {
             width: 30px;
             top: -5px;
@@ -354,8 +408,16 @@
             border-left: 53px solid darkred;
             border-bottom: 0px solid transparent;
             border-top: 11px solid transparent;
-            transform: rotatez(12deg);
             transform-origin: left center;
+            @include animation(samuraiwing4 1s linear infinite);
+            @keyframes samuraiwing4 {
+                40% {
+                    transform: rotateZ(21deg)
+                }
+                80% {
+                    transform: rotateZ(27deg)
+                }
+            }
             .samurai-wing44 {
                 width: 30px;
                 top: -10px;
@@ -364,8 +426,16 @@
                 border-left: 74px solid darkred;
                 border-bottom: 0px solid transparent;
                 border-top: 11px solid transparent;
-                transform: rotatez(12deg);
                 transform-origin: left center;
+                @include animation(samuraiwing44 1s linear infinite);
+                @keyframes samuraiwing44 {
+                    40% {
+                        transform: rotateZ(30deg)
+                    }
+                    80% {
+                        transform: rotateZ(43deg)
+                    }
+                }
             }
         }
     }
@@ -388,7 +458,7 @@
         border-left: 3px solid transparent;
         border-right: 3px solid transparent;
         transform-origin: right center;
-        transform: rotatez(51deg);
+        transform: rotatez(39deg);
         .samurai-bicep {
             width: 13px;
             /* height: 30px; */
@@ -396,10 +466,28 @@
             top: -1px;
             left: -3px;
             position: absolute;
-            border-bottom: 10px solid $deeporange10;
+            border-bottom: 10px solid $deeporange9;
             border-left: 3px solid transparent;
             border-right: 3px solid transparent;
             transform-origin: center top;
+            transition: all 1s linear;
+            @include animation(samuraibicep 1s linear infinite);
+            @keyframes samuraibicep {
+                10%,
+                30%,
+                50%,
+                70%,
+                90% {
+                    border-bottom: 10px solid $deeporange2;
+                }
+                20%,
+                40%,
+                60%,
+                80%,
+                100% {
+                    border-bottom: 10px solid $deeporange9;
+                }
+            }
             .samurai-lowarm {
                 width: 13px;
                 /* height: 30px; */
@@ -411,7 +499,25 @@
                 border-left: 6px solid transparent;
                 border-right: 5px solid transparent;
                 transform-origin: center top;
+                transition: all 1s linear;
                 transform: rotatez(9deg);
+                @include animation(samurailowarm 1s linear infinite);
+                @keyframes samurailowarm {
+                    10%,
+                    30%,
+                    50%,
+                    70%,
+                    90% {
+                        border-top: 20px solid $deeporange2;
+                    }
+                    20%,
+                    40%,
+                    60%,
+                    80%,
+                    100% {
+                        border-top: 20px solid $deeporange9;
+                    }
+                }
                 .samurai-hand {
                     width: 15px;
                     height: 15px;
@@ -420,19 +526,47 @@
                     left: -6px;
                     position: absolute;
                     border-radius: 100px;
+                    transition: all 1s linear;
                     transform-origin: center top;
-                    transform: rotatez(-17deg);
+                    transform: rotatez(-51deg);
+                    @include animation(samuraihand 1s linear infinite);
+                    @keyframes samuraihand {
+                        10%,
+                        30%,
+                        50%,
+                        70%,
+                        90% {
+                            background: $deeporange2;
+                        }
+                        20%,
+                        40%,
+                        60%,
+                        80%,
+                        100% {
+                            background: $deeporange9;
+                        }
+                    }
                     .samurai-sword {
                         width: 7px;
                         height: 85px;
                         background: red;
-                        top: 23px;
+                        top: 11px;
                         left: -6px;
                         position: absolute;
                         border-radius: 0 0 10px 0;
                         transform-origin: center top;
-                        transform: rotatez(30deg);
+                        transform: rotatez(58deg);
+                        transition: all 1s linear;
                         z-index: 9999999;
+                        @include animation(samuraisword 1s linear infinite);
+                        @keyframes samuraisword {
+                            50% {
+                                background: $deeporange9;
+                            }
+                            100% {
+                                background: $deeporange2
+                            }
+                        }
                         .samurai-sword-head {
                             width: 8px;
                             height: 30px;
@@ -465,7 +599,7 @@
         border-left: 3px solid transparent;
         border-right: 3px solid transparent;
         transform-origin: left center;
-        transform: rotatez(-32deg);
+        transform: rotatez(-19deg);
         .samurai-bicep2 {
             width: 13px;
             /* height: 30px; */
@@ -477,6 +611,24 @@
             border-left: 3px solid transparent;
             border-right: 3px solid transparent;
             transform-origin: center top;
+            transition: all 1s linear;
+            @include animation(samuraibicep2 1s linear infinite);
+            @keyframes samuraibicep2 {
+                10%,
+                30%,
+                50%,
+                70%,
+                90% {
+                    border-bottom: 10px solid $deeporange2;
+                }
+                20%,
+                40%,
+                60%,
+                80%,
+                100% {
+                    border-bottom: 10px solid $deeporange9;
+                }
+            }
             .samurai-lowarm2 {
                 width: 12px;
                 /* height: 30px; */
@@ -488,7 +640,25 @@
                 border-left: 6px solid transparent;
                 border-right: 5px solid transparent;
                 transform-origin: center top;
-                transform: rotatez(36deg);
+                transform: rotatez(0deg);
+                transition: all 1s linear;
+                @include animation(samurailowarm2 1s linear infinite);
+                @keyframes samurailowarm2 {
+                    10%,
+                    30%,
+                    50%,
+                    70%,
+                    90% {
+                        border-top: 20px solid $deeporange2;
+                    }
+                    20%,
+                    40%,
+                    60%,
+                    80%,
+                    100% {
+                        border-top: 20px solid $deeporange9;
+                    }
+                }
                 .samurai-hand2 {
                     width: 15px;
                     height: 15px;
@@ -498,6 +668,24 @@
                     position: absolute;
                     border-radius: 100px;
                     z-index: 999999;
+                    transition: all 1s linear;
+                    @include animation(samuraihand2 1s linear infinite);
+                    @keyframes samuraihand2 {
+                        10%,
+                        30%,
+                        50%,
+                        70%,
+                        90% {
+                            background: $deeporange2;
+                        }
+                        20%,
+                        40%,
+                        60%,
+                        80%,
+                        100% {
+                            background: $deeporange9;
+                        }
+                    }
                 }
             }
         }
@@ -505,43 +693,13 @@
 }
 
 .samurai-peegu {
-    @include s(30px,
-    30px,
-    $orange3,
-    0px,
-    0px);
-    z-index: -99999;
     .samurai-sword-cover {
         .samurai-sword-cover-deco {}
     }
-    .samurai-line1 {
-        @include s(30px,
-        30px,
-        $orange3,
-        0px,
-        0px);
-    }
-    .samurai-line2 {
-        @include s(30px,
-        30px,
-        $orange3,
-        0px,
-        0px);
-    }
-    .samurai-line3 {
-        @include s(30px,
-        30px,
-        $orange3,
-        0px,
-        0px);
-    }
-    .samurai-line4 {
-        @include s(30px,
-        30px,
-        $orange3,
-        0px,
-        0px);
-    }
+    .samurai-line1 {}
+    .samurai-line2 {}
+    .samurai-line3 {}
+    .samurai-line4 {}
     .samurai-leg {
         width: 26px;
         /* height: 30px; */
@@ -561,6 +719,24 @@
             left: 3px;
             position: absolute;
             transform-origin: center top;
+            transform: rotateZ(-10deg);
+            @include animation(samurailowleg 2s linear forwards);
+            @keyframes samurailowleg {
+                10%,
+                30%,
+                50%,
+                70%,
+                90% {
+                    transform: rotateZ(-10deg)translateX(1px);
+                }
+                20%,
+                40%,
+                60%,
+                80%,
+                100% {
+                    transform: rotateZ(-10deg) translateX(-1px)
+                }
+            }
             .samurai-feet {
                 width: 19px;
                 height: 10px;
@@ -570,6 +746,24 @@
                 position: absolute;
                 border-radius: 10px 0 0;
                 transform-origin: center top;
+                transform: rotateZ(-57deg);
+                @include animation(samuraifeet 1s linear infinite);
+                @keyframes samuraifeet {
+                    10%,
+                    30%,
+                    50%,
+                    70%,
+                    90% {
+                        transform: rotateZ(-57deg)translateX(1px);
+                    }
+                    20%,
+                    40%,
+                    60%,
+                    80%,
+                    100% {
+                        transform: rotateZ(-57deg) translateX(-1px)
+                    }
+                }
             }
         }
     }
@@ -582,6 +776,23 @@
         border-left: 3px solid transparent;
         border-right: 3px solid transparent;
         transform-origin: center top;
+        @include animation(samuraileg2 2s linear 1s infinite);
+        @keyframes samuraileg2 {
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: rotateZ(-13deg)translateX(1px);
+            }
+            20%,
+            40%,
+            60%,
+            80%,
+            100% {
+                transform: rotateZ(-13deg) translateX(-1px)
+            }
+        }
         .samurai-lowleg2 {
             width: 12px;
             height: 16px;
@@ -599,6 +810,7 @@
                 position: absolute;
                 border-radius: 0 10px 0px 0px;
                 transform-origin: center top;
+                transform: rotateZ(72deg)
             }
         }
     }
@@ -607,50 +819,100 @@
         /* height: 30px; */
         /* background: #ffcc80; */
         border-top: 20px solid darkred;
-        top: 30px;
-        left: 0px;
+        top: 99px;
+        left: 60px;
         position: absolute;
         border-left: 2px solid transparent;
         border-right: 2px solid transparent;
+        -webkit-transform-origin: center top;
+        -ms-transform-origin: center top;
         transform-origin: center top;
+        transform: rotatez(-73deg);
+        @include animation(samuraitail 2s ease-in-out infinite);
+        @keyframes samuraitail {
+            30% {
+                transform: rotateZ(-59deg)
+            }
+            40% {
+                transform: rotatez(-72deg);
+            }
+            50% {
+                transform: rotateZ(-50deg)
+            }
+            60% {
+                transform: rotateZ(-28deg)
+            }
+            70% {
+                transform: rotateZ(-50deg)
+            }
+        }
         .samurai-tail2 {
             width: 14px;
             /* height: 30px; */
             /* background: #ffcc80; */
             border-top: 20px solid darkred;
-            top: 30px;
-            left: 0px;
+            top: -1px;
+            left: -2px;
             position: absolute;
             border-left: 2px solid transparent;
             border-right: 2px solid transparent;
+            -webkit-transform-origin: center top;
+            -ms-transform-origin: center top;
             transform-origin: center top;
+            transform: rotatez(30deg);
+            @include animation(samuraitail2 2s ease-in-out infinite);
+            @keyframes samuraitail2 {
+                40% {
+                    transform: rotateZ(53deg)
+                }
+                50% {
+                    transform: rotatez(58deg)
+                }
+                60% {
+                    transform: rotateZ(-50deg)
+                }
+                70% {
+                    transform: rotateZ(-1deg)
+                }
+                80% {
+                    transform: rotateZ(53deg)
+                }
+            }
             .samurai-tail3 {
                 width: 14px;
                 /* height: 30px; */
                 /* background: #ffcc80; */
                 border-top: 20px solid darkred;
-                top: 30px;
-                left: 0px;
+                top: 0px;
+                left: -2px;
                 position: absolute;
-                border-left: 2px solid transparent;
-                border-right: 2px solid transparent;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                -webkit-transform-origin: center top;
+                -ms-transform-origin: center top;
                 transform-origin: center top;
+                transform: rotatez(-30deg);
+                @include animation(samuraitail3 2s ease-in-out infinite);
+                @keyframes samuraitail3 {
+                    50% {
+                        transform: rotateZ(46deg)
+                    }
+                    60% {
+                        transform: rotatez(-29deg)
+                    }
+                    70% {
+                        transform: rotateZ(-75deg)
+                    }
+                    80% {
+                        transform: rotateZ(-5deg);
+                    }
+                    90% {
+                        transform: rotateZ(-35deg)
+                    }
+                }
             }
         }
     }
 }
 
-.samurai-effect1 {
-    width: 10px;
-    height: 10px;
-    border-radius: 100px;
-    background: linear-gradient(red, darkred);
-    bottom: 200px;
-    position: absolute;
-    animation: sameffect1 .63s linear infinite;
-    @keyframes sameffect1 {
-        to {
-            margin-top: -300px;
-        }
-    }
-}
+.samurai-effect1 {}

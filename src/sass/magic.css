@@ -230,7 +230,10 @@ iframe[seamless] {
   display: block; }
 
 .magic-btn {
-  background: darkorchid; }
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background: darkorchid;
+  overflow: hidden; }
   .magic-btn .magic-lowbox {
     width: 38%;
     height: 100%;

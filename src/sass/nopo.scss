@@ -3,6 +3,9 @@
 .nopo-btn {
     /*background: $gra-skin;*/
     background: $gra-skin;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    overflow: hidden;
     .nopo-bg {
         width: 100px;
         height: 100px;

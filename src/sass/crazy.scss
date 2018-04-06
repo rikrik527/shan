@@ -2,44 +2,11 @@
 @import './prefix';
 .crazy-btn {
     background: darkcyan;
-    .crazy-box {
-        grid-column: 2/3;
-        background: darkcyan;
-        grid-row: 1/2;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        transform-style: preserve-3d;
-        perspective: 1000px;
-        transform-origin: center;
-        transform: rotatex(180deg);
-        backface-visibility: hidden;
-        transition: all 1s linear;
-    }
-    .crazy-box2 {
-        transition: all 1s linear;
-        grid-column: 2/3;
-        background: darkcyan;
-        background-size: contain;
-        grid-row: 1/2;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-perspective: 1000px;
-        perspective: 1000px;
-        -webkit-transform-origin: center;
-        -ms-transform-origin: center;
-        transform-origin: center;
-        -webkit-transform: rotatex(1deg);
-        -ms-transform: rotatex(1deg);
-        transform: rotatex(1deg);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    overflow: hidden;
+    .crazy-box {}
+    .crazy-box2 {}
     .crazy-lowbox {
         width: 38%;
         height: 100%;
@@ -149,8 +116,8 @@
 }
 
 .btn-pos3 {
-    left: 90%;
-    top: 30%;
+    left: 75%;
+    top: 89%;
     background: aquamarine;
     font-size: 10px;
     line-height: 22px;
@@ -162,11 +129,11 @@
     height: 100px;
     cursor: pointer;
     position: absolute;
-    top: 21%;
+    top: 59%;
     margin: -50px 0 0 -50px;
     transform-style: preserve-3d;
     perspective: 1000px;
-    left: 90.5%;
+    left: 74.5%;
     transition: all .5s linear;
     z-index: 99999999999999;
     animation: crazyboxcontrol 1s linear infinite;

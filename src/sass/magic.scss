@@ -1,7 +1,10 @@
 @import './color';
 @import './prefix';
 .magic-btn {
+    transform-style: preserve-3d;
+    perspective: 1000px;
     background: darkorchid;
+    overflow: hidden;
     .magic-lowbox {
         width: 38%;
         height: 100%;

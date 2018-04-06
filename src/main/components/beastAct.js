@@ -2,15 +2,15 @@ var obj = require('../getall');
 var transform = require('../transform');
 var transition = require('../transform');
 var requestAnimationFrame = require('../requestAnimationFrame');
-var beastAppear = (function() {
+module.exports.beastAppear = (function() {
     var excute = false;
     return function(){
         if(!excute){
             excute = true;
             var beast = '<div class="beast-weapon"><div class="beast-weapon-head"></div></div><div class="beast-sensor-top"></div><div class="beast-sensor-left"></div><div class="beast-sensor-right"></div><div class="beast-head"><div class="beast-hair"></div><div class="beast-eyebrow"><div class="beast-eye"><div class="beast-eyeball"></div></div></div><div class="beast-eyebrow2"><div class="beast-eye2"><div class="beast-eyeball2"></div></div></div><div class="beast-nose"></div><div class="beast-lips"><div class="beast-mouth"><div class="beast-teeth"></div><div class="beast-tougn"></div></div></div><div class="beast-ear"></div><div class="beast-ear2"></div><div class="beast-face-side"></div><div class="beast-face-side2"></div><div class="beast-jaw"></div></div><div class="beast-neck"></div><div class="beast-body"><div class="beast-triangle"></div><div class="beast-triangle2"></div><div class="beast-tatoo">&#9039;</div><div class="beast-chest"></div><div class="beast-chest2"></div><div class="beast-arm"><div class="beast-bicep"><div class="beast-lowarm"><div class="beast-hand"></div></div></div></div><div class="beast-arm2"><div class="beast-bicep2"><div class="beast-lowarm2"><div class="beast-hand2"></div></div></div></div></div></div></div><div class="beast-peegu"><div class="beast-champ-line"><div class="beast-champ">W</div></div><div class="beast-leg"><div class="beast-short"></div><div class="beast-legguto"><div class="beast-lowleg"><div class="beast-shoe"><div class="beast-shoefoot"><div class="beast-shoefootfront"></div></div></div></div></div></div><div class="beast-leg2"><div class="beast-short2"></div><div class="beast-legguto2"><div class="beast-lowleg2"><div class="beast-shoe2"><div class="beast-shoefoot2"><div class="beast-shoefootfront2"></div></div></div></div></div></div></div><div class="beast-effect1"></div><div class="beast-effect2"></div><div class="beast-effect3"></div><div class="beast-effect4"></div><div class="beast-effect5"></div><div class="beast-effect6"></div><div class="beast-effect7"></div><div class="beast-effect8"></div><div class="beast-effect9"></div><div class="beast-effect10"></div><div class="beast-effect11"></div><div class="shan-li-cat"><div class="shan-li-cat-head"><div class="shan-li-cat-eye"><div class="shan-li-cat-eyeball"></div></div><div class="shan-li-cat-eye2"><div class="shan-li-cat-eyeball2"></div></div><div class="shan-li-cat-nose"><div class="shan-li-cat-mo1"></div><div class="shan-li-cat-mo2"></div><div class="shan-li-cat-mo3"></div><div class="shan-li-cat-mo4"></div><div class="shan-li-cat-mo5"></div><div class="shan-li-cat-mo6"></div></div><div class="shan-li-cat-mouth-circle"><div class="shan-li-cat-mouth-circle2"><div class="shan-li-cat-mouth"><div class="shan-li-cat-teeth"></div><div class="shan-li-cat-teeth2"></div></div></div></div></div><div class="shan-li-cat-body"><div class="shan-li-cat-leg"><div class="shan-li-cat-lowleg"><div class="shan-li-cat-foot"></div></div></div><div class="shan-li-cat-leg2"><div class="shan-li-cat-lowleg2"><div class="shan-li-cat-foot2"></div></div></div><div class="shan-li-cat-tail"><div class="shan-li-cat-tail2"></div></div></div></div>';
 
-    var beastbox = obj.get('.beast-box');
-    beastbox.insertAdjacentHTML('afterbegin', '<article class="beast-boxcontrol"></article>');
+    var beastBtn = obj.get('.beast-btn');
+    beastBtn.insertAdjacentHTML('afterbegin', '<article class="beast-boxcontrol"></article>');
     var beastBc = obj.get('.beast-boxcontrol');
     beastBc.innerHTML = beast;
 
@@ -18,14 +18,14 @@ var beastAppear = (function() {
     }
 
 })();
-var beastProfile = (function(){
+module.exports.beastProfile = (function(){
     var excute = false;
     return function(){
         if(!excute){
     excute= true;
     var img = require('../../images/beast-test.png');
-    var beastbox = obj.get('.beast-box');
-    beastbox.insertAdjacentHTML('afterbegin', "<div class='beast-lowbox'><div class='beast-name'>The Beast</div><div class='beast-photo'><img id='beast-image' alt='beast-profile-photo'></div><div class='beast-profile'>Height:194cm<br>Weight:130kg<br>Country:United states</div><ul class='beast-status'><li class='beast-info'></li></ul></div>");
+    var beastBtn = obj.get('.beast-btn');
+    beastBtn.insertAdjacentHTML('afterbegin', "<div class='beast-lowbox'><div class='beast-name'>The Beast</div><div class='beast-photo'><img id='beast-image' alt='beast-profile-photo'></div><div class='beast-profile'>Height:194cm<br>Weight:130kg<br>Country:United states</div><ul class='beast-status'><li class='beast-info'></li></ul></div>");
     var beastImg = obj.getId('beast-image');
     beastImg.src = img;
     var beastStatus = obj.get('.beast-status');
@@ -50,44 +50,44 @@ var beastProfile = (function(){
 module.exports.beastBox = function(){
     var beastbox = obj.get('.beast-box'),beastbox2 = obj.get('.beast-box2'),
     beastBg = obj.get('.beast-bg'),beastBtn = obj.get('.beast-btn');
-    beastBtn.onmouseover = function(){
+    // beastBtn.onmouseover = function(){
 
-        beastbox2.style.transform = 'rotatex(-180deg)';
-        beastbox.style.transform = 'rotatex(1deg)';
-        beastProfile();
-        beastAppear();
-        var beastBc = obj.get('.beast-boxcontrol')
-        beastBg.style.display = 'block';
-        beastBc.style.display = 'block';
+    //     beastbox2.style.transform = 'rotatex(-180deg)';
+    //     beastbox.style.transform = 'rotatex(1deg)';
+    //     beastProfile();
+    //     beastAppear();
+    //     var beastBc = obj.get('.beast-boxcontrol')
+    //     beastBg.style.display = 'block';
+    //     beastBc.style.display = 'block';
 
-    }
-    beastBtn.onmouseout = function(){
-        beastbox2.style.transform = 'rotatex(1deg)';
-        beastbox.style.transform = 'rotatex(180deg)';
-        var beastBc = obj.get('.beast-boxcontrol')
-        beastBg.style.display = 'none';
-        beastBc.style.display = 'none';
-    }
+    // }
+    // beastBtn.onmouseout = function(){
+    //     beastbox2.style.transform = 'rotatex(1deg)';
+    //     beastbox.style.transform = 'rotatex(180deg)';
+    //     var beastBc = obj.get('.beast-boxcontrol')
+    //     beastBg.style.display = 'none';
+    //     beastBc.style.display = 'none';
+    // }
 
-    beastBtn.ontouchstart = function(e){
-        var touch = e.targetTouches;
-        beastbox2.style.transform = 'rotatex(-180deg)';
-        beastbox.style.transform = 'rotatex(1deg)';
-        beastProfile();
-        beastAppear();
-        var beastBc = obj.get('.beast-boxcontrol')
-        beastBg.style.display = 'none';
-        beastBc.style.display = 'none';
-    }
+    // beastBtn.ontouchstart = function(e){
+    //     var touch = e.targetTouches;
+    //     beastbox2.style.transform = 'rotatex(-180deg)';
+    //     beastbox.style.transform = 'rotatex(1deg)';
+    //     beastProfile();
+    //     beastAppear();
+    //     var beastBc = obj.get('.beast-boxcontrol')
+    //     beastBg.style.display = 'none';
+    //     beastBc.style.display = 'none';
+    // }
 
-    beastBtn.ontouchend = function(e){
-        var touched = e.changedTouch[0];
-        beastbox2.style.transform = 'rotatex(1deg)';
-        beastbox.style.transform = 'rotatex(180deg)';
-        var beastBc = obj.get('.beast-boxcontrol')
-        beastBg.style.display = 'none';
-        beastBc.style.display = 'none';
-    }
+    // beastBtn.ontouchend = function(e){
+
+    //     beastbox2.style.transform = 'rotatex(1deg)';
+    //     beastbox.style.transform = 'rotatex(180deg)';
+    //     var beastBc = obj.get('.beast-boxcontrol')
+    //     beastBg.style.display = 'none';
+    //     beastBc.style.display = 'none';
+    // }
 }
 module.exports.beastFishEye = function() {
     var beastFish = '<div class="beast-weapon"><div class="beast-weapon-head"></div></div><div class="beast-sensor-top"></div><div class="beast-sensor-left"></div><div class="beast-sensor-right"></div><div class="beast-head"><div class="beast-hair"></div><div class="beast-eyebrow"><div class="beast-eye"><div class="beast-eyeball"></div></div></div><div class="beast-eyebrow2"><div class="beast-eye2"><div class="beast-eyeball2"></div></div></div><div class="beast-nose"></div><div class="beast-lips"><div class="beast-mouth"><div class="beast-teeth"></div><div class="beast-tougn"></div></div></div><div class="beast-ear"></div><div class="beast-ear2"></div><div class="beast-face-side"></div><div class="beast-face-side2"></div><div class="beast-jaw"></div></div><div class="beast-neck"></div><div class="beast-body"><div class="beast-triangle"></div><div class="beast-triangle2"></div><div class="beast-tatoo">&#9039;</div><div class="beast-chest"></div><div class="beast-chest2"></div></div></div></div><div class="beast-arm1"><div class="beast-bicep1"><div class="beast-lowarm1"><div class="beast-hand1"></div></div></div></div><div class="beast-arm21"><div class="beast-bicep21"><div class="beast-lowarm21"><div class="beast-hand21"></div></div></div></div><div class="beast-peegu"><div class="beast-champ-line"><div class="beast-champ">W</div></div></div><div class="beast-leg1"><div class="beast-short1"></div></div><div class="beast-legguto1"></div><div class="beast-lowleg1"><div class="beast-shoe1"><div class="beast-shoefoot1"><div class="beast-shoefootfront1"></div></div></div></div><div class="beast-leg21"><div class="beast-short21"></div></div><div class="beast-legguto21"></div><div class="beast-lowleg21"><div class="beast-shoe21"><div class="beast-shoefoot21"><div class="beast-shoefootfront21"></div></div></div></div><div class="beast-effect1"></div><div class="beast-effect2"></div><div class="beast-effect3"></div><div class="beast-effect4"></div><div class="beast-effect5"></div><div class="beast-effect6"></div><div class="beast-effect7"></div><div class="beast-effect8"></div><div class="beast-effect9"></div><div class="beast-effect10"></div><div class="beast-effect11"></div><div class="shan-li-cat"><div class="shan-li-cat-head"><div class="shan-li-cat-eye"><div class="shan-li-cat-eyeball"></div></div><div class="shan-li-cat-eye2"><div class="shan-li-cat-eyeball2"></div></div><div class="shan-li-cat-nose"><div class="shan-li-cat-mo1"></div><div class="shan-li-cat-mo2"></div><div class="shan-li-cat-mo3"></div><div class="shan-li-cat-mo4"></div><div class="shan-li-cat-mo5"></div><div class="shan-li-cat-mo6"></div></div><div class="shan-li-cat-mouth-circle"><div class="shan-li-cat-mouth-circle2"><div class="shan-li-cat-mouth"><div class="shan-li-cat-teeth"></div><div class="shan-li-cat-teeth2"></div></div></div></div></div><div class="shan-li-cat-body"><div class="shan-li-cat-leg"><div class="shan-li-cat-lowleg"><div class="shan-li-cat-foot"></div></div></div><div class="shan-li-cat-leg2"><div class="shan-li-cat-lowleg2"><div class="shan-li-cat-foot2"></div></div></div><div class="shan-li-cat-tail"><div class="shan-li-cat-tail2"></div></div></div></div>';

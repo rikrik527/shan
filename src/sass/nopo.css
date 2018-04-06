@@ -231,7 +231,10 @@ iframe[seamless] {
 
 .nopo-btn {
   /*background: $gra-skin;*/
-  background: #feceab; }
+  background: #feceab;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden; }
   .nopo-btn .nopo-bg {
     width: 100px;
     height: 100px;

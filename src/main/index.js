@@ -15,9 +15,91 @@ var nopo = require('../main/components/nopoAct');
 var crazy = require('../main/components/crazyAct');
 var magic = require('../main/components/magicAct');
 var hands = require('../main/components/hands');
+var canvas = require('./canvas');
+window.onload = function(){
+    switch(document.readyState){
+        case "loading":document.querySelector('.loading');
+        break;
+        case "interactive":// add methods here
+        break;
+        case "complete":
+        document.querySelector('.loading').style.display ='none';
+        console.log('loaded');
+
+        if($(window).width() > 400){
+            // add large screen function
+            hands.original();
+            var div = obj.create('canvas');
+            document.querySelector('.samurai-btn').appendChild(div);
+            div.id = 'canvas';
+           canvas.canvasCircle();
+            // var id = setInterval(function(){
+            //     for(var i  = 0; i < 10;i++){
+            //     x = cw/2;
+            //     y = 0;
+            //     d = 1.5;
+            //     y += d* i;
+            //     ctx.fillStyle = 'red';
+            //     ctx.clearRect(0,0,cw,ch);
+            //     ctx.arc(x,y,3,0,Math.PI*2);
+            //     ctx.fill();
+            //     console.log('fill')
+            //     if(y > ch){
+            //     y = 0;}
+            //     }},20);
 
 
-hands.original();
+$('.btn-pos2').on('click',function(){
+    alert('雨珊,你好不好?每一天.....只想你!!羞');
+    setTimeout(() => {
+        window.location.href = './shan.html';
+    }, 3000);
+
+})
+
+judo.judoAppear();
+judo.judoProfile();
+shanLi.shanAppear();
+shanLi.shanProfile();
+crazy.crazyAppear();
+crazy.crazyProfile();
+beast.beastAppear();
+beast.beastProfile();
+magic.magicAppear();
+
+
+samurai.samuraiAppear();
+        }else{
+            // add small screen javascript
+            hands.original();
+            var div = obj.create('canvas');
+document.querySelector('.samurai-btn').appendChild(div);
+div.id = 'canvas';
+$('.btn-pos2').on('click',function(){
+    alert('雨珊,你好不好?每一天.....只想你!!羞');
+    setTimeout(() => {
+        window.location.href = './shan.html';
+    }, 3000);
+
+})
+
+judo.judoAppear();
+judo.judoProfile();
+shanLi.shanAppear();
+shanLi.shanProfile();
+crazy.crazyAppear();
+crazy.crazyProfile();
+beast.beastAppear();
+beast.beastProfile();
+magic.magicAppear();
+
+
+samurai.samuraiAppear();
+
+        }
+    }
+}
+
 
 
 
@@ -56,9 +138,7 @@ document.onmousemove = function(){
         }
 
     }
-var div = obj.create('canvas');
-document.body.appendChild(div);
-div.id = 'canvas';
+
 // function rain(){
 
 // var ctx = obj.getId('canvas').getContext('2d');
@@ -100,20 +180,4 @@ div.id = 'canvas';
 // }
 // rain();
 
-$('.btn-pos2').on('click',function(){
-    alert('雨珊,你好不好?每一天.....只想你!!羞');
-    setTimeout(() => {
-        window.location.href = './shan.html';
-    }, 3000);
 
-})
-judo.judoBox();
-crazy.crazyBox();
-
-
-shanLi.shanBox();
-
-magic.magicAppear();
-beast.beastBox();
-
-samurai.samuraiAppear();
