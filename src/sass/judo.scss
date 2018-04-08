@@ -955,22 +955,22 @@
         z-index: -99;
         transition: all 1s linear;
         width: 18px;
-        height: 12px;
+        height: 19px;
         background: $bluegrey7;
         -ms-transform: rotate(30deg);
-        transform: rotatez(18deg);
+        transform: rotatez(79deg);
         -ms-transform-origin: center top;
         transform-origin: center top;
         .judo-lowleg {
             position: absolute;
-            top: 11px;
-            left: 0px;
+            top: 19px;
+            left: -5px;
             width: 18px;
             transition: all 1s linear;
             border-right: 3px solid transparent;
             border-top: 9px solid $bluegrey6;
             border-left: 3px solid transparent;
-            transform: rotatez(-10deg);
+            transform: rotatez(-71deg);
             -ms-transform-origin: center top;
             transform-origin: center top;
             .judo-foot {
@@ -991,6 +991,7 @@
                     left: -7px;
                     transition: all 1s linear;
                     border-bottom: 8px solid $bluegrey10;
+                    transform: rotateZ(-25deg);
                     border-left: 9px solid transparent;
                 }
             }
@@ -1003,22 +1004,22 @@
         z-index: -99;
         width: 18px;
         transition: all 1s linear;
-        height: 12px;
+        height: 17px;
         background: $bluegrey7;
-        transform: rotatez(-18deg)translateZ(0px);
+        transform: rotatez(-79deg)translateZ(0px);
         -ms-transform-origin: center top;
         transform-origin: center top;
         .judo-lowleg2 {
             position: absolute;
-            top: 10px;
-            left: -1px;
+            top: 13px;
+            left: 2px;
             transition: all 1s linear;
             width: 19px;
             border-right: 6px solid transparent;
             border-top: 17px solid $bluegrey6;
             border-left: 3px solid transparent;
             -ms-transform: rotate(0deg);
-            transform: rotate(4deg);
+            transform: rotate(57deg);
             -ms-transform-origin: center top;
             transform-origin: center top;
             .judo-foot2 {

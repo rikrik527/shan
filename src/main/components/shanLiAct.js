@@ -17,6 +17,30 @@ module.exports.shanAppear = (function() {
             shanBtn.insertAdjacentHTML('afterbegin', '<article class="shan-li-boxcontrol"></article>');
             var shanLiBc = obj.get('.shan-li-boxcontrol');
             shanLiBc.innerHTML = shan;
+            var btnPos2 = obj.get('.btn-pos2');
+            btnPos2.onclick = function(){
+               shanLiBc.innerHTML = '';
+               shanAppear2();
+            }
+        }
+    }
+
+
+})();
+var shanAppear2 = (function() {
+    console.log('excuted shanapeer')
+
+    var excute = false;
+    return function(){
+        console.log('return')
+        if(!excute){
+            excute= true;
+            var shan = "<div class='shan-li-hair11'></div><div class='shan-li-hair21'></div><div class='shan-li-hair31'></div><div class='shan-li-head1'><div class='shan-li-eyebrow1'></div><div class='shan-li-eyebrow21'></div><div class='shan-li-eye1'><div class='shan-li-eyeball1'></div></div><div class='shan-li-eye21'><div class='shan-li-eyeball21'></div></div><div class='shan-li-nose1'></div><div class='shan-li-lips1'></div><div class='shan-li-mouth1'><div class='shan-li-teeth1'></div></div><div class='shan-li-lips21'></div></div><div class='shan-li-neck1'></div><div class='shan-li-body1'><div class='shan-li-mimi1'></div><div class='shan-li-mimi21'></div></div><div class='shan-li-arm1'></div><div class='shan-li-arm21'></div><div class='shan-li-lowarm1'><div class='shan-li-hand1'></div></div><div class='shan-li-lowarm21'><div class='shan-li-hand21'></div></div><div class='shan-li-stomache1'></div><div class='shan-li-peegu1'></div><div class='shan-li-leg1'></div><div class='shan-li-leg21'></div><div class='shan-li-lowleg1'><div class='shan-li-feet1'></div></div><div class='shan-li-lowleg21'><div class='shan-li-feet21'></div></div><div class='shan-li-horse-hair1'></div><div class='shan-li-horse-hair21'></div><div class='shan-li-horse-head1'><div class='shan-li-horse-eye1'><div class='shan-li-horse-eyeball1'></div></div><div class='shan-li-horse-eye21'><div class='shan-li-horse-eyeball21'></div></div><div class='shan-li-horse-nose1'></div><div class='shan-li-horse-lips1'></div><div class='shan-li-horse-mouth1'><div class='shan-li-horse-teeth1'></div></div><div class='shan-li-horse-lips21'></div></div><div class='shan-li-horse-neck1'></div><div class='shan-li-horse-neck21'></div><div class='shan-li-horse-body1'></div><div class='shan-li-horse-sit1'>愛</div><div class='shan-li-horse-sitside1'></div><div class='shan-li-horse-sitside21'></div><div class='shan-li-horse-mask1'></div><div class='shan-li-horse-circle1'></div><div class='shan-li-horse-line1'></div><div class='shan-li-horse-line21'></div><div class='shan-li-horse-line31'></div><div class='shan-li-horse-line41'></div><div class='shan-li-horse-line51'></div><div class='shan-li-horse-line61'></div><div class='shan-li-horse-frontleg1'></div><div class='shan-li-horse-frontlowleg1'><div class='shan-li-horse-feet1'></div></div><div class='shan-li-horse-frontleg21'></div><div class='shan-li-horse-frontlowleg21'><div class='shan-li-horse-feet21'></div></div><div class='shan-li-horse-backleg1'></div><div class='shan-li-horse-backleg21'></div><div class='shan-li-horse-backlowleg1'><div class='shan-li-horse-backfeet1'></div></div><div class='shan-li-horse-backlowleg21'><div class='shan-li-horse-backfeet21'></div></div><div class='shan-li-horse-tail1'></div><div class='shan-li-horse-tail21'></div><div class='shan-li-horse-weapon1'><div class='shan-li-horse-flag1'>戒</div></div><div class='shan-li-horse-sword1'></div><div class='shan-li-horse-weapon21'><div class='shan-li-horse-flag21'>律</div></div><div class='shan-li-horse-sword21'></div><div class='shan-li-horse-deco11'></div><div class='shan-li-horse-deco21'></div><div class='shan-li-horse-deco31'></div><div class='shan-li-horse-deco41'></div><div class='shan-li-horse-deco51'></div><div class='shan-li-horse-deco61'></div><div class='shan-li-horse-deco71'></div><div class='shan-li-horse-deco81'></div><div class='shan-li-horse-effect11'></div><div class='shan-li-horse-effect21'></div><div class='shan-li-horse-effect31'></div><div class='shan-li-horse-effect41'></div><div class='shan-li-horse-effect51'></div><div class='shan-li-horse-effect61'></div><div class='shan-li-horse-effect71'></div><div class='shan-li-horse-effect81'></div><div class='shan-li-horse-effect91'></div><div class='shan-li-horse-effect101'></div><div class='shan-li-horse-effect111'></div><div class='shan-li-horse-effect121'></div>";
+
+            var shanBtn= obj.get('.shan-btn');
+            shanBtn.insertAdjacentHTML('afterbegin', '<article class="shan-li-boxcontrol1"></article>');
+            var shanLiBc2 = obj.get('.shan-li-boxcontrol1');
+            shanLiBc2.innerHTML = shan;
         }
     }
 

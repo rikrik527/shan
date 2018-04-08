@@ -16,87 +16,89 @@ var crazy = require('../main/components/crazyAct');
 var magic = require('../main/components/magicAct');
 var hands = require('../main/components/hands');
 var canvas = require('./canvas');
-window.onload = function(){
-    switch(document.readyState){
-        case "loading":document.querySelector('.loading');
-        break;
-        case "interactive":// add methods here
-        break;
+window.onload = function () {
+    switch (document.readyState) {
+        case "loading":
+            document.querySelector('.loading');
+            break;
+        case "interactive": // add methods here
+            break;
         case "complete":
-        document.querySelector('.loading').style.display ='none';
-        console.log('loaded');
+            document.querySelector('.loading').style.display = 'none';
+            console.log('loaded');
 
-        if($(window).width() > 400){
-            // add large screen function
-            hands.original();
-            var div = obj.create('canvas');
-            document.querySelector('.samurai-btn').appendChild(div);
-            div.id = 'canvas';
-           canvas.canvasCircle();
-            // var id = setInterval(function(){
-            //     for(var i  = 0; i < 10;i++){
-            //     x = cw/2;
-            //     y = 0;
-            //     d = 1.5;
-            //     y += d* i;
-            //     ctx.fillStyle = 'red';
-            //     ctx.clearRect(0,0,cw,ch);
-            //     ctx.arc(x,y,3,0,Math.PI*2);
-            //     ctx.fill();
-            //     console.log('fill')
-            //     if(y > ch){
-            //     y = 0;}
-            //     }},20);
+            if ($(window).width() > 400) {
+                // add large screen function
+                hands.original();
+
+                // var id = setInterval(function(){
+                //     for(var i  = 0; i < 10;i++){
+                //     x = cw/2;
+                //     y = 0;
+                //     d = 1.5;
+                //     y += d* i;
+                //     ctx.fillStyle = 'red';
+                //     ctx.clearRect(0,0,cw,ch);
+                //     ctx.arc(x,y,3,0,Math.PI*2);
+                //     ctx.fill();
+                //     console.log('fill')
+                //     if(y > ch){
+                //     y = 0;}
+                //     }},20);
 
 
-$('.btn-pos2').on('click',function(){
-    alert('雨珊,你好不好?每一天.....只想你!!羞');
-    setTimeout(() => {
-        window.location.href = './shan.html';
-    }, 3000);
-
-})
-
-judo.judoAppear();
-judo.judoProfile();
-shanLi.shanAppear();
-shanLi.shanProfile();
-crazy.crazyAppear();
-crazy.crazyProfile();
-beast.beastAppear();
-beast.beastProfile();
-magic.magicAppear();
 
 
-samurai.samuraiAppear();
-        }else{
-            // add small screen javascript
-            hands.original();
-            var div = obj.create('canvas');
-document.querySelector('.samurai-btn').appendChild(div);
-div.id = 'canvas';
-$('.btn-pos2').on('click',function(){
-    alert('雨珊,你好不好?每一天.....只想你!!羞');
-    setTimeout(() => {
-        window.location.href = './shan.html';
-    }, 3000);
+                judo.judoAppear();
+                judo.judoProfile();
+                shanLi.shanAppear();
 
-})
+                shanLi.shanProfile();
+                crazy.crazyAppear();
+                crazy.crazyProfile();
+                beast.beastAppear();
+                beast.beastProfile();
+                samurai.samuraiAppear();
+                // samurai.samuraiProfile();
+               samurai.circle();
 
-judo.judoAppear();
-judo.judoProfile();
-shanLi.shanAppear();
-shanLi.shanProfile();
-crazy.crazyAppear();
-crazy.crazyProfile();
-beast.beastAppear();
-beast.beastProfile();
-magic.magicAppear();
+                magic.magicAppear();
 
 
-samurai.samuraiAppear();
 
-        }
+            } else {
+                // add small screen javascript
+                hands.original();
+
+                $('.btn-pos2').on('click', function () {
+                    alert('雨珊,你好不好?每一天.....只想你!!羞');
+                    setTimeout(() => {
+                        window.location.href = './shan.html';
+                    }, 3000);
+
+                })
+
+
+
+                judo.judoAppear();
+                judo.judoProfile();
+                shanLi.shanAppear();
+                shanLi.shanProfile();
+                crazy.crazyAppear();
+                crazy.crazyProfile();
+                beast.beastAppear();
+                beast.beastProfile();
+                samurai.samuraiAppear();
+                // samurai.samuraiProfile();
+                samurai.circle();
+
+
+
+                magic.magicAppear();
+
+
+
+            }
     }
 }
 
@@ -104,40 +106,40 @@ samurai.samuraiAppear();
 
 
 var idleTime = 0;
-document.onmousemove = function(){
+document.onmousemove = function () {
 
-        clearInterval(timerIncrease);
-        idleTime = 0;
-    };
-    document.onkeypress = function() {
-        clearInterval(timerIncrease);
-        idleTime = 0;
-    };
-    document.ontouchstart = function() {
-        clearInterval(timerIncrease);
-        idleTime = 0;
+    clearInterval(timerIncrease);
+    idleTime = 0;
+};
+document.onkeypress = function () {
+    clearInterval(timerIncrease);
+    idleTime = 0;
+};
+document.ontouchstart = function () {
+    clearInterval(timerIncrease);
+    idleTime = 0;
 
-    };
-    document.ontouchend = function(){
+};
+document.ontouchend = function () {
 
-    }
-    document.onmousedown = function(){
+}
+document.onmousedown = function () {
 
-    }
-    document.onmouseup = function(){
+}
+document.onmouseup = function () {
 
-    }
+}
 
-    function timerIncrease() {
-        idleTime += 1;
-        if (idleTime > 30) {
-            // shanTalking.shanTalking();
-            if (shanTalking) {
-                idleTime = 0;
-            }
+function timerIncrease() {
+    idleTime += 1;
+    if (idleTime > 30) {
+        // shanTalking.shanTalking();
+        if (shanTalking) {
+            idleTime = 0;
         }
-
     }
+
+}
 
 // function rain(){
 
@@ -179,5 +181,3 @@ document.onmousemove = function(){
 // var animateRain = setInterval(animate,30);
 // }
 // rain();
-
-
