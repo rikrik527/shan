@@ -51,7 +51,7 @@
     display: none;
     background-image: url('../images/icon2.svg');
     background-size: 4500%;
-    animation: fireball .5s steps(3) infinite;
+    animation: fireball .5s steps(5) infinite;
     @keyframes fireball {
         from {
             background-position: -2024px -1280px;

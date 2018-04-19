@@ -45,16 +45,16 @@
   text-shadow: 1px 1px 7px darkred; }
 
 .fireball {
-  left: 136px;
-  top: 193px;
+  margin: -25px 0 0 -50px;
+  left: 23%;
   width: 100px;
   height: 50px;
   position: absolute;
   transform: rotateZ(30deg);
-  transition: all .5s ease-in-out;
+  transition: all .5s linear;
   background-image: url("../images/icon2.svg");
   background-size: 4500%;
-  animation: fireball 0.5s steps(3) infinite; }
+  animation: fireball 0.5s steps(5) infinite; }
 @keyframes fireball {
   from {
     background-position: -2799px -1280px; }
@@ -410,6 +410,9 @@
     clear: left; }
 
 .cross-hair {
+  margin: -25px 0 0 -25px;
+  left: 66%;
+  top: 37%;
   width: 50px;
   height: 50px;
   border-radius: 100px;
@@ -417,21 +420,5 @@
   position: absolute;
   transition: all .2s linear;
   z-index: 999999999; }
-  .cross-hair:before {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 5px;
-    background: blue;
-    left: 0%;
-    top: 46%; }
-  .cross-hair:after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 50px;
-    background: blue;
-    left: 46%;
-    top: 0%; }
 
 /*# sourceMappingURL=shanbtn-ex.css.map */

@@ -457,22 +457,23 @@ var cross = 1;
 setTimeout(()=>{
     this.bigWords.style.display = 'block';
     this.bigWords.classList.add('leftright');
+    console.log(this.bigWords);
     this.bigWords.textContent = this.love[num];
     this.speech(this.love[num]);
-},2000);
+},4000);
 setTimeout(()=>{
     this.bigWords.classList.remove('leftright');
     console.log('remove-leftright')
-},3000);
+},7000);
 setTimeout(() => {
     this.robot.classList.add(cls);
     console.log('add',cls,'4sec');
     this.talk(this.love[num],4000);// speech skillset 4 secs later
-}, 4000);
+}, 9000);
 setTimeout(()=>{
     this.robot.classList.remove(cls);// removing class after 7 seconds
-    console.log('removed',cls,'7sec');
-},7000)
+    console.log('removed',cls,'11sec');
+},11000)
         },
 
         //addDiv is a function allows you to add div and append it to an element you choose the first argument is classname you want to assign to newly created div the second arguments is the elem you want the div to append to

@@ -1,7 +1,16 @@
 var update = require('./update');
+var obj = require('./getall');
 var helper = helper || {};
 
 helper = {
+    description:function(elem,elem2){
+        var object1 = obj.get(elem);
+         var top = object1.offsetHeight;
+        var left = object1.offsetWidth;
+        var object = obj.get(elem2);
+        object.style.top = (top+100)+'px';
+        object.style.left = (left)+'px';
+    },
     updateLi: (function() {
         var excute = false;
         return function(){

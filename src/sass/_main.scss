@@ -2,7 +2,7 @@
     @import './color.scss';
     @import './mediaQuery';
     @import './prefix.scss';
-    @import './utils/shanli.scss';
+    @import './utils/shanli';
     @import './judo.scss';
     @import './crazy';
     @import './animation';
@@ -23,20 +23,20 @@
         -moz-user-select: none;
         -o-user-select: none;
     }
-
+    
     #canvas {
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: 9999999999;
     }
-
+    
     .wrapper {
         width: 100%;
         height: 100vh;
         font-size: 15px;
     }
-
+    
     .main-boxcontrol {
         position: relative;
         overflow: hidden;
@@ -107,7 +107,7 @@
             font-size: 16px;
         }
     }
-
+    
     .footer-boxcontrol {
         position: absolute;
         bottom: 0;
@@ -115,14 +115,14 @@
         height: 15vh;
         background: linear-gradient(to left, $cyan4, $teal4, $blue4);
     }
-
+    
     .stage {
         position: absolute;
         width: 100%;
         height: 100%;
         transform-style: preserve-3d;
     }
-
+    
     .judo-space {
         position: absolute;
         top: 297px;
@@ -264,7 +264,7 @@
             }
         }
     }
-
+    
     .rotate-boxcontrol {
         width: 800px;
         height: 800px;
@@ -293,7 +293,7 @@
             }
         }
     }
-
+    
     .shan-talk {
         position: absolute;
         top: 174px;

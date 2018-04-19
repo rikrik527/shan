@@ -229,12 +229,6 @@ iframe:focus {
 iframe[seamless] {
   display: block; }
 
-.shan-talk {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: white; }
-
 .shanli-outline {
   position: absolute;
   width: 7em;
@@ -2302,4 +2296,4 @@ iframe[seamless] {
     text-shadow: 2px 2px 4px 3px rgba(250, 150, 0, 0.5);
     transform: rotatey(50deg); } }
 
-/*# sourceMappingURL=shanli-ex.css.map */
+/*# sourceMappingURL=shanli-app.css.map */

@@ -1,5 +1,12 @@
 @import '../color.scss';
 @import '../prefix.scss';
+.shan-talk {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: white;
+}
+
 .shanli-outline {
     position: absolute;
     width: 7em;
@@ -62,68 +69,115 @@
 
 //main
 .shan-btn {
-    /*background: $gra-skin;*/
-    animation: shan-btn 2s ease 1s;
-    width: 32%;
-    height: 400px;
-    background: $pink3;
-    float: left;
-    @keyframes shan-btn {}
-    ;
-    .shan-bg {
-        width: 100px;
-        height: 100px;
-        margin: -50px 0 0 -50px;
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        .shan-bg2 {
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            width: 100px;
-            height: 100px;
-            @include border-radius(100px);
-            background-color: linear-gradient(to top, $pink3 40%, $pink8 60%);
-            background-image: url('../../images/earth.png');
-            @include animation (shanbg2 90s linear infinite);
-            background-blend-mode: overlay;
-            @keyframes shanbg2 {
-                0% {
-                    border: 1px solid $pink2;
-                    background-position-y: 900%;
-                    box-shadow: 0px 0px 4px 4px $pink6;
-                }
-                20% {
-                    border: 1px solid $pink2;
-                    background-position-y: 1800%;
-                    box-shadow: -2px -2px 2px 2px $pink6;
-                }
-                40% {
-                    border: 1px solid $pink2;
-                    background-position-y: 2700%;
-                    box-shadow: 0px 0px 4px 4px $pink6;
-                }
-                60% {
-                    border: 1px solid $pink2;
-                    background-position-y: 3600%;
-                    box-shadow: 2px 2px 2px 2px $pink6;
-                }
-                80% {
-                    border: 1px solid $pink2;
-                    background-position-y: 4500%;
-                    box-shadow: 0px 0px 4px 4px $pink6;
-                }
-                100% {
-                    border: 1px solid $pink2;
-                    background-position-y: 5400%;
-                    box-shadow: 2px 2px 2px 2px $pink6;
-                }
+    .shan-lowbox {
+        width: 38%;
+        height: 100%;
+        color: #bbdefb;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: baseline;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        text-shadow: 0px 0px 3px #1565c0;
+        .shan-name {
+            display: inline-block;
+            width: 100%;
+            height: 2em;
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            font-size: 10px;
+        }
+        .shan-photo {
+            width: 100%;
+            max-width: 100px;
+            align-self: center;
+        }
+        .shan-profile {
+            font-size: 10px;
+        }
+        .shan-status {
+            display: block;
+            overflow: scroll;
+            padding: 2px;
+            width: 100%;
+            height: auto;
+            .shan-info {
+                font-family: "Cutive Mono", monospace;
+                font-size: 10px;
+                margin: 0 0 0.5em;
+                white-space: pre-wrap;
+                word-break: break-all;
             }
         }
     }
-    .shan-box {}
 }
+
+.shan-bg {
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    position: absolute;
+    top: 24%;
+    left: 57%;
+    .shan-bg2 {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100px;
+        height: 100px;
+        @include border-radius(100px);
+        background-color: linear-gradient(to top, $pink3 40%, $pink8 60%);
+        background-image: url('../../images/earth.png');
+        @include animation (shanbg2 90s linear infinite);
+        background-blend-mode: overlay;
+        @keyframes shanbg2 {
+            0% {
+                border: 1px solid $pink2;
+                background-position-y: 900%;
+                box-shadow: 0px 0px 4px 4px $pink6;
+            }
+            20% {
+                border: 1px solid $pink2;
+                background-position-y: 1800%;
+                box-shadow: -2px -2px 2px 2px $pink6;
+            }
+            40% {
+                border: 1px solid $pink2;
+                background-position-y: 2700%;
+                box-shadow: 0px 0px 4px 4px $pink6;
+            }
+            60% {
+                border: 1px solid $pink2;
+                background-position-y: 3600%;
+                box-shadow: 2px 2px 2px 2px $pink6;
+            }
+            80% {
+                border: 1px solid $pink2;
+                background-position-y: 4500%;
+                box-shadow: 0px 0px 4px 4px $pink6;
+            }
+            100% {
+                border: 1px solid $pink2;
+                background-position-y: 5400%;
+                box-shadow: 2px 2px 2px 2px $pink6;
+            }
+        }
+    }
+}
+
+.shan-box {}
 
 .enter-btn {
     position: absolute;
@@ -139,9 +193,10 @@
 
 .btn-pos2 {
     color: pink;
-    border: 2px solid deeppink;
-    top: 87%;
-    left: 50%;
+    top: 30%;
+    left: 57%;
+    line-height: 22px;
+    font-size: 10px;
     background: hotpink;
 }
 
@@ -151,8 +206,8 @@
     height: 100px;
     margin: -50px 0 0 -50px;
     position: absolute;
-    top: 47%;
-    left: 54%;
+    top: 20%;
+    left: 61%;
     cursor: pointer;
     transform-style: preserve-3d;
     perspective: 1000px;

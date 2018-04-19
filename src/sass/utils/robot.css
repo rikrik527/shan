@@ -303,6 +303,21 @@ iframe[seamless] {
       left: -14px;
       top: -23px; }
 
+.leftright {
+  background: linear-gradient(to left, #26c6da, #90caf9);
+  position: absolute;
+  width: 100vw;
+  height: 100px;
+  left: -100%;
+  margin: -50px 0 0 -50vw;
+  top: 50%;
+  -webkit-animation: leftright 2s linear forwards;
+  -moz-animation: leftright 2s linear forwards;
+  -ms-animation: leftright 2s linear forwards;
+  animation: leftright 2s linear forwards; }
+@keyframes leftright {
+  to {
+    left: 200%; } }
 #robot-shake {
   -webkit-animation: robotshake 1s linear infinite;
   -moz-animation: robotshake 1s linear infinite;
@@ -342,6 +357,16 @@ iframe[seamless] {
     background-position: -7px -340px; }
   to {
     background-position: -903px -340px; } }
+.robot-nice-to-meet-you {
+  -webkit-animation: robotnicetomeetyou 3s steps(12) forwards;
+  -moz-animation: robotnicetomeetyou 3s steps(12) forwards;
+  -ms-animation: robotnicetomeetyou 3s steps(12) forwards;
+  animation: robotnicetomeetyou 3s steps(12) forwards; }
+@keyframes robotnicetomeetyou {
+  from {
+    background-position: -901px -347px; }
+  to {
+    background-position: -2256px -347px; } }
 .robot-fireworks {
   -webkit-animation: robotfireworks 2s steps(8) forwards;
   -moz-animation: robotfireworks 2s steps(8) forwards;
@@ -429,5 +454,15 @@ iframe[seamless] {
     background-position: -5px -1464px; }
   to {
     background-position: -1581px -1464px; } }
+.robot-shootlove {
+  -webkit-animation: robotshootlove 0.5s steps() forwards;
+  -moz-animation: robotshootlove 0.5s steps() forwards;
+  -ms-animation: robotshootlove 0.5s steps() forwards;
+  animation: robotshootlove 0.5s steps() forwards; }
+@keyframes robotshootlove {
+  from {
+    background-position: -2473px -1240px; }
+  to {
+    background-position: -2692px -1240px; } }
 
 /*# sourceMappingURL=robot.css.map */

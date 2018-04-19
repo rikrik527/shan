@@ -84,6 +84,22 @@
     }
 }
 
+.leftright {
+    background: linear-gradient(to left, $cyan5, $blue3);
+    position: absolute;
+    width: 100vw;
+    height: 100px;
+    left: -100%;
+    margin: -50px 0 0 -50vw;
+    top: 50%;
+    @include animation(leftright 2s linear forwards);
+    @keyframes leftright {
+        to {
+            left: 200%;
+        }
+    }
+}
+
 #robot-shake {
     @include animation(robotshake 1s linear infinite);
     @keyframes robotshake {
@@ -128,6 +144,18 @@
         }
         to {
             background-position: -903px -340px;
+        }
+    }
+}
+
+.robot-nice-to-meet-you {
+    @include animation(robotnicetomeetyou 3s steps(12) forwards);
+    @keyframes robotnicetomeetyou {
+        from {
+            background-position: -901px -347px;
+        }
+        to {
+            background-position: -2256px -347px;
         }
     }
 }
@@ -235,6 +263,18 @@
         }
         to {
             background-position: -1581px -1464px
+        }
+    }
+}
+
+.robot-shootlove {
+    @include animation(robotshootlove .5s steps() forwards);
+    @keyframes robotshootlove {
+        from {
+            background-position: -2473px -1240px;
+        }
+        to {
+            background-position: -2692px -1240px;
         }
     }
 }

@@ -1,5 +1,5 @@
-@import '../color.scss';
-@import '../prefix.scss';
+@import '../color';
+@import '../prefix';
 .shanli-outline {
     position: absolute;
     width: 7em;
@@ -4935,30 +4935,262 @@
     &-deco61 {}
     &-deco71 {}
     &-deco81 {}
-    &-effect11 {}
-    &-effect21 {}
-    &-effect31 {}
-    &-effect41 {}
-    &-effect51 {}
+    &-effect11 {
+        width: 10px;
+        height: 10px;
+        background: radial-gradient(white, 40%, green);
+        position: absolute;
+        @include border-radius(100px);
+        opacity: 0;
+        top: 112%;
+        left: 0%;
+        transition: all .5s linear;
+        @include animation(effect11 .5s linear infinite);
+        @keyframes effect11 {
+            20% {
+                transform: rotateZ(-47deg)translateY(-30px);
+                -webkit-transform: rotateZ(-47deg)translateY(-30px);
+                opacity: 0.3;
+            }
+            40% {
+                transform: rotateZ(-84deg)translateY(-51px);
+                -webkit-transform: rotateZ(-84deg)translateY(-51px);
+                opacity: 0.6;
+            }
+            60% {
+                width: 10px;
+                height: 10px;
+                transform: rotatex(70deg) rotateZ(-86deg) translateY(-51px);
+                -webkit-transform: rotatex(70deg) rotateZ(-86deg) translateY(-51px);
+                opacity: 0.6;
+            }
+            100% {
+                width: 30px;
+                height: 30px;
+                transform: rotatex(70deg) rotateZ(-86deg) translateY(-51px)translateX(30px);
+                -webkit-transform: rotatex(70deg) rotateZ(-86deg) translateY(-51px)translateX(30px);
+                opacity: 0.2;
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+            }
+        }
+    }
+    &-effect21 {
+        width: 5px;
+        height: 5px;
+        background: radial-gradient(white, 40%, green);
+        position: absolute;
+        @include border-radius(100px);
+        opacity: 0;
+        top: 112%;
+        left: 0%;
+        transition: all .5s linear;
+        @include animation(effect21 .5s linear infinite);
+        @keyframes effect21 {
+            10% {
+                -webkit-transform: rotateZ(-10deg) translateY(-9px);
+                opacity: 0.3;
+                filter: contrast(10);
+                -webkit-filter: contrast(10);
+                ;
+            }
+            30% {
+                -webkit-transform: rotateZ(-88deg) translateY(-24px);
+                opacity: 0.3;
+            }
+            50% {
+                width: 4px;
+                height: 4px;
+                -webkit-transform: rotatex(70deg) rotateZ(-44deg) translateY(-26px);
+                opacity: 0.2;
+            }
+            100% {
+                width: 15px;
+                height: 15px;
+                -webkit-transform: rotatex(70deg) rotateZ(-46deg) translateY(-26px) translateX(30px);
+                opacity: 0.2;
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+            }
+        }
+    }
+    &-effect31 {
+        width: 15px;
+        height: 15px;
+        background: radial-gradient(white, 40%, green);
+        position: absolute;
+        @include border-radius(100px);
+        opacity: 0;
+        top: 112%;
+        left: 0%;
+        transition: all .5s linear;
+        @include animation(effect41 .5s linear infinite);
+        @keyframes effect41 {
+            10% {
+                -webkit-transform: rotateZ(-4deg) translateY(-45px)translateZ(100px);
+                opacity: 0.6;
+                filter: drop-shadow(3px 2px 6px green);
+            }
+            30% {
+                -webkit-transform: rotateZ(-6deg) translateY(-56px)translateZ(120px);
+                opacity: 0.8;
+                filter: blur(1px);
+            }
+            50% {
+                width: 12px;
+                height: 12px;
+                -webkit-transform: rotatex(70deg) rotateZ(-44deg) translateY(-26px);
+                opacity: 0.2;
+            }
+            100% {
+                width: 15px;
+                height: 15px;
+                -webkit-transform: rotatex(70deg) rotateZ(-46deg) translateY(-26px) translateX(30px);
+                opacity: 0.2;
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+            }
+        }
+    }
+    &-effect41 {
+        width: 10px;
+        height: 10px;
+        background: radial-gradient(white, 40%, green);
+        position: absolute;
+        @include border-radius(100px);
+        opacity: 0;
+        top: 112%;
+        left: 0%;
+        transition: all .5s linear;
+        @include animation(effect31 .5s linear infinite);
+        @keyframes effect31 {
+            10% {
+                -webkit-transform: rotateZ(-31deg) translateY(-20px);
+                opacity: 0.3;
+                filter: blur(1px);
+                -webkit-filter: blur(1px);
+                ;
+            }
+            30% {
+                -webkit-transform: rotateZ(-88deg) translateY(-24px);
+                opacity: 0.3;
+            }
+            50% {
+                width: 12px;
+                height: 12px;
+                -webkit-transform: rotatex(70deg) rotateZ(-44deg) translateY(-26px);
+                opacity: 0.2;
+            }
+            100% {
+                width: 15px;
+                height: 15px;
+                -webkit-transform: rotatex(70deg) rotateZ(-46deg) translateY(-26px) translateX(30px);
+                opacity: 0.2;
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+            }
+        }
+    }
+    &-effect51 {
+        width: 10px;
+        height: 10px;
+        background: radial-gradient(white, 40%, green);
+        position: absolute;
+        @include border-radius(100px);
+        opacity: 0;
+        top: 112%;
+        left: 27%;
+        transition: all .5s linear;
+        @include animation(effect5 .5s linear infinite);
+        @keyframes effect5 {
+            30% {
+                -webkit-transform: rotateZ(31deg) translateY(-20px);
+                transform: rotateZ(31deg) translateY(-20px);
+                opacity: 0.3;
+                filter: contrast(1);
+                -webkit-filter: contrast(1);
+            }
+            50% {
+                -webkit-transform: rotateZ(88deg) translateY(-24px);
+                transform: rotateZ(88deg) translateY(-24px);
+                opacity: 0.3;
+                filter: contrast(1);
+                -webkit-filter: contrast(1)
+            }
+            70% {
+                width: 12px;
+                height: 12px;
+                -webkit-transform: rotatex(70deg) rotateZ(44deg) translateY(-26px);
+                transform: rotatex(70deg) rotateZ(44deg) translateY(-26px);
+                opacity: 0.6;
+            }
+            100% {
+                width: 15px;
+                height: 15px;
+                -webkit-transform: rotatex(70deg) rotateZ(46deg) translateY(-26px) translateX(30px);
+                transform: rotatex(70deg) rotateZ(46deg) translateY(-26px) translateX(0px);
+                opacity: 0.2;
+                filter: blur(1);
+                -webkit-filter: blur(1);
+            }
+        }
+    }
     &-effect61 {}
     &-effect71 {}
-    &-effect81 {}
-    &-effect91 {}
-    &-effect101 {
+    &-effect81 {
         position: absolute;
         top: 0px;
-        left: 0px;
+        left: -62px;
         width: 100px;
         height: 100px;
         background-size: 74%;
-        opacity: 0.2;
+        opacity: 0.7;
         background-repeat: no-repeat;
-        transform: rotatex(66deg)rotatez(12deg)translatey(50px);
+        transform: rotatex(66deg)rotatez(-12deg)translatey(-50px);
+        background-image: url('../../images/wind.svg');
+        @include animation(effect81 .5s linear infinite);
+        @keyframes effect81 {
+            to {
+                opacity: 0.1;
+                transform: rotateX(79deg) rotateZ(-12deg) translateY(100px) scale(1.2);
+            }
+        }
+    }
+    &-effect91 {
+        position: absolute;
+        top: -63px;
+        left: -18px;
+        width: 100px;
+        height: 100px;
+        background-size: 74%;
+        opacity: 0.7;
+        background-repeat: no-repeat;
+        transform: rotatex(70deg)rotatez(0deg)translatey(-50px);
+        background-image: url('../../images/wind.svg');
+        @include animation(effect91 .5s linear infinite);
+        @keyframes effect91 {
+            to {
+                opacity: 0.1;
+                transform: rotateX(70deg) rotateZ(0deg) translateY(100px) scale(0.8);
+            }
+        }
+    }
+    &-effect101 {
+        position: absolute;
+        top: 0px;
+        left: 17px;
+        width: 100px;
+        height: 100px;
+        background-size: 74%;
+        opacity: 0.7;
+        background-repeat: no-repeat;
+        transform: rotatex(66deg)rotatez(12deg)translatey(-50px);
         background-image: url('../../images/wind.svg');
         @include animation(effect101 .5s linear infinite);
         @keyframes effect101 {
             to {
-                transform: rotateX(79deg) rotateZ(12deg) translateY(-100px) scale(1.2);
+                opacity: 0.1;
+                transform: rotateX(79deg) rotateZ(12deg) translateY(100px) scale(1.2);
             }
         }
     }
@@ -4968,16 +5200,16 @@
         left: 28px;
         width: 100px;
         height: 100px;
-        opacity: 0.1;
+        opacity: 0.7;
         background-repeat: no-repeat;
         background-size: 74%;
-        transform: rotatex(66deg)rotatez(-18deg)translateY(-50px);
+        transform: rotatex(66deg)rotatez(-18deg)translateY(50px);
         background-image: url('../../images/wind.svg');
         @include animation(effect111 .5s linear infinite);
         @keyframes effect111 {
             to {
                 opacity: 0.2;
-                transform: rotateX(66deg)rotateZ(-18deg)translateY(50px)scale(1.2)
+                transform: rotateX(66deg)rotateZ(-18deg)translateY(-50px)scale(1.2)
             }
         }
     }
@@ -4987,16 +5219,16 @@
         left: -63px;
         width: 100px;
         height: 100px;
-        opacity: 0;
+        opacity: 0.7;
         background-size: 74%;
         background-repeat: no-repeat;
-        transform: rotatex(66deg)rotatez(18deg)translatey(-50px);
+        transform: rotatex(66deg)rotatez(18deg)translatey(50px);
         background-image: url('../../images/wind.svg');
         @include animation(effect121 .5s linear infinite);
         @keyframes effect121 {
             to {
-                opacity: 0.3;
-                transform: rotateX(66deg)rotateZ(18deg)translateY(50px)scale(1.2)
+                opacity: 0.1;
+                transform: rotateX(66deg)rotateZ(18deg)translateY(-50px)scale(1.2)
             }
         }
     }

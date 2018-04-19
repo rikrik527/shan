@@ -5,7 +5,7 @@ var requestAnimationFrame = require('../requestAnimationFrame');
 var transform = require('../transform');
 var transition = require('../transform');
 var robotMenu = require('../robotMenu');
-
+var helper = require('../helperFunction');
 var robot = obj.get('#robot');
 var crossHair = obj.get('.cross-hair');
 var fireball = obj.get('.fireball');
@@ -16,10 +16,16 @@ module.exports.crossFire = function(){
 
 infinityLoopAnimation('robot-cross-get','robot-cross-charging',3000);
 console.log('crossfire ready',ready);
-if(ready){
-    console.log('ready');
-    shootLove();
-}
+setTimeout(() => {
+    console.log('ready after 10 ',ready);
+}, 3500);
+setTimeout(() => {
+    if(ready){
+        console.log('ready');
+        shootLove();
+    }
+}, 11000);
+
 
 console.log('infiniteloopanimation');
 }
@@ -37,7 +43,8 @@ setTimeout(()=>{
     console.log('readysetimeout',ready)
 },time);
 setTimeout(()=>{
-    console.log('ready',ready)
+    console.log('ready',ready);
+    fire = true;//fire set to true
 },10000);
 // if(fire){
 //     console.log('fired');
@@ -57,44 +64,54 @@ var lastpostion = [null,null];
 var position = [0,0];
 // set the crossfire fireball position
 function shootLove(){
-    fire = true;//fire set to true
+    console.log('shoot love is ready',fire);
+
+
 
     var fireball = obj.get('.fireball');
+
     var crossHair = obj.get('.cross-hair');
+    var robotOutline = obj.get('.robot-outline');
+    var rtop = window.getComputedStyle(robotOutline).getPropertyValue('top');
+    fireball.style.top = parseInt(rtop)*1.5+'px';
+    window.onresize = function(){
+        var rtop = window.getComputedStyle(robotOutline).getPropertyValue('top');
+    fireball.style.top = parseInt(rtop)*1.5+'px';
+    }
+    helper.description('.cross-hair','.description');
+
     $('.cross-hair').css('display','block');
     $('.fireball').css('display','block');
-    $('.cross-hair').on('mousedown touchstart',function(e){   touchDown = true;
-        var touch = targetTouches;
-    });
-    $('.cross-hair').on('mouseup touchend',function(e){
-        touchDown = false;
-    });
-    $('.cross-hair').on('mousemove touchmove',function(e){
-       if(!touchDown){
-           return false;
-       }
-       var touched = e.changedTouches[0];
-       var changeX = 0;
-       var changeY = 0;
-       if(lastpostion[0]){
-         console.log(lastpostion[0]);
-         changeX = (lastpostion[0] - e.clientX);
-         if(Math.abs(changeX)>20){
-             changeX = 0;
-         }
-       }
-       if(lastpostion[1]){
-        console.log(lastpostion[1]);
-        changeX = (lastpostion[1] - e.clientX);
-        if(Math.abs(changeX)>20){
-            changeX = 0;
-        }
-      }
-       lastpostion = e.clientX;
-       position[0] -= changeX;
-       crossHair.style.cssText = 'left'+(position[0]-25)+'px;top:'+(position[1]-25)+'px';
+    var click = 0;
+    crossHair.onclick = function(){
+        console.log('cross clicked');
+        click++
+        return (function(){
+            if(!fire){
+                return false;
+                console.log('fire is false');
+            }
+            if(click == 10) fire = false;
 
-    });
+            console.log(click);
+            var fireball = obj.get('.fireball');
+        var shanLiOutline = obj.get('.shanli-outline');
+        var shanLeft = window.getComputedStyle(shanLiOutline).getPropertyValue('left');
+        var shanTop = window.getComputedStyle(shanLiOutline).getPropertyValue('top');
+        fireball.style.left = shanLeft;
+        fireball.style.top = shanTop;
+        setTimeout(() => {
+            fireball.parentNode.removeChild(fireball);
+            var div = obj.create('div');
+            div.className = 'fireball';
+            var shanBtn = obj.get('.shan-btn').appendChild(div);
+
+        }, 50);
+
+        console.log('clicked',click)
+    })();
+    };
+
 
 }
 function setCrossFireballPos(){

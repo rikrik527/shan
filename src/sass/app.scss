@@ -1,8 +1,8 @@
 @import '../css/normalize.css';
-@import './color.scss';
+@import './color';
 @import './mediaQuery';
 @import './prefix';
-@import './utils/shanli-ex';
+@import './utils/shanli-app';
 @import './aside';
 @import './todo';
 @import './prologue';
@@ -15,6 +15,14 @@ body,
 html {
     width: 100%;
     height: 100%;
+}
+
+.description {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
 }
 
 .loading {
